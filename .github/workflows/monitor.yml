@@ -1,0 +1,63 @@
+name: Monitor TAR Friuli
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Ripristina stato provvedimenti
+        uses: actions/cache@v4
+        with:
+          path: tar_stato.json
+          key: tar-stato-${{ github.run_id }}
+          restore-keys: |
+            tar-stato-
+
+      - name: Ripristina stato ricorsi
+        uses: actions/cache@v4
+        with:
+          path: tar_ricorsi_stato.json
+          key: tar-ricorsi-stato-${{ github.run_id }}
+          restore-keys: |
+            tar-ricorsi-stato-
+
+      - name: Installa dipendenze
+        run: pip install requests
+
+      - name: Monitora provvedimenti
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        run: python .github/workflows/monitor_tar_gh.py
+
+      - name: Monitora ricorsi
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        run: python .github/workflows/monitor_ricorsi_gh.py
+
+      - name: Salva stato provvedimenti
+        uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: tar_stato.json
+          key: tar-stato-${{ github.run_id }}
+
+      - name: Salva stato ricorsi
+        uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: tar_ricorsi_stato.json
+          key: tar-ricorsi-stato-${{ github.run_id }}
