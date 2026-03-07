@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="TAR Friuli">
+<title>TAR Friuli — Monitor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:     #07090c;
+    --s1:     #0d1117;
+    --s2:     #161d27;
+    --s3:     #1e2733;
+    --border: rgba(255,255,255,0.07);
+    --accent: #4fc3f7;
+    --gold:   #ffd54f;
+    --green:  #69f0ae;
+    --red:    #ff5252;
+    --orange: #ffab40;
+    --text:   #dce8f0;
+    --muted:  #5a7a8a;
+    --muted2: #8aa0b0;
+  }
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:'IBM Plex Mono',monospace;min-height:100vh;font-size:15px;line-height:1.5}
+  body::after{content:'';position:fixed;top:-300px;left:50%;transform:translateX(-50%);width:800px;height:500px;background:radial-gradient(ellipse,rgba(79,195,247,0.06) 0%,transparent 65%);pointer-events:none;z-index:0}
+  .wrap{position:relative;z-index:1;max-width:500px;margin:0 auto;padding:max(env(safe-area-inset-top),16px) 14px max(env(safe-area-inset-bottom),24px)}
+
+  /* HEADER */
+  .hd{padding:20px 0 16px;animation:fadeD .5s ease both}
+  .hd-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+  .hd-label{font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--accent);opacity:.7}
+  .hd-live{display:flex;align-items:center;gap:6px;font-size:10px;color:var(--green);letter-spacing:.1em}
+  .hd-live-dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 7px var(--green);animation:blink 2s ease-in-out infinite}
+  .hd h1{font-family:'Syne',sans-serif;font-size:30px;font-weight:800;letter-spacing:-.03em;line-height:1.1;color:var(--text)}
+  .hd h1 em{font-style:normal;color:var(--accent)}
+  .hd-sub{font-size:12px;color:var(--muted2);margin-top:6px;letter-spacing:.03em}
+
+  /* REFRESH */
+  .btn-refresh{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;margin:14px 0;padding:14px;background:linear-gradient(135deg,var(--s2),var(--s3));border:1px solid rgba(79,195,247,0.25);border-radius:14px;color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:500;cursor:pointer;transition:all .2s;letter-spacing:.05em;box-shadow:0 0 20px rgba(79,195,247,0.05);animation:fadeD .5s .05s ease both}
+  .btn-refresh:active{transform:scale(.97);border-color:rgba(79,195,247,.5);box-shadow:0 0 24px rgba(79,195,247,.15)}
+  .btn-refresh .ico{font-size:18px}
+  .spinning{animation:spin .7s linear infinite!important;display:inline-block}
+
+  /* TABS */
+  .tabs{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-bottom:16px;animation:fadeD .5s .1s ease both}
+  .tab{padding:10px 4px;background:var(--s1);border:1px solid var(--border);border-radius:10px;color:var(--muted);font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;text-align:center;transition:all .2s}
+  .tab.on{background:var(--s2);color:var(--accent);border-color:rgba(79,195,247,.3);box-shadow:0 0 12px rgba(79,195,247,.08)}
+
+  /* PANELS */
+  .panel{display:none}
+  .panel.on{display:block;animation:fadeU .3s ease both}
+
+  /* SECTION LABEL */
+  .sec-label{font-size:10px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin:18px 0 8px;display:flex;align-items:center;gap:8px}
+  .sec-label::after{content:'';flex:1;height:1px;background:var(--border)}
+
+  /* CARD */
+  .card{background:var(--s1);border:1px solid var(--border);border-radius:16px;padding:16px;margin-bottom:10px;overflow:hidden;animation:fadeU .4s ease both}
+  .card-hd{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px;gap:8px}
+  .card-nrg{font-family:'Syne',sans-serif;font-size:17px;font-weight:700;color:var(--accent);letter-spacing:-.01em}
+
+  /* BADGE */
+  .badge{font-size:10px;font-weight:500;padding:3px 9px;border-radius:20px;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;flex-shrink:0}
+  .b-blue  {background:rgba(79,195,247,.12); color:var(--accent); border:1px solid rgba(79,195,247,.2)}
+  .b-gold  {background:rgba(255,213,79,.10); color:var(--gold);   border:1px solid rgba(255,213,79,.2)}
+  .b-green {background:rgba(105,240,174,.10);color:var(--green);  border:1px solid rgba(105,240,174,.2)}
+  .b-red   {background:rgba(255,82,82,.12);  color:var(--red);    border:1px solid rgba(255,82,82,.2)}
+  .b-orange{background:rgba(255,171,64,.10); color:var(--orange); border:1px solid rgba(255,171,64,.2)}
+
+  /* CARD ROWS */
+  .cr{display:flex;gap:8px;margin-bottom:5px;align-items:baseline}
+  .ck{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;min-width:72px;flex-shrink:0}
+  .cv{font-size:14px;color:var(--text);line-height:1.4}
+  .card-oggetto{font-size:13px;color:var(--muted2);line-height:1.5;margin-bottom:10px;padding:8px 10px;background:rgba(255,255,255,0.02);border-radius:8px;border-left:2px solid var(--accent)}
+  .card-pills{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+
+  /* EXPAND */
+  .expand-btn{display:flex;align-items:center;justify-content:center;gap:6px;width:100%;margin-top:12px;padding:10px;background:rgba(79,195,247,.05);border:1px solid rgba(79,195,247,.15);border-radius:10px;color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:13px;cursor:pointer;transition:all .2s;letter-spacing:.05em}
+  .expand-btn:active{background:rgba(79,195,247,.1)}
+  .arr{display:inline-block;transition:transform .3s}
+  .arr.open{transform:rotate(180deg)}
+  .details{max-height:0;overflow:hidden;transition:max-height .4s ease}
+  .details.open{max-height:99999px}
+
+  /* DETAIL SECTIONS */
+  .ds{margin-top:12px;padding-top:12px;border-top:1px solid var(--border)}
+  .ds-title{font-size:10px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:8px}
+  .dt-row{padding:8px 0;border-bottom:1px solid rgba(255,255,255,.03)}
+  .dt-row:last-child{border-bottom:none}
+  .dt-tipo{font-size:14px;color:var(--text);font-weight:500;line-height:1.3}
+  .dt-meta{font-size:12px;color:var(--muted2);margin-top:2px}
+  .dt-data{font-size:12px;color:var(--gold)}
+  .dt-esito{font-size:13px;color:var(--green);margin-top:3px}
+  .pt-row{display:flex;justify-content:space-between;align-items:baseline;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.03);gap:8px}
+  .pt-row:last-child{border-bottom:none}
+  .pt-tipo{font-size:14px;color:var(--text)}
+  .pt-data{font-size:12px;color:var(--muted2);white-space:nowrap}
+
+  /* PROVV CARD */
+  .prov-card{background:var(--s1);border:1px solid var(--border);border-radius:16px;padding:16px;margin-bottom:10px;animation:fadeU .4s ease both}
+  .prov-nrg{font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:var(--accent);margin-bottom:8px}
+
+  /* NUOVI HERO */
+  .stat-hero{background:linear-gradient(135deg,var(--s2),var(--s3));border:1px solid rgba(105,240,174,.2);border-radius:18px;padding:24px 20px;margin-bottom:12px;text-align:center;position:relative;overflow:hidden;animation:fadeU .4s ease both}
+  .stat-hero::before{content:'';position:absolute;top:-40px;right:-40px;width:150px;height:150px;background:radial-gradient(circle,rgba(105,240,174,.08),transparent 70%)}
+  .stat-hero-label{font-size:11px;color:var(--muted2);letter-spacing:.15em;text-transform:uppercase;margin-bottom:8px}
+  .stat-hero-num{font-family:'Syne',sans-serif;font-size:56px;font-weight:800;color:var(--green);line-height:1;margin-bottom:6px}
+  .stat-hero-sub{font-size:12px;color:var(--muted2)}
+  .stat-hero-oggetto{font-size:13px;color:var(--text);margin-top:12px;line-height:1.5;padding:10px;background:rgba(0,0,0,.2);border-radius:8px;text-align:left}
+
+  /* EMPTY / LOADING */
+  .empty{text-align:center;padding:40px 20px;color:var(--muted)}
+  .empty-ico{font-size:36px;margin-bottom:12px;opacity:.4}
+  .empty-txt{font-size:13px;line-height:1.6}
+  .loading{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 20px;gap:14px}
+  .spinner{width:28px;height:28px;border:2px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin .7s linear infinite}
+  .loading-txt{font-size:12px;color:var(--muted);letter-spacing:.1em}
+
+  /* FOOTER */
+  .footer{text-align:center;padding:28px 0 8px;font-size:11px;color:var(--muted);opacity:.5;letter-spacing:.06em;line-height:1.8}
+
+  /* ANIMATIONS */
+  @keyframes fadeD{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes fadeU{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .card:nth-child(1){animation-delay:.04s}.card:nth-child(2){animation-delay:.08s}.card:nth-child(3){animation-delay:.12s}
+  .card:nth-child(4){animation-delay:.16s}.card:nth-child(5){animation-delay:.20s}.card:nth-child(6){animation-delay:.24s}
+  .card:nth-child(7){animation-delay:.28s}.card:nth-child(8){animation-delay:.32s}.card:nth-child(9){animation-delay:.36s}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hd">
+    <div class="hd-top">
+      <div class="hd-label">TAR Friuli Venezia Giulia</div>
+      <div class="hd-live"><div class="hd-live-dot"></div><span id="liveLabel">–</span></div>
+    </div>
+    <h1>Monitor<br><em>Ricorsi</em></h1>
+    <div class="hd-sub" id="lastUp">Caricamento in corso...</div>
+  </div>
+
+  <button class="btn-refresh" id="btnRefresh" onclick="loadData()">
+    <span class="ico" id="refreshIco">↻</span> Aggiorna dati
+  </button>
+
+  <div class="tabs">
+    <button class="tab on" onclick="showTab('ricorsi',this)">Ricorsi</button>
+    <button class="tab"    onclick="showTab('provv',this)">Provved.</button>
+    <button class="tab"    onclick="showTab('nuovi',this)">Nuovi</button>
+  </div>
+
+  <div class="panel on" id="panel-ricorsi">
+    <div id="cnt-ricorsi"><div class="loading"><div class="spinner"></div><div class="loading-txt">Caricamento...</div></div></div>
+  </div>
+  <div class="panel" id="panel-provv">
+    <div id="cnt-provv"><div class="loading"><div class="spinner"></div><div class="loading-txt">Caricamento...</div></div></div>
+  </div>
+  <div class="panel" id="panel-nuovi">
+    <div id="cnt-nuovi"><div class="loading"><div class="spinner"></div><div class="loading-txt">Caricamento...</div></div></div>
+  </div>
+
+  <div class="footer">TAR Friuli Venezia Giulia — Monitor automatico<br>by Rolando Meotto</div>
+</div>
+
+<script>
+function parseDate(s){
+  if(!s)return null;
+  let m=s.match(/(\d{2})\/(\d{2})\/(\d{4})/);
+  if(m)return new Date(+m[3],+m[2]-1,+m[1]);
+  m=s.match(/(\d{4})-(\d{2})-(\d{2})/);
+  if(m)return new Date(+m[1],+m[2]-1,+m[3]);
+  return null;
+}
+function sortByDate(arr,fn,desc=true){
+  return[...arr].sort((a,b)=>{
+    const da=parseDate(fn(a)),db=parseDate(fn(b));
+    if(!da&&!db)return 0;if(!da)return 1;if(!db)return-1;
+    return desc?db-da:da-db;
+  });
+}
+function firstDate(s){const m=s.match(/^(\d{2}\/\d{2}\/\d{4})/);return m?m[1]:null;}
+function extractDate(s){const m=s.match(/(\d{2}\/\d{2}\/\d{4})/g);return m?m[m.length-1]:null;}
+function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+
+function parseParte(s){const p=s.split('|').map(x=>x.trim());return{tipo:p[0]||'',data:p[1]||''};}
+function parseAtto(s){const p=s.split('|').map(x=>x.trim());return{tipo:p[0]||'',numero:p[1]||'',parte:p[2]||'',data:p[3]||''};}
+function parseDisc(s){const p=s.split('|').map(x=>x.trim());return{data:p[0]||'',tipo:p[1]||'',esito:p[2]||'',magistrato:p[3]||'',giudizio:p[4]||''};}
+function parseColl(s){const p=s.split('|').map(x=>x.trim());return{tipo:p[0]||'',magistrato:p[1]||'',data_pubbl:p[2]||'',data_ud:p[3]||'',esito:p[5]||''};}
+function parseMono(s){const p=s.split('|').map(x=>x.trim());return{tipo:p[0]||'',magistrato:p[1]||'',data:p[2]||'',esito:p[3]||''};}
+
+function renderParti(list){
+  if(!list||!list.length)return'';
+  const sorted=sortByDate(list,s=>parseParte(s).data);
+  let h='<div class="ds"><div class="ds-title">Parti</div>';
+  sorted.forEach(s=>{
+    const p=parseParte(s);if(!p.tipo)return;
+    h+=`<div class="pt-row"><span class="pt-tipo">${esc(p.tipo)}</span><span class="pt-data">${esc(p.data)}</span></div>`;
+  });
+  return h+'</div>';
+}
+
+function renderAtti(list){
+  if(!list||!list.length)return'';
+  const sorted=sortByDate(list,s=>parseAtto(s).data);
+  let h='<div class="ds"><div class="ds-title">Atti depositati</div>';
+  sorted.forEach(s=>{
+    const a=parseAtto(s);if(!a.tipo)return;
+    h+=`<div class="dt-row">
+      <div class="dt-tipo">${esc(a.tipo)}</div>
+      <div class="dt-meta">${esc(a.parte)}${a.data?' &nbsp;·&nbsp; <span class="dt-data">'+esc(a.data)+'</span>':''}</div>
+    </div>`;
+  });
+  return h+'</div>';
+}
+
+function renderDisc(list){
+  if(!list||!list.length)return'';
+  const sorted=sortByDate(list,s=>firstDate(s));
+  let h='<div class="ds"><div class="ds-title">Discussioni</div>';
+  sorted.forEach(s=>{
+    const d=parseDisc(s);if(!d.data)return;
+    h+=`<div class="dt-row">
+      <div class="dt-data">${esc(d.data)} — ${esc(d.tipo)}</div>
+      <div class="dt-meta">${esc(d.giudizio)}${d.magistrato?' &nbsp;·&nbsp; '+esc(d.magistrato):''}</div>
+      ${d.esito?'<div class="dt-esito">'+esc(d.esito)+'</div>':''}
+    </div>`;
+  });
+  return h+'</div>';
+}
+
+function renderColl(list){
+  if(!list||!list.length)return'';
+  const sorted=sortByDate(list,s=>parseColl(s).data_pubbl);
+  let h='<div class="ds"><div class="ds-title">Provvedimenti Collegiali</div>';
+  sorted.forEach(s=>{
+    const p=parseColl(s);if(!p.tipo)return;
+    h+=`<div class="dt-row">
+      <div class="dt-tipo">${esc(p.tipo)}</div>
+      <div class="dt-data">${esc(p.data_pubbl)}</div>
+      <div class="dt-meta">${esc(p.magistrato)}</div>
+      ${p.esito?'<div class="dt-esito">'+esc(p.esito)+'</div>':''}
+    </div>`;
+  });
+  return h+'</div>';
+}
+
+function renderMono(list){
+  if(!list||!list.length)return'';
+  const sorted=sortByDate(list,s=>parseMono(s).data);
+  let h='<div class="ds"><div class="ds-title">Provvedimenti Monocratici</div>';
+  sorted.forEach(s=>{
+    const p=parseMono(s);if(!p.tipo)return;
+    h+=`<div class="dt-row">
+      <div class="dt-tipo">${esc(p.tipo)}</div>
+      <div class="dt-data">${esc(p.data)}</div>
+      <div class="dt-meta">${esc(p.magistrato)}</div>
+      ${p.esito?'<div class="dt-esito">'+esc(p.esito)+'</div>':''}
+    </div>`;
+  });
+  return h+'</div>';
+}
+
+function renderRicorsi(data){
+  const list=data.ricorsi_monitorati||[];
+  if(!list.length)return'<div class="empty"><div class="empty-ico">📋</div><div class="empty-txt">Nessun ricorso monitorato</div></div>';
+  const sorted=sortByDate(list,r=>r.data_deposito);
+  let h='';
+  sorted.forEach((r,i)=>{
+    const nrg=r.nrg||(r.anno+'/'+r.numero);
+    const hasPM=(r.provvedimenti_monocratici||[]).length;
+    const hasPC=(r.provvedimenti_collegiali||[]).length;
+    const hasD=(r.discussioni||[]).length;
+    let prossimaUd='';
+    if(r.discussioni&&r.discussioni.length){
+      const fut=r.discussioni.map(d=>parseDisc(d)).filter(d=>!d.esito||d.esito==='').sort((a,b)=>{const da=parseDate(a.data),db=parseDate(b.data);return da&&db?da-db:0;});
+      if(fut.length)prossimaUd=fut[0].data+' — '+fut[0].tipo;
+    }
+    h+=`<div class="card">
+      <div class="card-hd">
+        <div class="card-nrg">NRG ${esc(nrg)}</div>
+        <span class="badge b-blue">${esc(r.tipo_ricorso||'N/D')}</span>
+      </div>
+      ${r.oggetto?'<div class="card-oggetto">${r.oggetto ? esc(r.oggetto) : '<span style="color:var(--muted)">Oggetto non ancora disponibile</span>'}</div>
+      <div class="cr"><span class="ck">Deposito</span><span class="cv">${esc(r.data_deposito||'N/D')}</span></div>
+      <div class="cr"><span class="ck">Sezione</span><span class="cv">${esc(r.sezione||'N/D')}</span></div>
+      ${prossimaUd?'<div class="cr"><span class="ck">Pross. ud.</span><span class="cv" style="color:var(--gold)">'+esc(prossimaUd)+'</span></div>':''}
+      <div class="card-pills">
+        ${hasD?'<span class="badge b-gold">📅 '+hasD+' udienze</span>':''}
+        ${hasPC?'<span class="badge b-blue">⚖️ '+hasPC+' coll.</span>':''}
+        ${hasPM?'<span class="badge b-orange">📄 '+hasPM+' mono.</span>':''}
+      </div>
+      <div class="details" id="det-${i}">
+        ${renderParti(r.parti)}
+        ${renderAtti(r.atti)}
+        ${renderDisc(r.discussioni)}
+        ${renderColl(r.provvedimenti_collegiali)}
+        ${renderMono(r.provvedimenti_monocratici)}
+      </div>
+      <button class="expand-btn" onclick="toggle(${i})">Dettagli <span class="arr" id="arr-${i}">▼</span></button>
+    </div>`;
+  });
+  return h;
+}
+
+function renderProvvedimenti(data){
+  const coll=data.provvedimenti_collegiali||[];
+  const mono=data.provvedimenti_monocratici||[];
+
+  // Raccoglie ultimi provvedimenti dai ricorsi monitorati
+  let ultimi=[];
+  (data.ricorsi_monitorati||[]).forEach(r=>{
+    (r.provvedimenti_collegiali||[]).forEach(s=>{
+      const p=parseColl(s);if(p.tipo)ultimi.push({...p,nrg:r.nrg,kind:'Collegiale'});
+    });
+    (r.provvedimenti_monocratici||[]).forEach(s=>{
+      const p=parseMono(s);if(p.tipo)ultimi.push({tipo:p.tipo,magistrato:p.magistrato,data_pubbl:p.data,esito:p.esito,nrg:r.nrg,kind:'Monocratico'});
+    });
+  });
+  ultimi=sortByDate(ultimi,p=>p.data_pubbl);
+
+  let h='';
+
+  if(!coll.length&&!mono.length){
+    h+='<div class="empty"><div class="empty-ico">⚖️</div><div class="empty-txt">Nessun provvedimento nelle ultime 48h</div></div>';
+  } else {
+    const collS=sortByDate(coll,p=>p.dataPubblicazione);
+    const monoS=sortByDate(mono,p=>p.dataPubblicazione);
+    h+='<div class="sec-label">Collegiali</div>';
+    collS.forEach(p=>{h+=`<div class="prov-card"><div class="prov-nrg">${esc(p.nrgFascicolo||'N/D')}</div><div class="cr"><span class="ck">Tipo</span><span class="cv">${esc(p.tipoProvvedimento||'N/D')}</span></div><div class="cr"><span class="ck">Pubbl.</span><span class="cv" style="color:var(--gold)">${esc(p.dataPubblicazione||'N/D')}</span></div><div class="cr"><span class="ck">Parte</span><span class="cv">${esc(p.parte||'N/D')}</span></div></div>`;});
+    h+='<div class="sec-label">Monocratici</div>';
+    monoS.forEach(p=>{h+=`<div class="prov-card"><div class="prov-nrg">${esc(p.nrgFascicolo||'N/D')}</div><div class="cr"><span class="ck">Tipo</span><span class="cv">${esc(p.tipoProvvedimento||'N/D')}</span></div><div class="cr"><span class="ck">Pubbl.</span><span class="cv" style="color:var(--gold)">${esc(p.dataPubblicazione||'N/D')}</span></div><div class="cr"><span class="ck">Parte</span><span class="cv">${esc(p.parte||'N/D')}</span></div></div>`;});
+  }
+
+  if(ultimi.length){
+    h+='<div class="sec-label">Ultimi provvedimenti — ricorsi monitorati</div>';
+    ultimi.slice(0,15).forEach(p=>{
+      h+=`<div class="prov-card">
+        <div class="prov-nrg">${esc(p.nrg)}</div>
+        <div class="cr"><span class="ck">Tipo</span><span class="cv">${esc(p.tipo)}</span></div>
+        <div class="cr"><span class="ck">Data</span><span class="cv" style="color:var(--gold)">${esc(p.data_pubbl||'N/D')}</span></div>
+        <div class="cr"><span class="ck">Magistrato</span><span class="cv">${esc(p.magistrato||'N/D')}</span></div>
+        ${p.esito?'<div class="cr"><span class="ck">Esito</span><span class="cv" style="color:var(--green)">'+esc(p.esito)+'</span></div>':''}
+        <span class="badge ${p.kind==='Collegiale'?'b-blue':'b-orange'}" style="margin-top:6px;display:inline-block">${p.kind}</span>
+      </div>`;
+    });
+  }
+  return h;
+}
+
+function renderNuovi(data){
+  const ultimo=data.ultimo_ricorso||0;
+  const anno=data.anno_nuovi||2026;
+  const ricorsi=data.ricorsi_monitorati||[];
+  const ultimoR=ricorsi.find(r=>r.anno===anno&&r.numero===ultimo);
+  const oggettoUltimo=ultimoR?ultimoR.oggetto:'';
+
+  let h=`<div class="stat-hero">
+    <div class="stat-hero-label">Ultimo ricorso depositato — Anno ${anno}</div>
+    <div class="stat-hero-num">${ultimo}</div>
+    <div class="stat-hero-sub">NRG ${anno}${String(ultimo).padStart(6,'0')}</div>
+    ${oggettoUltimo?'<div class="stat-hero-oggetto">'+esc(oggettoUltimo)+'</div>':''}
+  </div>`;
+
+  const correnti=ricorsi.filter(r=>r.anno===anno).sort((a,b)=>b.numero-a.numero);
+  if(correnti.length){
+    h+='<div class="sec-label">Ricorsi '+anno+' monitorati</div>';
+    correnti.forEach(r=>{
+      h+=`<div class="card">
+        <div class="card-hd"><div class="card-nrg">N. ${r.numero}</div><span class="badge b-green">${anno}</span></div>
+        ${r.oggetto?'<div class="card-oggetto">'+esc(r.oggetto)+'</div>':''}
+        <div class="cr"><span class="ck">Deposito</span><span class="cv">${esc(r.data_deposito||'N/D')}</span></div>
+      </div>`;
+    });
+  }
+  return h;
+}
+
+function toggle(i){
+  const det=document.getElementById('det-'+i);
+  const arr=document.getElementById('arr-'+i);
+  if(!det)return;
+  det.classList.toggle('open');
+  arr.classList.toggle('open');
+}
+
+function showTab(name,btn){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('on'));
+  if(btn)btn.classList.add('on');
+  const panel=document.getElementById('panel-'+name);
+  if(panel)panel.classList.add('on');
+}
+
+let isLoading=false;
+
+async function loadData(){
+  if(isLoading)return;
+  isLoading=true;
+  const ico=document.getElementById('refreshIco');
+  ico.classList.add('spinning');
+  try{
+    const url='./dashboard_data.json?t='+Date.now();
+    const resp=await fetch(url);
+    if(!resp.ok)throw new Error('HTTP '+resp.status);
+    const data=await resp.json();
+    document.getElementById('lastUp').textContent='Aggiornato: '+(data.ultimo_aggiornamento||'—');
+    document.getElementById('liveLabel').textContent='LIVE';
+    document.getElementById('liveLabel').style.color='var(--green)';
+    document.getElementById('cnt-ricorsi').innerHTML=renderRicorsi(data);
+    document.getElementById('cnt-provv').innerHTML=renderProvvedimenti(data);
+    document.getElementById('cnt-nuovi').innerHTML=renderNuovi(data);
+  }catch(e){
+    document.getElementById('lastUp').textContent='Errore nel caricamento';
+    document.getElementById('liveLabel').textContent='OFFLINE';
+    document.getElementById('liveLabel').style.color='var(--red)';
+    const msg='<div class="empty"><div class="empty-ico">⚠️</div><div class="empty-txt">Impossibile caricare i dati.<br>Riprova tra qualche secondo.</div></div>';
+    document.getElementById('cnt-ricorsi').innerHTML=document.getElementById('cnt-provv').innerHTML=document.getElementById('cnt-nuovi').innerHTML=msg;
+    console.error(e);
+  }finally{
+    ico.classList.remove('spinning');
+    isLoading=false;
+  }
+}
+
+loadData();
+setInterval(loadData,5*60*1000);
+</script>
+</body>
+</html>
