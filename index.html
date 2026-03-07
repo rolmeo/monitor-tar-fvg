@@ -4,157 +4,243 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="TAR Friuli">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="TAR Monitor">
 <title>TAR Friuli — Monitor</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg:     #07090c;
-    --s1:     #0d1117;
-    --s2:     #161d27;
-    --s3:     #1e2733;
-    --border: rgba(255,255,255,0.07);
-    --accent: #4fc3f7;
-    --gold:   #ffd54f;
-    --green:  #69f0ae;
-    --red:    #ff5252;
-    --orange: #ffab40;
-    --text:   #dce8f0;
-    --muted:  #5a7a8a;
-    --muted2: #8aa0b0;
-  }
-  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-  html{scroll-behavior:smooth}
-  body{background:var(--bg);color:var(--text);font-family:'IBM Plex Mono',monospace;min-height:100vh;font-size:15px;line-height:1.5}
-  body::after{content:'';position:fixed;top:-300px;left:50%;transform:translateX(-50%);width:800px;height:500px;background:radial-gradient(ellipse,rgba(79,195,247,0.06) 0%,transparent 65%);pointer-events:none;z-index:0}
-  .wrap{position:relative;z-index:1;max-width:500px;margin:0 auto;padding:max(env(safe-area-inset-top),16px) 14px max(env(safe-area-inset-bottom),24px)}
+:root {
+  --white: #ffffff;
+  --off-white: #f5f5f7;
+  --light-gray: #e8e8ed;
+  --mid-gray: #d2d2d7;
+  --gray: #86868b;
+  --dark-gray: #424245;
+  --near-black: #1d1d1f;
+  --black: #000000;
+  --blue: #0071e3;
+  --blue-light: #2997ff;
+  --blue-bg: #f0f6ff;
+  --green: #30d158;
+  --green-bg: #f0faf3;
+  --orange: #ff9f0a;
+  --orange-bg: #fff8ee;
+  --red: #ff3b30;
+  --separator: rgba(0,0,0,0.08);
+}
 
-  /* HEADER */
-  .hd{padding:20px 0 16px;animation:fadeD .5s ease both}
-  .hd-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
-  .hd-label{font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--accent);opacity:.7}
-  .hd-live{display:flex;align-items:center;gap:6px;font-size:10px;color:var(--green);letter-spacing:.1em}
-  .hd-live-dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 7px var(--green);animation:blink 2s ease-in-out infinite}
-  .hd h1{font-family:'Syne',sans-serif;font-size:30px;font-weight:800;letter-spacing:-.03em;line-height:1.1;color:var(--text)}
-  .hd h1 em{font-style:normal;color:var(--accent)}
-  .hd-sub{font-size:12px;color:var(--muted2);margin-top:6px;letter-spacing:.03em}
+* { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+html { scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
 
-  /* REFRESH */
-  .btn-refresh{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;margin:14px 0;padding:14px;background:linear-gradient(135deg,var(--s2),var(--s3));border:1px solid rgba(79,195,247,0.25);border-radius:14px;color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:500;cursor:pointer;transition:all .2s;letter-spacing:.05em;box-shadow:0 0 20px rgba(79,195,247,0.05);animation:fadeD .5s .05s ease both}
-  .btn-refresh:active{transform:scale(.97);border-color:rgba(79,195,247,.5);box-shadow:0 0 24px rgba(79,195,247,.15)}
-  .btn-refresh .ico{font-size:18px}
-  .spinning{animation:spin .7s linear infinite!important;display:inline-block}
+body {
+  background: var(--off-white);
+  color: var(--near-black);
+  font-family: 'Montserrat', -apple-system, sans-serif;
+  min-height: 100vh;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
 
-  /* TABS */
-  .tabs{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-bottom:16px;animation:fadeD .5s .1s ease both}
-  .tab{padding:10px 4px;background:var(--s1);border:1px solid var(--border);border-radius:10px;color:var(--muted);font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;text-align:center;transition:all .2s}
-  .tab.on{background:var(--s2);color:var(--accent);border-color:rgba(79,195,247,.3);box-shadow:0 0 12px rgba(79,195,247,.08)}
+.header {
+  background: rgba(245,245,247,0.85);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid var(--separator);
+  position: sticky; top:0; z-index:100;
+  padding: max(env(safe-area-inset-top), 0px) 0 0;
+}
+.header-inner {
+  max-width: 500px; margin:0 auto;
+  padding: 14px 20px;
+  display: flex; justify-content:space-between; align-items:center;
+}
+.header-title { font-size: 17px; font-weight: 600; letter-spacing: -0.02em; color: var(--near-black); }
+.header-status { display:flex; align-items:center; gap:5px; font-size:13px; font-weight:500; color: var(--green); }
+.status-dot { width:7px; height:7px; border-radius:50%; background: var(--green); animation: pulse-dot 2s ease-in-out infinite; }
 
-  /* PANELS */
-  .panel{display:none}
-  .panel.on{display:block;animation:fadeU .3s ease both}
+.main { max-width: 500px; margin:0 auto; padding: 0 16px max(env(safe-area-inset-bottom), 32px); }
 
-  /* SECTION LABEL */
-  .sec-label{font-size:10px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin:18px 0 8px;display:flex;align-items:center;gap:8px}
-  .sec-label::after{content:'';flex:1;height:1px;background:var(--border)}
+.hero { padding: 32px 0 8px; animation: fadeUp 0.5s ease both; }
+.hero-eyebrow { font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); margin-bottom: 6px; }
+.hero-title { font-size: 38px; font-weight: 700; letter-spacing: -0.04em; line-height: 1.05; color: var(--near-black); }
+.hero-title span { color: var(--blue); }
+.hero-sub { font-size: 14px; font-weight: 400; color: var(--gray); margin-top: 6px; letter-spacing: -0.01em; }
 
-  /* CARD */
-  .card{background:var(--s1);border:1px solid var(--border);border-radius:16px;padding:16px;margin-bottom:10px;overflow:hidden;animation:fadeU .4s ease both}
-  .card-hd{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px;gap:8px}
-  .card-nrg{font-family:'Syne',sans-serif;font-size:17px;font-weight:700;color:var(--accent);letter-spacing:-.01em}
+.hero-timestamps { margin-top: 10px; display: flex; flex-direction: column; gap: 4px; }
+.hero-ts-row { display: flex; gap: 8px; align-items: baseline; }
+.hero-ts-label { font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--near-black); min-width: 130px; flex-shrink: 0; }
+.hero-ts-val { font-size: 13px; font-weight: 500; color: var(--near-black); }
 
-  /* BADGE */
-  .badge{font-size:10px;font-weight:500;padding:3px 9px;border-radius:20px;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;flex-shrink:0}
-  .b-blue  {background:rgba(79,195,247,.12); color:var(--accent); border:1px solid rgba(79,195,247,.2)}
-  .b-gold  {background:rgba(255,213,79,.10); color:var(--gold);   border:1px solid rgba(255,213,79,.2)}
-  .b-green {background:rgba(105,240,174,.10);color:var(--green);  border:1px solid rgba(105,240,174,.2)}
-  .b-red   {background:rgba(255,82,82,.12);  color:var(--red);    border:1px solid rgba(255,82,82,.2)}
-  .b-orange{background:rgba(255,171,64,.10); color:var(--orange); border:1px solid rgba(255,171,64,.2)}
+.btn-refresh {
+  display: flex; align-items:center; justify-content:center; gap: 8px;
+  width: 100%; margin: 20px 0; padding: 16px;
+  background: var(--blue); border: none; border-radius: 14px;
+  color: white; font-family: 'Montserrat', sans-serif;
+  font-size: 16px; font-weight: 600; letter-spacing: -0.01em;
+  cursor: pointer; transition: all 0.15s ease;
+  animation: fadeUp 0.5s 0.05s ease both;
+  box-shadow: 0 4px 16px rgba(0,113,227,0.3);
+}
+.btn-refresh:active { transform: scale(0.97); background: #0062c4; box-shadow: 0 2px 8px rgba(0,113,227,0.2); }
+.refresh-icon { font-size:18px; display:inline-block; }
+.spinning { animation: spin 0.7s linear infinite !important; }
 
-  /* CARD ROWS */
-  .cr{display:flex;gap:8px;margin-bottom:5px;align-items:baseline}
-  .ck{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;min-width:72px;flex-shrink:0}
-  .cv{font-size:14px;color:var(--text);line-height:1.4}
-  .card-oggetto{font-size:13px;color:var(--muted2);line-height:1.5;margin-bottom:10px;padding:8px 10px;background:rgba(255,255,255,0.02);border-radius:8px;border-left:2px solid var(--accent)}
-  .card-pills{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+.tabs {
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  background: var(--light-gray); border-radius: 12px; padding: 3px;
+  margin-bottom: 20px; animation: fadeUp 0.5s 0.1s ease both;
+}
+.tab {
+  padding: 9px 4px; background: transparent; border: none; border-radius: 10px;
+  color: var(--gray); font-family: 'Montserrat', sans-serif;
+  font-size: 13px; font-weight: 500; letter-spacing: -0.01em;
+  cursor: pointer; text-align:center; transition: all 0.2s ease;
+}
+.tab.on { background: var(--white); color: var(--near-black); font-weight: 600; box-shadow: 0 1px 4px rgba(0,0,0,0.12), 0 0 1px rgba(0,0,0,0.08); }
 
-  /* EXPAND */
-  .expand-btn{display:flex;align-items:center;justify-content:center;gap:6px;width:100%;margin-top:12px;padding:10px;background:rgba(79,195,247,.05);border:1px solid rgba(79,195,247,.15);border-radius:10px;color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:13px;cursor:pointer;transition:all .2s;letter-spacing:.05em}
-  .expand-btn:active{background:rgba(79,195,247,.1)}
-  .arr{display:inline-block;transition:transform .3s}
-  .arr.open{transform:rotate(180deg)}
-  .details{max-height:0;overflow:hidden;transition:max-height .4s ease}
-  .details.open{max-height:99999px}
+.panel { display:none; }
+.panel.on { display:block; animation: fadeUp 0.3s ease both; }
 
-  /* DETAIL SECTIONS */
-  .ds{margin-top:12px;padding-top:12px;border-top:1px solid var(--border)}
-  .ds-title{font-size:10px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:8px}
-  .dt-row{padding:8px 0;border-bottom:1px solid rgba(255,255,255,.03)}
-  .dt-row:last-child{border-bottom:none}
-  .dt-tipo{font-size:14px;color:var(--text);font-weight:500;line-height:1.3}
-  .dt-meta{font-size:12px;color:var(--muted2);margin-top:2px}
-  .dt-data{font-size:12px;color:var(--gold)}
-  .dt-esito{font-size:13px;color:var(--green);margin-top:3px}
-  .pt-row{display:flex;justify-content:space-between;align-items:baseline;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.03);gap:8px}
-  .pt-row:last-child{border-bottom:none}
-  .pt-tipo{font-size:14px;color:var(--text)}
-  .pt-data{font-size:12px;color:var(--muted2);white-space:nowrap}
+.section-header { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray); padding: 0 4px; margin: 24px 0 10px; }
 
-  /* PROVV CARD */
-  .prov-card{background:var(--s1);border:1px solid var(--border);border-radius:16px;padding:16px;margin-bottom:10px;animation:fadeU .4s ease both}
-  .prov-nrg{font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:var(--accent);margin-bottom:8px}
+.card { background: var(--white); border-radius: 16px; padding: 18px; margin-bottom: 10px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04); animation: fadeUp 0.4s ease both; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+.card:active { transform: scale(0.99); box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
 
-  /* NUOVI HERO */
-  .stat-hero{background:linear-gradient(135deg,var(--s2),var(--s3));border:1px solid rgba(105,240,174,.2);border-radius:18px;padding:24px 20px;margin-bottom:12px;text-align:center;position:relative;overflow:hidden;animation:fadeU .4s ease both}
-  .stat-hero::before{content:'';position:absolute;top:-40px;right:-40px;width:150px;height:150px;background:radial-gradient(circle,rgba(105,240,174,.08),transparent 70%)}
-  .stat-hero-label{font-size:11px;color:var(--muted2);letter-spacing:.15em;text-transform:uppercase;margin-bottom:8px}
-  .stat-hero-num{font-family:'Syne',sans-serif;font-size:56px;font-weight:800;color:var(--green);line-height:1;margin-bottom:6px}
-  .stat-hero-sub{font-size:12px;color:var(--muted2)}
-  .stat-hero-oggetto{font-size:13px;color:var(--text);margin-top:12px;line-height:1.5;padding:10px;background:rgba(0,0,0,.2);border-radius:8px;text-align:left}
+.card-header { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom: 12px; gap: 10px; }
+.card-nrg { font-size: 19px; font-weight: 700; letter-spacing: -0.03em; color: var(--near-black); }
+.card-nrg span { color: var(--blue); }
 
-  /* EMPTY / LOADING */
-  .empty{text-align:center;padding:40px 20px;color:var(--muted)}
-  .empty-ico{font-size:36px;margin-bottom:12px;opacity:.4}
-  .empty-txt{font-size:13px;line-height:1.6}
-  .loading{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 20px;gap:14px}
-  .spinner{width:28px;height:28px;border:2px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin .7s linear infinite}
-  .loading-txt{font-size:12px;color:var(--muted);letter-spacing:.1em}
+.badge { font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 20px; letter-spacing: 0.02em; white-space: nowrap; flex-shrink:0; }
+.b-blue   { background: var(--blue-bg);   color: var(--blue); }
+.b-green  { background: var(--green-bg);  color: #1a7a3a; }
+.b-orange { background: var(--orange-bg); color: #b36800; }
+.b-gray   { background: var(--light-gray); color: var(--dark-gray); }
 
-  /* FOOTER */
-  .footer{text-align:center;padding:28px 0 8px;font-size:11px;color:var(--muted);opacity:.5;letter-spacing:.06em;line-height:1.8}
+.card-oggetto { font-size: 14px; font-weight: 400; color: var(--dark-gray); line-height: 1.55; margin-bottom: 12px; padding: 12px 14px; background: var(--off-white); border-radius: 10px; border-left: 3px solid var(--blue); }
+.card-oggetto.empty { color: var(--gray); font-style: italic; border-left-color: var(--mid-gray); }
 
-  /* ANIMATIONS */
-  @keyframes fadeD{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
-  @keyframes fadeU{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
-  @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
-  @keyframes spin{to{transform:rotate(360deg)}}
-  .card:nth-child(1){animation-delay:.04s}.card:nth-child(2){animation-delay:.08s}.card:nth-child(3){animation-delay:.12s}
-  .card:nth-child(4){animation-delay:.16s}.card:nth-child(5){animation-delay:.20s}.card:nth-child(6){animation-delay:.24s}
-  .card:nth-child(7){animation-delay:.28s}.card:nth-child(8){animation-delay:.32s}.card:nth-child(9){animation-delay:.36s}
+.cr { display: flex; gap: 10px; margin-bottom: 6px; align-items: baseline; }
+.ck { font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gray); min-width: 76px; flex-shrink:0; }
+.cv { font-size: 15px; font-weight: 400; color: var(--near-black); line-height: 1.4; }
+.cv.highlight { color: var(--blue); font-weight: 500; }
+.cv.date { color: var(--near-black); font-weight: 500; }
+
+.card-pills { display:flex; flex-wrap:wrap; gap:6px; margin-top:10px; }
+.card-sep { height: 1px; background: var(--separator); margin: 14px 0; }
+
+.expand-btn { display:flex; align-items:center; justify-content:center; gap:6px; width:100%; margin-top:14px; padding:11px; background: var(--off-white); border: none; border-radius: 10px; color: var(--blue); font-family:'Montserrat',sans-serif; font-size:14px; font-weight:600; cursor:pointer; transition:all 0.15s; letter-spacing:-0.01em; }
+.expand-btn:active { background: var(--light-gray); }
+.arr { display:inline-block; transition:transform 0.3s; font-size:12px; }
+.arr.open { transform:rotate(180deg); }
+.details { max-height:0; overflow:hidden; transition:max-height 0.4s ease; }
+.details.open { max-height:99999px; }
+
+.ds { margin-top:14px; }
+.ds-title { font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color: var(--blue); margin-bottom:8px; }
+.dt-row { padding: 10px 0; border-bottom: 1px solid var(--separator); }
+.dt-row:last-child { border-bottom:none; }
+.dt-tipo { font-size:15px; font-weight:500; color:var(--near-black); line-height:1.3; }
+.dt-meta { font-size:13px; color:var(--gray); margin-top:3px; }
+.dt-data { font-size:13px; color:var(--blue); font-weight:500; }
+.dt-esito { font-size:14px; color:#1a7a3a; font-weight:500; margin-top:4px; }
+
+.pt-row { display:flex; justify-content:space-between; align-items:baseline; padding:9px 0; border-bottom:1px solid var(--separator); gap:8px; }
+.pt-row:last-child { border-bottom:none; }
+.pt-tipo { font-size:15px; font-weight:400; color:var(--near-black); }
+.pt-data { font-size:13px; color:var(--gray); white-space:nowrap; }
+
+.hero-stat { background: var(--white); border-radius: 20px; padding: 28px 24px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); text-align: center; position:relative; overflow:hidden; animation: fadeUp 0.4s ease both; }
+.hero-stat::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background: linear-gradient(90deg, var(--blue), var(--green)); }
+.hero-stat-label { font-size:12px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--gray); margin-bottom:10px; }
+.hero-stat-num { font-size:72px; font-weight:700; letter-spacing:-0.05em; line-height:1; color:var(--near-black); margin-bottom:4px; }
+.hero-stat-num span { color:var(--blue); }
+.hero-stat-sub { font-size:14px; color:var(--gray); font-weight:400; }
+.hero-stat-oggetto { font-size:14px; color:var(--dark-gray); margin-top:16px; line-height:1.55; padding:12px 14px; background:var(--off-white); border-radius:10px; text-align:left; border-left:3px solid var(--blue); }
+.hero-stat-oggetto.empty { color:var(--gray); font-style:italic; border-left-color:var(--mid-gray); }
+
+.prov-card { background:var(--white); border-radius:16px; padding:18px; margin-bottom:10px; box-shadow:0 1px 3px rgba(0,0,0,0.06); animation:fadeUp 0.4s ease both; }
+.prov-nrg { font-size:18px; font-weight:700; letter-spacing:-0.03em; color:var(--near-black); margin-bottom:10px; }
+.prov-nrg span { color:var(--blue); }
+
+.empty { text-align:center; padding:48px 20px; color:var(--gray); }
+.empty-ico { font-size:40px; margin-bottom:14px; opacity:0.5; }
+.empty-txt { font-size:15px; line-height:1.6; font-weight:400; }
+
+.loading { display:flex; flex-direction:column; align-items:center; justify-content:center; padding:64px 20px; gap:16px; }
+.spinner { width:32px; height:32px; border:2.5px solid var(--light-gray); border-top-color:var(--blue); border-radius:50%; animation:spin 0.7s linear infinite; }
+.loading-txt { font-size:14px; color:var(--gray); font-weight:400; }
+
+.footer { text-align:center; padding:32px 0 12px; font-size:12px; color:var(--gray); font-weight:400; line-height:1.8; letter-spacing:-0.01em; }
+
+/* Pross. ud. sfondo verde */
+.cr-prossud { display:flex; gap:10px; margin-bottom:6px; align-items:baseline; background:var(--green-bg); border-radius:8px; padding:6px 8px; }
+
+/* Tabella Agenda */
+.agenda-table { width:100%; border-collapse:collapse; background:var(--white); border-radius:16px; overflow:hidden; box-shadow:0 1px 3px rgba(0,0,0,0.06); margin-bottom:16px; animation:fadeUp 0.4s ease both; }
+.agenda-table thead tr { background:var(--near-black); }
+.agenda-table thead th { padding:11px 10px; font-size:11px; font-weight:600; letter-spacing:0.07em; text-transform:uppercase; color:var(--white); text-align:left; }
+.agenda-table thead th:last-child { text-align:right; }
+.agenda-table tbody tr { border-bottom:1px solid var(--separator); transition:background 0.15s; }
+.agenda-table tbody tr:last-child { border-bottom:none; }
+.agenda-table tbody tr:active { background:var(--off-white); }
+.agenda-table tbody td { padding:11px 10px; font-size:13px; color:var(--near-black); vertical-align:middle; }
+.agenda-table tbody td:last-child { text-align:right; font-weight:600; color:var(--blue); white-space:nowrap; }
+.agenda-nr { font-weight:700; color:var(--blue); }
+.agenda-stab { font-weight:500; }
+.agenda-ricorr { color:var(--dark-gray); font-size:12px; }
+.agenda-evento { font-size:12px; color:var(--gray); margin-top:2px; }
+.agenda-empty { text-align:center; padding:48px 20px; color:var(--gray); }
+
+@keyframes fadeUp { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+@keyframes pulse-dot { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:0.5; transform:scale(0.85); } }
+@keyframes spin { to { transform:rotate(360deg); } }
+
+.card:nth-child(1){animation-delay:.03s}
+.card:nth-child(2){animation-delay:.06s}
+.card:nth-child(3){animation-delay:.09s}
+.card:nth-child(4){animation-delay:.12s}
+.card:nth-child(5){animation-delay:.15s}
+.card:nth-child(6){animation-delay:.18s}
+.card:nth-child(7){animation-delay:.21s}
+.card:nth-child(8){animation-delay:.24s}
 </style>
 </head>
 <body>
-<div class="wrap">
 
-  <div class="hd">
-    <div class="hd-top">
-      <div class="hd-label">TAR Friuli Venezia Giulia</div>
-      <div class="hd-live"><div class="hd-live-dot"></div><span id="liveLabel">–</span></div>
+<div class="header">
+  <div class="header-inner">
+    <div class="header-title">TAR Friuli VG</div>
+    <div class="header-status">
+      <div class="status-dot" id="statusDot"></div>
+      <span id="liveLabel">–</span>
     </div>
-    <h1>Monitor<br><em>Ricorsi</em></h1>
-    <div class="hd-sub" id="lastUp">Caricamento in corso...</div>
+  </div>
+</div>
+
+<div class="main">
+
+  <div class="hero">
+    <div class="hero-eyebrow">Tribunale Amministrativo Regionale</div>
+    <div class="hero-title">Monitor<br><span>Ricorsi</span></div>
+    <div class="hero-sub" id="lastUp" style="display:none"></div>
+    <div class="hero-timestamps">
+      <div class="hero-ts-row"><span class="hero-ts-label">Ultimo controllo</span><span class="hero-ts-val" id="lastCheck">—</span></div>
+      <div class="hero-ts-row"><span class="hero-ts-label">Ultima variazione</span><span class="hero-ts-val" id="lastChange">—</span></div>
+    </div>
   </div>
 
-  <button class="btn-refresh" id="btnRefresh" onclick="loadData()">
-    <span class="ico" id="refreshIco">↻</span> Aggiorna dati
+  <button class="btn-refresh" onclick="loadData()">
+    <span class="refresh-icon" id="refreshIco">↻</span>
+    Aggiorna dati
   </button>
 
-  <div class="tabs">
+  <div class="tabs" style="grid-template-columns:1fr 1fr 1fr 1fr;">
     <button class="tab on" onclick="showTab('ricorsi',this)">Ricorsi</button>
     <button class="tab"    onclick="showTab('provv',this)">Provved.</button>
     <button class="tab"    onclick="showTab('nuovi',this)">Nuovi</button>
+    <button class="tab"    onclick="showTab('agenda',this)">Agenda</button>
   </div>
 
   <div class="panel on" id="panel-ricorsi">
@@ -166,268 +252,327 @@
   <div class="panel" id="panel-nuovi">
     <div id="cnt-nuovi"><div class="loading"><div class="spinner"></div><div class="loading-txt">Caricamento...</div></div></div>
   </div>
+  <div class="panel" id="panel-agenda">
+    <div id="cnt-agenda"><div class="loading"><div class="spinner"></div><div class="loading-txt">Caricamento...</div></div></div>
+  </div>
 
-  <div class="footer">TAR Friuli Venezia Giulia — Monitor automatico<br>by Rolando Meotto</div>
+  <div class="footer">
+    TAR Friuli Venezia Giulia — Monitor automatico<br>
+    by Rolando Meotto
+  </div>
 </div>
 
 <script>
+// Dati statici dall'Excel (Nr ricorso → stabilimento + ricorrente)
+var ANAGRAFICA = {
+  '257/2025': {stab:'Portofino',       ricorr:'Meotto Giuseppe Srl'},
+  '267/2025': {stab:'Ausonia',         ricorr:'Pietro Ceiner Snc'},
+  '268/2025': {stab:'Spiaggia per cani',ricorr:'Doggy Beach Srl'},
+  '270/2025': {stab:'Gabbiano',        ricorr:'Gigante Giancarlo'},
+  '399/2025': {stab:'Lido del Sole',   ricorr:'Battiston MD Srl'},
+  '403/2025': {stab:'Ufficio 7 bis',   ricorr:'Paschetto G. / Neri R.'},
+  '404/2025': {stab:'La Sacca',        ricorr:'Giardino Srl'},
+  '405/2025': {stab:'Bagno Italia',    ricorr:'Gest. Spiaggia Italia Snc'},
+  '479/2025': {stab:'Getur',           ricorr:'Tiliaventum ASD'},
+  '686/2025': {stab:'Gabbiano',        ricorr:'Gigante Giancarlo'},
+  '689/2025': {stab:'La Sacca',        ricorr:'Fenice Srl'},
+  '51/2026':  {stab:'Bar Frecce Tricolori', ricorr:'Beach Bar F.T. Sas'},
+  '74/2026':  {stab:'Bagno Lignano',   ricorr:'Albergo Italia Srl'},
+  '80/2026':  {stab:'Bagno Italia',    ricorr:'Gest. Spiaggia Italia Snc'},
+  '99/2026':  {stab:'Portofino',       ricorr:'Meotto Giuseppe Srl'},
+  '100/2026': {stab:'Lido City',       ricorr:'Sast degli eredi Sapienza'},
+  '120/2026': {stab:'Ausonia',         ricorr:'Matajur 3000 Srl'},
+  '121/2026': {stab:'Portofino',       ricorr:'Matajur 3000 Srl'},
+};
+
+function nrgToKey(r){
+  return r.numero+'/'+r.anno;
+}
+
+function prossimoEvento(r){
+  var oggi=new Date(); oggi.setHours(0,0,0,0);
+  var fut=[];
+  (r.discussioni||[]).forEach(function(s){
+    var d=parseDisc(s);
+    var dt=parseDate(d.data);
+    if(dt&&dt>=oggi&&(!d.esito||d.esito===''))fut.push({data:dt,dataStr:d.data,tipo:d.tipo});
+  });
+  if(!fut.length)return null;
+  fut.sort(function(a,b){return a.data-b.data;});
+  return fut[0];
+}
+
+function renderAgenda(data){
+  var list=data.ricorsi_monitorati||[];
+  var righe=[];
+  list.forEach(function(r){
+    var ev=prossimoEvento(r);
+    if(!ev)return;
+    var key=nrgToKey(r);
+    var ana=ANAGRAFICA[key]||{stab:'—',ricorr:'—'};
+    righe.push({nr:r.numero+'/'+r.anno, stab:ana.stab, ricorr:ana.ricorr, evento:ev.tipo, dataEv:ev.data, dataStr:ev.dataStr});
+  });
+  if(!righe.length){
+    return '<div class="agenda-empty"><div class="empty-ico">📅</div><div class="empty-txt">Nessun evento futuro in agenda</div></div>';
+  }
+  righe.sort(function(a,b){return a.dataEv-b.dataEv;});
+  var h='<table class="agenda-table"><thead><tr>';
+  h+='<th>Nr ric.</th><th>Stab.</th><th>Ricorr.</th><th>Evento</th><th>Data ev.</th>';
+  h+='</tr></thead><tbody>';
+  righe.forEach(function(row){
+    h+='<tr>';
+    h+='<td><span class="agenda-nr">'+esc(row.nr)+'</span></td>';
+    h+='<td><span class="agenda-stab">'+esc(row.stab)+'</span></td>';
+    h+='<td><span class="agenda-ricorr">'+esc(row.ricorr)+'</span></td>';
+    h+='<td><span class="agenda-evento">'+esc(row.evento)+'</span></td>';
+    h+='<td>'+esc(row.dataStr)+'</td>';
+    h+='</tr>';
+  });
+  h+='</tbody></table>';
+  return h;
+}
+
 function parseDate(s){
   if(!s)return null;
-  let m=s.match(/(\d{2})\/(\d{2})\/(\d{4})/);
+  var m=s.match(/(\d{2})\/(\d{2})\/(\d{4})/);
   if(m)return new Date(+m[3],+m[2]-1,+m[1]);
   m=s.match(/(\d{4})-(\d{2})-(\d{2})/);
   if(m)return new Date(+m[1],+m[2]-1,+m[3]);
   return null;
 }
-function sortByDate(arr,fn,desc=true){
-  return[...arr].sort((a,b)=>{
-    const da=parseDate(fn(a)),db=parseDate(fn(b));
-    if(!da&&!db)return 0;if(!da)return 1;if(!db)return-1;
+function sortByDate(arr,fn,desc){
+  if(desc===undefined)desc=true;
+  return arr.slice().sort(function(a,b){
+    var da=parseDate(fn(a)),db=parseDate(fn(b));
+    if(!da&&!db)return 0; if(!da)return 1; if(!db)return -1;
     return desc?db-da:da-db;
   });
 }
-function firstDate(s){const m=s.match(/^(\d{2}\/\d{2}\/\d{4})/);return m?m[1]:null;}
-function extractDate(s){const m=s.match(/(\d{2}\/\d{2}\/\d{4})/g);return m?m[m.length-1]:null;}
+function firstDate(s){var m=s.match(/^(\d{2}\/\d{2}\/\d{4})/);return m?m[1]:null;}
 function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
-
-function parseParte(s){const p=s.split('|').map(x=>x.trim());return{tipo:p[0]||'',data:p[1]||''};}
-function parseAtto(s){const p=s.split('|').map(x=>x.trim());return{tipo:p[0]||'',numero:p[1]||'',parte:p[2]||'',data:p[3]||''};}
-function parseDisc(s){const p=s.split('|').map(x=>x.trim());return{data:p[0]||'',tipo:p[1]||'',esito:p[2]||'',magistrato:p[3]||'',giudizio:p[4]||''};}
-function parseColl(s){const p=s.split('|').map(x=>x.trim());return{tipo:p[0]||'',magistrato:p[1]||'',data_pubbl:p[2]||'',data_ud:p[3]||'',esito:p[5]||''};}
-function parseMono(s){const p=s.split('|').map(x=>x.trim());return{tipo:p[0]||'',magistrato:p[1]||'',data:p[2]||'',esito:p[3]||''};}
+function parseParte(s){var p=s.split('|').map(function(x){return x.trim();});return{tipo:p[0]||'',data:p[1]||''};}
+function parseAtto(s){var p=s.split('|').map(function(x){return x.trim();});return{tipo:p[0]||'',parte:p[2]||'',data:p[3]||''};}
+function parseDisc(s){var p=s.split('|').map(function(x){return x.trim();});return{data:p[0]||'',tipo:p[1]||'',esito:p[2]||'',magistrato:p[3]||'',giudizio:p[4]||''};}
+function parseColl(s){var p=s.split('|').map(function(x){return x.trim();});return{tipo:p[0]||'',magistrato:p[1]||'',data_pubbl:p[2]||'',esito:p[5]||''};}
+function parseMono(s){var p=s.split('|').map(function(x){return x.trim();});return{tipo:p[0]||'',magistrato:p[1]||'',data:p[2]||'',esito:p[3]||''};}
 
 function renderParti(list){
   if(!list||!list.length)return'';
-  const sorted=sortByDate(list,s=>parseParte(s).data);
-  let h='<div class="ds"><div class="ds-title">Parti</div>';
-  sorted.forEach(s=>{
-    const p=parseParte(s);if(!p.tipo)return;
-    h+=`<div class="pt-row"><span class="pt-tipo">${esc(p.tipo)}</span><span class="pt-data">${esc(p.data)}</span></div>`;
-  });
+  var sorted=sortByDate(list,function(s){return parseParte(s).data;});
+  var h='<div class="ds"><div class="ds-title">Parti</div>';
+  sorted.forEach(function(s){var p=parseParte(s);if(!p.tipo)return;h+='<div class="pt-row"><span class="pt-tipo">'+esc(p.tipo)+'</span><span class="pt-data">'+esc(p.data)+'</span></div>';});
   return h+'</div>';
 }
-
 function renderAtti(list){
   if(!list||!list.length)return'';
-  const sorted=sortByDate(list,s=>parseAtto(s).data);
-  let h='<div class="ds"><div class="ds-title">Atti depositati</div>';
-  sorted.forEach(s=>{
-    const a=parseAtto(s);if(!a.tipo)return;
-    h+=`<div class="dt-row">
-      <div class="dt-tipo">${esc(a.tipo)}</div>
-      <div class="dt-meta">${esc(a.parte)}${a.data?' &nbsp;·&nbsp; <span class="dt-data">'+esc(a.data)+'</span>':''}</div>
-    </div>`;
-  });
+  var sorted=sortByDate(list,function(s){return parseAtto(s).data;});
+  var h='<div class="ds"><div class="ds-title">Atti depositati</div>';
+  sorted.forEach(function(s){var a=parseAtto(s);if(!a.tipo)return;h+='<div class="dt-row"><div class="dt-tipo">'+esc(a.tipo)+'</div><div class="dt-meta">'+esc(a.parte)+(a.data?' &nbsp;·&nbsp; <span class="dt-data">'+esc(a.data)+'</span>':'')+'</div></div>';});
   return h+'</div>';
 }
-
 function renderDisc(list){
   if(!list||!list.length)return'';
-  const sorted=sortByDate(list,s=>firstDate(s));
-  let h='<div class="ds"><div class="ds-title">Discussioni</div>';
-  sorted.forEach(s=>{
-    const d=parseDisc(s);if(!d.data)return;
-    h+=`<div class="dt-row">
-      <div class="dt-data">${esc(d.data)} — ${esc(d.tipo)}</div>
-      <div class="dt-meta">${esc(d.giudizio)}${d.magistrato?' &nbsp;·&nbsp; '+esc(d.magistrato):''}</div>
-      ${d.esito?'<div class="dt-esito">'+esc(d.esito)+'</div>':''}
-    </div>`;
-  });
+  var sorted=sortByDate(list,function(s){return firstDate(s);});
+  var h='<div class="ds"><div class="ds-title">Discussioni</div>';
+  sorted.forEach(function(s){var d=parseDisc(s);if(!d.data)return;h+='<div class="dt-row"><div class="dt-data">'+esc(d.data)+' — '+esc(d.tipo)+'</div><div class="dt-meta">'+esc(d.giudizio)+(d.magistrato?' &nbsp;·&nbsp; '+esc(d.magistrato):'')+'</div>'+(d.esito?'<div class="dt-esito">'+esc(d.esito)+'</div>':'')+'</div>';});
   return h+'</div>';
 }
-
 function renderColl(list){
   if(!list||!list.length)return'';
-  const sorted=sortByDate(list,s=>parseColl(s).data_pubbl);
-  let h='<div class="ds"><div class="ds-title">Provvedimenti Collegiali</div>';
-  sorted.forEach(s=>{
-    const p=parseColl(s);if(!p.tipo)return;
-    h+=`<div class="dt-row">
-      <div class="dt-tipo">${esc(p.tipo)}</div>
-      <div class="dt-data">${esc(p.data_pubbl)}</div>
-      <div class="dt-meta">${esc(p.magistrato)}</div>
-      ${p.esito?'<div class="dt-esito">'+esc(p.esito)+'</div>':''}
-    </div>`;
-  });
+  var sorted=sortByDate(list,function(s){return parseColl(s).data_pubbl;});
+  var h='<div class="ds"><div class="ds-title">Provvedimenti Collegiali</div>';
+  sorted.forEach(function(s){var p=parseColl(s);if(!p.tipo)return;h+='<div class="dt-row"><div class="dt-tipo">'+esc(p.tipo)+'</div><div class="dt-data">'+esc(p.data_pubbl)+'</div><div class="dt-meta">'+esc(p.magistrato)+'</div>'+(p.esito?'<div class="dt-esito">'+esc(p.esito)+'</div>':'')+'</div>';});
+  return h+'</div>';
+}
+function renderMono(list){
+  if(!list||!list.length)return'';
+  var sorted=sortByDate(list,function(s){return parseMono(s).data;});
+  var h='<div class="ds"><div class="ds-title">Provvedimenti Monocratici</div>';
+  sorted.forEach(function(s){var p=parseMono(s);if(!p.tipo)return;h+='<div class="dt-row"><div class="dt-tipo">'+esc(p.tipo)+'</div><div class="dt-data">'+esc(p.data)+'</div><div class="dt-meta">'+esc(p.magistrato)+'</div>'+(p.esito?'<div class="dt-esito">'+esc(p.esito)+'</div>':'')+'</div>';});
   return h+'</div>';
 }
 
-function renderMono(list){
-  if(!list||!list.length)return'';
-  const sorted=sortByDate(list,s=>parseMono(s).data);
-  let h='<div class="ds"><div class="ds-title">Provvedimenti Monocratici</div>';
-  sorted.forEach(s=>{
-    const p=parseMono(s);if(!p.tipo)return;
-    h+=`<div class="dt-row">
-      <div class="dt-tipo">${esc(p.tipo)}</div>
-      <div class="dt-data">${esc(p.data)}</div>
-      <div class="dt-meta">${esc(p.magistrato)}</div>
-      ${p.esito?'<div class="dt-esito">'+esc(p.esito)+'</div>':''}
-    </div>`;
-  });
-  return h+'</div>';
+function oggettoBox(testo,cls){
+  cls=cls||'';
+  if(!testo)return '<div class="card-oggetto empty">Oggetto non ancora disponibile</div>';
+  return '<div class="card-oggetto '+cls+'">'+esc(testo)+'</div>';
 }
 
 function renderRicorsi(data){
-  const list=data.ricorsi_monitorati||[];
+  var list=data.ricorsi_monitorati||[];
   if(!list.length)return'<div class="empty"><div class="empty-ico">📋</div><div class="empty-txt">Nessun ricorso monitorato</div></div>';
-  const sorted=sortByDate(list,r=>r.data_deposito);
-  let h='';
-  sorted.forEach((r,i)=>{
-    const nrg=r.nrg||(r.anno+'/'+r.numero);
-    const hasPM=(r.provvedimenti_monocratici||[]).length;
-    const hasPC=(r.provvedimenti_collegiali||[]).length;
-    const hasD=(r.discussioni||[]).length;
-    let prossimaUd='';
+  var sorted=sortByDate(list,function(r){return r.data_deposito;});
+  var h='';
+  sorted.forEach(function(r,i){
+    var nrg=r.nrg||(r.anno+'/'+r.numero);
+    var hasPM=(r.provvedimenti_monocratici||[]).length;
+    var hasPC=(r.provvedimenti_collegiali||[]).length;
+    var hasD=(r.discussioni||[]).length;
+    var prossimaUd='';
     if(r.discussioni&&r.discussioni.length){
-      const fut=r.discussioni.map(d=>parseDisc(d)).filter(d=>!d.esito||d.esito==='').sort((a,b)=>{const da=parseDate(a.data),db=parseDate(b.data);return da&&db?da-db:0;});
+      var fut=r.discussioni.map(parseDisc).filter(function(d){return !d.esito||d.esito==='';});
+      fut.sort(function(a,b){var da=parseDate(a.data),db=parseDate(b.data);return da&&db?da-db:0;});
       if(fut.length)prossimaUd=fut[0].data+' — '+fut[0].tipo;
     }
-    h+=`<div class="card">
-      <div class="card-hd">
-        <div class="card-nrg">NRG ${esc(nrg)}</div>
-        <span class="badge b-blue">${esc(r.tipo_ricorso||'N/D')}</span>
-      </div>
-      ${r.oggetto?'<div class="card-oggetto">${r.oggetto ? esc(r.oggetto) : '<span style="color:var(--muted)">Oggetto non ancora disponibile</span>'}</div>
-      <div class="cr"><span class="ck">Deposito</span><span class="cv">${esc(r.data_deposito||'N/D')}</span></div>
-      <div class="cr"><span class="ck">Sezione</span><span class="cv">${esc(r.sezione||'N/D')}</span></div>
-      ${prossimaUd?'<div class="cr"><span class="ck">Pross. ud.</span><span class="cv" style="color:var(--gold)">'+esc(prossimaUd)+'</span></div>':''}
-      <div class="card-pills">
-        ${hasD?'<span class="badge b-gold">📅 '+hasD+' udienze</span>':''}
-        ${hasPC?'<span class="badge b-blue">⚖️ '+hasPC+' coll.</span>':''}
-        ${hasPM?'<span class="badge b-orange">📄 '+hasPM+' mono.</span>':''}
-      </div>
-      <div class="details" id="det-${i}">
-        ${renderParti(r.parti)}
-        ${renderAtti(r.atti)}
-        ${renderDisc(r.discussioni)}
-        ${renderColl(r.provvedimenti_collegiali)}
-        ${renderMono(r.provvedimenti_monocratici)}
-      </div>
-      <button class="expand-btn" onclick="toggle(${i})">Dettagli <span class="arr" id="arr-${i}">▼</span></button>
-    </div>`;
+    h+='<div class="card">';
+    h+='<div class="card-header"><div class="card-nrg">NRG <span>'+esc(nrg)+'</span></div><span class="badge b-blue">'+esc(r.tipo_ricorso||'N/D')+'</span></div>';
+    h+=oggettoBox(r.oggetto);
+    h+='<div class="cr"><span class="ck">Deposito</span><span class="cv date">'+esc(r.data_deposito||'N/D')+'</span></div>';
+    h+='<div class="cr"><span class="ck">Sezione</span><span class="cv">'+esc(r.sezione||'N/D')+'</span></div>';
+    if(prossimaUd)h+='<div class="cr-prossud"><span class="ck">Pross. ud.</span><span class="cv highlight">'+esc(prossimaUd)+'</span></div>';
+    var pills=[];
+    if(hasD)pills.push('<span class="badge b-orange">'+hasD+' udienze</span>');
+    if(hasPC)pills.push('<span class="badge b-blue">'+hasPC+' coll.</span>');
+    if(hasPM)pills.push('<span class="badge b-green">'+hasPM+' mono.</span>');
+    if(pills.length)h+='<div class="card-pills">'+pills.join('')+'</div>';
+    h+='<div class="details" id="det-'+i+'">';
+    h+='<div class="card-sep"></div>';
+    h+=renderParti(r.parti);
+    h+=renderAtti(r.atti);
+    h+=renderDisc(r.discussioni);
+    h+=renderColl(r.provvedimenti_collegiali);
+    h+=renderMono(r.provvedimenti_monocratici);
+    h+='</div>';
+    h+='<button class="expand-btn" onclick="toggle('+i+')">Dettagli <span class="arr" id="arr-'+i+'">▾</span></button>';
+    h+='</div>';
   });
   return h;
 }
 
 function renderProvvedimenti(data){
-  const coll=data.provvedimenti_collegiali||[];
-  const mono=data.provvedimenti_monocratici||[];
-
-  // Raccoglie ultimi provvedimenti dai ricorsi monitorati
-  let ultimi=[];
-  (data.ricorsi_monitorati||[]).forEach(r=>{
-    (r.provvedimenti_collegiali||[]).forEach(s=>{
-      const p=parseColl(s);if(p.tipo)ultimi.push({...p,nrg:r.nrg,kind:'Collegiale'});
-    });
-    (r.provvedimenti_monocratici||[]).forEach(s=>{
-      const p=parseMono(s);if(p.tipo)ultimi.push({tipo:p.tipo,magistrato:p.magistrato,data_pubbl:p.data,esito:p.esito,nrg:r.nrg,kind:'Monocratico'});
-    });
+  var coll=data.provvedimenti_collegiali||[];
+  var mono=data.provvedimenti_monocratici||[];
+  var ultimi=[];
+  (data.ricorsi_monitorati||[]).forEach(function(r){
+    (r.provvedimenti_collegiali||[]).forEach(function(s){var p=parseColl(s);if(p.tipo)ultimi.push({tipo:p.tipo,magistrato:p.magistrato,data_pubbl:p.data_pubbl,esito:p.esito,nrg:r.nrg,kind:'Collegiale'});});
+    (r.provvedimenti_monocratici||[]).forEach(function(s){var p=parseMono(s);if(p.tipo)ultimi.push({tipo:p.tipo,magistrato:p.magistrato,data_pubbl:p.data,esito:p.esito,nrg:r.nrg,kind:'Monocratico'});});
   });
-  ultimi=sortByDate(ultimi,p=>p.data_pubbl);
-
-  let h='';
-
+  ultimi=sortByDate(ultimi,function(p){return p.data_pubbl;});
+  var h='';
   if(!coll.length&&!mono.length){
     h+='<div class="empty"><div class="empty-ico">⚖️</div><div class="empty-txt">Nessun provvedimento nelle ultime 48h</div></div>';
   } else {
-    const collS=sortByDate(coll,p=>p.dataPubblicazione);
-    const monoS=sortByDate(mono,p=>p.dataPubblicazione);
-    h+='<div class="sec-label">Collegiali</div>';
-    collS.forEach(p=>{h+=`<div class="prov-card"><div class="prov-nrg">${esc(p.nrgFascicolo||'N/D')}</div><div class="cr"><span class="ck">Tipo</span><span class="cv">${esc(p.tipoProvvedimento||'N/D')}</span></div><div class="cr"><span class="ck">Pubbl.</span><span class="cv" style="color:var(--gold)">${esc(p.dataPubblicazione||'N/D')}</span></div><div class="cr"><span class="ck">Parte</span><span class="cv">${esc(p.parte||'N/D')}</span></div></div>`;});
-    h+='<div class="sec-label">Monocratici</div>';
-    monoS.forEach(p=>{h+=`<div class="prov-card"><div class="prov-nrg">${esc(p.nrgFascicolo||'N/D')}</div><div class="cr"><span class="ck">Tipo</span><span class="cv">${esc(p.tipoProvvedimento||'N/D')}</span></div><div class="cr"><span class="ck">Pubbl.</span><span class="cv" style="color:var(--gold)">${esc(p.dataPubblicazione||'N/D')}</span></div><div class="cr"><span class="ck">Parte</span><span class="cv">${esc(p.parte||'N/D')}</span></div></div>`;});
+    h+='<div class="section-header">Collegiali</div>';
+    sortByDate(coll,function(p){return p.dataPubblicazione;}).forEach(function(p){h+='<div class="prov-card"><div class="prov-nrg">NRG <span>'+esc(p.nrgFascicolo||'N/D')+'</span></div><div class="cr"><span class="ck">Tipo</span><span class="cv">'+esc(p.tipoProvvedimento||'N/D')+'</span></div><div class="cr"><span class="ck">Pubbl.</span><span class="cv date">'+esc(p.dataPubblicazione||'N/D')+'</span></div><div class="cr"><span class="ck">Parte</span><span class="cv">'+esc(p.parte||'N/D')+'</span></div></div>';});
+    h+='<div class="section-header">Monocratici</div>';
+    sortByDate(mono,function(p){return p.dataPubblicazione;}).forEach(function(p){h+='<div class="prov-card"><div class="prov-nrg">NRG <span>'+esc(p.nrgFascicolo||'N/D')+'</span></div><div class="cr"><span class="ck">Tipo</span><span class="cv">'+esc(p.tipoProvvedimento||'N/D')+'</span></div><div class="cr"><span class="ck">Pubbl.</span><span class="cv date">'+esc(p.dataPubblicazione||'N/D')+'</span></div><div class="cr"><span class="ck">Parte</span><span class="cv">'+esc(p.parte||'N/D')+'</span></div></div>';});
   }
-
   if(ultimi.length){
-    h+='<div class="sec-label">Ultimi provvedimenti — ricorsi monitorati</div>';
-    ultimi.slice(0,15).forEach(p=>{
-      h+=`<div class="prov-card">
-        <div class="prov-nrg">${esc(p.nrg)}</div>
-        <div class="cr"><span class="ck">Tipo</span><span class="cv">${esc(p.tipo)}</span></div>
-        <div class="cr"><span class="ck">Data</span><span class="cv" style="color:var(--gold)">${esc(p.data_pubbl||'N/D')}</span></div>
-        <div class="cr"><span class="ck">Magistrato</span><span class="cv">${esc(p.magistrato||'N/D')}</span></div>
-        ${p.esito?'<div class="cr"><span class="ck">Esito</span><span class="cv" style="color:var(--green)">'+esc(p.esito)+'</span></div>':''}
-        <span class="badge ${p.kind==='Collegiale'?'b-blue':'b-orange'}" style="margin-top:6px;display:inline-block">${p.kind}</span>
-      </div>`;
+    h+='<div class="section-header">Ultimi provvedimenti — ricorsi monitorati</div>';
+    ultimi.slice(0,15).forEach(function(p){
+      h+='<div class="prov-card"><div class="prov-nrg">NRG <span>'+esc(p.nrg)+'</span></div>';
+      h+='<div class="cr"><span class="ck">Tipo</span><span class="cv">'+esc(p.tipo)+'</span></div>';
+      h+='<div class="cr"><span class="ck">Data</span><span class="cv date">'+esc(p.data_pubbl||'N/D')+'</span></div>';
+      h+='<div class="cr"><span class="ck">Magistrato</span><span class="cv">'+esc(p.magistrato||'N/D')+'</span></div>';
+      if(p.esito)h+='<div class="cr"><span class="ck">Esito</span><span class="cv" style="color:#1a7a3a;font-weight:500">'+esc(p.esito)+'</span></div>';
+      h+='<span class="badge '+(p.kind==='Collegiale'?'b-blue':'b-green')+'" style="margin-top:8px;display:inline-block">'+p.kind+'</span></div>';
     });
   }
   return h;
 }
 
 function renderNuovi(data){
-  const ultimo=data.ultimo_ricorso||0;
-  const anno=data.anno_nuovi||2026;
-  const ricorsi=data.ricorsi_monitorati||[];
-  const ultimoR=ricorsi.find(r=>r.anno===anno&&r.numero===ultimo);
-  const oggettoUltimo=ultimoR?ultimoR.oggetto:'';
-
-  let h=`<div class="stat-hero">
-    <div class="stat-hero-label">Ultimo ricorso depositato — Anno ${anno}</div>
-    <div class="stat-hero-num">${ultimo}</div>
-    <div class="stat-hero-sub">NRG ${anno}${String(ultimo).padStart(6,'0')}</div>
-    ${oggettoUltimo?'<div class="stat-hero-oggetto">'+esc(oggettoUltimo)+'</div>':''}
-  </div>`;
-
-  const correnti=ricorsi.filter(r=>r.anno===anno).sort((a,b)=>b.numero-a.numero);
+  var ultimo=data.ultimo_ricorso||0;
+  var anno=data.anno_nuovi||2026;
+  var ricorsi=data.ricorsi_monitorati||[];
+  var ultimoR=null;
+  ricorsi.forEach(function(r){if(r.anno===anno&&r.numero===ultimo)ultimoR=r;});
+  var oggettoUltimo=ultimoR?ultimoR.oggetto:'';
+  var h='<div class="hero-stat">';
+  h+='<div class="hero-stat-label">Ultimo ricorso depositato — Anno '+anno+'</div>';
+  h+='<div class="hero-stat-num"><span>'+ultimo+'</span></div>';
+  h+='<div class="hero-stat-sub">NRG '+anno+String(ultimo).padStart(6,'0')+'</div>';
+  h+=(oggettoUltimo?'<div class="hero-stat-oggetto">'+esc(oggettoUltimo)+'</div>':'<div class="hero-stat-oggetto empty">Oggetto non ancora disponibile</div>');
+  h+='</div>';
+  var correnti=ricorsi.filter(function(r){return r.anno===anno;}).sort(function(a,b){return b.numero-a.numero;});
   if(correnti.length){
-    h+='<div class="sec-label">Ricorsi '+anno+' monitorati</div>';
-    correnti.forEach(r=>{
-      h+=`<div class="card">
-        <div class="card-hd"><div class="card-nrg">N. ${r.numero}</div><span class="badge b-green">${anno}</span></div>
-        ${r.oggetto?'<div class="card-oggetto">'+esc(r.oggetto)+'</div>':''}
-        <div class="cr"><span class="ck">Deposito</span><span class="cv">${esc(r.data_deposito||'N/D')}</span></div>
-      </div>`;
+    h+='<div class="section-header">Ricorsi '+anno+' monitorati</div>';
+    correnti.forEach(function(r){
+      h+='<div class="card">';
+      h+='<div class="card-header"><div class="card-nrg">N. <span>'+r.numero+'</span></div><span class="badge b-green">'+anno+'</span></div>';
+      h+=oggettoBox(r.oggetto);
+      h+='<div class="cr"><span class="ck">Deposito</span><span class="cv date">'+esc(r.data_deposito||'N/D')+'</span></div>';
+      h+='</div>';
     });
   }
   return h;
 }
 
+function trovaUltimaVariazione(data){
+  var oggi=new Date(); oggi.setHours(0,0,0,0);
+  var maxData=null;
+  (data.ricorsi_monitorati||[]).forEach(function(r){
+    ['discussioni','provvedimenti_collegiali','provvedimenti_monocratici','atti'].forEach(function(campo){
+      (r[campo]||[]).forEach(function(s){
+        var m=s.match(/(\d{2}\/\d{2}\/\d{4})/);
+        if(!m)m=s.match(/(\d{4}-\d{2}-\d{2})/);
+        if(m){
+          var parts=m[1].includes('/')?m[1].split('/'):m[1].split('-').reverse();
+          var d=new Date(+parts[2],+parts[1]-1,+parts[0]);
+          if(d<=oggi&&(!maxData||d>maxData))maxData=d;
+        }
+      });
+    });
+  });
+  if(maxData){
+    var dd=String(maxData.getDate()).padStart(2,'0');
+    var mm=String(maxData.getMonth()+1).padStart(2,'0');
+    return dd+'/'+mm+'/'+maxData.getFullYear()+' (da dati)';
+  }
+  return 'Nessuna ancora';
+}
+
 function toggle(i){
-  const det=document.getElementById('det-'+i);
-  const arr=document.getElementById('arr-'+i);
+  var det=document.getElementById('det-'+i);
+  var arr=document.getElementById('arr-'+i);
   if(!det)return;
   det.classList.toggle('open');
   arr.classList.toggle('open');
 }
 
 function showTab(name,btn){
-  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));
-  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('on'));
+  document.querySelectorAll('.tab').forEach(function(t){t.classList.remove('on');});
+  document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('on');});
   if(btn)btn.classList.add('on');
-  const panel=document.getElementById('panel-'+name);
+  var panel=document.getElementById('panel-'+name);
   if(panel)panel.classList.add('on');
 }
 
-let isLoading=false;
-
-async function loadData(){
+var isLoading=false;
+function loadData(){
   if(isLoading)return;
   isLoading=true;
-  const ico=document.getElementById('refreshIco');
+  var ico=document.getElementById('refreshIco');
   ico.classList.add('spinning');
-  try{
-    const url='./dashboard_data.json?t='+Date.now();
-    const resp=await fetch(url);
-    if(!resp.ok)throw new Error('HTTP '+resp.status);
-    const data=await resp.json();
-    document.getElementById('lastUp').textContent='Aggiornato: '+(data.ultimo_aggiornamento||'—');
-    document.getElementById('liveLabel').textContent='LIVE';
-    document.getElementById('liveLabel').style.color='var(--green)';
-    document.getElementById('cnt-ricorsi').innerHTML=renderRicorsi(data);
-    document.getElementById('cnt-provv').innerHTML=renderProvvedimenti(data);
-    document.getElementById('cnt-nuovi').innerHTML=renderNuovi(data);
-  }catch(e){
-    document.getElementById('lastUp').textContent='Errore nel caricamento';
-    document.getElementById('liveLabel').textContent='OFFLINE';
-    document.getElementById('liveLabel').style.color='var(--red)';
-    const msg='<div class="empty"><div class="empty-ico">⚠️</div><div class="empty-txt">Impossibile caricare i dati.<br>Riprova tra qualche secondo.</div></div>';
-    document.getElementById('cnt-ricorsi').innerHTML=document.getElementById('cnt-provv').innerHTML=document.getElementById('cnt-nuovi').innerHTML=msg;
-    console.error(e);
-  }finally{
-    ico.classList.remove('spinning');
-    isLoading=false;
-  }
+  fetch('https://raw.githubusercontent.com/rolmeo/monitor-tar-fvg/main/dashboard_data.json?t='+Date.now())
+    .then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json();})
+    .then(function(data){
+      document.getElementById('lastUp').textContent='Aggiornato: '+(data.ultimo_aggiornamento||'—');
+      document.getElementById('lastCheck').textContent=(data.ultimo_controllo||'—');
+      var ultimaVar=data.ultima_variazione||trovaUltimaVariazione(data);
+      document.getElementById('lastChange').textContent=ultimaVar;
+      document.getElementById('liveLabel').textContent='Live';
+      document.getElementById('statusDot').style.background='var(--green)';
+      document.getElementById('cnt-ricorsi').innerHTML=renderRicorsi(data);
+      document.getElementById('cnt-provv').innerHTML=renderProvvedimenti(data);
+      document.getElementById('cnt-nuovi').innerHTML=renderNuovi(data);
+      document.getElementById('cnt-agenda').innerHTML=renderAgenda(data);
+    })
+    .catch(function(e){
+      document.getElementById('lastUp').textContent='Errore nel caricamento';
+      document.getElementById('liveLabel').textContent='Offline';
+      document.getElementById('liveLabel').style.color='var(--red)';
+      document.getElementById('statusDot').style.background='var(--red)';
+      var msg='<div class="empty"><div class="empty-ico">⚠️</div><div class="empty-txt">Impossibile caricare i dati.<br>Riprova tra qualche secondo.</div></div>';
+      document.getElementById('cnt-ricorsi').innerHTML=msg;
+      document.getElementById('cnt-provv').innerHTML=msg;
+      document.getElementById('cnt-nuovi').innerHTML=msg;
+      console.error(e);
+    })
+    .finally(function(){
+      ico.classList.remove('spinning');
+      isLoading=false;
+    });
 }
 
 loadData();
