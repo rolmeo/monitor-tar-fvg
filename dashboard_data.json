@@ -1,5 +1,5 @@
 {
-  "ultimo_aggiornamento": "09/03/2026 09:27",
+  "ultimo_aggiornamento": "09/03/2026 09:28",
   "provvedimenti_collegiali": [],
   "provvedimenti_monocratici": [],
   "ultimo_ricorso": 122,
@@ -341,10 +341,12 @@
       "parti": [
         "RICORRENTE | 05/03/2026 | ",
         "RESISTENTE |  | ",
-        "CONTROINTERESSATO |  | "
+        "CONTROINTERESSATO |  | ",
+        "CONTROINTERESSATO | 09/03/2026 | "
       ],
       "atti": [
         "ISTANZA DI FISSAZIONE UDIENZA | 2026000110 | RICORRENTE PRINCIPALE | 05/03/2026",
+        "ATTO DI COSTITUZIONE | 2026001054 | CONTROINTERESSATO | 09/03/2026",
         "RICORSO | 2026001015 | RICORRENTE PRINCIPALE | 05/03/2026"
       ],
       "discussioni": [],
@@ -373,5 +375,5 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_controllo": "09/03/2026 09:27"
+  "ultimo_controllo": "09/03/2026 09:28"
 }
