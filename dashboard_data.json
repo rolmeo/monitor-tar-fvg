@@ -1,5 +1,5 @@
 {
-  "ultimo_aggiornamento": "10/03/2026 11:45",
+  "ultimo_aggiornamento": "10/03/2026 11:50",
   "provvedimenti_collegiali": [],
   "provvedimenti_monocratici": [],
   "ultimo_ricorso": 122,
@@ -219,7 +219,8 @@
         "CONTRIBUTO UNIFICATO | 2026000493 | RICORRENTE PRINCIPALE | 29/01/2026",
         "MOTIVI AGGIUNTI | 2026000464 | RICORRENTE PRINCIPALE | 28/01/2026",
         "MOTIVI AGGIUNTI | 2026000995 | RICORRENTE PRINCIPALE | 04/03/2026",
-        "ISTANZA DI FISSAZIONE UDIENZA | 2025000675 | RICORRENTE PRINCIPALE | 22/12/2025"
+        "ISTANZA DI FISSAZIONE UDIENZA | 2025000675 | RICORRENTE PRINCIPALE | 22/12/2025",
+        "ALTRO | 2026001074 | AMMINISTRAZIONE INTIMATA | 10/03/2026"
       ],
       "discussioni": [
         "22/04/2026 | UDIENZA PUBBLICA |  | DA ASSEGNARE MAGISTRATO | Merito | ",
@@ -375,5 +376,5 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_controllo": "10/03/2026 11:45"
+  "ultimo_controllo": "10/03/2026 11:50"
 }
