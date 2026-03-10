@@ -1,5 +1,5 @@
 {
-  "ultimo_aggiornamento": "10/03/2026 14:50",
+  "ultimo_aggiornamento": "10/03/2026 14:55",
   "provvedimenti_collegiali": [],
   "provvedimenti_monocratici": [],
   "ultimo_ricorso": 122,
@@ -365,11 +365,12 @@
       "oggetto": "CONCESSIONE DEMANIALE MARITTIMA CON FINALITÀ TURISTICO-RICREATIVA SITA IN VIA LUNGOMARE TRIESTE, STABILIMENTO BALNEARE “PORTOFINO” - INDIVIDUATA DAL PUD CON IL NUMERO 188 - AGGIUDICAZIONE",
       "parti": [
         "RICORRENTE | 06/03/2026 | ",
-        "RESISTENTE |  | ",
+        "RESISTENTE | 10/03/2026 | ",
         "CONTROINTERESSATO |  | "
       ],
       "atti": [
         "ISTANZA DI FISSAZIONE UDIENZA | 2026000111 | RICORRENTE PRINCIPALE | 06/03/2026",
+        "ATTO DI COSTITUZIONE | 2026001076 | AMMINISTRAZIONE INTIMATA | 10/03/2026",
         "RICORSO | 2026001024 | RICORRENTE PRINCIPALE | 06/03/2026"
       ],
       "discussioni": [],
@@ -377,5 +378,5 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_controllo": "10/03/2026 14:50"
+  "ultimo_controllo": "10/03/2026 14:55"
 }
