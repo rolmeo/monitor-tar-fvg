@@ -1,8 +1,8 @@
 {
-  "ultimo_aggiornamento": "11/03/2026 16:48",
+  "ultimo_aggiornamento": "11/03/2026 16:53",
   "provvedimenti_collegiali": [],
   "provvedimenti_monocratici": [],
-  "ultimo_ricorso": 122,
+  "ultimo_ricorso": 123,
   "anno_nuovi": 2026,
   "ricorsi_monitorati": [
     {
@@ -381,5 +381,5 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_controllo": "11/03/2026 16:48"
+  "ultimo_controllo": "11/03/2026 16:53"
 }
