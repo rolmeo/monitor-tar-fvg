@@ -1,6 +1,37 @@
 {
-  "ultimo_aggiornamento": "13/03/2026 10:05",
-  "provvedimenti_collegiali": [],
+  "ultimo_aggiornamento": "13/03/2026 10:08",
+  "provvedimenti_collegiali": [
+    {
+      "nrgFascicolo": "202600034",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "CC",
+      "dataUdienza": "27/01/2026",
+      "numProvvedimento": "202600085",
+      "dataPubblicazione": "13/03/2026",
+      "tipoProvvedimento": "SENTENZA BREVE",
+      "codiceTipoProvvedimento": "20",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RESPINGE     ",
+      "nomeFile": "202600085_20.xml"
+    },
+    {
+      "nrgFascicolo": "202600033",
+      "sezione": "1",
+      "parte": "COOPERATIVA ITACA SOCIETÀ COOPERATIVA SOCIALE ONLUS",
+      "tipoUdienza": "CC",
+      "dataUdienza": "24/02/2026",
+      "numProvvedimento": "202600084",
+      "dataPubblicazione": "13/03/2026",
+      "tipoProvvedimento": "SENTENZA BREVE",
+      "codiceTipoProvvedimento": "20",
+      "relatore": "SINIGOI MANUELA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RESPINGE     ",
+      "nomeFile": "202600084_20.xml"
+    }
+  ],
   "provvedimenti_monocratici": [],
   "ultimo_ricorso": 125,
   "anno_nuovi": 2026,
@@ -382,5 +413,6 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_controllo": "13/03/2026 10:05"
+  "ultimo_controllo": "13/03/2026 10:08",
+  "ultima_variazione": "13/03/2026 10:08"
 }
