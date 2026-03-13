@@ -1,5 +1,5 @@
 {
-  "ultimo_ricorso": 125,
+  "ultimo_ricorso": 126,
   "anno_nuovi": 2026,
   "ricorsi_monitorati": [
     {
@@ -80,10 +80,16 @@
       "parti": [
         "RICORRENTE | 06/02/2026 | ",
         "CONTROINTERESSATO | 16/02/2026 | ",
-        "RESISTENTE | 13/02/2026 | "
+        "RESISTENTE | 13/02/2026 | ",
+        "ALTRE PARTI NON RITUALI |  | ",
+        "ALTRE PARTI NON RITUALI |  | ",
+        "ALTRE PARTI NON RITUALI |  | ",
+        "ALTRE PARTI NON RITUALI |  | ",
+        "ALTRE PARTI NON RITUALI |  | "
       ],
       "atti": [
         "DOCUMENTI | 2026000659 | RICORRENTE PRINCIPALE | 06/02/2026",
+        "MOTIVI AGGIUNTI | 2026001106 | RICORRENTE PRINCIPALE | 13/03/2026",
         "DOCUMENTI | 2026000657 | RICORRENTE PRINCIPALE | 06/02/2026",
         "MEMORIA | 2026000865 | AMMINISTRAZIONE INTIMATA | 21/02/2026",
         "MEMORIA | 2026000854 | CONTROINTERESSATO | 21/02/2026",
@@ -401,6 +407,6 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "13/03/2026 18:15",
-  "ultimo_controllo": "13/03/2026 18:15"
+  "ultimo_aggiornamento": "13/03/2026 18:20",
+  "ultimo_controllo": "13/03/2026 18:20"
 }
