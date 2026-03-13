@@ -1,5 +1,5 @@
 {
-  "ultimo_aggiornamento": "13/03/2026 10:55",
+  "ultimo_aggiornamento": "13/03/2026 11:00",
   "provvedimenti_collegiali": [],
   "provvedimenti_monocratici": [],
   "ultimo_ricorso": 125,
@@ -380,7 +380,29 @@
       "discussioni": [],
       "provvedimenti_collegiali": [],
       "provvedimenti_monocratici": []
+    },
+    {
+      "nrg": "2026000123",
+      "anno": 2026,
+      "numero": 123,
+      "sezione": "1",
+      "data_deposito": "11/03/2026",
+      "tipo_ricorso": "ORDINARIO",
+      "oggetto": "AGGIUDICAZIONE CONCESSIONE DEMANIALE MARITTIMA CON FINALITÀ TURISTICO-RICREATIVA SITA IN VIA LUNGOMARE TRIESTE, STAB. BALNEARE «BAGNO ITALIA», PUD N. 134",
+      "parti": [
+        "RICORRENTE | 11/03/2026 | ",
+        "RESISTENTE |  | ",
+        "CONTROINTERESSATO | 11/03/2026 | "
+      ],
+      "atti": [
+        "RICORSO | 2026001087 | RICORRENTE PRINCIPALE | 11/03/2026",
+        "ATTO DI COSTITUZIONE | 2026001088 | CONTROINTERESSATO | 11/03/2026",
+        "ISTANZA DI FISSAZIONE UDIENZA | 2026000113 | RICORRENTE PRINCIPALE | 11/03/2026"
+      ],
+      "discussioni": [],
+      "provvedimenti_collegiali": [],
+      "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_controllo": "13/03/2026 10:55"
+  "ultimo_controllo": "13/03/2026 11:00"
 }
