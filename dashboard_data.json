@@ -405,8 +405,33 @@
       "discussioni": [],
       "provvedimenti_collegiali": [],
       "provvedimenti_monocratici": []
+    },
+    {
+      "nrg": "2026000126",
+      "anno": 2026,
+      "numero": 126,
+      "sezione": "1",
+      "data_deposito": "13/03/2026",
+      "tipo_ricorso": "ORDINARIO",
+      "oggetto": "AVVISO DI SELEZIONE PUBBLICA N. 3 PER L’AFFIDAMENTO DI UNA CONCESSIONE DEMANIALE MARITTIMA CON FINALITÀ TURISTICO-RICREATIVA SITA IN VIA LUNGOMARE TRIESTE, STAB. BALNEARE «GABBIANO», PUD N. 219 - AGGI",
+      "parti": [
+        "RICORRENTE | 13/03/2026 | ",
+        "RESISTENTE |  | ",
+        "CONTROINTERESSATO |  | ",
+        "CONTROINTERESSATO |  | ",
+        "CONTROINTERESSATO |  | ",
+        "CONTROINTERESSATO |  | "
+      ],
+      "atti": [
+        "ISTANZA DI FISSAZIONE UDIENZA | 2026000118 | RICORRENTE PRINCIPALE | 13/03/2026",
+        "DOMANDA DI MISURE CAUTELARI MONOCRATICHE ART.56 C.P.A. | 2026001107 | RICORRENTE PRINCIPALE | 13/03/2026",
+        "RICORSO | 2026001105 | RICORRENTE PRINCIPALE | 13/03/2026"
+      ],
+      "discussioni": [],
+      "provvedimenti_collegiali": [],
+      "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "15/03/2026 14:28",
-  "ultimo_controllo": "15/03/2026 14:28"
+  "ultimo_aggiornamento": "15/03/2026 14:32",
+  "ultimo_controllo": "15/03/2026 14:32"
 }
