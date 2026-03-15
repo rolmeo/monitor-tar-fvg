@@ -432,6 +432,39 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "15/03/2026 16:43",
-  "ultimo_controllo": "15/03/2026 16:43"
+  "ultimo_aggiornamento": "15/03/2026 16:45",
+  "ultimo_controllo": "15/03/2026 16:45",
+  "provvedimenti_collegiali": [
+    {
+      "nrgFascicolo": "202600107",
+      "sezione": "1",
+      "parte": "SOCIETA' AGRICOLA ZUALT DI PONTELLO UGO & C. S.S.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "10/03/2026",
+      "numProvvedimento": "202600089",
+      "dataPubblicazione": "14/03/2026",
+      "tipoProvvedimento": "SENTENZA BREVE",
+      "codiceTipoProvvedimento": "20",
+      "relatore": "SINIGOI MANUELA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "DICHIARA INAMMISSIBILE     ",
+      "nomeFile": "202600089_20.xml"
+    },
+    {
+      "nrgFascicolo": "202600035",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "CC",
+      "dataUdienza": "27/01/2026",
+      "numProvvedimento": "202600088",
+      "dataPubblicazione": "14/03/2026",
+      "tipoProvvedimento": "SENTENZA BREVE",
+      "codiceTipoProvvedimento": "20",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "ACCOGLIE     ",
+      "nomeFile": "202600088_20.xml"
+    }
+  ],
+  "provvedimenti_monocratici": []
 }
