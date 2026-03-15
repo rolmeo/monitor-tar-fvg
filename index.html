@@ -5,213 +5,291 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-mobile-web-app-title" content="TAR Monitor">
-<title>TAR Friuli — Monitor</title>
+<meta name="apple-mobile-web-app-title" content="Monitor Ricorsi">
+<title>Monitor Ricorsi — TAR / CdS</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --white: #ffffff;
-  --off-white: #f5f5f7;
+  --white:      #ffffff;
+  --off-white:  #f5f5f7;
   --light-gray: #e8e8ed;
-  --mid-gray: #d2d2d7;
-  --gray: #86868b;
-  --dark-gray: #424245;
+  --mid-gray:   #d2d2d7;
+  --gray:       #86868b;
+  --dark-gray:  #424245;
   --near-black: #1d1d1f;
-  --black: #000000;
-  --blue: #0071e3;
+  --blue:       #0071e3;
   --blue-light: #2997ff;
-  --blue-bg: #f0f6ff;
-  --green: #30d158;
-  --green-bg: #f0faf3;
-  --orange: #ff9f0a;
-  --orange-bg: #fff8ee;
-  --red: #ff3b30;
-  --separator: rgba(0,0,0,0.08);
+  --blue-bg:    #e8f1fb;
+  --green:      #30d158;
+  --green-bg:   #edfaf2;
+  --green-dark: #1a7a3a;
+  --orange:     #ff9f0a;
+  --orange-bg:  #fff8ee;
+  --red:        #ff3b30;
+  --red-bg:     #fff2f1;
+  --purple:     #6a0dad;
+  --purple-bg:  #f0e6ff;
+  --separator:  rgba(0,0,0,0.07);
+  --nav-h:      calc(60px + env(safe-area-inset-bottom, 0px));
 }
 
-* { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
-html { scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
-
-body {
-  background: var(--off-white);
-  color: var(--near-black);
-  font-family: 'Montserrat', -apple-system, sans-serif;
-  min-height: 100vh;
-  font-size: 16px;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{
+  background:var(--off-white);
+  color:var(--near-black);
+  font-family:'Montserrat',-apple-system,sans-serif;
+  min-height:100vh;
+  font-size:16px;
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+  padding-bottom:0;
 }
 
-.header {
-  background: rgba(245,245,247,0.85);
-  backdrop-filter: saturate(180%) blur(20px);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-  border-bottom: 1px solid var(--separator);
-  position: sticky; top:0; z-index:100;
-  padding: max(env(safe-area-inset-top), 0px) 0 0;
+/* ── HEADER ── */
+.header{
+  background:rgba(245,245,247,0.92);
+  backdrop-filter:saturate(180%) blur(20px);
+  -webkit-backdrop-filter:saturate(180%) blur(20px);
+  border-bottom:1px solid var(--separator);
+  position:sticky;top:0;z-index:200;
+  padding:max(env(safe-area-inset-top,0px),0px) 0 0;
 }
-.header-inner {
-  max-width: 500px; margin:0 auto;
-  padding: 14px 20px;
-  display: flex; justify-content:space-between; align-items:center;
+.header-inner{
+  max-width:640px;margin:0 auto;
+  padding:13px 20px;
+  display:flex;justify-content:space-between;align-items:center;
 }
-.header-title { font-size: 17px; font-weight: 600; letter-spacing: -0.02em; color: var(--near-black); }
-.header-status { display:flex; align-items:center; gap:5px; font-size:13px; font-weight:500; color: var(--green); }
-.status-dot { width:7px; height:7px; border-radius:50%; background: var(--green); animation: pulse-dot 2s ease-in-out infinite; }
+.header-title{font-size:17px;font-weight:700;letter-spacing:-0.02em;}
+.header-status{display:flex;align-items:center;gap:5px;font-size:13px;font-weight:500;color:var(--green);}
+.status-dot{width:7px;height:7px;border-radius:50%;background:var(--green);animation:pulse-dot 2s ease-in-out infinite;}
 
-.main { max-width: 500px; margin:0 auto; padding: 0 16px max(env(safe-area-inset-bottom), 32px); }
-
-.hero { padding: 32px 0 8px; animation: fadeUp 0.5s ease both; }
-.hero-eyebrow { font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); margin-bottom: 6px; }
-.hero-title { font-size: 38px; font-weight: 700; letter-spacing: -0.04em; line-height: 1.05; color: var(--near-black); }
-.hero-title span { color: var(--blue); }
-.hero-sub { font-size: 14px; font-weight: 400; color: var(--gray); margin-top: 6px; letter-spacing: -0.01em; }
-
-.hero-timestamps { margin-top: 10px; display: flex; flex-direction: column; gap: 4px; }
-.hero-ts-row { display: flex; gap: 8px; align-items: baseline; }
-.hero-ts-label { font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--near-black); min-width: 130px; flex-shrink: 0; }
-.hero-ts-val { font-size: 13px; font-weight: 500; color: var(--near-black); }
-
-.btn-refresh {
-  display: flex; align-items:center; justify-content:center; gap: 8px;
-  width: 100%; margin: 20px 0; padding: 16px;
-  background: var(--blue); border: none; border-radius: 14px;
-  color: white; font-family: 'Montserrat', sans-serif;
-  font-size: 16px; font-weight: 600; letter-spacing: -0.01em;
-  cursor: pointer; transition: all 0.15s ease;
-  animation: fadeUp 0.5s 0.05s ease both;
-  box-shadow: 0 4px 16px rgba(0,113,227,0.3);
+/* ── HOME SCREEN ── */
+.home-screen{
+  min-height:calc(100vh - 60px);
+  display:flex;flex-direction:column;
+  padding:0 16px max(env(safe-area-inset-bottom,16px),16px);
 }
-.btn-refresh:active { transform: scale(0.97); background: #0062c4; box-shadow: 0 2px 8px rgba(0,113,227,0.2); }
-.refresh-icon { font-size:18px; display:inline-block; }
-.spinning { animation: spin 0.7s linear infinite !important; }
-
-.tabs {
-  display: grid; grid-template-columns: 1fr 1fr 1fr;
-  background: var(--light-gray); border-radius: 12px; padding: 3px;
-  margin-bottom: 20px; animation: fadeUp 0.5s 0.1s ease both;
+.home-hero{padding:24px 0 16px;text-align:center;}
+.home-title{font-size:28px;font-weight:700;letter-spacing:-0.04em;color:var(--near-black);line-height:1.1;margin-bottom:4px;}
+.home-title span{color:var(--blue);}
+.home-sub{font-size:13px;color:var(--gray);}
+.home-ts{background:var(--white);border-radius:14px;padding:10px 16px;margin-bottom:20px;box-shadow:0 1px 3px rgba(0,0,0,0.05);display:flex;justify-content:space-between;align-items:center;gap:8px;}
+.home-ts-lbl{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;color:var(--gray);}
+.home-ts-val{font-size:12px;font-weight:600;color:var(--near-black);text-align:right;}
+.home-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;flex:1;}
+.home-tile{
+  background:var(--white);border-radius:22px;
+  padding:28px 16px 24px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:10px;border:none;cursor:pointer;
+  box-shadow:0 2px 12px rgba(0,0,0,0.07),0 1px 3px rgba(0,0,0,0.05);
+  transition:transform 0.14s,box-shadow 0.14s;
+  font-family:'Montserrat',sans-serif;
+  min-height:150px;position:relative;overflow:hidden;
 }
-.tab {
-  padding: 9px 4px; background: transparent; border: none; border-radius: 10px;
-  color: var(--gray); font-family: 'Montserrat', sans-serif;
-  font-size: 13px; font-weight: 500; letter-spacing: -0.01em;
-  cursor: pointer; text-align:center; transition: all 0.2s ease;
+.home-tile::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;border-radius:22px 22px 0 0;}
+.home-tile.t-blue::before  {background:var(--blue);}
+.home-tile.t-green::before {background:var(--green);}
+.home-tile.t-orange::before{background:var(--orange);}
+.home-tile.t-purple::before{background:var(--purple);}
+.home-tile:active{transform:scale(0.94);box-shadow:0 1px 4px rgba(0,0,0,0.07);}
+.tile-ico{font-size:46px;line-height:1;}
+.tile-lbl{font-size:15px;font-weight:700;letter-spacing:-0.01em;color:var(--near-black);text-align:center;line-height:1.2;}
+.tile-sub{font-size:11px;color:var(--gray);text-align:center;line-height:1.3;}
+/* ── BACK BUTTON ── */
+.btn-back{display:flex;align-items:center;gap:6px;background:transparent;border:none;cursor:pointer;color:var(--blue);font-family:'Montserrat',sans-serif;font-size:15px;font-weight:600;padding:8px 0 4px;letter-spacing:-0.01em;}
+.btn-back:active{opacity:0.5;}
+
+/* ── MAIN ── */
+.main{max-width:640px;margin:0 auto;padding:0 16px 24px;}
+
+/* ── PANELS ── */
+.panel{display:none;}
+.panel.on{display:block;animation:fadeUp 0.28s ease both;}
+
+/* ── REFRESH BTN ── */
+.btn-refresh{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  width:100%;margin:16px 0;padding:14px;
+  background:var(--blue);border:none;border-radius:14px;
+  color:white;font-family:'Montserrat',sans-serif;
+  font-size:15px;font-weight:600;cursor:pointer;
+  box-shadow:0 4px 16px rgba(0,113,227,0.28);
+  transition:all 0.15s;
 }
-.tab.on { background: var(--white); color: var(--near-black); font-weight: 600; box-shadow: 0 1px 4px rgba(0,0,0,0.12), 0 0 1px rgba(0,0,0,0.08); }
+.btn-refresh:active{transform:scale(0.97);background:#005ec9;}
+.refresh-ico{font-size:17px;display:inline-block;}
+.spinning{animation:spin 0.7s linear infinite!important;}
 
-.panel { display:none; }
-.panel.on { display:block; animation: fadeUp 0.3s ease both; }
+/* ── SECTION LABEL ── */
+.sec-lbl{font-size:11px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:var(--gray);padding:18px 0 8px;}
 
-.section-header { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray); padding: 0 4px; margin: 24px 0 10px; }
+/* ── LOADING / EMPTY ── */
+.loading{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:64px 20px;gap:16px;}
+.spinner{width:30px;height:30px;border:2.5px solid var(--light-gray);border-top-color:var(--blue);border-radius:50%;animation:spin 0.7s linear infinite;}
+.loading-txt{font-size:14px;color:var(--gray);}
+.empty{text-align:center;padding:48px 20px;color:var(--gray);}
+.empty-ico{font-size:38px;margin-bottom:12px;opacity:0.45;}
+.empty-txt{font-size:15px;line-height:1.6;}
 
-.card { background: var(--white); border-radius: 16px; padding: 18px; margin-bottom: 10px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04); animation: fadeUp 0.4s ease both; transition: transform 0.15s ease, box-shadow 0.15s ease; }
-.card:active { transform: scale(0.99); box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+/* ── TIMESTAMPS ── */
+.ts-box{background:var(--white);border-radius:14px;padding:14px 16px;margin-bottom:10px;box-shadow:0 1px 3px rgba(0,0,0,0.05);}
+.ts-row{display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid var(--separator);}
+.ts-row:last-child{border-bottom:none;}
+.ts-lbl{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;color:var(--gray);}
+.ts-val{font-size:12px;font-weight:500;color:var(--near-black);}
 
-.card-header { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom: 12px; gap: 10px; }
-.card-nrg { font-size: 19px; font-weight: 700; letter-spacing: -0.03em; color: var(--near-black); }
-.card-nrg span { color: var(--blue); }
+/* ── BADGE ── */
+.badge{display:inline-block;font-size:10px;font-weight:700;padding:2px 8px;border-radius:20px;letter-spacing:0.03em;white-space:nowrap;}
+.b-blue  {background:var(--blue-bg);   color:var(--blue);}
+.b-green {background:var(--green-bg);  color:var(--green-dark);}
+.b-orange{background:var(--orange-bg); color:#a05c00;}
+.b-gray  {background:var(--light-gray);color:var(--dark-gray);}
+.b-purple{background:var(--purple-bg); color:var(--purple);}
+.b-red   {background:var(--red-bg);    color:var(--red);}
 
-.badge { font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 20px; letter-spacing: 0.02em; white-space: nowrap; flex-shrink:0; }
-.b-blue   { background: var(--blue-bg);   color: var(--blue); }
-.b-green  { background: var(--green-bg);  color: #1a7a3a; }
-.b-orange { background: var(--orange-bg); color: #b36800; }
-.b-gray   { background: var(--light-gray); color: var(--dark-gray); }
+/* ══════════════════════════════════════════
+   DASHBOARD
+══════════════════════════════════════════ */
+.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px;}
+.stat-card{background:var(--white);border-radius:16px;padding:16px 14px;box-shadow:0 1px 3px rgba(0,0,0,0.05);position:relative;overflow:hidden;}
+.stat-card.full{grid-column:1/-1;}
+.stat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--blue);opacity:0;}
+.stat-card.accent::before{opacity:1;}
+.stat-lbl{font-size:10px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:var(--gray);margin-bottom:4px;}
+.stat-val{font-size:30px;font-weight:700;letter-spacing:-0.04em;color:var(--near-black);line-height:1.1;}
+.stat-val.blue{color:var(--blue);}
+.stat-val.sm{font-size:18px;}
+.stat-sub{font-size:11px;color:var(--gray);margin-top:3px;}
+.stat-sub b{color:var(--near-black);}
 
-.card-oggetto { font-size: 14px; font-weight: 400; color: var(--dark-gray); line-height: 1.55; margin-bottom: 12px; padding: 12px 14px; background: var(--off-white); border-radius: 10px; border-left: 3px solid var(--blue); }
-.card-oggetto.empty { color: var(--gray); font-style: italic; border-left-color: var(--mid-gray); }
+.dash-row{display:flex;justify-content:space-between;align-items:baseline;padding:6px 0;border-bottom:1px solid var(--separator);}
+.dash-row:last-child{border-bottom:none;}
+.dash-row-lbl{font-size:12px;font-weight:500;color:var(--dark-gray);}
+.dash-row-val{font-size:13px;font-weight:700;color:var(--near-black);}
+.dash-row-val.blue{color:var(--blue);}
 
-.cr { display: flex; gap: 10px; margin-bottom: 6px; align-items: baseline; }
-.ck { font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gray); min-width: 76px; flex-shrink:0; }
-.cv { font-size: 15px; font-weight: 400; color: var(--near-black); line-height: 1.4; }
-.cv.highlight { color: var(--blue); font-weight: 500; }
-.cv.date { color: var(--near-black); font-weight: 500; }
+/* ══════════════════════════════════════════
+   ELENCO RICORSI — tabella
+══════════════════════════════════════════ */
+.table-hint{font-size:11px;color:var(--gray);text-align:right;margin-bottom:4px;padding-right:2px;}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:16px;box-shadow:0 1px 3px rgba(0,0,0,0.06);margin-bottom:12px;}
+.ric-table{width:100%;border-collapse:collapse;background:var(--white);min-width:520px;}
+.ric-table thead tr{background:var(--near-black);}
+.ric-table thead th{
+  padding:10px 8px;
+  font-size:10px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;
+  color:var(--white);text-align:left;white-space:nowrap;
+}
+.ric-table thead th:first-child{text-align:center;width:28px;}
+.ric-table tbody tr{border-bottom:1px solid var(--separator);cursor:pointer;transition:background 0.1s;}
+.ric-table tbody tr.data-row:hover{background:var(--blue-bg);}
+.ric-table tbody tr.data-row:active{background:var(--blue-bg);}
+.ric-table tbody tr.data-row.expanded{background:var(--blue-bg);}
+.ric-table tbody tr:last-child{border-bottom:none;}
+.ric-table tbody td{padding:9px 8px;font-size:12px;color:var(--near-black);vertical-align:top;}
+.td-p{text-align:center;font-weight:700;color:var(--blue);font-size:11px;}
+.td-stab{font-weight:600;font-size:12px;}
+.td-stab-sub{font-size:10px;color:var(--gray);margin-top:1px;}
+.td-ric{color:var(--dark-gray);font-size:11px;max-width:110px;}
+.td-nr{font-weight:700;white-space:nowrap;color:var(--blue);font-size:12px;}
+.td-data{white-space:nowrap;color:var(--gray);font-size:11px;}
+.td-ogg{font-size:11px;color:var(--dark-gray);max-width:130px;}
 
-.card-pills { display:flex; flex-wrap:wrap; gap:6px; margin-top:10px; }
-.card-sep { height: 1px; background: var(--separator); margin: 14px 0; }
+/* Row detail */
+.row-detail{display:none;background:var(--off-white);}
+.row-detail.open{display:table-row;}
+.row-detail td{padding:14px 12px;border-bottom:1px solid var(--mid-gray);}
+.det-title{font-size:14px;font-weight:700;color:var(--blue);margin-bottom:10px;letter-spacing:-0.01em;}
+.det-cr{display:flex;gap:8px;margin-bottom:5px;align-items:baseline;}
+.det-ck{font-size:10px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:var(--gray);min-width:78px;flex-shrink:0;}
+.det-cv{font-size:13px;color:var(--near-black);line-height:1.4;}
+.det-sec{margin-top:12px;}
+.det-sec-title{font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);padding-bottom:4px;border-bottom:1px solid var(--separator);margin-bottom:5px;}
+.det-item{font-size:12px;color:var(--near-black);padding:5px 0;border-bottom:1px solid var(--separator);line-height:1.45;}
+.det-item:last-child{border-bottom:none;}
+.det-item.future{background:var(--green-bg);border-radius:8px;padding:6px 10px;margin:3px 0;border:none;font-weight:500;}
+.det-nodata{font-size:12px;color:var(--gray);padding:10px;background:var(--light-gray);border-radius:8px;text-align:center;margin-top:8px;}
+.det-date{color:var(--blue);font-size:11px;}
+.det-esito{color:var(--green-dark);font-weight:600;}
 
-.expand-btn { display:flex; align-items:center; justify-content:center; gap:6px; width:100%; margin-top:14px; padding:11px; background: var(--off-white); border: none; border-radius: 10px; color: var(--blue); font-family:'Montserrat',sans-serif; font-size:14px; font-weight:600; cursor:pointer; transition:all 0.15s; letter-spacing:-0.01em; }
-.expand-btn:active { background: var(--light-gray); }
-.arr { display:inline-block; transition:transform 0.3s; font-size:12px; }
-.arr.open { transform:rotate(180deg); }
-.details { max-height:0; overflow:hidden; transition:max-height 0.4s ease; }
-.details.open { max-height:99999px; }
+/* ══════════════════════════════════════════
+   PROVVEDIMENTI
+══════════════════════════════════════════ */
+.sub-tabs{
+  display:grid;grid-template-columns:1fr 1fr;
+  background:var(--light-gray);border-radius:12px;padding:3px;
+  margin:12px 0 14px;
+}
+.sub-tab{
+  padding:9px 6px;background:transparent;border:none;border-radius:10px;
+  color:var(--gray);font-family:'Montserrat',sans-serif;
+  font-size:13px;font-weight:500;cursor:pointer;text-align:center;
+  transition:all 0.2s;
+}
+.sub-tab.on{background:var(--white);color:var(--near-black);font-weight:700;box-shadow:0 1px 4px rgba(0,0,0,0.1);}
+.sub-panel{display:none;}
+.sub-panel.on{display:block;animation:fadeUp 0.25s ease both;}
 
-.ds { margin-top:14px; }
-.ds-title { font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color: var(--blue); margin-bottom:8px; }
-.dt-row { padding: 10px 0; border-bottom: 1px solid var(--separator); }
-.dt-row:last-child { border-bottom:none; }
-.dt-tipo { font-size:15px; font-weight:500; color:var(--near-black); line-height:1.3; }
-.dt-meta { font-size:13px; color:var(--gray); margin-top:3px; }
-.dt-data { font-size:13px; color:var(--blue); font-weight:500; }
-.dt-esito { font-size:14px; color:#1a7a3a; font-weight:500; margin-top:4px; }
+.prov-card{background:var(--white);border-radius:16px;padding:16px;margin-bottom:10px;box-shadow:0 1px 3px rgba(0,0,0,0.05);}
+.prov-stab{font-size:17px;font-weight:700;letter-spacing:-0.02em;color:var(--near-black);margin-bottom:1px;}
+.prov-ric{font-size:12px;color:var(--gray);margin-bottom:9px;}
+.prov-nrg{font-size:12px;font-weight:600;color:var(--blue);margin-bottom:8px;}
+.cr{display:flex;gap:10px;margin-bottom:5px;align-items:baseline;}
+.ck{font-size:11px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--gray);min-width:78px;flex-shrink:0;}
+.cv{font-size:14px;color:var(--near-black);line-height:1.4;}
+.cv.date{font-weight:500;color:var(--blue);}
+.cv.esito{color:var(--green-dark);font-weight:600;}
 
-.pt-row { display:flex; justify-content:space-between; align-items:baseline; padding:9px 0; border-bottom:1px solid var(--separator); gap:8px; }
-.pt-row:last-child { border-bottom:none; }
-.pt-tipo { font-size:15px; font-weight:400; color:var(--near-black); }
-.pt-data { font-size:13px; color:var(--gray); white-space:nowrap; }
+/* Tutti: tabella */
+.tutti-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:14px;box-shadow:0 1px 3px rgba(0,0,0,0.06);margin-bottom:12px;}
+.tutti-table{width:100%;border-collapse:collapse;background:var(--white);min-width:440px;font-size:12px;}
+.tutti-table thead tr{background:var(--near-black);}
+.tutti-table thead th{padding:10px 8px;font-size:10px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:var(--white);text-align:left;white-space:nowrap;}
+.tutti-table tbody tr{border-bottom:1px solid var(--separator);}
+.tutti-table tbody tr:last-child{border-bottom:none;}
+.tutti-table tbody td{padding:9px 8px;vertical-align:top;}
+.t-parte{font-weight:500;color:var(--near-black);}
+.t-tipo{color:var(--dark-gray);}
+.t-data{color:var(--blue);font-weight:600;white-space:nowrap;}
+.t-esito{color:var(--green-dark);font-weight:600;}
 
-.hero-stat { background: var(--white); border-radius: 20px; padding: 28px 24px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); text-align: center; position:relative; overflow:hidden; animation: fadeUp 0.4s ease both; }
-.hero-stat::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background: linear-gradient(90deg, var(--blue), var(--green)); }
-.hero-stat-label { font-size:12px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--gray); margin-bottom:10px; }
-.hero-stat-num { font-size:72px; font-weight:700; letter-spacing:-0.05em; line-height:1; color:var(--near-black); margin-bottom:4px; }
-.hero-stat-num span { color:var(--blue); }
-.hero-stat-sub { font-size:14px; color:var(--gray); font-weight:400; }
-.hero-stat-oggetto { font-size:14px; color:var(--dark-gray); margin-top:16px; line-height:1.55; padding:12px 14px; background:var(--off-white); border-radius:10px; text-align:left; border-left:3px solid var(--blue); }
-.hero-stat-oggetto.empty { color:var(--gray); font-style:italic; border-left-color:var(--mid-gray); }
+/* ══════════════════════════════════════════
+   SCADENZE
+══════════════════════════════════════════ */
+.scad-card{
+  background:var(--white);border-radius:14px;padding:14px 16px;
+  margin-bottom:8px;box-shadow:0 1px 3px rgba(0,0,0,0.05);
+  display:flex;justify-content:space-between;align-items:center;gap:12px;
+}
+.scad-left{flex:1;min-width:0;}
+.scad-nr{font-size:11px;font-weight:700;color:var(--blue);margin-bottom:2px;}
+.scad-stab{font-size:14px;font-weight:700;color:var(--near-black);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.scad-tipo{font-size:11px;color:var(--gray);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.scad-right{text-align:right;flex-shrink:0;}
+.scad-data{font-size:14px;font-weight:700;color:var(--near-black);white-space:nowrap;}
+.scad-gg{font-size:11px;font-weight:600;margin-top:2px;white-space:nowrap;}
+.scad-gg.ok   {color:var(--green-dark);}
+.scad-gg.presto{color:var(--orange);}
+.scad-gg.oggi {color:var(--red);}
 
-.prov-card { background:var(--white); border-radius:16px; padding:18px; margin-bottom:10px; box-shadow:0 1px 3px rgba(0,0,0,0.06); animation:fadeUp 0.4s ease both; }
-.prov-nrg { font-size:18px; font-weight:700; letter-spacing:-0.03em; color:var(--near-black); margin-bottom:10px; }
-.prov-nrg span { color:var(--blue); }
+/* ── FOOTER ── */
+.footer{text-align:center;padding:20px 0 4px;font-size:12px;color:var(--mid-gray);line-height:1.9;}
 
-.empty { text-align:center; padding:48px 20px; color:var(--gray); }
-.empty-ico { font-size:40px; margin-bottom:14px; opacity:0.5; }
-.empty-txt { font-size:15px; line-height:1.6; font-weight:400; }
-
-.loading { display:flex; flex-direction:column; align-items:center; justify-content:center; padding:64px 20px; gap:16px; }
-.spinner { width:32px; height:32px; border:2.5px solid var(--light-gray); border-top-color:var(--blue); border-radius:50%; animation:spin 0.7s linear infinite; }
-.loading-txt { font-size:14px; color:var(--gray); font-weight:400; }
-
-.footer { text-align:center; padding:32px 0 12px; font-size:12px; color:var(--gray); font-weight:400; line-height:1.8; letter-spacing:-0.01em; }
-
-/* Pross. ud. sfondo verde */
-.cr-prossud { display:flex; gap:10px; margin-bottom:6px; align-items:baseline; background:var(--green-bg); border-radius:8px; padding:6px 8px; }
-
-/* Tabella Agenda */
-.agenda-table { width:100%; border-collapse:collapse; background:var(--white); border-radius:16px; overflow:hidden; box-shadow:0 1px 3px rgba(0,0,0,0.06); margin-bottom:16px; animation:fadeUp 0.4s ease both; }
-.agenda-table thead tr { background:var(--near-black); }
-.agenda-table thead th { padding:11px 10px; font-size:11px; font-weight:600; letter-spacing:0.07em; text-transform:uppercase; color:var(--white); text-align:left; }
-.agenda-table thead th:last-child { text-align:right; }
-.agenda-table tbody tr { border-bottom:1px solid var(--separator); transition:background 0.15s; }
-.agenda-table tbody tr:last-child { border-bottom:none; }
-.agenda-table tbody tr:active { background:var(--off-white); }
-.agenda-table tbody td { padding:11px 10px; font-size:13px; color:var(--near-black); vertical-align:middle; }
-.agenda-table tbody td:last-child { text-align:right; font-weight:600; color:var(--blue); white-space:nowrap; }
-.agenda-nr { font-weight:700; color:var(--blue); }
-.agenda-stab { font-weight:500; }
-.agenda-ricorr { color:var(--dark-gray); font-size:12px; }
-.agenda-evento { font-size:12px; color:var(--gray); margin-top:2px; }
-.agenda-empty { text-align:center; padding:48px 20px; color:var(--gray); }
-
-@keyframes fadeUp { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
-@keyframes pulse-dot { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:0.5; transform:scale(0.85); } }
-@keyframes spin { to { transform:rotate(360deg); } }
-
-.card:nth-child(1){animation-delay:.03s}
-.card:nth-child(2){animation-delay:.06s}
-.card:nth-child(3){animation-delay:.09s}
-.card:nth-child(4){animation-delay:.12s}
-.card:nth-child(5){animation-delay:.15s}
-.card:nth-child(6){animation-delay:.18s}
-.card:nth-child(7){animation-delay:.21s}
-.card:nth-child(8){animation-delay:.24s}
+/* ── ANIMATIONS ── */
+@keyframes fadeUp  {from{opacity:0;transform:translateY(9px);}to{opacity:1;transform:translateY(0);}}
+@keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.45;transform:scale(0.8);}}
+@keyframes spin    {to{transform:rotate(360deg);}}
 </style>
 </head>
 <body>
 
+<!-- ═══════════ HEADER ═══════════ -->
 <div class="header">
   <div class="header-inner">
-    <div class="header-title">TAR Friuli VG</div>
+    <div class="header-title">⚖️ Monitor Ricorsi</div>
     <div class="header-status">
       <div class="status-dot" id="statusDot"></div>
       <span id="liveLabel">–</span>
@@ -219,118 +297,113 @@ body {
   </div>
 </div>
 
-<div class="main">
-
-  <div class="hero">
-    <div class="hero-eyebrow">Tribunale Amministrativo Regionale</div>
-    <div class="hero-title">Monitor<br><span>Ricorsi</span></div>
-    <div class="hero-sub" id="lastUp" style="display:none"></div>
-    <div class="hero-timestamps">
-      <div class="hero-ts-row"><span class="hero-ts-label">Ultimo controllo</span><span class="hero-ts-val" id="lastCheck">—</span></div>
-      <div class="hero-ts-row"><span class="hero-ts-label">Ultima variazione</span><span class="hero-ts-val" id="lastChange">—</span></div>
-    </div>
+<!-- ═══════════ HOME SCREEN ═══════════ -->
+<div class="home-screen" id="home-screen">
+  <div class="home-hero">
+    <div class="home-title">Monitor <span>Ricorsi</span></div>
+    <div class="home-sub">TAR Friuli VG · Consiglio di Stato</div>
   </div>
 
+  <div class="home-ts">
+    <span class="home-ts-lbl">Ultimo controllo</span>
+    <span class="home-ts-val" id="home-ts-val">—</span>
+  </div>
+
+  <div class="home-grid">
+    <button class="home-tile t-blue" onclick="showSection('dashboard')">
+      <span class="tile-ico">📊</span>
+      <span class="tile-lbl">Dashboard</span>
+      <span class="tile-sub">Riepilogo e statistiche</span>
+    </button>
+    <button class="home-tile t-green" onclick="showSection('ricorsi')">
+      <span class="tile-ico">📋</span>
+      <span class="tile-lbl">Elenco Ricorsi</span>
+      <span class="tile-sub">Tutti i ricorsi monitorati</span>
+    </button>
+    <button class="home-tile t-orange" onclick="showSection('provv')">
+      <span class="tile-ico">⚖️</span>
+      <span class="tile-lbl">Provvedimenti</span>
+      <span class="tile-sub">TAR FVG · ultime 48h</span>
+    </button>
+    <button class="home-tile t-purple" onclick="showSection('scadenze')">
+      <span class="tile-ico">📅</span>
+      <span class="tile-lbl">Scadenze</span>
+      <span class="tile-sub">Prossime udienze</span>
+    </button>
+  </div>
+
+  <div class="footer">TAR Friuli VG — Monitor automatico<br>by Rolando Meotto</div>
+</div>
+
+<!-- ═══════════ SEZIONI ═══════════ -->
+<div class="main" id="main-content" style="display:none">
+
+  <button class="btn-back" onclick="showHome()">‹ Menu principale</button>
   <button class="btn-refresh" onclick="loadData()">
-    <span class="refresh-icon" id="refreshIco">↻</span>
+    <span class="refresh-ico" id="refreshIco">↻</span>
     Aggiorna dati
   </button>
 
-  <div class="tabs" style="grid-template-columns:1fr 1fr 1fr 1fr;">
-    <button class="tab on" onclick="showTab('ricorsi',this)">Ricorsi</button>
-    <button class="tab"    onclick="showTab('provv',this)">Provved.</button>
-    <button class="tab"    onclick="showTab('nuovi',this)">Nuovi</button>
-    <button class="tab"    onclick="showTab('agenda',this)">Agenda</button>
+  <div class="panel" id="panel-dashboard">
+    <div id="cnt-dashboard"><div class="loading"><div class="spinner"></div><div class="loading-txt">Caricamento…</div></div></div>
   </div>
-
-  <div class="panel on" id="panel-ricorsi">
-    <div id="cnt-ricorsi"><div class="loading"><div class="spinner"></div><div class="loading-txt">Caricamento...</div></div></div>
+  <div class="panel" id="panel-ricorsi">
+    <div id="cnt-ricorsi"><div class="loading"><div class="spinner"></div><div class="loading-txt">Caricamento…</div></div></div>
   </div>
   <div class="panel" id="panel-provv">
-    <div id="cnt-provv"><div class="loading"><div class="spinner"></div><div class="loading-txt">Caricamento...</div></div></div>
+    <div id="cnt-provv"><div class="loading"><div class="spinner"></div><div class="loading-txt">Caricamento…</div></div></div>
   </div>
-  <div class="panel" id="panel-nuovi">
-    <div id="cnt-nuovi"><div class="loading"><div class="spinner"></div><div class="loading-txt">Caricamento...</div></div></div>
-  </div>
-  <div class="panel" id="panel-agenda">
-    <div id="cnt-agenda"><div class="loading"><div class="spinner"></div><div class="loading-txt">Caricamento...</div></div></div>
+  <div class="panel" id="panel-scadenze">
+    <div id="cnt-scadenze"><div class="loading"><div class="spinner"></div><div class="loading-txt">Caricamento…</div></div></div>
   </div>
 
-  <div class="footer">
-    TAR Friuli Venezia Giulia — Monitor automatico<br>
-    by Rolando Meotto
-  </div>
 </div>
 
 <script>
-// Dati statici dall'Excel (Nr ricorso → stabilimento + ricorrente)
-var ANAGRAFICA = {
-  '257/2025': {stab:'Portofino',       ricorr:'Meotto Giuseppe Srl'},
-  '267/2025': {stab:'Ausonia',         ricorr:'Pietro Ceiner Snc'},
-  '268/2025': {stab:'Spiaggia per cani',ricorr:'Doggy Beach Srl'},
-  '270/2025': {stab:'Gabbiano',        ricorr:'Gigante Giancarlo'},
-  '399/2025': {stab:'Lido del Sole',   ricorr:'Battiston MD Srl'},
-  '403/2025': {stab:'Ufficio 7 bis',   ricorr:'Paschetto G. / Neri R.'},
-  '404/2025': {stab:'La Sacca',        ricorr:'Giardino Srl'},
-  '405/2025': {stab:'Bagno Italia',    ricorr:'Gest. Spiaggia Italia Snc'},
-  '479/2025': {stab:'Getur',           ricorr:'Tiliaventum ASD'},
-  '686/2025': {stab:'Gabbiano',        ricorr:'Gigante Giancarlo'},
-  '689/2025': {stab:'La Sacca',        ricorr:'Fenice Srl'},
-  '51/2026':  {stab:'Bar Frecce Tricolori', ricorr:'Beach Bar F.T. Sas'},
-  '74/2026':  {stab:'Bagno Lignano',   ricorr:'Albergo Italia Srl'},
-  '80/2026':  {stab:'Bagno Italia',    ricorr:'Gest. Spiaggia Italia Snc'},
-  '99/2026':  {stab:'Portofino',       ricorr:'Meotto Giuseppe Srl'},
-  '100/2026': {stab:'Lido City',       ricorr:'Sast degli eredi Sapienza'},
-  '120/2026': {stab:'Ausonia',         ricorr:'Matajur 3000 Srl'},
-  '121/2026': {stab:'Portofino',       ricorr:'Matajur 3000 Srl'},
-};
+/* ================================================================
+   RICORSI_DB — fonte: Excel "Ricorsi su bandi concessioni"
+   Campi:
+     p    = progressivo
+     luogo= 'TAR FVG' | 'CdS'
+     nr   = numero/anno (es. '99/2026')
+     data = gg/mm/aaaa
+     ric  = ricorrente
+     ogg  = oggetto
+     stab = nome stabilimento (null se non applicabile)
+     caut = esito cautelare: 'Accolta' | 'Respinta' | '' (non richiesta/n.d.)
+     mon  = true se monitorato dallo scraper GitHub
+   ================================================================ */
+var RICORSI_DB = [
+  {p:1,  luogo:'TAR FVG', nr:'406/2024',  data:'25/11/2024', ric:'Albergo Italia Srl',               ogg:'Annullamento revoca bando',             stab:null,                     mon:false},
+  {p:2,  luogo:'CdS',     nr:'1750/2025', data:'03/03/2025', ric:'Albergo Italia Srl',               ogg:'Riforma sentenza TAR su ric. 406/2024', stab:null,                     mon:false},
+  {p:3,  luogo:'TAR FVG', nr:'257/2025',  data:'29/05/2025', ric:'Meotto Giuseppe Srl',              ogg:'Proroga',                               stab:'Portofino',              mon:false},
+  {p:4,  luogo:'TAR FVG', nr:'267/2025',  data:'30/05/2025', ric:'Pietro Ceiner Snc',                ogg:'Proroga',                               stab:'Ausonia',                mon:false},
+  {p:5,  luogo:'TAR FVG', nr:'268/2025',  data:'30/05/2025', ric:'Doggy Beach Srl',                  ogg:'Proroga',                               stab:'Spiaggia per cani',      mon:false},
+  {p:6,  luogo:'TAR FVG', nr:'270/2025',  data:'30/05/2025', ric:'Gigante Giancarlo',                ogg:'Proroga',                               stab:'Gabbiano',               mon:false},
+  {p:7,  luogo:'TAR FVG', nr:'399/2025',  data:'31/07/2025', ric:'Battiston MD Srl',                 ogg:'Proroga',                               stab:'Lido del Sole',          mon:false},
+  {p:8,  luogo:'TAR FVG', nr:'403/2025',  data:'01/08/2025', ric:'Paschetto G. / Neri R.',           ogg:'Proroga',                               stab:'Ufficio 7 bis (Pineta)', mon:false},
+  {p:9,  luogo:'TAR FVG', nr:'404/2025',  data:'01/08/2025', ric:'Giardino Srl',                     ogg:'Proroga',                               stab:'La Sacca',               mon:false},
+  {p:10, luogo:'TAR FVG', nr:'405/2025',  data:'01/08/2025', ric:'Gest. Spiaggia Italia Snc',        ogg:'Proroga',                               stab:'Bagno Italia',           mon:false},
+  {p:11, luogo:'TAR FVG', nr:'479/2025',  data:'01/10/2025', ric:'Tiliaventum ASD',                  ogg:'Ritiro lotto Getur dalla gara',          stab:'Getur',                  mon:true},
+  {p:12, luogo:'TAR FVG', nr:'686/2025',  data:'19/12/2025', ric:'Gigante Giancarlo',                ogg:'Esclusione',                            stab:'Gabbiano',               mon:true},
+  {p:13, luogo:'TAR FVG', nr:'689/2025',  data:'22/12/2025', ric:'Fenice Srl',                       ogg:'Aggiudicazione',                        stab:'La Sacca',               mon:true},
+  {p:14, luogo:'TAR FVG', nr:'51/2026',   data:'22/01/2026', ric:'Beach Bar F.T. Sas',               ogg:'Aggiudicazione',                        stab:'Bar Frecce Tricolori',   mon:true},
+  {p:15, luogo:'TAR FVG', nr:'74/2026',   data:'04/02/2026', ric:'Albergo Italia Srl',               ogg:'Aggiudicazione',                        stab:'Bagno Lignano',          mon:true},
+  {p:16, luogo:'TAR FVG', nr:'80/2026',   data:'06/02/2026', ric:'Gest. Spiaggia Italia Snc',        ogg:'Aggiudicazione',                        stab:'Bagno Italia',           mon:true},
+  {p:17, luogo:'TAR FVG', nr:'99/2026',   data:'20/02/2026', ric:'Meotto Giuseppe Srl',              ogg:'Aggiudicazione',                        stab:'Portofino',              mon:true},
+  {p:18, luogo:'TAR FVG', nr:'100/2026',  data:'21/02/2026', ric:'Sast degli eredi Sapienza',        ogg:'Aggiudicazione',                        stab:'Lido City',              mon:true},
+  {p:19, luogo:'TAR FVG', nr:'120/2026',  data:'05/03/2026', ric:'Matajur 3000 Srl',                 ogg:'Aggiudicazione',                        stab:'Ausonia',                mon:true},
+  {p:20, luogo:'TAR FVG', nr:'121/2026',  data:'06/03/2026', ric:'Matajur 3000 Srl',                 ogg:'Aggiudicazione',                        stab:'Portofino',              mon:true},
+  {p:21, luogo:'CdS',     nr:'1897/2026', data:'06/03/2026', ric:'Gest. Spiaggia Italia Snc',        ogg:'Aggiudicazione',                        stab:'Bagno Italia',           mon:false},
+  {p:22, luogo:'TAR FVG', nr:'123/2026',  data:'11/03/2026', ric:'Condominio Marinella/Marin',       ogg:'Non conformità urbanistica',            stab:'Bagno Italia',           mon:true},
+  {p:23, luogo:'CdS',     nr:'2039/2026', data:'11/03/2026', ric:'Beach Bar F.T. Sas',               ogg:'Riforma sentenza TAR su ric. 51/2026',  stab:'Bar Frecce Tricolori',   mon:false},
+  {p:24, luogo:'TAR FVG', nr:'126/2026',  data:'13/03/2026', ric:'Gigante Giancarlo',                ogg:'Esclusione',                            stab:'Gabbiano',               mon:true},
+];
 
-function nrgToKey(r){
-  return r.numero+'/'+r.anno;
-}
-
-function prossimoEvento(r){
-  var oggi=new Date(); oggi.setHours(0,0,0,0);
-  var fut=[];
-  (r.discussioni||[]).forEach(function(s){
-    var d=parseDisc(s);
-    var dt=parseDate(d.data);
-    if(dt&&dt>=oggi&&(!d.esito||d.esito===''))fut.push({data:dt,dataStr:d.data,tipo:d.tipo});
-  });
-  if(!fut.length)return null;
-  fut.sort(function(a,b){return a.data-b.data;});
-  return fut[0];
-}
-
-function renderAgenda(data){
-  var list=data.ricorsi_monitorati||[];
-  var righe=[];
-  list.forEach(function(r){
-    var ev=prossimoEvento(r);
-    if(!ev)return;
-    var key=nrgToKey(r);
-    var ana=ANAGRAFICA[key]||{stab:'—',ricorr:'—'};
-    righe.push({nr:r.numero+'/'+r.anno, stab:ana.stab, ricorr:ana.ricorr, evento:ev.tipo, dataEv:ev.data, dataStr:ev.dataStr});
-  });
-  if(!righe.length){
-    return '<div class="agenda-empty"><div class="empty-ico">📅</div><div class="empty-txt">Nessun evento futuro in agenda</div></div>';
-  }
-  righe.sort(function(a,b){return a.dataEv-b.dataEv;});
-  var h='<table class="agenda-table"><thead><tr>';
-  h+='<th>Nr ric.</th><th>Stab.</th><th>Ricorr.</th><th>Evento</th><th>Data ev.</th>';
-  h+='</tr></thead><tbody>';
-  righe.forEach(function(row){
-    h+='<tr>';
-    h+='<td><span class="agenda-nr">'+esc(row.nr)+'</span></td>';
-    h+='<td><span class="agenda-stab">'+esc(row.stab)+'</span></td>';
-    h+='<td><span class="agenda-ricorr">'+esc(row.ricorr)+'</span></td>';
-    h+='<td><span class="agenda-evento">'+esc(row.evento)+'</span></td>';
-    h+='<td>'+esc(row.dataStr)+'</td>';
-    h+='</tr>';
-  });
-  h+='</tbody></table>';
-  return h;
-}
+/* ================================================================
+   UTILITY
+   ================================================================ */
+function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 
 function parseDate(s){
   if(!s)return null;
@@ -340,6 +413,10 @@ function parseDate(s){
   if(m)return new Date(+m[1],+m[2]-1,+m[3]);
   return null;
 }
+function fmtDate(d){
+  if(!d)return'—';
+  return String(d.getDate()).padStart(2,'0')+'/'+String(d.getMonth()+1).padStart(2,'0')+'/'+d.getFullYear();
+}
 function sortByDate(arr,fn,desc){
   if(desc===undefined)desc=true;
   return arr.slice().sort(function(a,b){
@@ -348,235 +425,459 @@ function sortByDate(arr,fn,desc){
     return desc?db-da:da-db;
   });
 }
-function firstDate(s){var m=s.match(/^(\d{2}\/\d{2}\/\d{4})/);return m?m[1]:null;}
-function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
-function parseParte(s){var p=s.split('|').map(function(x){return x.trim();});return{tipo:p[0]||'',data:p[1]||''};}
-function parseAtto(s){var p=s.split('|').map(function(x){return x.trim();});return{tipo:p[0]||'',parte:p[2]||'',data:p[3]||''};}
-function parseDisc(s){var p=s.split('|').map(function(x){return x.trim();});return{data:p[0]||'',tipo:p[1]||'',esito:p[2]||'',magistrato:p[3]||'',giudizio:p[4]||''};}
-function parseColl(s){var p=s.split('|').map(function(x){return x.trim();});return{tipo:p[0]||'',magistrato:p[1]||'',data_pubbl:p[2]||'',esito:p[5]||''};}
-function parseMono(s){var p=s.split('|').map(function(x){return x.trim();});return{tipo:p[0]||'',magistrato:p[1]||'',data:p[2]||'',esito:p[3]||''};}
-
-function renderParti(list){
-  if(!list||!list.length)return'';
-  var sorted=sortByDate(list,function(s){return parseParte(s).data;});
-  var h='<div class="ds"><div class="ds-title">Parti</div>';
-  sorted.forEach(function(s){var p=parseParte(s);if(!p.tipo)return;h+='<div class="pt-row"><span class="pt-tipo">'+esc(p.tipo)+'</span><span class="pt-data">'+esc(p.data)+'</span></div>';});
-  return h+'</div>';
-}
-function renderAtti(list){
-  if(!list||!list.length)return'';
-  var sorted=sortByDate(list,function(s){return parseAtto(s).data;});
-  var h='<div class="ds"><div class="ds-title">Atti depositati</div>';
-  sorted.forEach(function(s){var a=parseAtto(s);if(!a.tipo)return;h+='<div class="dt-row"><div class="dt-tipo">'+esc(a.tipo)+'</div><div class="dt-meta">'+esc(a.parte)+(a.data?' &nbsp;·&nbsp; <span class="dt-data">'+esc(a.data)+'</span>':'')+'</div></div>';});
-  return h+'</div>';
-}
-function renderDisc(list){
-  if(!list||!list.length)return'';
-  var sorted=sortByDate(list,function(s){return firstDate(s);});
-  var h='<div class="ds"><div class="ds-title">Discussioni</div>';
-  sorted.forEach(function(s){var d=parseDisc(s);if(!d.data)return;h+='<div class="dt-row"><div class="dt-data">'+esc(d.data)+' — '+esc(d.tipo)+'</div><div class="dt-meta">'+esc(d.giudizio)+(d.magistrato?' &nbsp;·&nbsp; '+esc(d.magistrato):'')+'</div>'+(d.esito?'<div class="dt-esito">'+esc(d.esito)+'</div>':'')+'</div>';});
-  return h+'</div>';
-}
-function renderColl(list){
-  if(!list||!list.length)return'';
-  var sorted=sortByDate(list,function(s){return parseColl(s).data_pubbl;});
-  var h='<div class="ds"><div class="ds-title">Provvedimenti Collegiali</div>';
-  sorted.forEach(function(s){var p=parseColl(s);if(!p.tipo)return;h+='<div class="dt-row"><div class="dt-tipo">'+esc(p.tipo)+'</div><div class="dt-data">'+esc(p.data_pubbl)+'</div><div class="dt-meta">'+esc(p.magistrato)+'</div>'+(p.esito?'<div class="dt-esito">'+esc(p.esito)+'</div>':'')+'</div>';});
-  return h+'</div>';
-}
-function renderMono(list){
-  if(!list||!list.length)return'';
-  var sorted=sortByDate(list,function(s){return parseMono(s).data;});
-  var h='<div class="ds"><div class="ds-title">Provvedimenti Monocratici</div>';
-  sorted.forEach(function(s){var p=parseMono(s);if(!p.tipo)return;h+='<div class="dt-row"><div class="dt-tipo">'+esc(p.tipo)+'</div><div class="dt-data">'+esc(p.data)+'</div><div class="dt-meta">'+esc(p.magistrato)+'</div>'+(p.esito?'<div class="dt-esito">'+esc(p.esito)+'</div>':'')+'</div>';});
-  return h+'</div>';
-}
-
-function oggettoBox(testo,cls){
-  cls=cls||'';
-  if(!testo)return '<div class="card-oggetto empty">Oggetto non ancora disponibile</div>';
-  return '<div class="card-oggetto '+cls+'">'+esc(testo)+'</div>';
-}
-
-function renderRicorsi(data){
-  var list=data.ricorsi_monitorati||[];
-  if(!list.length)return'<div class="empty"><div class="empty-ico">📋</div><div class="empty-txt">Nessun ricorso monitorato</div></div>';
-  var sorted=sortByDate(list,function(r){return r.data_deposito;});
-  var h='';
-  sorted.forEach(function(r,i){
-    var nrg=r.nrg||(r.anno+'/'+r.numero);
-    var hasPM=(r.provvedimenti_monocratici||[]).length;
-    var hasPC=(r.provvedimenti_collegiali||[]).length;
-    var hasD=(r.discussioni||[]).length;
-    var prossimaUd='';
-    if(r.discussioni&&r.discussioni.length){
-      var fut=r.discussioni.map(parseDisc).filter(function(d){return !d.esito||d.esito==='';});
-      fut.sort(function(a,b){var da=parseDate(a.data),db=parseDate(b.data);return da&&db?da-db:0;});
-      if(fut.length)prossimaUd=fut[0].data+' — '+fut[0].tipo;
-    }
-    h+='<div class="card">';
-    h+='<div class="card-header"><div class="card-nrg">NRG <span>'+esc(nrg)+'</span></div><span class="badge b-blue">'+esc(r.tipo_ricorso||'N/D')+'</span></div>';
-    h+=oggettoBox(r.oggetto);
-    h+='<div class="cr"><span class="ck">Deposito</span><span class="cv date">'+esc(r.data_deposito||'N/D')+'</span></div>';
-    h+='<div class="cr"><span class="ck">Sezione</span><span class="cv">'+esc(r.sezione||'N/D')+'</span></div>';
-    if(prossimaUd)h+='<div class="cr-prossud"><span class="ck">Pross. ud.</span><span class="cv highlight">'+esc(prossimaUd)+'</span></div>';
-    var pills=[];
-    if(hasD)pills.push('<span class="badge b-orange">'+hasD+' udienze</span>');
-    if(hasPC)pills.push('<span class="badge b-blue">'+hasPC+' coll.</span>');
-    if(hasPM)pills.push('<span class="badge b-green">'+hasPM+' mono.</span>');
-    if(pills.length)h+='<div class="card-pills">'+pills.join('')+'</div>';
-    h+='<div class="details" id="det-'+i+'">';
-    h+='<div class="card-sep"></div>';
-    h+=renderParti(r.parti);
-    h+=renderAtti(r.atti);
-    h+=renderDisc(r.discussioni);
-    h+=renderColl(r.provvedimenti_collegiali);
-    h+=renderMono(r.provvedimenti_monocratici);
-    h+='</div>';
-    h+='<button class="expand-btn" onclick="toggle('+i+')">Dettagli <span class="arr" id="arr-'+i+'">▾</span></button>';
-    h+='</div>';
-  });
-  return h;
-}
-
-function renderProvvedimenti(data){
-  var coll=data.provvedimenti_collegiali||[];
-  var mono=data.provvedimenti_monocratici||[];
-  var ultimi=[];
-  (data.ricorsi_monitorati||[]).forEach(function(r){
-    (r.provvedimenti_collegiali||[]).forEach(function(s){var p=parseColl(s);if(p.tipo)ultimi.push({tipo:p.tipo,magistrato:p.magistrato,data_pubbl:p.data_pubbl,esito:p.esito,nrg:r.nrg,kind:'Collegiale'});});
-    (r.provvedimenti_monocratici||[]).forEach(function(s){var p=parseMono(s);if(p.tipo)ultimi.push({tipo:p.tipo,magistrato:p.magistrato,data_pubbl:p.data,esito:p.esito,nrg:r.nrg,kind:'Monocratico'});});
-  });
-  ultimi=sortByDate(ultimi,function(p){return p.data_pubbl;});
-  var h='';
-  if(!coll.length&&!mono.length){
-    h+='<div class="empty"><div class="empty-ico">⚖️</div><div class="empty-txt">Nessun provvedimento nelle ultime 48h</div></div>';
-  } else {
-    h+='<div class="section-header">Collegiali</div>';
-    sortByDate(coll,function(p){return p.dataPubblicazione;}).forEach(function(p){h+='<div class="prov-card"><div class="prov-nrg">NRG <span>'+esc(p.nrgFascicolo||'N/D')+'</span></div><div class="cr"><span class="ck">Tipo</span><span class="cv">'+esc(p.tipoProvvedimento||'N/D')+'</span></div><div class="cr"><span class="ck">Pubbl.</span><span class="cv date">'+esc(p.dataPubblicazione||'N/D')+'</span></div><div class="cr"><span class="ck">Parte</span><span class="cv">'+esc(p.parte||'N/D')+'</span></div></div>';});
-    h+='<div class="section-header">Monocratici</div>';
-    sortByDate(mono,function(p){return p.dataPubblicazione;}).forEach(function(p){h+='<div class="prov-card"><div class="prov-nrg">NRG <span>'+esc(p.nrgFascicolo||'N/D')+'</span></div><div class="cr"><span class="ck">Tipo</span><span class="cv">'+esc(p.tipoProvvedimento||'N/D')+'</span></div><div class="cr"><span class="ck">Pubbl.</span><span class="cv date">'+esc(p.dataPubblicazione||'N/D')+'</span></div><div class="cr"><span class="ck">Parte</span><span class="cv">'+esc(p.parte||'N/D')+'</span></div></div>';});
-  }
-  if(ultimi.length){
-    h+='<div class="section-header">Ultimi provvedimenti — ricorsi monitorati</div>';
-    ultimi.slice(0,15).forEach(function(p){
-      h+='<div class="prov-card"><div class="prov-nrg">NRG <span>'+esc(p.nrg)+'</span></div>';
-      h+='<div class="cr"><span class="ck">Tipo</span><span class="cv">'+esc(p.tipo)+'</span></div>';
-      h+='<div class="cr"><span class="ck">Data</span><span class="cv date">'+esc(p.data_pubbl||'N/D')+'</span></div>';
-      h+='<div class="cr"><span class="ck">Magistrato</span><span class="cv">'+esc(p.magistrato||'N/D')+'</span></div>';
-      if(p.esito)h+='<div class="cr"><span class="ck">Esito</span><span class="cv" style="color:#1a7a3a;font-weight:500">'+esc(p.esito)+'</span></div>';
-      h+='<span class="badge '+(p.kind==='Collegiale'?'b-blue':'b-green')+'" style="margin-top:8px;display:inline-block">'+p.kind+'</span></div>';
-    });
-  }
-  return h;
-}
-
-function renderNuovi(data){
-  var ultimo=data.ultimo_ricorso||0;
-  var anno=data.anno_nuovi||2026;
-  var ricorsi=data.ricorsi_monitorati||[];
-  var ultimoR=null;
-  ricorsi.forEach(function(r){if(r.anno===anno&&r.numero===ultimo)ultimoR=r;});
-  var oggettoUltimo=ultimoR?ultimoR.oggetto:'';
-  var h='<div class="hero-stat">';
-  h+='<div class="hero-stat-label">Ultimo ricorso depositato — Anno '+anno+'</div>';
-  h+='<div class="hero-stat-num"><span>'+ultimo+'</span></div>';
-  h+='<div class="hero-stat-sub">NRG '+anno+String(ultimo).padStart(6,'0')+'</div>';
-  h+=(oggettoUltimo?'<div class="hero-stat-oggetto">'+esc(oggettoUltimo)+'</div>':'<div class="hero-stat-oggetto empty">Oggetto non ancora disponibile</div>');
-  h+='</div>';
-  var correnti=ricorsi.filter(function(r){return r.anno===anno;}).sort(function(a,b){return b.numero-a.numero;});
-  if(correnti.length){
-    h+='<div class="section-header">Ricorsi '+anno+' monitorati</div>';
-    correnti.forEach(function(r){
-      h+='<div class="card">';
-      h+='<div class="card-header"><div class="card-nrg">N. <span>'+r.numero+'</span></div><span class="badge b-green">'+anno+'</span></div>';
-      h+=oggettoBox(r.oggetto);
-      h+='<div class="cr"><span class="ck">Deposito</span><span class="cv date">'+esc(r.data_deposito||'N/D')+'</span></div>';
-      h+='</div>';
-    });
-  }
-  return h;
-}
-
-function trovaUltimaVariazione(data){
+function diffGg(d){
   var oggi=new Date(); oggi.setHours(0,0,0,0);
-  var maxData=null;
+  return Math.round((d-oggi)/86400000);
+}
+
+// Parser campi scraper (formato: campo1 | campo2 | ...)
+function parseParte(s){var p=s.split('|').map(function(x){return x.trim();});return{tipo:p[0]||'',data:p[1]||''};}
+function parseAtto(s) {var p=s.split('|').map(function(x){return x.trim();});return{tipo:p[0]||'',parte:p[2]||'',data:p[3]||''};}
+function parseDisc(s) {var p=s.split('|').map(function(x){return x.trim();});return{data:p[0]||'',tipo:p[1]||'',esito:p[2]||'',magistrato:p[3]||'',giudizio:p[4]||''};}
+function parseColl(s) {var p=s.split('|').map(function(x){return x.trim();});return{tipo:p[0]||'',magistrato:p[1]||'',data_pubbl:p[2]||'',esito:p[5]||''};}
+function parseMono(s) {var p=s.split('|').map(function(x){return x.trim();});return{tipo:p[0]||'',magistrato:p[1]||'',data:p[2]||'',esito:p[3]||''};}
+
+// Converte NRG scraper (es. "2026000099") → chiave DB ("99/2026")
+function nrgToNr(nrg){
+  if(!nrg||nrg.length<10)return nrg;
+  var anno=nrg.substring(0,4);
+  var num=parseInt(nrg.substring(4),10);
+  return num+'/'+anno;
+}
+// Trova record DB dal NRG scraper
+function dbByNrg(nrg){
+  var nr=nrgToNr(nrg);
+  return RICORSI_DB.find(function(r){return r.nr===nr;})||null;
+}
+// Trova dati scraper dal nr DB ("99/2026")
+function scraperByNr(nr, lista){
+  if(!lista)return null;
+  return lista.find(function(r){return r.numero+'/'+r.anno===nr;})||null;
+}
+
+/* ================================================================
+   NAVIGATION
+   ================================================================ */
+function showHome(){
+  document.getElementById('home-screen').style.display='flex';
+  document.getElementById('main-content').style.display='none';
+  window.scrollTo(0,0);
+}
+function showSection(name){
+  document.getElementById('home-screen').style.display='none';
+  document.getElementById('main-content').style.display='block';
+  document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('on');});
+  var el=document.getElementById('panel-'+name);
+  if(el)el.classList.add('on');
+  window.scrollTo(0,0);
+}
+function showSubTab(name,btn){
+  var wrap=btn.closest('.sub-tabs-wrap')||document.getElementById('panel-provv');
+  wrap.querySelectorAll('.sub-tab').forEach(function(t){t.classList.remove('on');});
+  wrap.querySelectorAll('.sub-panel').forEach(function(p){p.classList.remove('on');});
+  btn.classList.add('on');
+  var el=document.getElementById('sub-'+name);
+  if(el)el.classList.add('on');
+}
+
+/* ================================================================
+   TOGGLE RIGA DETTAGLIO
+   ================================================================ */
+function toggleRow(idx){
+  var det=document.getElementById('rowdet-'+idx);
+  var row=document.getElementById('row-'+idx);
+  if(!det)return;
+  var isOpen=det.classList.contains('open');
+  // Chiudi tutte le altre
+  document.querySelectorAll('.row-detail.open').forEach(function(el){el.classList.remove('open');});
+  document.querySelectorAll('.data-row.expanded').forEach(function(el){el.classList.remove('expanded');});
+  if(!isOpen){
+    det.classList.add('open');
+    if(row)row.classList.add('expanded');
+    // Scroll per mostrare il dettaglio
+    setTimeout(function(){if(row)row.scrollIntoView({behavior:'smooth',block:'nearest'});},50);
+  }
+}
+
+/* ================================================================
+   RENDER: DASHBOARD
+   ================================================================ */
+function renderDashboard(data){
+  var tot   = RICORSI_DB.length;
+  var nTar  = RICORSI_DB.filter(function(r){return r.luogo==='TAR FVG';}).length;
+  var nCds  = RICORSI_DB.filter(function(r){return r.luogo==='CdS';}).length;
+
+  // Cautelari: calcolate automaticamente dai dati scraper
+  // "Tipo Provvedimento" contiene "CAUTELARE", esito contiene "ACCOGLIE" / "RESPINGE"
+  var cautAcc=0, cautAccCds=0, cautResp=0, cautRespCds=0;
   (data.ricorsi_monitorati||[]).forEach(function(r){
-    ['discussioni','provvedimenti_collegiali','provvedimenti_monocratici','atti'].forEach(function(campo){
-      (r[campo]||[]).forEach(function(s){
+    var db=dbByNrg(r.nrg);
+    var isCds=db&&db.luogo==='CdS';
+    var provv=[];
+    (r.provvedimenti_collegiali||[]).forEach(function(s){var p=parseColl(s);provv.push({tipo:p.tipo,esito:p.esito});});
+    (r.provvedimenti_monocratici||[]).forEach(function(s){var p=parseMono(s);provv.push({tipo:p.tipo,esito:p.esito});});
+    provv.forEach(function(p){
+      if(!p.tipo||p.tipo.toUpperCase().indexOf('CAUTELARE')===-1)return;
+      var es=(p.esito||'').toUpperCase();
+      if(es.indexOf('ACCOGLIE')!==-1){cautAcc++;if(isCds)cautAccCds++;}
+      else if(es.indexOf('RESPINGE')!==-1){cautResp++;if(isCds)cautRespCds++;}
+    });
+  });
+
+  // Ultimo ricorso (data più recente)
+  var sorted=RICORSI_DB.slice().sort(function(a,b){
+    var da=parseDate(a.data),db=parseDate(b.data);
+    return (!da&&!db)?0:(!da?1:(!db?-1:db-da));
+  });
+  var ultimo=sorted[0];
+
+  // Ultima decisione (max data provvedimento tra ricorsi monitorati)
+  var oggi=new Date(); oggi.setHours(0,0,0,0);
+  var maxDec=null;
+  (data.ricorsi_monitorati||[]).forEach(function(r){
+    ['provvedimenti_collegiali','provvedimenti_monocratici'].forEach(function(f){
+      (r[f]||[]).forEach(function(s){
         var m=s.match(/(\d{2}\/\d{2}\/\d{4})/);
-        if(!m)m=s.match(/(\d{4}-\d{2}-\d{2})/);
-        if(m){
-          var parts=m[1].includes('/')?m[1].split('/'):m[1].split('-').reverse();
-          var d=new Date(+parts[2],+parts[1]-1,+parts[0]);
-          if(d<=oggi&&(!maxData||d>maxData))maxData=d;
-        }
+        if(m){var d=parseDate(m[1]);if(d&&d<=oggi&&(!maxDec||d>maxDec))maxDec=d;}
       });
     });
   });
-  if(maxData){
-    var dd=String(maxData.getDate()).padStart(2,'0');
-    var mm=String(maxData.getMonth()+1).padStart(2,'0');
-    return dd+'/'+mm+'/'+maxData.getFullYear()+' (da dati)';
+
+  var h='<div class="sec-lbl">Riepilogo</div>';
+  h+='<div class="stats-grid">';
+
+  // Totale ricorsi
+  h+='<div class="stat-card accent">';
+  h+='<div class="stat-lbl">Totale ricorsi</div>';
+  h+='<div class="stat-val blue">'+tot+'</div>';
+  h+='<div class="stat-sub">TAR FVG: <b>'+nTar+'</b> &nbsp;·&nbsp; CdS: <b>'+nCds+'</b></div>';
+  h+='</div>';
+
+  // Ultimo ricorso
+  h+='<div class="stat-card">';
+  h+='<div class="stat-lbl">Ultimo ricorso</div>';
+  h+='<div class="stat-val sm">'+esc(ultimo.nr)+'</div>';
+  h+='<div class="stat-sub">'+esc(ultimo.data)+(ultimo.stab?' · '+esc(ultimo.stab):'')+'</div>';
+  h+='<div class="stat-sub" style="margin-top:2px"><span class="badge '+(ultimo.luogo==='CdS'?'b-purple':'b-blue')+'">'+esc(ultimo.luogo)+'</span></div>';
+  h+='</div>';
+
+  // Cautelari accolte
+  h+='<div class="stat-card">';
+  h+='<div class="stat-lbl">Cautelari accolte</div>';
+  h+='<div class="stat-val '+(cautAcc?'':'')+'">'+(!cautAcc&&!cautAccCds?'—':cautAcc)+'</div>';
+  if(cautAccCds)h+='<div class="stat-sub">di cui CdS: <b>'+cautAccCds+'</b></div>';
+  h+='</div>';
+
+  // Cautelari respinte
+  h+='<div class="stat-card">';
+  h+='<div class="stat-lbl">Cautelari respinte</div>';
+  h+='<div class="stat-val">'+(!cautResp&&!cautRespCds?'—':cautResp)+'</div>';
+  if(cautRespCds)h+='<div class="stat-sub">di cui CdS: <b>'+cautRespCds+'</b></div>';
+  h+='</div>';
+
+  // Ultima decisione
+  h+='<div class="stat-card full">';
+  h+='<div class="stat-lbl">Data ultima decisione (ricorsi monitorati)</div>';
+  h+='<div class="stat-val sm '+(maxDec?'blue':'')+'">'+fmtDate(maxDec)+'</div>';
+  h+='</div>';
+
+  h+='</div>'; // /stats-grid
+
+  // Timestamps
+  h+='<div class="sec-lbl">Stato monitoraggio</div>';
+  h+='<div class="ts-box">';
+  h+='<div class="ts-row"><span class="ts-lbl">Ultimo controllo</span><span class="ts-val">'+(data.ultimo_controllo||'—')+'</span></div>';
+  h+='<div class="ts-row"><span class="ts-lbl">Ultima variazione</span><span class="ts-val">'+(data.ultima_variazione||'—')+'</span></div>';
+  h+='<div class="ts-row"><span class="ts-lbl">Ultimo ricorso (scraper)</span><span class="ts-val">'+(data.anno_nuovi||'—')+' / '+(data.ultimo_ricorso||'—')+'</span></div>';
+  h+='</div>';
+
+  return h;
+}
+
+/* ================================================================
+   RENDER: ELENCO RICORSI
+   ================================================================ */
+function renderRicorsiList(data){
+  var oggi=new Date(); oggi.setHours(0,0,0,0);
+  var scraperList=data.ricorsi_monitorati||[];
+
+  var h='<div class="sec-lbl">'+RICORSI_DB.length+' ricorsi — clicca per il dettaglio</div>';
+  h+='<p class="table-hint">↔ scorri se necessario</p>';
+  h+='<div class="table-wrap"><table class="ric-table"><thead><tr>';
+  h+='<th>#</th><th>Stabilimento</th><th>Ricorrente</th><th>Nr ricorso</th><th>Deposito</th><th>Oggetto</th>';
+  h+='</tr></thead><tbody>';
+
+  RICORSI_DB.forEach(function(r,i){
+    var scraperR=r.mon?scraperByNr(r.nr,scraperList):null;
+    var luogoBadge='<span class="badge '+(r.luogo==='CdS'?'b-purple':'b-blue')+'" style="font-size:9px;padding:1px 6px;margin-left:3px">'+esc(r.luogo)+'</span>';
+
+    // Riga principale
+    h+='<tr class="data-row" id="row-'+i+'" onclick="toggleRow('+i+')">';
+    h+='<td class="td-p">'+r.p+'</td>';
+    h+='<td class="td-stab">';
+    if(r.stab){h+=esc(r.stab)+luogoBadge;}
+    else{h+='<span style="color:var(--gray);font-style:italic;font-size:11px">—</span>'+luogoBadge;}
+    h+='</td>';
+    h+='<td class="td-ric">'+esc(r.ric)+'</td>';
+    h+='<td class="td-nr">'+esc(r.nr)+'</td>';
+    h+='<td class="td-data">'+esc(r.data)+'</td>';
+    h+='<td class="td-ogg">'+esc(r.ogg)+'</td>';
+    h+='</tr>';
+
+    // Riga dettaglio (espandibile)
+    h+='<tr class="row-detail" id="rowdet-'+i+'"><td colspan="6">';
+    h+='<div class="det-title">'+esc(r.nr)+(r.stab?' — '+esc(r.stab):'')+'</div>';
+    h+='<div class="det-cr"><span class="det-ck">Ricorrente</span><span class="det-cv">'+esc(r.ric)+'</span></div>';
+    h+='<div class="det-cr"><span class="det-ck">Oggetto</span><span class="det-cv">'+esc(r.ogg)+'</span></div>';
+    h+='<div class="det-cr"><span class="det-ck">Presso</span><span class="det-cv">'+esc(r.luogo)+'</span></div>';
+    h+='<div class="det-cr"><span class="det-ck">Deposito</span><span class="det-cv">'+esc(r.data)+'</span></div>';
+    if(r.caut)h+='<div class="det-cr"><span class="det-ck">Cautelare</span><span class="det-cv" style="color:var(--green-dark);font-weight:600">'+esc(r.caut)+'</span></div>';
+
+    if(scraperR){
+      if(scraperR.sezione)h+='<div class="det-cr"><span class="det-ck">Sezione</span><span class="det-cv">'+esc(scraperR.sezione)+'</span></div>';
+      if(scraperR.tipo_ricorso)h+='<div class="det-cr"><span class="det-ck">Tipo ric.</span><span class="det-cv">'+esc(scraperR.tipo_ricorso)+'</span></div>';
+
+      // Parti
+      if(scraperR.parti&&scraperR.parti.length){
+        h+='<div class="det-sec"><div class="det-sec-title">Parti</div>';
+        scraperR.parti.forEach(function(s){var p=parseParte(s);if(p.tipo)h+='<div class="det-item">'+esc(p.tipo)+(p.data?' <span class="det-date">'+esc(p.data)+'</span>':'')+'</div>';});
+        h+='</div>';
+      }
+      // Atti
+      if(scraperR.atti&&scraperR.atti.length){
+        h+='<div class="det-sec"><div class="det-sec-title">Atti depositati</div>';
+        sortByDate(scraperR.atti,function(s){return parseAtto(s).data;}).forEach(function(s){
+          var a=parseAtto(s);
+          if(a.tipo)h+='<div class="det-item">'+esc(a.tipo)+(a.parte?' · <span style="color:var(--gray)">'+esc(a.parte)+'</span>':'')+(a.data?' <span class="det-date">'+esc(a.data)+'</span>':'')+'</div>';
+        });
+        h+='</div>';
+      }
+      // Discussioni (future evidenziate in verde)
+      if(scraperR.discussioni&&scraperR.discussioni.length){
+        h+='<div class="det-sec"><div class="det-sec-title">Discussioni</div>';
+        sortByDate(scraperR.discussioni,function(s){return s.split('|')[0].trim();},false).forEach(function(s){
+          var d=parseDisc(s);
+          if(!d.data)return;
+          var dt=parseDate(d.data);
+          var futura=dt&&dt>=oggi&&(!d.esito||d.esito==='');
+          h+='<div class="det-item'+(futura?' future':'')+'"><strong>'+esc(d.data)+'</strong> — '+esc(d.tipo);
+          if(d.giudizio)h+=' <span style="color:var(--gray)">· '+esc(d.giudizio)+'</span>';
+          if(d.magistrato)h+=' <span style="color:var(--gray)">· '+esc(d.magistrato)+'</span>';
+          if(d.esito)h+=' <span class="det-esito">'+esc(d.esito)+'</span>';
+          h+='</div>';
+        });
+        h+='</div>';
+      }
+      // Provv. collegiali
+      if(scraperR.provvedimenti_collegiali&&scraperR.provvedimenti_collegiali.length){
+        h+='<div class="det-sec"><div class="det-sec-title">Provvedimenti Collegiali</div>';
+        sortByDate(scraperR.provvedimenti_collegiali,function(s){return parseColl(s).data_pubbl;}).forEach(function(s){
+          var p=parseColl(s);
+          if(p.tipo)h+='<div class="det-item">'+esc(p.tipo)+' <span class="det-date">'+esc(p.data_pubbl)+'</span>'+(p.esito?' <span class="det-esito">'+esc(p.esito)+'</span>':'')+'</div>';
+        });
+        h+='</div>';
+      }
+      // Provv. monocratici
+      if(scraperR.provvedimenti_monocratici&&scraperR.provvedimenti_monocratici.length){
+        h+='<div class="det-sec"><div class="det-sec-title">Provvedimenti Monocratici</div>';
+        sortByDate(scraperR.provvedimenti_monocratici,function(s){return parseMono(s).data;}).forEach(function(s){
+          var p=parseMono(s);
+          if(p.tipo)h+='<div class="det-item">'+esc(p.tipo)+' <span class="det-date">'+esc(p.data)+'</span>'+(p.esito?' <span class="det-esito">'+esc(p.esito)+'</span>':'')+'</div>';
+        });
+        h+='</div>';
+      }
+    } else if(!r.mon){
+      h+='<div class="det-nodata">Ricorso non tracciato dallo scraper (storico o CdS)</div>';
+    } else {
+      h+='<div class="det-nodata">Dati scraper non ancora disponibili</div>';
+    }
+
+    h+='</td></tr>';
+  });
+
+  h+='</tbody></table></div>';
+  return h;
+}
+
+/* ================================================================
+   RENDER: PROVVEDIMENTI
+   ================================================================ */
+function renderProvvedimenti(data){
+  var scraperList=data.ricorsi_monitorati||[];
+  var collAll=data.provvedimenti_collegiali||[];
+  var monoAll=data.provvedimenti_monocratici||[];
+
+  var h='<div id="sub-tabs-wrap">';
+  h+='<div class="sub-tabs">';
+  h+='<button class="sub-tab on" onclick="showSubTabLocal(\'monitorati\',this)">Monitorati</button>';
+  h+='<button class="sub-tab"    onclick="showSubTabLocal(\'tutti\',this)">Tutti TAR FVG</button>';
+  h+='</div>';
+
+  /* ── SUB: MONITORATI ── */
+  h+='<div class="sub-panel on" id="sub-monitorati">';
+  var monProv=[];
+  scraperList.forEach(function(r){
+    var db=dbByNrg(r.nrg);
+    (r.provvedimenti_collegiali||[]).forEach(function(s){
+      var p=parseColl(s);
+      if(p.tipo)monProv.push({stab:db?db.stab:null,ric:db?db.ric:null,nrg:r.nrg,tipo:p.tipo,kind:'Collegiale',data:p.data_pubbl,mag:p.magistrato,esito:p.esito});
+    });
+    (r.provvedimenti_monocratici||[]).forEach(function(s){
+      var p=parseMono(s);
+      if(p.tipo)monProv.push({stab:db?db.stab:null,ric:db?db.ric:null,nrg:r.nrg,tipo:p.tipo,kind:'Monocratico',data:p.data,mag:p.magistrato,esito:p.esito});
+    });
+  });
+  monProv=sortByDate(monProv,function(p){return p.data;});
+
+  if(!monProv.length){
+    h+='<div class="empty"><div class="empty-ico">⚖️</div><div class="empty-txt">Nessun provvedimento<br>nei ricorsi monitorati</div></div>';
+  } else {
+    monProv.forEach(function(p){
+      h+='<div class="prov-card">';
+      if(p.stab)h+='<div class="prov-stab">'+esc(p.stab)+'</div>';
+      if(p.ric)h+='<div class="prov-ric">'+esc(p.ric)+'</div>';
+      h+='<div class="prov-nrg">NRG '+esc(p.nrg)+'</div>';
+      h+='<div class="cr"><span class="ck">Tipo</span><span class="cv">'+esc(p.tipo)+'</span></div>';
+      h+='<div class="cr"><span class="ck">Pubbl.</span><span class="cv date">'+esc(p.data||'N/D')+'</span></div>';
+      if(p.mag)h+='<div class="cr"><span class="ck">Magistrato</span><span class="cv">'+esc(p.mag)+'</span></div>';
+      if(p.esito)h+='<div class="cr"><span class="ck">Esito</span><span class="cv esito">'+esc(p.esito)+'</span></div>';
+      h+='<span class="badge '+(p.kind==='Collegiale'?'b-blue':'b-green')+'" style="margin-top:8px;display:inline-block">'+esc(p.kind)+'</span>';
+      h+='</div>';
+    });
   }
-  return 'Nessuna ancora';
+  h+='</div>'; // /sub-monitorati
+
+  /* ── SUB: TUTTI ── */
+  h+='<div class="sub-panel" id="sub-tutti">';
+  var tutti=[];
+  collAll.forEach(function(p){tutti.push({parte:p.parte,tipo:p.tipoProvvedimento,dataPubbl:p.dataPubblicazione,dataUd:p.dataUdienza,esito:p.esito,kind:'C'});});
+  monoAll.forEach(function(p){tutti.push({parte:p.parte,tipo:p.tipoProvvedimento,dataPubbl:p.dataPubblicazione,dataUd:p.dataUdienza,esito:p.esito,kind:'M'});});
+  tutti=sortByDate(tutti,function(p){return p.dataPubbl;});
+
+  if(!tutti.length){
+    h+='<div class="empty"><div class="empty-ico">⚖️</div><div class="empty-txt">Nessun provvedimento<br>nelle ultime 48h</div></div>';
+  } else {
+    h+='<div class="sec-lbl">'+tutti.length+' provvedimenti — ultime 48h</div>';
+    h+='<div class="tutti-wrap"><table class="tutti-table"><thead><tr>';
+    h+='<th>Parte</th><th>Tipo</th><th>Data pubbl.</th><th>Data udienza</th><th>Esito</th>';
+    h+='</tr></thead><tbody>';
+    tutti.forEach(function(p){
+      h+='<tr>';
+      h+='<td class="t-parte">'+esc(p.parte||'—')+'</td>';
+      h+='<td class="t-tipo">'+esc(p.tipo||'—')+'</td>';
+      h+='<td class="t-data">'+esc(p.dataPubbl||'—')+'</td>';
+      h+='<td class="t-data">'+esc(p.dataUd||'—')+'</td>';
+      h+='<td class="t-esito">'+esc(p.esito||'')+'</td>';
+      h+='</tr>';
+    });
+    h+='</tbody></table></div>';
+  }
+  h+='</div>'; // /sub-tutti
+  h+='</div>'; // /sub-tabs-wrap
+
+  return h;
 }
 
-function toggle(i){
-  var det=document.getElementById('det-'+i);
-  var arr=document.getElementById('arr-'+i);
-  if(!det)return;
-  det.classList.toggle('open');
-  arr.classList.toggle('open');
+// Sub-tab switcher locale alla sezione Provvedimenti
+function showSubTabLocal(name,btn){
+  var wrap=document.getElementById('sub-tabs-wrap');
+  if(!wrap)return;
+  wrap.querySelectorAll('.sub-tab').forEach(function(t){t.classList.remove('on');});
+  wrap.querySelectorAll('.sub-panel').forEach(function(p){p.classList.remove('on');});
+  btn.classList.add('on');
+  var el=document.getElementById('sub-'+name);
+  if(el)el.classList.add('on');
 }
 
-function showTab(name,btn){
-  document.querySelectorAll('.tab').forEach(function(t){t.classList.remove('on');});
-  document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('on');});
-  if(btn)btn.classList.add('on');
-  var panel=document.getElementById('panel-'+name);
-  if(panel)panel.classList.add('on');
+/* ================================================================
+   RENDER: SCADENZE
+   ================================================================ */
+function renderScadenze(data){
+  var oggi=new Date(); oggi.setHours(0,0,0,0);
+  var scraperList=data.ricorsi_monitorati||[];
+  var righe=[];
+
+  scraperList.forEach(function(r){
+    var db=dbByNrg(r.nrg);
+    var nr=r.numero+'/'+r.anno;
+    (r.discussioni||[]).forEach(function(s){
+      var d=parseDisc(s);
+      var dt=parseDate(d.data);
+      if(dt&&dt>=oggi&&(!d.esito||d.esito==='')){
+        righe.push({nr:nr, stab:db?db.stab:null, tipo:d.tipo, giudizio:d.giudizio, data:dt, dataStr:d.data});
+      }
+    });
+  });
+
+  if(!righe.length){
+    return '<div class="empty"><div class="empty-ico">📅</div><div class="empty-txt">Nessuna scadenza futura<br>in agenda</div></div>';
+  }
+
+  righe.sort(function(a,b){return a.data-b.data;});
+  var h='<div class="sec-lbl">'+righe.length+' scadenz'+(righe.length===1?'a':'e')+' in agenda</div>';
+  righe.forEach(function(row){
+    var gg=diffGg(row.data);
+    var ggCls=gg===0?'oggi':(gg<=7?'presto':'ok');
+    var ggTxt=gg===0?'OGGI':(gg===1?'domani':'tra '+gg+' gg');
+    h+='<div class="scad-card">';
+    h+='<div class="scad-left">';
+    h+='<div class="scad-nr">'+esc(row.nr)+'</div>';
+    h+='<div class="scad-stab">'+(row.stab?esc(row.stab):'—')+'</div>';
+    h+='<div class="scad-tipo">'+esc(row.tipo)+(row.giudizio?' · '+esc(row.giudizio):'')+'</div>';
+    h+='</div>';
+    h+='<div class="scad-right">';
+    h+='<div class="scad-data">'+esc(row.dataStr)+'</div>';
+    h+='<div class="scad-gg '+ggCls+'">'+esc(ggTxt)+'</div>';
+    h+='</div>';
+    h+='</div>';
+  });
+  return h;
 }
 
+/* ================================================================
+   LOAD DATA
+   ================================================================ */
 var isLoading=false;
 function loadData(){
   if(isLoading)return;
   isLoading=true;
   var ico=document.getElementById('refreshIco');
-  ico.classList.add('spinning');
+  if(ico)ico.classList.add('spinning');
+  document.getElementById('liveLabel').textContent='–';
+  document.getElementById('statusDot').style.background='var(--gray)';
+
   fetch('https://raw.githubusercontent.com/rolmeo/monitor-tar-fvg/main/dashboard_data.json?t='+Date.now())
     .then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json();})
     .then(function(data){
-      document.getElementById('lastUp').textContent='Aggiornato: '+(data.ultimo_aggiornamento||'—');
-      document.getElementById('lastCheck').textContent=(data.ultimo_controllo||'—');
-      var ultimaVar=data.ultima_variazione||trovaUltimaVariazione(data);
-      document.getElementById('lastChange').textContent=ultimaVar;
-      document.getElementById('liveLabel').textContent='Live';
       document.getElementById('statusDot').style.background='var(--green)';
-      document.getElementById('cnt-ricorsi').innerHTML=renderRicorsi(data);
-      document.getElementById('cnt-provv').innerHTML=renderProvvedimenti(data);
-      document.getElementById('cnt-nuovi').innerHTML=renderNuovi(data);
-      document.getElementById('cnt-agenda').innerHTML=renderAgenda(data);
+      document.getElementById('liveLabel').textContent='Live';
+      var tsEl=document.getElementById('home-ts-val');
+      if(tsEl)tsEl.textContent=data.ultimo_controllo||'—';
+
+      document.getElementById('cnt-dashboard').innerHTML = renderDashboard(data);
+      document.getElementById('cnt-ricorsi').innerHTML   = renderRicorsiList(data);
+      document.getElementById('cnt-provv').innerHTML     = renderProvvedimenti(data);
+      document.getElementById('cnt-scadenze').innerHTML  = renderScadenze(data);
     })
     .catch(function(e){
-      document.getElementById('lastUp').textContent='Errore nel caricamento';
       document.getElementById('liveLabel').textContent='Offline';
       document.getElementById('liveLabel').style.color='var(--red)';
       document.getElementById('statusDot').style.background='var(--red)';
-      var msg='<div class="empty"><div class="empty-ico">⚠️</div><div class="empty-txt">Impossibile caricare i dati.<br>Riprova tra qualche secondo.</div></div>';
-      document.getElementById('cnt-ricorsi').innerHTML=msg;
-      document.getElementById('cnt-provv').innerHTML=msg;
-      document.getElementById('cnt-nuovi').innerHTML=msg;
+      var err='<div class="empty"><div class="empty-ico">⚠️</div><div class="empty-txt">Impossibile caricare i dati.<br>Riprova tra qualche istante.</div></div>';
+      document.getElementById('cnt-dashboard').innerHTML = err;
+      document.getElementById('cnt-ricorsi').innerHTML   = renderRicorsiList({});
+      document.getElementById('cnt-provv').innerHTML     = err;
+      document.getElementById('cnt-scadenze').innerHTML  = err;
       console.error(e);
     })
     .finally(function(){
-      ico.classList.remove('spinning');
+      if(ico)ico.classList.remove('spinning');
       isLoading=false;
     });
 }
 
 loadData();
-setInterval(loadData,5*60*1000);
+setInterval(loadData, 5*60*1000);
 </script>
 </body>
 </html>
