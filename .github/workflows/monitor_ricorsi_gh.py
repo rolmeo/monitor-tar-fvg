@@ -2,47 +2,26 @@ import requests
 import json
 import os
 import re
-from datetime import datetime
+import base64
+from datetime import datetime, timezone, timedelta
 import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # ============================================================
-# Carica variabili dal file .env (C:\TAR\.env)
-# ============================================================
-_env_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env")
-if os.path.exists(_env_path):
-    with open(_env_path, "r", encoding="utf-8") as _f:
-        for _line in _f:
-            _line = _line.strip()
-            if _line and not _line.startswith("#") and "=" in _line:
-                _k, _v = _line.split("=", 1)
-                os.environ.setdefault(_k.strip(), _v.strip())
-
-# ============================================================
 # CONFIGURAZIONE
 # ============================================================
-TELEGRAM_TOKEN   = os.environ.get("TELEGRAM_TOKEN", "")
+TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN", "")
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "")
-STATO_FILE = "C:\\TAR\\tar_ricorsi_stato.json"
+GH_TOKEN = os.environ.get("GH_TOKEN", "")
+GH_REPO = os.environ.get("GH_REPO", "")
+STATO_FILE = "tar_ricorsi_stato.json"
+DASHBOARD_FILE = "dashboard_data.json"
 
 # Anno usato per la ricerca di NUOVI ricorsi
 ANNO_NUOVI = 2026
 
 # Ricorsi specifici da monitorare per variazioni.
-# Formato: (anno, numero)
-# Esempi:
-#   (2026, 99)   -> ricorso 99 del 2026
-#   (2025, 150)  -> ricorso 150 del 2025
 RICORSI_DA_MONITORARE = [
-    (2024, 406),
-    (2025, 257),
-    (2025, 267),
-    (2025, 268),
-    (2025, 270),
-    (2025, 399),
-    (2025, 403),
-    (2025, 404),
-    (2025, 405),
     (2026, 99),
     (2026, 100),
     (2026, 80),
@@ -55,7 +34,7 @@ RICORSI_DA_MONITORARE = [
     (2026, 121),
     (2026, 123),
     (2026, 126)
-    ]
+]
 
 # ============================================================
 # URL e portlet
@@ -69,6 +48,11 @@ sessione.headers.update({
     "Accept-Language": "it-IT,it;q=0.8,en-US;q=0.7",
 })
 p_auth_token = ""
+
+
+def ora_locale():
+    return datetime.now(timezone.utc) + timedelta(hours=1)
+
 
 # ============================================================
 # Funzioni base
@@ -100,7 +84,6 @@ def inizializza_sessione():
 
 
 def fetch_ricorso(anno, numero):
-    """Recupera la pagina HTML di un ricorso. Restituisce l'HTML o None se non trovato."""
     url = (
         URL_HOME + "?p_p_id=" + PORTLET
         + "&p_p_lifecycle=1&p_p_state=normal&p_p_mode=view"
@@ -108,7 +91,7 @@ def fetch_ricorso(anno, numero):
         + "&p_auth=" + p_auth_token
     )
     form_data = {
-        "_" + PORTLET + "_formDate": (None, str(int(datetime.now().timestamp() * 1000))),
+        "_" + PORTLET + "_formDate": (None, str(int(ora_locale().timestamp() * 1000))),
         "_" + PORTLET + "_year": (None, str(anno)),
         "_" + PORTLET + "_number": (None, str(numero)),
         "_" + PORTLET + "_search": (None, ""),
@@ -137,7 +120,6 @@ def fetch_ricorso(anno, numero):
 
 
 def estrai_dettagli(html, anno, numero):
-    """Estrae i dettagli principali del ricorso dall'HTML."""
     dettagli = {
         "nrg": str(anno) + str(numero).zfill(6),
         "anno": anno,
@@ -153,7 +135,6 @@ def estrai_dettagli(html, anno, numero):
         "provvedimenti_monocratici": [],
     }
 
-    # Estrai campi base usando gli id HTML specifici della pagina
     m = re.search(r'id="valoreSezione"[^>]*>([^<]+)<', html)
     if m:
         dettagli["sezione"] = m.group(1).strip()
@@ -170,7 +151,6 @@ def estrai_dettagli(html, anno, numero):
     if m:
         dettagli["oggetto"] = m.group(1).strip()[:200]
 
-    # Estrai tabelle usando regex sulle righe <tr>
     def estrai_righe_tabella(html, titolo_sezione, titolo_fine):
         pattern = titolo_sezione + r'.*?<tbody>(.*?)</tbody>.*?' + titolo_fine
         m = re.search(pattern, html, re.DOTALL | re.IGNORECASE)
@@ -197,7 +177,6 @@ def estrai_dettagli(html, anno, numero):
 
 
 def confronta_dettagli(vecchio, nuovo):
-    """Confronta due versioni dei dettagli e restituisce le differenze."""
     differenze = []
     sezioni = ["parti", "atti", "discussioni", "provvedimenti_collegiali", "provvedimenti_monocratici"]
     nomi = {
@@ -235,16 +214,76 @@ def carica_stato():
     if os.path.exists(STATO_FILE):
         with open(STATO_FILE, "r", encoding="utf-8") as f:
             return json.load(f)
-    return {
-        "ultimo_numero": 109,
-        "ricorsi_monitorati": {}
-    }
+    return {"ultimo_numero": 120, "ricorsi_monitorati": {}}
 
 
 def salva_stato(stato):
-    os.makedirs(os.path.dirname(STATO_FILE), exist_ok=True)
     with open(STATO_FILE, "w", encoding="utf-8") as f:
         json.dump(stato, f, ensure_ascii=False, indent=2)
+
+
+def pubblica_su_github(filepath):
+    if not GH_TOKEN or not GH_REPO:
+        print("[WARN] GH_TOKEN o GH_REPO non configurati, skip pubblicazione")
+        return
+    try:
+        with open(filepath, "rb") as f:
+            contenuto = base64.b64encode(f.read()).decode("utf-8")
+
+        api_url = "https://api.github.com/repos/" + GH_REPO + "/contents/" + filepath
+        headers = {
+            "Authorization": "token " + GH_TOKEN,
+            "Accept": "application/vnd.github.v3+json",
+        }
+        sha = None
+        resp = requests.get(api_url, headers=headers, timeout=10)
+        if resp.status_code == 200:
+            sha = resp.json().get("sha")
+
+        payload = {
+            "message": "Aggiorna " + filepath,
+            "content": contenuto,
+        }
+        if sha:
+            payload["sha"] = sha
+
+        resp = requests.put(api_url, headers=headers, json=payload, timeout=15)
+        if resp.status_code in (200, 201):
+            print("[OK] " + filepath + " pubblicato su GitHub")
+        else:
+            print("[ERRORE] GitHub API: " + str(resp.status_code) + " " + resp.text[:200])
+    except Exception as e:
+        print("[ERRORE] pubblica_su_github: " + str(e))
+
+
+def aggiorna_dashboard(stato, ha_variazioni=False):
+    """Legge dashboard_data.json esistente, aggiorna la sezione ricorsi e salva."""
+    dati = {}
+    if os.path.exists(DASHBOARD_FILE):
+        try:
+            with open(DASHBOARD_FILE, "r", encoding="utf-8") as f:
+                dati = json.load(f)
+        except Exception:
+            dati = {}
+
+    ora_str = ora_locale().strftime("%d/%m/%Y %H:%M")
+    dati["ultimo_aggiornamento"] = ora_str
+    dati["ultimo_controllo"] = ora_str
+    if ha_variazioni:
+        dati["ultima_variazione"] = ora_str
+    dati["ultimo_ricorso"] = stato.get("ultimo_numero", 0)
+    dati["anno_nuovi"] = ANNO_NUOVI
+
+    # Lista ricorsi monitorati con dettagli
+    ricorsi = []
+    for chiave, dettagli in stato.get("ricorsi_monitorati", {}).items():
+        ricorsi.append(dettagli)
+    dati["ricorsi_monitorati"] = ricorsi
+
+    with open(DASHBOARD_FILE, "w", encoding="utf-8") as f:
+        json.dump(dati, f, ensure_ascii=False, indent=2)
+
+    pubblica_su_github(DASHBOARD_FILE)
 
 
 # ============================================================
@@ -252,8 +291,7 @@ def salva_stato(stato):
 # ============================================================
 
 def controlla_nuovi_ricorsi(stato):
-    """Cerca nuovi ricorsi partendo dall'ultimo numero noto."""
-    ultimo = stato.get("ultimo_numero", 109)
+    ultimo = stato.get("ultimo_numero", 120)
     trovati = []
 
     while True:
@@ -270,7 +308,7 @@ def controlla_nuovi_ricorsi(stato):
 
     if trovati:
         stato["ultimo_numero"] = ultimo
-        ora = datetime.now().strftime("%d/%m/%Y %H:%M")
+        ora = ora_locale().strftime("%d/%m/%Y %H:%M")
         for d in trovati:
             msg = "🆕 TAR Friuli - Nuovo ricorso\nRilevato il " + ora + "\n\n"
             msg += "NRG: " + d["nrg"] + " | Sezione: " + d["sezione"] + "\n"
@@ -283,42 +321,39 @@ def controlla_nuovi_ricorsi(stato):
 
 
 def controlla_variazioni_ricorso(stato, anno, numero):
-    """Controlla se ci sono variazioni in un ricorso specifico."""
     print("[INFO] Controllo variazioni ricorso " + str(anno) + "/" + str(numero) + "...")
     html = fetch_ricorso(anno, numero)
     if html is None:
         print("[WARN] Impossibile recuperare ricorso " + str(anno) + "/" + str(numero))
-        return stato
+        return stato, False
 
     dettagli_nuovi = estrai_dettagli(html, anno, numero)
-
-    # La chiave include l'anno per distinguere ricorsi di anni diversi
     chiave = str(anno) + "_" + str(numero)
 
     if chiave not in stato["ricorsi_monitorati"]:
         stato["ricorsi_monitorati"][chiave] = dettagli_nuovi
         print("[INFO] Ricorso " + str(anno) + "/" + str(numero) + ": stato iniziale salvato")
-        return stato
+        return stato, False
 
     dettagli_vecchi = stato["ricorsi_monitorati"][chiave]
     differenze = confronta_dettagli(dettagli_vecchi, dettagli_nuovi)
 
     if differenze:
-        ora = datetime.now().strftime("%d/%m/%Y %H:%M")
+        ora = ora_locale().strftime("%d/%m/%Y %H:%M")
         msg = "🔔 TAR Friuli - Variazione ricorso " + str(anno) + "/" + str(numero) + "\nRilevata il " + ora + "\n\n"
         msg += "\n\n".join(differenze)
         invia_telegram(msg)
         stato["ricorsi_monitorati"][chiave] = dettagli_nuovi
         print("[INFO] Ricorso " + str(anno) + "/" + str(numero) + ": " + str(len(differenze)) + " variazioni trovate")
+        return stato, True
     else:
         print("[INFO] Ricorso " + str(anno) + "/" + str(numero) + ": nessuna variazione")
 
-    return stato
+    return stato, False
 
 
 def main():
-    
-    print("[INFO] Avvio controllo ricorsi: " + datetime.now().strftime("%d/%m/%Y %H:%M"))
+    print("[INFO] Avvio controllo ricorsi: " + ora_locale().strftime("%d/%m/%Y %H:%M"))
 
     if not inizializza_sessione():
         print("[ERRORE] Impossibile connettersi al sito")
@@ -326,14 +361,19 @@ def main():
 
     stato = carica_stato()
 
-    # 1. Controlla nuovi ricorsi
     stato = controlla_nuovi_ricorsi(stato)
 
-    # 2. Controlla variazioni nei ricorsi monitorati
+    ha_variazioni = False
     for anno, numero in RICORSI_DA_MONITORARE:
-        stato = controlla_variazioni_ricorso(stato, anno, numero)
+        stato, variato = controlla_variazioni_ricorso(stato, anno, numero)
+        if variato:
+            ha_variazioni = True
 
     salva_stato(stato)
+
+    # Aggiorna dashboard
+    aggiorna_dashboard(stato, ha_variazioni)
+
     print("[INFO] Fine controllo ricorsi")
 
 
