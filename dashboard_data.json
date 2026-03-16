@@ -784,24 +784,6 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "16/03/2026 16:43",
-  "ultimo_controllo": "16/03/2026 16:43",
-  "provvedimenti_collegiali": [
-    {
-      "nrgFascicolo": "202500312",
-      "sezione": "1",
-      "parte": "BLUSOLAR SESTO AL REGHENA 1 S.R.L.",
-      "tipoUdienza": "CC",
-      "dataUdienza": "10/03/2026",
-      "numProvvedimento": "202600090",
-      "dataPubblicazione": "16/03/2026",
-      "tipoProvvedimento": "SENTENZA",
-      "codiceTipoProvvedimento": "01",
-      "relatore": "SINIGOI MANUELA",
-      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
-      "esito": "ACCOGLIE INTERLOCUTORIO/A CONVERSIONE DEL RITO FISSA UDIENZA PUBBLICA  ",
-      "nomeFile": "202600090_01.xml"
-    }
-  ],
-  "provvedimenti_monocratici": []
+  "ultimo_aggiornamento": "16/03/2026 16:47",
+  "ultimo_controllo": "16/03/2026 16:47"
 }
