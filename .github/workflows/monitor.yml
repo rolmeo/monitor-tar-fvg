@@ -21,7 +21,7 @@ jobs:
           restore-keys: |
             tar-stato-
 
-      - name: Ripristina stato ricorsi
+      - name: Ripristina stato ricorsi TAR
         uses: actions/cache@v4
         with:
           path: tar_ricorsi_stato.json
@@ -29,10 +29,18 @@ jobs:
           restore-keys: |
             tar-ricorsi-stato-
 
+      - name: Ripristina stato ricorsi CdS
+        uses: actions/cache@v4
+        with:
+          path: cds_ricorsi_stato.json
+          key: cds-ricorsi-stato-${{ github.run_id }}
+          restore-keys: |
+            cds-ricorsi-stato-
+
       - name: Installa dipendenze
         run: pip install requests
 
-      - name: Monitora provvedimenti
+      - name: Monitora provvedimenti TAR
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
@@ -40,13 +48,21 @@ jobs:
           GH_REPO: ${{ github.repository }}
         run: python .github/workflows/monitor_tar_gh.py
 
-      - name: Monitora ricorsi
+      - name: Monitora ricorsi TAR
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GH_REPO: ${{ github.repository }}
         run: python .github/workflows/monitor_ricorsi_gh.py
+
+      - name: Monitora ricorsi CdS
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        run: python .github/workflows/monitor_cds_gh.py
 
       - name: Salva stato provvedimenti
         uses: actions/cache/save@v4
@@ -55,9 +71,16 @@ jobs:
           path: tar_stato.json
           key: tar-stato-${{ github.run_id }}
 
-      - name: Salva stato ricorsi
+      - name: Salva stato ricorsi TAR
         uses: actions/cache/save@v4
         if: always()
         with:
           path: tar_ricorsi_stato.json
           key: tar-ricorsi-stato-${{ github.run_id }}
+
+      - name: Salva stato ricorsi CdS
+        uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: cds_ricorsi_stato.json
+          key: cds-ricorsi-stato-${{ github.run_id }}
