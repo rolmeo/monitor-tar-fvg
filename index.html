@@ -162,7 +162,7 @@ body{background:var(--off-white);color:var(--near-black);font-family:'Montserrat
 .sub-panel.on{display:block;animation:fadeUp 0.25s ease both;}
 .prov-card{background:var(--white);border-radius:16px;padding:16px;margin-bottom:10px;box-shadow:0 1px 3px rgba(0,0,0,0.05);}
 .prov-stab{font-size:17px;font-weight:700;letter-spacing:-0.02em;margin-bottom:1px;}
-.prov-ric{font-size:12px;color:var(--gray);margin-bottom:8px;}
+.prov-ric{font-size:14px;font-weight:600;color:var(--near-black);margin-bottom:9px;}.prov-ric-lbl{font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--near-black);display:block;margin-bottom:2px;}
 .prov-nrg{font-size:12px;font-weight:600;color:var(--blue);margin-bottom:8px;}
 .cr{display:flex;gap:10px;margin-bottom:5px;align-items:baseline;}
 .ck{font-size:11px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--gray);min-width:78px;flex-shrink:0;}
@@ -288,16 +288,16 @@ body{background:var(--off-white);color:var(--near-black);font-family:'Montserrat
    Campi: p, luogo, nr, data, ric, ogg, stab, contro, neiConfrDi, mon
    ================================================================ */
 var RICORSI_DB = [
-  {p:1,  luogo:'TAR FVG', nr:'406/2024',  data:'25/11/2024', ric:'Albergo Italia Srl',               ogg:'Annullamento revoca bando',             stab:null,                    contro:'Comune di Lignano; Ente di Decentr. Reg. di Udine', neiConfrDi:'Bagni di Lignano di Augusto Angelo Marin Sas', mon:true},
-  {p:2,  luogo:'CdS',     nr:'1750/2025', data:'03/03/2025', ric:'Albergo Italia Srl',               ogg:'Riforma sentenza TAR su ric. 406/2024', stab:null,                    contro:'Comune di Lignano; Ente di Decentr. Reg. di Udine', neiConfrDi:'Bagni di Lignano di Augusto Angelo Marin Sas', mon:true},
-  {p:3,  luogo:'TAR FVG', nr:'257/2025',  data:'29/05/2025', ric:'Meotto Giuseppe Srl',              ogg:'Proroga',                               stab:'Portofino',             contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'n.d.', mon:true},
-  {p:4,  luogo:'TAR FVG', nr:'267/2025',  data:'30/05/2025', ric:'Pietro Ceiner Snc',                ogg:'Proroga',                               stab:'Ausonia',               contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'n.d.', mon:true},
-  {p:5,  luogo:'TAR FVG', nr:'268/2025',  data:'30/05/2025', ric:'Doggy Beach Srl',                  ogg:'Proroga',                               stab:'Spiaggia per cani',     contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'n.d.', mon:true},
-  {p:6,  luogo:'TAR FVG', nr:'270/2025',  data:'30/05/2025', ric:'Gigante Giancarlo',                ogg:'Proroga',                               stab:'Gabbiano',              contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'n.d.', mon:true},
-  {p:7,  luogo:'TAR FVG', nr:'399/2025',  data:'31/07/2025', ric:'Battiston MD Srl',                 ogg:'Proroga',                               stab:'Lido del Sole',         contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'n.d.', mon:true},
-  {p:8,  luogo:'TAR FVG', nr:'403/2025',  data:'01/08/2025', ric:'Paschetto G. / Neri R.',           ogg:'Proroga',                               stab:'Ufficio 7 bis (Pineta)',contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'Frontemare di Casarin Lorenzo Sas', mon:true},
-  {p:9,  luogo:'TAR FVG', nr:'404/2025',  data:'01/08/2025', ric:'Giardino Srl',                     ogg:'Proroga',                               stab:'La Sacca',              contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'n.d.', mon:true},
-  {p:10, luogo:'TAR FVG', nr:'405/2025',  data:'01/08/2025', ric:'Gest. Spiaggia Italia Snc',        ogg:'Proroga',                               stab:'Bagno Italia',          contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'n.d.', mon:true},
+  {p:1,  luogo:'TAR FVG', nr:'406/2024',  data:'25/11/2024', ric:'Albergo Italia Srl',               ogg:'Annullamento revoca bando',             stab:null,                    contro:'Comune di Lignano; Ente di Decentr. Reg. di Udine', neiConfrDi:'Bagni di Lignano di Augusto Angelo Marin Sas', mon:false},
+  {p:2,  luogo:'CdS',     nr:'1750/2025', data:'03/03/2025', ric:'Albergo Italia Srl',               ogg:'Riforma sentenza TAR su ric. 406/2024', stab:null,                    contro:'Comune di Lignano; Ente di Decentr. Reg. di Udine', neiConfrDi:'Bagni di Lignano di Augusto Angelo Marin Sas', mon:false},
+  {p:3,  luogo:'TAR FVG', nr:'257/2025',  data:'29/05/2025', ric:'Meotto Giuseppe Srl',              ogg:'Proroga',                               stab:'Portofino',             contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'n.d.', mon:false},
+  {p:4,  luogo:'TAR FVG', nr:'267/2025',  data:'30/05/2025', ric:'Pietro Ceiner Snc',                ogg:'Proroga',                               stab:'Ausonia',               contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'n.d.', mon:false},
+  {p:5,  luogo:'TAR FVG', nr:'268/2025',  data:'30/05/2025', ric:'Doggy Beach Srl',                  ogg:'Proroga',                               stab:'Spiaggia per cani',     contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'n.d.', mon:false},
+  {p:6,  luogo:'TAR FVG', nr:'270/2025',  data:'30/05/2025', ric:'Gigante Giancarlo',                ogg:'Proroga',                               stab:'Gabbiano',              contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'n.d.', mon:false},
+  {p:7,  luogo:'TAR FVG', nr:'399/2025',  data:'31/07/2025', ric:'Battiston MD Srl',                 ogg:'Proroga',                               stab:'Lido del Sole',         contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'n.d.', mon:false},
+  {p:8,  luogo:'TAR FVG', nr:'403/2025',  data:'01/08/2025', ric:'Paschetto G. / Neri R.',           ogg:'Proroga',                               stab:'Ufficio 7 bis (Pineta)',contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'Frontemare di Casarin Lorenzo Sas', mon:false},
+  {p:9,  luogo:'TAR FVG', nr:'404/2025',  data:'01/08/2025', ric:'Giardino Srl',                     ogg:'Proroga',                               stab:'La Sacca',              contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'n.d.', mon:false},
+  {p:10, luogo:'TAR FVG', nr:'405/2025',  data:'01/08/2025', ric:'Gest. Spiaggia Italia Snc',        ogg:'Proroga',                               stab:'Bagno Italia',          contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'n.d.', mon:false},
   {p:11, luogo:'TAR FVG', nr:'479/2025',  data:'01/10/2025', ric:'Tiliaventum ASD',                  ogg:'Ritiro lotto Getur dalla gara',          stab:'Getur',                 contro:'Regione, Comune, Promoturismo', neiConfrDi:'Ge.Tur. Scarl', mon:true},
   {p:12, luogo:'TAR FVG', nr:'686/2025',  data:'19/12/2025', ric:'Gigante Giancarlo',                ogg:'Esclusione',                            stab:'Gabbiano',              contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'Di Notte Srl', mon:true},
   {p:13, luogo:'TAR FVG', nr:'689/2025',  data:'22/12/2025', ric:'Fenice Srl',                       ogg:'Aggiudicazione',                        stab:'La Sacca',              contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'Giardino Srl', mon:true},
@@ -308,9 +308,9 @@ var RICORSI_DB = [
   {p:18, luogo:'TAR FVG', nr:'100/2026',  data:'21/02/2026', ric:'Sast degli eredi Sapienza',        ogg:'Aggiudicazione',                        stab:'Lido City',             contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'Code Beach Srl', mon:true},
   {p:19, luogo:'TAR FVG', nr:'120/2026',  data:'05/03/2026', ric:'Matajur 3000 Srl',                 ogg:'Aggiudicazione',                        stab:'Ausonia',               contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'Pietro Ceiner Snc di Pietro Ceiner & C.', mon:true},
   {p:20, luogo:'TAR FVG', nr:'121/2026',  data:'06/03/2026', ric:'Matajur 3000 Srl',                 ogg:'Aggiudicazione',                        stab:'Portofino',             contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'Fast Eat Italy Srl', mon:true},
-  {p:21, luogo:'CdS',     nr:'1897/2026', data:'06/03/2026', ric:'Gest. Spiaggia Italia Snc',        ogg:'Aggiudicazione',                        stab:'Bagno Italia',          contro:'Comune di Lignano Sabbiadoro; Pregi Srl', neiConfrDi:'n.d.', mon:true},
+  {p:21, luogo:'CdS',     nr:'1897/2026', data:'06/03/2026', ric:'Gest. Spiaggia Italia Snc',        ogg:'Aggiudicazione',                        stab:'Bagno Italia',          contro:'Comune di Lignano Sabbiadoro; Pregi Srl', neiConfrDi:'n.d.', mon:false},
   {p:22, luogo:'TAR FVG', nr:'123/2026',  data:'11/03/2026', ric:'Condominio Marinella/Marin',       ogg:'Non conformità urbanistica',            stab:'Bagno Italia',          contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'Pregi Srl', mon:true},
-  {p:23, luogo:'CdS',     nr:'2039/2026', data:'11/03/2026', ric:'Beach Bar F.T. Sas',               ogg:'Riforma sentenza TAR su ric. 51/2026',  stab:'Bar Frecce Tricolori',  contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'Fuel Srl', mon:true},
+  {p:23, luogo:'CdS',     nr:'2039/2026', data:'11/03/2026', ric:'Beach Bar F.T. Sas',               ogg:'Riforma sentenza TAR su ric. 51/2026',  stab:'Bar Frecce Tricolori',  contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'Fuel Srl', mon:false},
   {p:24, luogo:'TAR FVG', nr:'126/2026',  data:'13/03/2026', ric:'Gigante Giancarlo',                ogg:'Esclusione',                            stab:'Gabbiano',              contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'Jesolo Beach Service Sas; Aura Srl; Weiss Srl; Serenissima Ristorazione Srl', mon:true},
 ];
 
@@ -668,7 +668,7 @@ function renderProvvedimenti(data){
       var ec=esitoClass(p.esito);
       h+='<div class="prov-card">';
       if(p.stab)h+='<div class="prov-stab">'+esc(p.stab)+'</div>';
-      if(p.ric) h+='<div class="prov-ric">'+esc(p.ric)+'</div>';
+      if(p.ric) h+='<div class="prov-ric"><span class="prov-ric-lbl">Ricorrente</span>'+esc(p.ric)+'</div>';
       h+='<div class="prov-nrg">NRG '+esc(p.nrg)+'</div>';
       h+='<div class="cr"><span class="ck">Tipo</span><span class="cv">'+esc(p.tipo)+'</span></div>';
       if(p.data)h+='<div class="cr"><span class="ck">Pubbl.</span><span class="cv date">'+esc(p.data)+'</span></div>';
