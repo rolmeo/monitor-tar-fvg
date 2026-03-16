@@ -19,7 +19,6 @@
   --dark-gray:  #424245;
   --near-black: #1d1d1f;
   --blue:       #0071e3;
-  --blue-light: #2997ff;
   --blue-bg:    #e8f1fb;
   --green:      #30d158;
   --green-bg:   #edfaf2;
@@ -31,102 +30,60 @@
   --purple:     #6a0dad;
   --purple-bg:  #f0e6ff;
   --separator:  rgba(0,0,0,0.07);
-  --nav-h:      calc(60px + env(safe-area-inset-bottom, 0px));
 }
-
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
-body{
-  background:var(--off-white);
-  color:var(--near-black);
-  font-family:'Montserrat',-apple-system,sans-serif;
-  min-height:100vh;
-  font-size:16px;
-  line-height:1.5;
-  -webkit-font-smoothing:antialiased;
-  padding-bottom:0;
-}
+body{background:var(--off-white);color:var(--near-black);font-family:'Montserrat',-apple-system,sans-serif;min-height:100vh;font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;}
 
-/* ── HEADER ── */
-.header{
-  background:rgba(245,245,247,0.92);
-  backdrop-filter:saturate(180%) blur(20px);
-  -webkit-backdrop-filter:saturate(180%) blur(20px);
-  border-bottom:1px solid var(--separator);
-  position:sticky;top:0;z-index:200;
-  padding:max(env(safe-area-inset-top,0px),0px) 0 0;
-}
-.header-inner{
-  max-width:640px;margin:0 auto;
-  padding:13px 20px;
-  display:flex;justify-content:space-between;align-items:center;
-}
+/* HEADER */
+.header{background:rgba(245,245,247,0.92);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--separator);position:sticky;top:0;z-index:200;padding:max(env(safe-area-inset-top,0px),0px) 0 0;}
+.header-inner{max-width:640px;margin:0 auto;padding:13px 20px;display:flex;justify-content:space-between;align-items:center;}
 .header-title{font-size:17px;font-weight:700;letter-spacing:-0.02em;}
 .header-status{display:flex;align-items:center;gap:5px;font-size:13px;font-weight:500;color:var(--green);}
 .status-dot{width:7px;height:7px;border-radius:50%;background:var(--green);animation:pulse-dot 2s ease-in-out infinite;}
 
-/* ── HOME SCREEN ── */
-.home-screen{
-  min-height:calc(100vh - 60px);
-  display:flex;flex-direction:column;
-  padding:0 16px max(env(safe-area-inset-bottom,16px),16px);
-}
-.home-hero{padding:24px 0 16px;text-align:center;}
+/* HOME SCREEN */
+.home-screen{min-height:calc(100vh - 60px);display:flex;flex-direction:column;padding:0 16px max(env(safe-area-inset-bottom,16px),16px);}
+.home-hero{padding:22px 0 14px;text-align:center;}
 .home-title{font-size:28px;font-weight:700;letter-spacing:-0.04em;color:var(--near-black);line-height:1.1;margin-bottom:4px;}
 .home-title span{color:var(--blue);}
 .home-sub{font-size:13px;color:var(--gray);}
-.home-ts{background:var(--white);border-radius:14px;padding:10px 16px;margin-bottom:20px;box-shadow:0 1px 3px rgba(0,0,0,0.05);display:flex;justify-content:space-between;align-items:center;gap:8px;}
+.home-ts{background:var(--white);border-radius:14px;padding:10px 16px;margin-bottom:16px;box-shadow:0 1px 3px rgba(0,0,0,0.05);display:flex;justify-content:space-between;align-items:center;}
 .home-ts-lbl{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;color:var(--gray);}
-.home-ts-val{font-size:12px;font-weight:600;color:var(--near-black);text-align:right;}
-.home-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;flex:1;}
-.home-tile{
-  background:var(--white);border-radius:22px;
-  padding:28px 16px 24px;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  gap:10px;border:none;cursor:pointer;
-  box-shadow:0 2px 12px rgba(0,0,0,0.07),0 1px 3px rgba(0,0,0,0.05);
-  transition:transform 0.14s,box-shadow 0.14s;
-  font-family:'Montserrat',sans-serif;
-  min-height:150px;position:relative;overflow:hidden;
-}
+.home-ts-val{font-size:12px;font-weight:600;color:var(--near-black);}
+.home-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;flex:1;margin-bottom:16px;}
+.home-tile{background:var(--white);border-radius:22px;padding:26px 14px 22px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;border:none;cursor:pointer;box-shadow:0 2px 12px rgba(0,0,0,0.07);transition:transform 0.14s;font-family:'Montserrat',sans-serif;min-height:148px;position:relative;overflow:hidden;}
 .home-tile::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;border-radius:22px 22px 0 0;}
 .home-tile.t-blue::before  {background:var(--blue);}
 .home-tile.t-green::before {background:var(--green);}
 .home-tile.t-orange::before{background:var(--orange);}
 .home-tile.t-purple::before{background:var(--purple);}
-.home-tile:active{transform:scale(0.94);box-shadow:0 1px 4px rgba(0,0,0,0.07);}
-.tile-ico{font-size:46px;line-height:1;}
-.tile-lbl{font-size:15px;font-weight:700;letter-spacing:-0.01em;color:var(--near-black);text-align:center;line-height:1.2;}
-.tile-sub{font-size:11px;color:var(--gray);text-align:center;line-height:1.3;}
-/* ── BACK BUTTON ── */
-.btn-back{display:flex;align-items:center;gap:6px;background:transparent;border:none;cursor:pointer;color:var(--blue);font-family:'Montserrat',sans-serif;font-size:15px;font-weight:600;padding:8px 0 4px;letter-spacing:-0.01em;}
-.btn-back:active{opacity:0.5;}
+.home-tile:active{transform:scale(0.94);}
+.tile-ico{font-size:44px;line-height:1;}
+.tile-lbl{font-size:15px;font-weight:700;color:var(--near-black);text-align:center;line-height:1.2;}
+.tile-sub{font-size:11px;color:var(--gray);text-align:center;}
 
-/* ── MAIN ── */
-.main{max-width:640px;margin:0 auto;padding:0 16px 24px;}
-
-/* ── PANELS ── */
-.panel{display:none;}
-.panel.on{display:block;animation:fadeUp 0.28s ease both;}
-
-/* ── REFRESH BTN ── */
-.btn-refresh{
-  display:flex;align-items:center;justify-content:center;gap:8px;
-  width:100%;margin:16px 0;padding:14px;
-  background:var(--blue);border:none;border-radius:14px;
-  color:white;font-family:'Montserrat',sans-serif;
-  font-size:15px;font-weight:600;cursor:pointer;
-  box-shadow:0 4px 16px rgba(0,113,227,0.28);
-  transition:all 0.15s;
-}
-.btn-refresh:active{transform:scale(0.97);background:#005ec9;}
+/* REFRESH su home */
+.btn-refresh-home{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:15px;background:var(--blue);border:none;border-radius:14px;color:white;font-family:'Montserrat',sans-serif;font-size:15px;font-weight:600;cursor:pointer;box-shadow:0 4px 16px rgba(0,113,227,0.28);transition:all 0.15s;margin-bottom:6px;}
+.btn-refresh-home:active{transform:scale(0.97);background:#005ec9;}
 .refresh-ico{font-size:17px;display:inline-block;}
 .spinning{animation:spin 0.7s linear infinite!important;}
 
-/* ── SECTION LABEL ── */
-.sec-lbl{font-size:11px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:var(--gray);padding:18px 0 8px;}
+/* MAIN CONTENT */
+.main{max-width:640px;margin:0 auto;padding:0 16px 32px;}
+.panel{display:none;}
+.panel.on{display:block;animation:fadeUp 0.28s ease both;}
 
-/* ── LOADING / EMPTY ── */
+/* Barra in cima a ogni sezione */
+.sec-topbar{display:flex;align-items:center;gap:12px;padding:12px 0 8px;}
+.sec-topbar-title{font-size:19px;font-weight:700;letter-spacing:-0.02em;color:var(--near-black);flex:1;}
+.btn-menu{display:flex;align-items:center;gap:5px;background:transparent;border:none;cursor:pointer;color:var(--blue);font-family:'Montserrat',sans-serif;font-size:14px;font-weight:600;padding:6px 0;white-space:nowrap;}
+.btn-menu:active{opacity:0.5;}
+
+/* SEC LABEL */
+.sec-lbl{font-size:11px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:var(--gray);padding:14px 0 8px;}
+
+/* LOADING / EMPTY */
 .loading{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:64px 20px;gap:16px;}
 .spinner{width:30px;height:30px;border:2.5px solid var(--light-gray);border-top-color:var(--blue);border-radius:50%;animation:spin 0.7s linear infinite;}
 .loading-txt{font-size:14px;color:var(--gray);}
@@ -134,14 +91,14 @@ body{
 .empty-ico{font-size:38px;margin-bottom:12px;opacity:0.45;}
 .empty-txt{font-size:15px;line-height:1.6;}
 
-/* ── TIMESTAMPS ── */
+/* TS BOX */
 .ts-box{background:var(--white);border-radius:14px;padding:14px 16px;margin-bottom:10px;box-shadow:0 1px 3px rgba(0,0,0,0.05);}
 .ts-row{display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid var(--separator);}
 .ts-row:last-child{border-bottom:none;}
 .ts-lbl{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;color:var(--gray);}
-.ts-val{font-size:12px;font-weight:500;color:var(--near-black);}
+.ts-val{font-size:12px;font-weight:500;color:var(--near-black);text-align:right;}
 
-/* ── BADGE ── */
+/* BADGE */
 .badge{display:inline-block;font-size:10px;font-weight:700;padding:2px 8px;border-radius:20px;letter-spacing:0.03em;white-space:nowrap;}
 .b-blue  {background:var(--blue-bg);   color:var(--blue);}
 .b-green {background:var(--green-bg);  color:var(--green-dark);}
@@ -150,9 +107,7 @@ body{
 .b-purple{background:var(--purple-bg); color:var(--purple);}
 .b-red   {background:var(--red-bg);    color:var(--red);}
 
-/* ══════════════════════════════════════════
-   DASHBOARD
-══════════════════════════════════════════ */
+/* DASHBOARD */
 .stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px;}
 .stat-card{background:var(--white);border-radius:16px;padding:16px 14px;box-shadow:0 1px 3px rgba(0,0,0,0.05);position:relative;overflow:hidden;}
 .stat-card.full{grid-column:1/-1;}
@@ -162,49 +117,33 @@ body{
 .stat-val{font-size:30px;font-weight:700;letter-spacing:-0.04em;color:var(--near-black);line-height:1.1;}
 .stat-val.blue{color:var(--blue);}
 .stat-val.sm{font-size:18px;}
+.stat-val.xs{font-size:14px;font-weight:600;}
 .stat-sub{font-size:11px;color:var(--gray);margin-top:3px;}
 .stat-sub b{color:var(--near-black);}
 
-.dash-row{display:flex;justify-content:space-between;align-items:baseline;padding:6px 0;border-bottom:1px solid var(--separator);}
-.dash-row:last-child{border-bottom:none;}
-.dash-row-lbl{font-size:12px;font-weight:500;color:var(--dark-gray);}
-.dash-row-val{font-size:13px;font-weight:700;color:var(--near-black);}
-.dash-row-val.blue{color:var(--blue);}
-
-/* ══════════════════════════════════════════
-   ELENCO RICORSI — tabella
-══════════════════════════════════════════ */
-.table-hint{font-size:11px;color:var(--gray);text-align:right;margin-bottom:4px;padding-right:2px;}
+/* TABELLA RICORSI */
+.table-hint{font-size:11px;color:var(--gray);text-align:right;margin-bottom:4px;}
 .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:16px;box-shadow:0 1px 3px rgba(0,0,0,0.06);margin-bottom:12px;}
-.ric-table{width:100%;border-collapse:collapse;background:var(--white);min-width:520px;}
+.ric-table{width:100%;border-collapse:collapse;background:var(--white);min-width:480px;}
 .ric-table thead tr{background:var(--near-black);}
-.ric-table thead th{
-  padding:10px 8px;
-  font-size:10px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;
-  color:var(--white);text-align:left;white-space:nowrap;
-}
-.ric-table thead th:first-child{text-align:center;width:28px;}
-.ric-table tbody tr{border-bottom:1px solid var(--separator);cursor:pointer;transition:background 0.1s;}
-.ric-table tbody tr.data-row:hover{background:var(--blue-bg);}
+.ric-table thead th{padding:10px 8px;font-size:10px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:var(--white);text-align:left;white-space:nowrap;}
+.ric-table thead th:first-child{text-align:center;width:26px;}
+.ric-table tbody tr.data-row{border-bottom:1px solid var(--separator);cursor:pointer;transition:background 0.1s;}
 .ric-table tbody tr.data-row:active{background:var(--blue-bg);}
 .ric-table tbody tr.data-row.expanded{background:var(--blue-bg);}
-.ric-table tbody tr:last-child{border-bottom:none;}
 .ric-table tbody td{padding:9px 8px;font-size:12px;color:var(--near-black);vertical-align:top;}
 .td-p{text-align:center;font-weight:700;color:var(--blue);font-size:11px;}
-.td-stab{font-weight:600;font-size:12px;}
-.td-stab-sub{font-size:10px;color:var(--gray);margin-top:1px;}
-.td-ric{color:var(--dark-gray);font-size:11px;max-width:110px;}
-.td-nr{font-weight:700;white-space:nowrap;color:var(--blue);font-size:12px;}
+.td-stab{font-weight:600;}
+.td-ric{color:var(--dark-gray);font-size:11px;}
+.td-nr{font-weight:700;white-space:nowrap;color:var(--blue);}
 .td-data{white-space:nowrap;color:var(--gray);font-size:11px;}
-.td-ogg{font-size:11px;color:var(--dark-gray);max-width:130px;}
-
-/* Row detail */
+.td-ogg{font-size:11px;color:var(--dark-gray);}
 .row-detail{display:none;background:var(--off-white);}
 .row-detail.open{display:table-row;}
-.row-detail td{padding:14px 12px;border-bottom:1px solid var(--mid-gray);}
-.det-title{font-size:14px;font-weight:700;color:var(--blue);margin-bottom:10px;letter-spacing:-0.01em;}
-.det-cr{display:flex;gap:8px;margin-bottom:5px;align-items:baseline;}
-.det-ck{font-size:10px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:var(--gray);min-width:78px;flex-shrink:0;}
+.row-detail td{padding:14px 12px;border-bottom:2px solid var(--mid-gray);}
+.det-title{font-size:15px;font-weight:700;color:var(--blue);margin-bottom:10px;}
+.det-cr{display:flex;gap:8px;margin-bottom:6px;align-items:baseline;}
+.det-ck{font-size:10px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:var(--gray);min-width:90px;flex-shrink:0;}
 .det-cv{font-size:13px;color:var(--near-black);line-height:1.4;}
 .det-sec{margin-top:12px;}
 .det-sec-title{font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);padding-bottom:4px;border-bottom:1px solid var(--separator);margin-bottom:5px;}
@@ -215,70 +154,53 @@ body{
 .det-date{color:var(--blue);font-size:11px;}
 .det-esito{color:var(--green-dark);font-weight:600;}
 
-/* ══════════════════════════════════════════
-   PROVVEDIMENTI
-══════════════════════════════════════════ */
-.sub-tabs{
-  display:grid;grid-template-columns:1fr 1fr;
-  background:var(--light-gray);border-radius:12px;padding:3px;
-  margin:12px 0 14px;
-}
-.sub-tab{
-  padding:9px 6px;background:transparent;border:none;border-radius:10px;
-  color:var(--gray);font-family:'Montserrat',sans-serif;
-  font-size:13px;font-weight:500;cursor:pointer;text-align:center;
-  transition:all 0.2s;
-}
+/* PROVVEDIMENTI */
+.sub-tabs{display:grid;grid-template-columns:1fr 1fr;background:var(--light-gray);border-radius:12px;padding:3px;margin-bottom:14px;}
+.sub-tab{padding:9px 6px;background:transparent;border:none;border-radius:10px;color:var(--gray);font-family:'Montserrat',sans-serif;font-size:13px;font-weight:500;cursor:pointer;text-align:center;transition:all 0.2s;}
 .sub-tab.on{background:var(--white);color:var(--near-black);font-weight:700;box-shadow:0 1px 4px rgba(0,0,0,0.1);}
 .sub-panel{display:none;}
 .sub-panel.on{display:block;animation:fadeUp 0.25s ease both;}
-
 .prov-card{background:var(--white);border-radius:16px;padding:16px;margin-bottom:10px;box-shadow:0 1px 3px rgba(0,0,0,0.05);}
-.prov-stab{font-size:17px;font-weight:700;letter-spacing:-0.02em;color:var(--near-black);margin-bottom:1px;}
-.prov-ric{font-size:12px;color:var(--gray);margin-bottom:9px;}
+.prov-stab{font-size:17px;font-weight:700;letter-spacing:-0.02em;margin-bottom:1px;}
+.prov-ric{font-size:12px;color:var(--gray);margin-bottom:8px;}
 .prov-nrg{font-size:12px;font-weight:600;color:var(--blue);margin-bottom:8px;}
 .cr{display:flex;gap:10px;margin-bottom:5px;align-items:baseline;}
 .ck{font-size:11px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--gray);min-width:78px;flex-shrink:0;}
 .cv{font-size:14px;color:var(--near-black);line-height:1.4;}
 .cv.date{font-weight:500;color:var(--blue);}
-.cv.esito{color:var(--green-dark);font-weight:600;}
+.cv.acc{color:var(--green-dark);font-weight:600;}
+.cv.resp{color:var(--red);font-weight:600;}
 
-/* Tutti: tabella */
+/* TABELLA TUTTI */
 .tutti-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:14px;box-shadow:0 1px 3px rgba(0,0,0,0.06);margin-bottom:12px;}
-.tutti-table{width:100%;border-collapse:collapse;background:var(--white);min-width:440px;font-size:12px;}
+.tutti-table{width:100%;border-collapse:collapse;background:var(--white);min-width:400px;font-size:12px;}
 .tutti-table thead tr{background:var(--near-black);}
 .tutti-table thead th{padding:10px 8px;font-size:10px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:var(--white);text-align:left;white-space:nowrap;}
 .tutti-table tbody tr{border-bottom:1px solid var(--separator);}
 .tutti-table tbody tr:last-child{border-bottom:none;}
 .tutti-table tbody td{padding:9px 8px;vertical-align:top;}
-.t-parte{font-weight:500;color:var(--near-black);}
+.t-parte{font-weight:500;}
 .t-tipo{color:var(--dark-gray);}
 .t-data{color:var(--blue);font-weight:600;white-space:nowrap;}
-.t-esito{color:var(--green-dark);font-weight:600;}
+.t-esito-acc{color:var(--green-dark);font-weight:600;}
+.t-esito-resp{color:var(--red);font-weight:600;}
 
-/* ══════════════════════════════════════════
-   SCADENZE
-══════════════════════════════════════════ */
-.scad-card{
-  background:var(--white);border-radius:14px;padding:14px 16px;
-  margin-bottom:8px;box-shadow:0 1px 3px rgba(0,0,0,0.05);
-  display:flex;justify-content:space-between;align-items:center;gap:12px;
-}
+/* SCADENZE */
+.scad-card{background:var(--white);border-radius:14px;padding:14px 16px;margin-bottom:8px;box-shadow:0 1px 3px rgba(0,0,0,0.05);display:flex;justify-content:space-between;align-items:center;gap:12px;}
 .scad-left{flex:1;min-width:0;}
 .scad-nr{font-size:11px;font-weight:700;color:var(--blue);margin-bottom:2px;}
 .scad-stab{font-size:14px;font-weight:700;color:var(--near-black);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.scad-tipo{font-size:11px;color:var(--gray);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.scad-tipo{font-size:11px;color:var(--gray);margin-top:2px;}
 .scad-right{text-align:right;flex-shrink:0;}
-.scad-data{font-size:14px;font-weight:700;color:var(--near-black);white-space:nowrap;}
+.scad-data{font-size:14px;font-weight:700;white-space:nowrap;}
 .scad-gg{font-size:11px;font-weight:600;margin-top:2px;white-space:nowrap;}
-.scad-gg.ok   {color:var(--green-dark);}
+.scad-gg.ok    {color:var(--green-dark);}
 .scad-gg.presto{color:var(--orange);}
-.scad-gg.oggi {color:var(--red);}
+.scad-gg.oggi  {color:var(--red);}
 
-/* ── FOOTER ── */
+/* FOOTER */
 .footer{text-align:center;padding:20px 0 4px;font-size:12px;color:var(--mid-gray);line-height:1.9;}
 
-/* ── ANIMATIONS ── */
 @keyframes fadeUp  {from{opacity:0;transform:translateY(9px);}to{opacity:1;transform:translateY(0);}}
 @keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.45;transform:scale(0.8);}}
 @keyframes spin    {to{transform:rotate(360deg);}}
@@ -286,7 +208,6 @@ body{
 </head>
 <body>
 
-<!-- ═══════════ HEADER ═══════════ -->
 <div class="header">
   <div class="header-inner">
     <div class="header-title">⚖️ Monitor Ricorsi</div>
@@ -297,63 +218,65 @@ body{
   </div>
 </div>
 
-<!-- ═══════════ HOME SCREEN ═══════════ -->
+<!-- HOME SCREEN -->
 <div class="home-screen" id="home-screen">
   <div class="home-hero">
     <div class="home-title">Monitor <span>Ricorsi</span></div>
     <div class="home-sub">TAR Friuli VG · Consiglio di Stato</div>
   </div>
-
   <div class="home-ts">
     <span class="home-ts-lbl">Ultimo controllo</span>
     <span class="home-ts-val" id="home-ts-val">—</span>
   </div>
-
   <div class="home-grid">
-    <button class="home-tile t-blue" onclick="showSection('dashboard')">
-      <span class="tile-ico">📊</span>
-      <span class="tile-lbl">Dashboard</span>
-      <span class="tile-sub">Riepilogo e statistiche</span>
-    </button>
-    <button class="home-tile t-green" onclick="showSection('ricorsi')">
-      <span class="tile-ico">📋</span>
-      <span class="tile-lbl">Elenco Ricorsi</span>
-      <span class="tile-sub">Tutti i ricorsi monitorati</span>
-    </button>
-    <button class="home-tile t-orange" onclick="showSection('provv')">
-      <span class="tile-ico">⚖️</span>
-      <span class="tile-lbl">Provvedimenti</span>
-      <span class="tile-sub">TAR FVG · ultime 48h</span>
-    </button>
-    <button class="home-tile t-purple" onclick="showSection('scadenze')">
-      <span class="tile-ico">📅</span>
-      <span class="tile-lbl">Scadenze</span>
-      <span class="tile-sub">Prossime udienze</span>
-    </button>
+    <button class="home-tile t-blue"   onclick="showSection('dashboard')"><span class="tile-ico">📊</span><span class="tile-lbl">Dashboard</span><span class="tile-sub">Riepilogo e statistiche</span></button>
+    <button class="home-tile t-green"  onclick="showSection('ricorsi')"><span class="tile-ico">📋</span><span class="tile-lbl">Elenco Ricorsi</span><span class="tile-sub">Tutti i ricorsi monitorati</span></button>
+    <button class="home-tile t-orange" onclick="showSection('provv')"><span class="tile-ico">⚖️</span><span class="tile-lbl">Provvedimenti</span><span class="tile-sub">TAR FVG · ultimi 7 giorni</span></button>
+    <button class="home-tile t-purple" onclick="showSection('scadenze')"><span class="tile-ico">📅</span><span class="tile-lbl">Scadenze</span><span class="tile-sub">Prossime udienze</span></button>
   </div>
-
-  <div class="footer">TAR Friuli VG — Monitor automatico<br>by Rolando Meotto</div>
-</div>
-
-<!-- ═══════════ SEZIONI ═══════════ -->
-<div class="main" id="main-content" style="display:none">
-
-  <button class="btn-back" onclick="showHome()">‹ Menu principale</button>
-  <button class="btn-refresh" onclick="loadData()">
+  <button class="btn-refresh-home" onclick="loadData()">
     <span class="refresh-ico" id="refreshIco">↻</span>
     Aggiorna dati
   </button>
+  <div class="footer">TAR Friuli VG — Monitor automatico<br>by Rolando Meotto</div>
+</div>
 
+<!-- SEZIONI -->
+<div class="main" id="main-content" style="display:none">
+
+  <!-- DASHBOARD -->
   <div class="panel" id="panel-dashboard">
+    <div class="sec-topbar">
+      <button class="btn-menu" onclick="showHome()">‹ Menu</button>
+      <span class="sec-topbar-title">Dashboard</span>
+    </div>
     <div id="cnt-dashboard"><div class="loading"><div class="spinner"></div><div class="loading-txt">Caricamento…</div></div></div>
   </div>
+
+  <!-- RICORSI -->
   <div class="panel" id="panel-ricorsi">
+    <div class="sec-topbar">
+      <button class="btn-menu" onclick="showHome()">‹ Menu</button>
+      <span class="sec-topbar-title">Elenco Ricorsi</span>
+    </div>
     <div id="cnt-ricorsi"><div class="loading"><div class="spinner"></div><div class="loading-txt">Caricamento…</div></div></div>
   </div>
+
+  <!-- PROVVEDIMENTI -->
   <div class="panel" id="panel-provv">
+    <div class="sec-topbar">
+      <button class="btn-menu" onclick="showHome()">‹ Menu</button>
+      <span class="sec-topbar-title">Provvedimenti</span>
+    </div>
     <div id="cnt-provv"><div class="loading"><div class="spinner"></div><div class="loading-txt">Caricamento…</div></div></div>
   </div>
+
+  <!-- SCADENZE -->
   <div class="panel" id="panel-scadenze">
+    <div class="sec-topbar">
+      <button class="btn-menu" onclick="showHome()">‹ Menu</button>
+      <span class="sec-topbar-title">Scadenze</span>
+    </div>
     <div id="cnt-scadenze"><div class="loading"><div class="spinner"></div><div class="loading-txt">Caricamento…</div></div></div>
   </div>
 
@@ -362,48 +285,40 @@ body{
 <script>
 /* ================================================================
    RICORSI_DB — fonte: Excel "Ricorsi su bandi concessioni"
-   Campi:
-     p    = progressivo
-     luogo= 'TAR FVG' | 'CdS'
-     nr   = numero/anno (es. '99/2026')
-     data = gg/mm/aaaa
-     ric  = ricorrente
-     ogg  = oggetto
-     stab = nome stabilimento (null se non applicabile)
-     caut = esito cautelare: 'Accolta' | 'Respinta' | '' (non richiesta/n.d.)
-     mon  = true se monitorato dallo scraper GitHub
+   Campi: p, luogo, nr, data, ric, ogg, stab, contro, neiConfrDi, mon
    ================================================================ */
 var RICORSI_DB = [
-  {p:1,  luogo:'TAR FVG', nr:'406/2024',  data:'25/11/2024', ric:'Albergo Italia Srl',               ogg:'Annullamento revoca bando',             stab:'n.d.',                     mon:false},
-  {p:2,  luogo:'CdS',     nr:'1750/2025', data:'03/03/2025', ric:'Albergo Italia Srl',               ogg:'Riforma sentenza TAR su ric. 406/2024', stab:'n.d.',                     mon:false},
-  {p:3,  luogo:'TAR FVG', nr:'257/2025',  data:'29/05/2025', ric:'Meotto Giuseppe Srl',              ogg:'Proroga',                               stab:'Portofino',              mon:false},
-  {p:4,  luogo:'TAR FVG', nr:'267/2025',  data:'30/05/2025', ric:'Pietro Ceiner Snc',                ogg:'Proroga',                               stab:'Ausonia',                mon:false},
-  {p:5,  luogo:'TAR FVG', nr:'268/2025',  data:'30/05/2025', ric:'Doggy Beach Srl',                  ogg:'Proroga',                               stab:'Spiaggia per cani',      mon:false},
-  {p:6,  luogo:'TAR FVG', nr:'270/2025',  data:'30/05/2025', ric:'Gigante Giancarlo',                ogg:'Proroga',                               stab:'Gabbiano',               mon:false},
-  {p:7,  luogo:'TAR FVG', nr:'399/2025',  data:'31/07/2025', ric:'Battiston MD Srl',                 ogg:'Proroga',                               stab:'Lido del Sole',          mon:false},
-  {p:8,  luogo:'TAR FVG', nr:'403/2025',  data:'01/08/2025', ric:'Paschetto G. / Neri R.',           ogg:'Proroga',                               stab:'Ufficio 7 bis (Pineta)', mon:false},
-  {p:9,  luogo:'TAR FVG', nr:'404/2025',  data:'01/08/2025', ric:'Giardino Srl',                     ogg:'Proroga',                               stab:'La Sacca',               mon:false},
-  {p:10, luogo:'TAR FVG', nr:'405/2025',  data:'01/08/2025', ric:'Gest. Spiaggia Italia Snc',        ogg:'Proroga',                               stab:'Bagno Italia',           mon:false},
-  {p:11, luogo:'TAR FVG', nr:'479/2025',  data:'01/10/2025', ric:'Tiliaventum ASD',                  ogg:'Ritiro lotto Getur dalla gara',          stab:'Getur',                  mon:true},
-  {p:12, luogo:'TAR FVG', nr:'686/2025',  data:'19/12/2025', ric:'Gigante Giancarlo',                ogg:'Esclusione',                            stab:'Gabbiano',               mon:true},
-  {p:13, luogo:'TAR FVG', nr:'689/2025',  data:'22/12/2025', ric:'Fenice Srl',                       ogg:'Aggiudicazione',                        stab:'La Sacca',               mon:true},
-  {p:14, luogo:'TAR FVG', nr:'51/2026',   data:'22/01/2026', ric:'Beach Bar F.T. Sas',               ogg:'Aggiudicazione',                        stab:'Bar Frecce Tricolori',   mon:true},
-  {p:15, luogo:'TAR FVG', nr:'74/2026',   data:'04/02/2026', ric:'Albergo Italia Srl',               ogg:'Aggiudicazione',                        stab:'Bagno Lignano',          mon:true},
-  {p:16, luogo:'TAR FVG', nr:'80/2026',   data:'06/02/2026', ric:'Gest. Spiaggia Italia Snc',        ogg:'Aggiudicazione',                        stab:'Bagno Italia',           mon:true},
-  {p:17, luogo:'TAR FVG', nr:'99/2026',   data:'20/02/2026', ric:'Meotto Giuseppe Srl',              ogg:'Aggiudicazione',                        stab:'Portofino',              mon:true},
-  {p:18, luogo:'TAR FVG', nr:'100/2026',  data:'21/02/2026', ric:'Sast degli eredi Sapienza',        ogg:'Aggiudicazione',                        stab:'Lido City',              mon:true},
-  {p:19, luogo:'TAR FVG', nr:'120/2026',  data:'05/03/2026', ric:'Matajur 3000 Srl',                 ogg:'Aggiudicazione',                        stab:'Ausonia',                mon:true},
-  {p:20, luogo:'TAR FVG', nr:'121/2026',  data:'06/03/2026', ric:'Matajur 3000 Srl',                 ogg:'Aggiudicazione',                        stab:'Portofino',              mon:true},
-  {p:21, luogo:'CdS',     nr:'1897/2026', data:'06/03/2026', ric:'Gest. Spiaggia Italia Snc',        ogg:'Aggiudicazione',                        stab:'Bagno Italia',           mon:false},
-  {p:22, luogo:'TAR FVG', nr:'123/2026',  data:'11/03/2026', ric:'Condominio Marinella/Marin',       ogg:'Non conformità urbanistica',            stab:'Bagno Italia',           mon:true},
-  {p:23, luogo:'CdS',     nr:'2039/2026', data:'11/03/2026', ric:'Beach Bar F.T. Sas',               ogg:'Riforma sentenza TAR su ric. 51/2026',  stab:'Bar Frecce Tricolori',   mon:false},
-  {p:24, luogo:'TAR FVG', nr:'126/2026',  data:'13/03/2026', ric:'Gigante Giancarlo',                ogg:'Esclusione',                            stab:'Gabbiano',               mon:true},
+  {p:1,  luogo:'TAR FVG', nr:'406/2024',  data:'25/11/2024', ric:'Albergo Italia Srl',               ogg:'Annullamento revoca bando',             stab:null,                    contro:'Comune di Lignano; Ente di Decentr. Reg. di Udine', neiConfrDi:'Bagni di Lignano di Augusto Angelo Marin Sas', mon:true},
+  {p:2,  luogo:'CdS',     nr:'1750/2025', data:'03/03/2025', ric:'Albergo Italia Srl',               ogg:'Riforma sentenza TAR su ric. 406/2024', stab:null,                    contro:'Comune di Lignano; Ente di Decentr. Reg. di Udine', neiConfrDi:'Bagni di Lignano di Augusto Angelo Marin Sas', mon:true},
+  {p:3,  luogo:'TAR FVG', nr:'257/2025',  data:'29/05/2025', ric:'Meotto Giuseppe Srl',              ogg:'Proroga',                               stab:'Portofino',             contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'n.d.', mon:true},
+  {p:4,  luogo:'TAR FVG', nr:'267/2025',  data:'30/05/2025', ric:'Pietro Ceiner Snc',                ogg:'Proroga',                               stab:'Ausonia',               contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'n.d.', mon:true},
+  {p:5,  luogo:'TAR FVG', nr:'268/2025',  data:'30/05/2025', ric:'Doggy Beach Srl',                  ogg:'Proroga',                               stab:'Spiaggia per cani',     contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'n.d.', mon:true},
+  {p:6,  luogo:'TAR FVG', nr:'270/2025',  data:'30/05/2025', ric:'Gigante Giancarlo',                ogg:'Proroga',                               stab:'Gabbiano',              contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'n.d.', mon:true},
+  {p:7,  luogo:'TAR FVG', nr:'399/2025',  data:'31/07/2025', ric:'Battiston MD Srl',                 ogg:'Proroga',                               stab:'Lido del Sole',         contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'n.d.', mon:true},
+  {p:8,  luogo:'TAR FVG', nr:'403/2025',  data:'01/08/2025', ric:'Paschetto G. / Neri R.',           ogg:'Proroga',                               stab:'Ufficio 7 bis (Pineta)',contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'Frontemare di Casarin Lorenzo Sas', mon:true},
+  {p:9,  luogo:'TAR FVG', nr:'404/2025',  data:'01/08/2025', ric:'Giardino Srl',                     ogg:'Proroga',                               stab:'La Sacca',              contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'n.d.', mon:true},
+  {p:10, luogo:'TAR FVG', nr:'405/2025',  data:'01/08/2025', ric:'Gest. Spiaggia Italia Snc',        ogg:'Proroga',                               stab:'Bagno Italia',          contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'n.d.', mon:true},
+  {p:11, luogo:'TAR FVG', nr:'479/2025',  data:'01/10/2025', ric:'Tiliaventum ASD',                  ogg:'Ritiro lotto Getur dalla gara',          stab:'Getur',                 contro:'Regione, Comune, Promoturismo', neiConfrDi:'Ge.Tur. Scarl', mon:true},
+  {p:12, luogo:'TAR FVG', nr:'686/2025',  data:'19/12/2025', ric:'Gigante Giancarlo',                ogg:'Esclusione',                            stab:'Gabbiano',              contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'Di Notte Srl', mon:true},
+  {p:13, luogo:'TAR FVG', nr:'689/2025',  data:'22/12/2025', ric:'Fenice Srl',                       ogg:'Aggiudicazione',                        stab:'La Sacca',              contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'Giardino Srl', mon:true},
+  {p:14, luogo:'TAR FVG', nr:'51/2026',   data:'22/01/2026', ric:'Beach Bar F.T. Sas',               ogg:'Aggiudicazione',                        stab:'Bar Frecce Tricolori',  contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'Fuel Srl', mon:true},
+  {p:15, luogo:'TAR FVG', nr:'74/2026',   data:'04/02/2026', ric:'Albergo Italia Srl',               ogg:'Aggiudicazione',                        stab:'Bagno Lignano',         contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'Marin', mon:true},
+  {p:16, luogo:'TAR FVG', nr:'80/2026',   data:'06/02/2026', ric:'Gest. Spiaggia Italia Snc',        ogg:'Aggiudicazione',                        stab:'Bagno Italia',          contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'Pregi Srl', mon:true},
+  {p:17, luogo:'TAR FVG', nr:'99/2026',   data:'20/02/2026', ric:'Meotto Giuseppe Srl',              ogg:'Aggiudicazione',                        stab:'Portofino',             contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'Fast Eat Italy Srl e Levante Srl', mon:true},
+  {p:18, luogo:'TAR FVG', nr:'100/2026',  data:'21/02/2026', ric:'Sast degli eredi Sapienza',        ogg:'Aggiudicazione',                        stab:'Lido City',             contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'Code Beach Srl', mon:true},
+  {p:19, luogo:'TAR FVG', nr:'120/2026',  data:'05/03/2026', ric:'Matajur 3000 Srl',                 ogg:'Aggiudicazione',                        stab:'Ausonia',               contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'Pietro Ceiner Snc di Pietro Ceiner & C.', mon:true},
+  {p:20, luogo:'TAR FVG', nr:'121/2026',  data:'06/03/2026', ric:'Matajur 3000 Srl',                 ogg:'Aggiudicazione',                        stab:'Portofino',             contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'Fast Eat Italy Srl', mon:true},
+  {p:21, luogo:'CdS',     nr:'1897/2026', data:'06/03/2026', ric:'Gest. Spiaggia Italia Snc',        ogg:'Aggiudicazione',                        stab:'Bagno Italia',          contro:'Comune di Lignano Sabbiadoro; Pregi Srl', neiConfrDi:'n.d.', mon:true},
+  {p:22, luogo:'TAR FVG', nr:'123/2026',  data:'11/03/2026', ric:'Condominio Marinella/Marin',       ogg:'Non conformità urbanistica',            stab:'Bagno Italia',          contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'Pregi Srl', mon:true},
+  {p:23, luogo:'CdS',     nr:'2039/2026', data:'11/03/2026', ric:'Beach Bar F.T. Sas',               ogg:'Riforma sentenza TAR su ric. 51/2026',  stab:'Bar Frecce Tricolori',  contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'Fuel Srl', mon:true},
+  {p:24, luogo:'TAR FVG', nr:'126/2026',  data:'13/03/2026', ric:'Gigante Giancarlo',                ogg:'Esclusione',                            stab:'Gabbiano',              contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'Jesolo Beach Service Sas; Aura Srl; Weiss Srl; Serenissima Ristorazione Srl', mon:true},
 ];
 
 /* ================================================================
    UTILITY
    ================================================================ */
 function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function val(s){return s&&s!=='n.d.'?s:'';}  // tratta 'n.d.' come vuoto
 
 function parseDate(s){
   if(!s)return null;
@@ -421,38 +336,31 @@ function sortByDate(arr,fn,desc){
   if(desc===undefined)desc=true;
   return arr.slice().sort(function(a,b){
     var da=parseDate(fn(a)),db=parseDate(fn(b));
-    if(!da&&!db)return 0; if(!da)return 1; if(!db)return -1;
+    if(!da&&!db)return 0;if(!da)return 1;if(!db)return -1;
     return desc?db-da:da-db;
   });
 }
-function diffGg(d){
-  var oggi=new Date(); oggi.setHours(0,0,0,0);
-  return Math.round((d-oggi)/86400000);
-}
+function diffGg(d){var oggi=new Date();oggi.setHours(0,0,0,0);return Math.round((d-oggi)/86400000);}
 
-// Parser campi scraper (formato: campo1 | campo2 | ...)
 function parseParte(s){var p=s.split('|').map(function(x){return x.trim();});return{tipo:p[0]||'',data:p[1]||''};}
 function parseAtto(s) {var p=s.split('|').map(function(x){return x.trim();});return{tipo:p[0]||'',parte:p[2]||'',data:p[3]||''};}
 function parseDisc(s) {var p=s.split('|').map(function(x){return x.trim();});return{data:p[0]||'',tipo:p[1]||'',esito:p[2]||'',magistrato:p[3]||'',giudizio:p[4]||''};}
 function parseColl(s) {var p=s.split('|').map(function(x){return x.trim();});return{tipo:p[0]||'',magistrato:p[1]||'',data_pubbl:p[2]||'',esito:p[5]||''};}
 function parseMono(s) {var p=s.split('|').map(function(x){return x.trim();});return{tipo:p[0]||'',magistrato:p[1]||'',data:p[2]||'',esito:p[3]||''};}
 
-// Converte NRG scraper (es. "2026000099") → chiave DB ("99/2026")
 function nrgToNr(nrg){
   if(!nrg||nrg.length<10)return nrg;
-  var anno=nrg.substring(0,4);
-  var num=parseInt(nrg.substring(4),10);
-  return num+'/'+anno;
+  return parseInt(nrg.substring(4),10)+'/'+nrg.substring(0,4);
 }
-// Trova record DB dal NRG scraper
-function dbByNrg(nrg){
-  var nr=nrgToNr(nrg);
-  return RICORSI_DB.find(function(r){return r.nr===nr;})||null;
-}
-// Trova dati scraper dal nr DB ("99/2026")
-function scraperByNr(nr, lista){
-  if(!lista)return null;
-  return lista.find(function(r){return r.numero+'/'+r.anno===nr;})||null;
+function dbByNrg(nrg){var nr=nrgToNr(nrg);return RICORSI_DB.find(function(r){return r.nr===nr;})||null;}
+function scraperByNr(nr,lista){return(lista||[]).find(function(r){return r.numero+'/'+r.anno===nr;})||null;}
+
+function esitoClass(e){
+  if(!e)return'';
+  var u=e.toUpperCase();
+  if(u.indexOf('ACCOGLIE')!==-1)return'acc';
+  if(u.indexOf('RESPINGE')!==-1)return'resp';
+  return'';
 }
 
 /* ================================================================
@@ -471,30 +379,20 @@ function showSection(name){
   if(el)el.classList.add('on');
   window.scrollTo(0,0);
 }
-function showSubTab(name,btn){
-  var wrap=btn.closest('.sub-tabs-wrap')||document.getElementById('panel-provv');
-  wrap.querySelectorAll('.sub-tab').forEach(function(t){t.classList.remove('on');});
-  wrap.querySelectorAll('.sub-panel').forEach(function(p){p.classList.remove('on');});
-  btn.classList.add('on');
-  var el=document.getElementById('sub-'+name);
-  if(el)el.classList.add('on');
-}
 
 /* ================================================================
-   TOGGLE RIGA DETTAGLIO
+   TOGGLE DETTAGLIO RICORSO
    ================================================================ */
 function toggleRow(idx){
   var det=document.getElementById('rowdet-'+idx);
   var row=document.getElementById('row-'+idx);
   if(!det)return;
   var isOpen=det.classList.contains('open');
-  // Chiudi tutte le altre
   document.querySelectorAll('.row-detail.open').forEach(function(el){el.classList.remove('open');});
   document.querySelectorAll('.data-row.expanded').forEach(function(el){el.classList.remove('expanded');});
   if(!isOpen){
     det.classList.add('open');
     if(row)row.classList.add('expanded');
-    // Scroll per mostrare il dettaglio
     setTimeout(function(){if(row)row.scrollIntoView({behavior:'smooth',block:'nearest'});},50);
   }
 }
@@ -503,92 +401,126 @@ function toggleRow(idx){
    RENDER: DASHBOARD
    ================================================================ */
 function renderDashboard(data){
-  var tot   = RICORSI_DB.length;
-  var nTar  = RICORSI_DB.filter(function(r){return r.luogo==='TAR FVG';}).length;
-  var nCds  = RICORSI_DB.filter(function(r){return r.luogo==='CdS';}).length;
+  var tot  = RICORSI_DB.length;
+  var nTar = RICORSI_DB.filter(function(r){return r.luogo==='TAR FVG';}).length;
+  var nCds = RICORSI_DB.filter(function(r){return r.luogo==='CdS';}).length;
 
-  // Cautelari: calcolate automaticamente dai dati scraper
-  // "Tipo Provvedimento" contiene "CAUTELARE", esito contiene "ACCOGLIE" / "RESPINGE"
-  var cautAcc=0, cautAccCds=0, cautResp=0, cautRespCds=0;
+  // Totale provvedimenti da tutti i ricorsi monitorati
+  var totProv=0;
   (data.ricorsi_monitorati||[]).forEach(function(r){
-    var db=dbByNrg(r.nrg);
-    var isCds=db&&db.luogo==='CdS';
+    totProv+=(r.provvedimenti_collegiali||[]).length;
+    totProv+=(r.provvedimenti_monocratici||[]).length;
+  });
+
+  // Contatori provvedimenti per esito (su tutti i ricorsi monitorati)
+  var provAcc=0, provResp=0, provAltri=0;
+  (data.ricorsi_monitorati||[]).forEach(function(r){
     var provv=[];
-    (r.provvedimenti_collegiali||[]).forEach(function(s){var p=parseColl(s);provv.push({tipo:p.tipo,esito:p.esito});});
-    (r.provvedimenti_monocratici||[]).forEach(function(s){var p=parseMono(s);provv.push({tipo:p.tipo,esito:p.esito});});
-    provv.forEach(function(p){
-      if(!p.tipo||p.tipo.toUpperCase().indexOf('CAUTELARE')===-1)return;
-      var es=(p.esito||'').toUpperCase();
-      if(es.indexOf('ACCOGLIE')!==-1){cautAcc++;if(isCds)cautAccCds++;}
-      else if(es.indexOf('RESPINGE')!==-1){cautResp++;if(isCds)cautRespCds++;}
+    (r.provvedimenti_collegiali||[]).forEach(function(s){var p=parseColl(s);if(p.tipo)provv.push(p.esito||'');});
+    (r.provvedimenti_monocratici||[]).forEach(function(s){var p=parseMono(s);if(p.tipo)provv.push(p.esito||'');});
+    provv.forEach(function(es){
+      var u=(es||'').toUpperCase();
+      if(u.indexOf('ACCOGLIE')!==-1) provAcc++;
+      else if(u.indexOf('RESPINGE')!==-1) provResp++;
+      else provAltri++;
     });
   });
 
-  // Ultimo ricorso (data più recente)
-  var sorted=RICORSI_DB.slice().sort(function(a,b){
-    var da=parseDate(a.data),db=parseDate(b.data);
-    return (!da&&!db)?0:(!da?1:(!db?-1:db-da));
-  });
-  var ultimo=sorted[0];
-
-  // Ultima decisione (max data provvedimento tra ricorsi monitorati)
-  var oggi=new Date(); oggi.setHours(0,0,0,0);
-  var maxDec=null;
+  // Ultimo provvedimento
+  var oggi=new Date();oggi.setHours(0,0,0,0);
+  var maxProv=null;
   (data.ricorsi_monitorati||[]).forEach(function(r){
     ['provvedimenti_collegiali','provvedimenti_monocratici'].forEach(function(f){
       (r[f]||[]).forEach(function(s){
         var m=s.match(/(\d{2}\/\d{2}\/\d{4})/);
-        if(m){var d=parseDate(m[1]);if(d&&d<=oggi&&(!maxDec||d>maxDec))maxDec=d;}
+        if(m){var d=parseDate(m[1]);if(d&&d<=oggi&&(!maxProv||d>maxProv))maxProv=d;}
       });
     });
   });
 
-  var h='<div class="sec-lbl">Riepilogo</div>';
-  h+='<div class="stats-grid">';
+  // Ultimo ricorso monitorato (da RICORSI_DB, quelli con mon:true)
+  var monitorati=RICORSI_DB.filter(function(r){return r.mon;});
+  monitorati.sort(function(a,b){var da=parseDate(a.data),db=parseDate(b.data);return(!da&&!db)?0:(!da?1:(!db?-1:db-da));});
+  var ultimoMon=monitorati[0]||null;
 
-  // Totale ricorsi
+  // Ultimo ricorso in assoluto (da scraper: anno_nuovi + ultimo_ricorso + dettagli)
+  var ultimoScraperNr=data.ultimo_ricorso||0;
+  var ultimoScraperAnno=data.anno_nuovi||2026;
+  var ultimoScraperR=null;
+  if(ultimoScraperNr){
+    ultimoScraperR=scraperByNr(ultimoScraperNr+'/'+ultimoScraperAnno, data.ricorsi_monitorati);
+  }
+
+  var h='<div class="stats-grid">';
+
+  // A) Totale ricorsi
   h+='<div class="stat-card accent">';
   h+='<div class="stat-lbl">Totale ricorsi</div>';
   h+='<div class="stat-val blue">'+tot+'</div>';
   h+='<div class="stat-sub">TAR FVG: <b>'+nTar+'</b> &nbsp;·&nbsp; CdS: <b>'+nCds+'</b></div>';
   h+='</div>';
 
-  // Ultimo ricorso
+  // B) Totale provvedimenti
   h+='<div class="stat-card">';
-  h+='<div class="stat-lbl">Ultimo ricorso</div>';
-  h+='<div class="stat-val sm">'+esc(ultimo.nr)+'</div>';
-  h+='<div class="stat-sub">'+esc(ultimo.data)+(ultimo.stab?' · '+esc(ultimo.stab):'')+'</div>';
-  h+='<div class="stat-sub" style="margin-top:2px"><span class="badge '+(ultimo.luogo==='CdS'?'b-purple':'b-blue')+'">'+esc(ultimo.luogo)+'</span></div>';
+  h+='<div class="stat-lbl">Totale provvedimenti</div>';
+  h+='<div class="stat-val '+(totProv?'blue':'')+'">'+totProv+'</div>';
+  h+='<div class="stat-sub">sui ricorsi monitorati</div>';
   h+='</div>';
 
-  // Cautelari accolte
+  // C) Provv. accoglimento
   h+='<div class="stat-card">';
-  h+='<div class="stat-lbl">Cautelari accolte</div>';
-  h+='<div class="stat-val '+(cautAcc?'':'')+'">'+(!cautAcc&&!cautAccCds?'—':cautAcc)+'</div>';
-  if(cautAccCds)h+='<div class="stat-sub">di cui CdS: <b>'+cautAccCds+'</b></div>';
+  h+='<div class="stat-lbl">Provv. accoglimento</div>';
+  h+='<div class="stat-val '+(provAcc?'blue':'')+'">'+provAcc+'</div>';
+  h+='<div class="stat-sub" style="color:var(--green-dark)">esito ACCOGLIE</div>';
   h+='</div>';
 
-  // Cautelari respinte
+  // D) Provv. respingimento
   h+='<div class="stat-card">';
-  h+='<div class="stat-lbl">Cautelari respinte</div>';
-  h+='<div class="stat-val">'+(!cautResp&&!cautRespCds?'—':cautResp)+'</div>';
-  if(cautRespCds)h+='<div class="stat-sub">di cui CdS: <b>'+cautRespCds+'</b></div>';
+  h+='<div class="stat-lbl">Provv. respingimento</div>';
+  h+='<div class="stat-val '+(provResp?'':'')+'">'+provResp+'</div>';
+  h+='<div class="stat-sub" style="color:var(--red)">esito RESPINGE</div>';
   h+='</div>';
 
-  // Ultima decisione
+  // D2) Altri provvedimenti
+  h+='<div class="stat-card">';
+  h+='<div class="stat-lbl">Altri provvedimenti</div>';
+  h+='<div class="stat-val">'+provAltri+'</div>';
+  h+='<div class="stat-sub">esito diverso o assente</div>';
+  h+='</div>';
+
+  // E) Data ultimo provvedimento
   h+='<div class="stat-card full">';
-  h+='<div class="stat-lbl">Data ultima decisione (ricorsi monitorati)</div>';
-  h+='<div class="stat-val sm '+(maxDec?'blue':'')+'">'+fmtDate(maxDec)+'</div>';
+  h+='<div class="stat-lbl">Data ultimo provvedimento (ricorsi monitorati)</div>';
+  h+='<div class="stat-val sm '+(maxProv?'blue':'')+'">'+fmtDate(maxProv)+'</div>';
+  h+='</div>';
+
+  // F) Ultimo ricorso monitorato
+  if(ultimoMon){
+    h+='<div class="stat-card full">';
+    h+='<div class="stat-lbl">Ultimo ricorso monitorato</div>';
+    h+='<div class="stat-val xs">'+esc(ultimoMon.nr)+(ultimoMon.stab?' — '+esc(ultimoMon.stab):'')+'</div>';
+    h+='<div class="stat-sub">'+esc(ultimoMon.data)+' · '+esc(ultimoMon.ric)+'</div>';
+    h+='<div class="stat-sub" style="margin-top:3px"><span class="badge '+(ultimoMon.luogo==='CdS'?'b-purple':'b-blue')+'">'+esc(ultimoMon.luogo)+'</span></div>';
+    h+='</div>';
+  }
+
+  // G) Ultimo ricorso in generale (scraper)
+  h+='<div class="stat-card full">';
+  h+='<div class="stat-lbl">Nr ultimo ricorso su sito TAR FVG</div>';
+  h+='<div class="stat-val xs">'+esc(ultimoScraperAnno)+' / '+esc(ultimoScraperNr)+'</div>';
+  if(ultimoScraperR){
+    if(ultimoScraperR.data_deposito)h+='<div class="stat-sub">Depositato: <b>'+esc(ultimoScraperR.data_deposito)+'</b></div>';
+    if(ultimoScraperR.oggetto)h+='<div class="stat-sub">'+esc(ultimoScraperR.oggetto)+'</div>';
+  }
   h+='</div>';
 
   h+='</div>'; // /stats-grid
 
-  // Timestamps
+  // Stato monitoraggio
   h+='<div class="sec-lbl">Stato monitoraggio</div>';
   h+='<div class="ts-box">';
   h+='<div class="ts-row"><span class="ts-lbl">Ultimo controllo</span><span class="ts-val">'+(data.ultimo_controllo||'—')+'</span></div>';
   h+='<div class="ts-row"><span class="ts-lbl">Ultima variazione</span><span class="ts-val">'+(data.ultima_variazione||'—')+'</span></div>';
-  h+='<div class="ts-row"><span class="ts-lbl">Ultimo ricorso (scraper)</span><span class="ts-val">'+(data.anno_nuovi||'—')+' / '+(data.ultimo_ricorso||'—')+'</span></div>';
   h+='</div>';
 
   return h;
@@ -598,49 +530,48 @@ function renderDashboard(data){
    RENDER: ELENCO RICORSI
    ================================================================ */
 function renderRicorsiList(data){
-  var oggi=new Date(); oggi.setHours(0,0,0,0);
+  var oggi=new Date();oggi.setHours(0,0,0,0);
   var scraperList=data.ricorsi_monitorati||[];
 
-  var h='<div class="sec-lbl">'+RICORSI_DB.length+' ricorsi — clicca per il dettaglio</div>';
-  h+='<p class="table-hint">↔ scorri se necessario</p>';
+  var h='<p class="table-hint">↔ scorri se necessario · tocca riga per dettaglio</p>';
   h+='<div class="table-wrap"><table class="ric-table"><thead><tr>';
   h+='<th>#</th><th>Stabilimento</th><th>Ricorrente</th><th>Nr ricorso</th><th>Deposito</th><th>Oggetto</th>';
   h+='</tr></thead><tbody>';
 
   RICORSI_DB.forEach(function(r,i){
     var scraperR=r.mon?scraperByNr(r.nr,scraperList):null;
-    var luogoBadge='<span class="badge '+(r.luogo==='CdS'?'b-purple':'b-blue')+'" style="font-size:9px;padding:1px 6px;margin-left:3px">'+esc(r.luogo)+'</span>';
+    var luogoBadge='<span class="badge '+(r.luogo==='CdS'?'b-purple':'b-blue')+'" style="font-size:9px;padding:1px 5px;margin-left:3px">'+esc(r.luogo)+'</span>';
 
-    // Riga principale
     h+='<tr class="data-row" id="row-'+i+'" onclick="toggleRow('+i+')">';
     h+='<td class="td-p">'+r.p+'</td>';
-    h+='<td class="td-stab">';
-    if(r.stab){h+=esc(r.stab)+luogoBadge;}
-    else{h+='<span style="color:var(--gray);font-style:italic;font-size:11px">—</span>'+luogoBadge;}
-    h+='</td>';
+    h+='<td class="td-stab">'+(r.stab?esc(r.stab):'<span style="color:var(--gray);font-style:italic;font-size:11px">—</span>')+luogoBadge+'</td>';
     h+='<td class="td-ric">'+esc(r.ric)+'</td>';
     h+='<td class="td-nr">'+esc(r.nr)+'</td>';
     h+='<td class="td-data">'+esc(r.data)+'</td>';
     h+='<td class="td-ogg">'+esc(r.ogg)+'</td>';
     h+='</tr>';
 
-    // Riga dettaglio (espandibile)
+    // Riga dettaglio
     h+='<tr class="row-detail" id="rowdet-'+i+'"><td colspan="6">';
     h+='<div class="det-title">'+esc(r.nr)+(r.stab?' — '+esc(r.stab):'')+'</div>';
-    h+='<div class="det-cr"><span class="det-ck">Ricorrente</span><span class="det-cv">'+esc(r.ric)+'</span></div>';
-    h+='<div class="det-cr"><span class="det-ck">Oggetto</span><span class="det-cv">'+esc(r.ogg)+'</span></div>';
-    h+='<div class="det-cr"><span class="det-ck">Presso</span><span class="det-cv">'+esc(r.luogo)+'</span></div>';
-    h+='<div class="det-cr"><span class="det-ck">Deposito</span><span class="det-cv">'+esc(r.data)+'</span></div>';
-    if(r.caut)h+='<div class="det-cr"><span class="det-ck">Cautelare</span><span class="det-cv" style="color:var(--green-dark);font-weight:600">'+esc(r.caut)+'</span></div>';
 
+    // Campi sempre presenti (da DB)
+    h+=detCr('Ricorrente', r.ric);
+    if(val(r.contro))  h+=detCr('Contro',        r.contro);
+    if(val(r.neiConfrDi)) h+=detCr('Nei confronti di', r.neiConfrDi);
+    h+=detCr('Oggetto', r.ogg);
+    h+=detCr('Presso',  r.luogo);
+    h+=detCr('Deposito',r.data);
+
+    // Dati scraper (solo se monitorato)
     if(scraperR){
-      if(scraperR.sezione)h+='<div class="det-cr"><span class="det-ck">Sezione</span><span class="det-cv">'+esc(scraperR.sezione)+'</span></div>';
-      if(scraperR.tipo_ricorso)h+='<div class="det-cr"><span class="det-ck">Tipo ric.</span><span class="det-cv">'+esc(scraperR.tipo_ricorso)+'</span></div>';
+      if(scraperR.sezione)    h+=detCr('Sezione',  scraperR.sezione);
+      if(scraperR.tipo_ricorso) h+=detCr('Tipo ric.', scraperR.tipo_ricorso);
 
       // Parti
       if(scraperR.parti&&scraperR.parti.length){
         h+='<div class="det-sec"><div class="det-sec-title">Parti</div>';
-        scraperR.parti.forEach(function(s){var p=parseParte(s);if(p.tipo)h+='<div class="det-item">'+esc(p.tipo)+(p.data?' <span class="det-date">'+esc(p.data)+'</span>':'')+'</div>';});
+        scraperR.parti.forEach(function(s){var p=parseParte(s);if(p.tipo&&p.data)h+='<div class="det-item">'+esc(p.tipo)+' <span class="det-date">'+esc(p.data)+'</span></div>';});
         h+='</div>';
       }
       // Atti
@@ -648,16 +579,15 @@ function renderRicorsiList(data){
         h+='<div class="det-sec"><div class="det-sec-title">Atti depositati</div>';
         sortByDate(scraperR.atti,function(s){return parseAtto(s).data;}).forEach(function(s){
           var a=parseAtto(s);
-          if(a.tipo)h+='<div class="det-item">'+esc(a.tipo)+(a.parte?' · <span style="color:var(--gray)">'+esc(a.parte)+'</span>':'')+(a.data?' <span class="det-date">'+esc(a.data)+'</span>':'')+'</div>';
+          if(a.tipo&&(a.parte||a.data))h+='<div class="det-item">'+esc(a.tipo)+(a.parte?' · <span style="color:var(--gray)">'+esc(a.parte)+'</span>':'')+(a.data?' <span class="det-date">'+esc(a.data)+'</span>':'')+'</div>';
         });
         h+='</div>';
       }
-      // Discussioni (future evidenziate in verde)
+      // Discussioni
       if(scraperR.discussioni&&scraperR.discussioni.length){
         h+='<div class="det-sec"><div class="det-sec-title">Discussioni</div>';
         sortByDate(scraperR.discussioni,function(s){return s.split('|')[0].trim();},false).forEach(function(s){
-          var d=parseDisc(s);
-          if(!d.data)return;
+          var d=parseDisc(s);if(!d.data||!d.tipo)return;
           var dt=parseDate(d.data);
           var futura=dt&&dt>=oggi&&(!d.esito||d.esito==='');
           h+='<div class="det-item'+(futura?' future':'')+'"><strong>'+esc(d.data)+'</strong> — '+esc(d.tipo);
@@ -672,8 +602,7 @@ function renderRicorsiList(data){
       if(scraperR.provvedimenti_collegiali&&scraperR.provvedimenti_collegiali.length){
         h+='<div class="det-sec"><div class="det-sec-title">Provvedimenti Collegiali</div>';
         sortByDate(scraperR.provvedimenti_collegiali,function(s){return parseColl(s).data_pubbl;}).forEach(function(s){
-          var p=parseColl(s);
-          if(p.tipo)h+='<div class="det-item">'+esc(p.tipo)+' <span class="det-date">'+esc(p.data_pubbl)+'</span>'+(p.esito?' <span class="det-esito">'+esc(p.esito)+'</span>':'')+'</div>';
+          var p=parseColl(s);if(p.tipo&&p.data_pubbl)h+='<div class="det-item">'+esc(p.tipo)+' <span class="det-date">'+esc(p.data_pubbl)+'</span>'+(p.esito&&p.esito.trim()?' <span class="det-esito">'+esc(p.esito)+'</span>':'')+'</div>';
         });
         h+='</div>';
       }
@@ -681,22 +610,25 @@ function renderRicorsiList(data){
       if(scraperR.provvedimenti_monocratici&&scraperR.provvedimenti_monocratici.length){
         h+='<div class="det-sec"><div class="det-sec-title">Provvedimenti Monocratici</div>';
         sortByDate(scraperR.provvedimenti_monocratici,function(s){return parseMono(s).data;}).forEach(function(s){
-          var p=parseMono(s);
-          if(p.tipo)h+='<div class="det-item">'+esc(p.tipo)+' <span class="det-date">'+esc(p.data)+'</span>'+(p.esito?' <span class="det-esito">'+esc(p.esito)+'</span>':'')+'</div>';
+          var p=parseMono(s);if(p.tipo&&p.data)h+='<div class="det-item">'+esc(p.tipo)+' <span class="det-date">'+esc(p.data)+'</span>'+(p.esito&&p.esito.trim()?' <span class="det-esito">'+esc(p.esito)+'</span>':'')+'</div>';
         });
         h+='</div>';
       }
-    } else if(!r.mon){
-      h+='<div class="det-nodata">Ricorso non tracciato dallo scraper (storico o CdS)</div>';
-    } else {
+    } else if(r.mon){
       h+='<div class="det-nodata">Dati scraper non ancora disponibili</div>';
     }
+    // Se non monitorato non mettiamo nessun messaggio — i campi DB bastano
 
     h+='</td></tr>';
   });
 
   h+='</tbody></table></div>';
   return h;
+}
+
+function detCr(label, valore){
+  if(!valore)return'';
+  return'<div class="det-cr"><span class="det-ck">'+esc(label)+'</span><span class="det-cv">'+esc(valore)+'</span></div>';
 }
 
 /* ================================================================
@@ -713,7 +645,7 @@ function renderProvvedimenti(data){
   h+='<button class="sub-tab"    onclick="showSubTabLocal(\'tutti\',this)">Tutti TAR FVG</button>';
   h+='</div>';
 
-  /* ── SUB: MONITORATI ── */
+  // SUB: MONITORATI
   h+='<div class="sub-panel on" id="sub-monitorati">';
   var monProv=[];
   scraperList.forEach(function(r){
@@ -733,52 +665,53 @@ function renderProvvedimenti(data){
     h+='<div class="empty"><div class="empty-ico">⚖️</div><div class="empty-txt">Nessun provvedimento<br>nei ricorsi monitorati</div></div>';
   } else {
     monProv.forEach(function(p){
+      var ec=esitoClass(p.esito);
       h+='<div class="prov-card">';
       if(p.stab)h+='<div class="prov-stab">'+esc(p.stab)+'</div>';
-      if(p.ric)h+='<div class="prov-ric">'+esc(p.ric)+'</div>';
+      if(p.ric) h+='<div class="prov-ric">'+esc(p.ric)+'</div>';
       h+='<div class="prov-nrg">NRG '+esc(p.nrg)+'</div>';
       h+='<div class="cr"><span class="ck">Tipo</span><span class="cv">'+esc(p.tipo)+'</span></div>';
-      h+='<div class="cr"><span class="ck">Pubbl.</span><span class="cv date">'+esc(p.data||'N/D')+'</span></div>';
-      if(p.mag)h+='<div class="cr"><span class="ck">Magistrato</span><span class="cv">'+esc(p.mag)+'</span></div>';
-      if(p.esito)h+='<div class="cr"><span class="ck">Esito</span><span class="cv esito">'+esc(p.esito)+'</span></div>';
+      if(p.data)h+='<div class="cr"><span class="ck">Pubbl.</span><span class="cv date">'+esc(p.data)+'</span></div>';
+      if(p.mag)  h+='<div class="cr"><span class="ck">Magistrato</span><span class="cv">'+esc(p.mag)+'</span></div>';
+      if(p.esito)h+='<div class="cr"><span class="ck">Esito</span><span class="cv '+(ec||'')+'">'+esc(p.esito)+'</span></div>';
       h+='<span class="badge '+(p.kind==='Collegiale'?'b-blue':'b-green')+'" style="margin-top:8px;display:inline-block">'+esc(p.kind)+'</span>';
       h+='</div>';
     });
   }
-  h+='</div>'; // /sub-monitorati
+  h+='</div>';
 
-  /* ── SUB: TUTTI ── */
+  // SUB: TUTTI
   h+='<div class="sub-panel" id="sub-tutti">';
   var tutti=[];
-  collAll.forEach(function(p){tutti.push({parte:p.parte,tipo:p.tipoProvvedimento,dataPubbl:p.dataPubblicazione,dataUd:p.dataUdienza,esito:p.esito,kind:'C'});});
-  monoAll.forEach(function(p){tutti.push({parte:p.parte,tipo:p.tipoProvvedimento,dataPubbl:p.dataPubblicazione,dataUd:p.dataUdienza,esito:p.esito,kind:'M'});});
+  collAll.forEach(function(p){tutti.push({parte:p.parte,tipo:p.tipoProvvedimento,dataPubbl:p.dataPubblicazione,dataUd:p.dataUdienza,esito:p.esito});});
+  monoAll.forEach(function(p){tutti.push({parte:p.parte,tipo:p.tipoProvvedimento,dataPubbl:p.dataPubblicazione,dataUd:p.dataUdienza,esito:p.esito});});
   tutti=sortByDate(tutti,function(p){return p.dataPubbl;});
 
   if(!tutti.length){
-    h+='<div class="empty"><div class="empty-ico">⚖️</div><div class="empty-txt">Nessun provvedimento<br>nelle ultime 48h</div></div>';
+    h+='<div class="empty"><div class="empty-ico">⚖️</div><div class="empty-txt">Nessun provvedimento<br>negli ultimi 7 giorni</div></div>';
   } else {
-    h+='<div class="sec-lbl">'+tutti.length+' provvedimenti — ultime 48h</div>';
+    h+='<div class="sec-lbl">'+tutti.length+' provvedimenti — ultimi 7 giorni</div>';
     h+='<div class="tutti-wrap"><table class="tutti-table"><thead><tr>';
-    h+='<th>Parte</th><th>Tipo</th><th>Data pubbl.</th><th>Data udienza</th><th>Esito</th>';
+    h+='<th>Parte</th><th>Tipo</th><th>Pubbl.</th><th>Udienza</th><th>Esito</th>';
     h+='</tr></thead><tbody>';
     tutti.forEach(function(p){
+      var ec=esitoClass(p.esito);
+      var ecCls=ec==='acc'?'t-esito-acc':(ec==='resp'?'t-esito-resp':'');
       h+='<tr>';
-      h+='<td class="t-parte">'+esc(p.parte||'—')+'</td>';
-      h+='<td class="t-tipo">'+esc(p.tipo||'—')+'</td>';
-      h+='<td class="t-data">'+esc(p.dataPubbl||'—')+'</td>';
-      h+='<td class="t-data">'+esc(p.dataUd||'—')+'</td>';
-      h+='<td class="t-esito">'+esc(p.esito||'')+'</td>';
+      h+='<td class="t-parte">'+esc(p.parte||'')+'</td>';
+      h+='<td class="t-tipo">'+esc(p.tipo||'')+'</td>';
+      h+='<td class="t-data">'+esc(p.dataPubbl||'')+'</td>';
+      h+='<td class="t-data">'+esc(p.dataUd||'')+'</td>';
+      h+='<td class="'+ecCls+'">'+esc(p.esito||'')+'</td>';
       h+='</tr>';
     });
     h+='</tbody></table></div>';
   }
-  h+='</div>'; // /sub-tutti
-  h+='</div>'; // /sub-tabs-wrap
-
+  h+='</div>';
+  h+='</div>';
   return h;
 }
 
-// Sub-tab switcher locale alla sezione Provvedimenti
 function showSubTabLocal(name,btn){
   var wrap=document.getElementById('sub-tabs-wrap');
   if(!wrap)return;
@@ -793,7 +726,7 @@ function showSubTabLocal(name,btn){
    RENDER: SCADENZE
    ================================================================ */
 function renderScadenze(data){
-  var oggi=new Date(); oggi.setHours(0,0,0,0);
+  var oggi=new Date();oggi.setHours(0,0,0,0);
   var scraperList=data.ricorsi_monitorati||[];
   var righe=[];
 
@@ -803,14 +736,15 @@ function renderScadenze(data){
     (r.discussioni||[]).forEach(function(s){
       var d=parseDisc(s);
       var dt=parseDate(d.data);
+      // >= oggi: include oggi fino alle 23:59 (perché oggi è mezzanotte)
       if(dt&&dt>=oggi&&(!d.esito||d.esito==='')){
-        righe.push({nr:nr, stab:db?db.stab:null, tipo:d.tipo, giudizio:d.giudizio, data:dt, dataStr:d.data});
+        righe.push({nr:nr,stab:db?db.stab:null,tipo:d.tipo,giudizio:d.giudizio,data:dt,dataStr:d.data});
       }
     });
   });
 
   if(!righe.length){
-    return '<div class="empty"><div class="empty-ico">📅</div><div class="empty-txt">Nessuna scadenza futura<br>in agenda</div></div>';
+    return'<div class="empty"><div class="empty-ico">📅</div><div class="empty-txt">Nessuna scadenza futura<br>in agenda</div></div>';
   }
 
   righe.sort(function(a,b){return a.data-b.data;});
@@ -853,7 +787,6 @@ function loadData(){
       document.getElementById('liveLabel').textContent='Live';
       var tsEl=document.getElementById('home-ts-val');
       if(tsEl)tsEl.textContent=data.ultimo_controllo||'—';
-
       document.getElementById('cnt-dashboard').innerHTML = renderDashboard(data);
       document.getElementById('cnt-ricorsi').innerHTML   = renderRicorsiList(data);
       document.getElementById('cnt-provv').innerHTML     = renderProvvedimenti(data);
@@ -877,7 +810,7 @@ function loadData(){
 }
 
 loadData();
-setInterval(loadData, 5*60*1000);
+setInterval(loadData,5*60*1000);
 </script>
 </body>
 </html>
