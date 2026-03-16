@@ -83,7 +83,7 @@ def inizializza_sessione():
 
 def get_dates():
     oggi = ora_locale()
-    ieri = oggi - timedelta(days=1)
+    ieri = oggi - timedelta(days=14)
     return ieri.strftime("%Y-%m-%d"), oggi.strftime("%Y-%m-%d")
 
 
