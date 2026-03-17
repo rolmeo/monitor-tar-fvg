@@ -826,8 +826,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "17/03/2026 18:14",
-  "ultimo_controllo": "17/03/2026 18:14",
+  "ultimo_aggiornamento": "17/03/2026 18:15",
+  "ultimo_controllo": "17/03/2026 18:15",
   "provvedimenti_collegiali": [
     {
       "nrgFascicolo": "202500145",
@@ -890,6 +890,103 @@
       "presidente": null,
       "esito": "ACCOGLIE  FISSA CAMERA DI CONSIGLIO    ",
       "nomeFile": "202600034_06.xml"
+    }
+  ],
+  "cds_ricorsi_monitorati": [
+    {
+      "nrg": "2025001750",
+      "anno": 2025,
+      "numero": 1750,
+      "fonte": "CdS",
+      "sezione": "7",
+      "data_deposito": "03/03/2025",
+      "tipo_ricorso": "APPELLO AVVERSO SENTENZA SEMPLIFICATA",
+      "oggetto": "PROCEDURA DI AFFIDAMENTO DELLE CONCESSIONI DEMANIALI MARITTIME A USO TURISTICO-RICREATIVO - REVOCA DEGLI AVVISI DI SELEZIONE PUBBLICA APPROVATI - RISARCIMENTO DANNI",
+      "parti": [
+        "APPELLANTE | 03/03/2025 | ",
+        "APPELLATO |  | ",
+        "APPELLATO | 05/03/2025 | ",
+        "CONTROINTERESSATO | 06/03/2025 | "
+      ],
+      "atti": [
+        "MEMORIA | 2025021925 | CONTROINTERESSATO | 20/03/2025",
+        "DOCUMENTI | 2025022378 | APPELLANTE | 22/03/2025",
+        "ATTO DI COSTITUZIONE | 2025017993 | CONTROINTERESSATO | 06/03/2025",
+        "ATTO DI COSTITUZIONE | 2025017539 | APPELLATO | 05/03/2025",
+        "ISTANZA DI FISSAZIONE UDIENZA | 2025001675 | APPELLANTE | 03/03/2025",
+        "ALTRO | 2025018059 | APPELLANTE | 07/03/2025",
+        "MEMORIA | 2025022133 | APPELLATO | 21/03/2025",
+        "RICORSO | 2025016799 | APPELLANTE | 03/03/2025"
+      ],
+      "discussioni": [
+        "25/03/2025 | CAMERA DI CONSIGLIO | DISCUSSO | ANGELA ROTONDANO | Giudizio Cautelare | 8"
+      ],
+      "provvedimenti_collegiali": [
+        "SENTENZA BREVE | ROTONDANO ANGELA | 04/04/2025 | 25/03/2025 | CC | ACCOGLIE"
+      ],
+      "provvedimenti_monocratici": []
+    },
+    {
+      "nrg": "2026001897",
+      "anno": 2026,
+      "numero": 1897,
+      "fonte": "CdS",
+      "sezione": "7",
+      "data_deposito": "06/03/2026",
+      "tipo_ricorso": "APPELLO AVVERSO ORDINANZA CAUTELARE",
+      "oggetto": "AVVISO DI SELEZIONE PUBBLICA PER L’AFFIDAMENTO DI UNA CONCESSIONE DEMANIALE MARITTIMA CON FINALITÀ TURISTICO-RICREATIVA - AGGIUDICAZIONE - RICONSEGNA DEL BENE - MCP",
+      "parti": [
+        "APPELLANTE | 06/03/2026 | ",
+        "APPELLATO | 10/03/2026 | ",
+        "APPELLATO | 11/03/2026 | "
+      ],
+      "atti": [
+        "ISTANZA DI FISSAZIONE UDIENZA | 2026001834 | APPELLANTE | 06/03/2026",
+        "MEMORIA | 2026019154 | APPELLANTE | 12/03/2026",
+        "MEMORIA DI COSTITUZIONE | 2026018880 | APPELLATO | 11/03/2026",
+        "ALTRO | 2026019097 | APPELLATO | 12/03/2026",
+        "MEMORIA | 2026019722 | APPELLATO | 14/03/2026",
+        "MEMORIA | 2026019445 | APPELLATO | 13/03/2026",
+        "RICORSO | 2026017620 | APPELLANTE | 06/03/2026",
+        "ATTO DI COSTITUZIONE | 2026018505 | APPELLATO | 10/03/2026",
+        "MEMORIA | 2026019630 | APPELLANTE | 13/03/2026",
+        "ISTANZA DI REVOCA O MODIFICA MISURA CAUTELARE | 2026019002 | APPELLATO | 12/03/2026"
+      ],
+      "discussioni": [
+        "17/03/2026 | CAMERA DI CONSIGLIO | DISCUSSO | BRUNELLA BRUNO | Giudizio Cautelare | 33"
+      ],
+      "provvedimenti_collegiali": [],
+      "provvedimenti_monocratici": [
+        "DECRETO CAUTELARE | CONTESSA CLAUDIO | 13/03/2026 | RESPINGE",
+        "DECRETO CAUTELARE | LIPARI MARCO | 07/03/2026 | ACCOGLIE"
+      ]
+    },
+    {
+      "nrg": "2026002039",
+      "anno": 2026,
+      "numero": 2039,
+      "fonte": "CdS",
+      "sezione": "7",
+      "data_deposito": "11/03/2026",
+      "tipo_ricorso": "APPELLO AVVERSO ORDINANZA CAUTELARE",
+      "oggetto": "AFFIDAMENTO CONCESSIONE DEMANIALE MARITTIMA CON FINALITÀ TURISTICO-RICREATIVE - AGGIUDICAZIONE - MCP",
+      "parti": [
+        "APPELLANTE | 11/03/2026 | ",
+        "APPELLATO | 16/03/2026 | ",
+        "CONTROINTERESSATO |  | "
+      ],
+      "atti": [
+        "ATTO DI COSTITUZIONE | 2026020189 | APPELLATO | 16/03/2026",
+        "ISTANZA DI FISSAZIONE UDIENZA | 2026001972 | APPELLANTE | 11/03/2026",
+        "RICORSO | 2026018793 | APPELLANTE | 11/03/2026"
+      ],
+      "discussioni": [
+        "14/04/2026 | CAMERA DI CONSIGLIO |  | DA ASSEGNARE MAGISTRATO | Giudizio Cautelare | "
+      ],
+      "provvedimenti_collegiali": [],
+      "provvedimenti_monocratici": [
+        "DECRETO CAUTELARE | CONTESSA CLAUDIO | 13/03/2026 | RESPINGE FISSA CAMERA DI CONSIGLIO"
+      ]
     }
   ]
 }
