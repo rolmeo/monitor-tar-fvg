@@ -123,8 +123,8 @@ body{background:var(--off-white);color:var(--near-black);font-family:-apple-syst
 /* TABELLA RICORSI */
 .table-hint{font-size:11px;color:var(--gray);text-align:right;margin-bottom:4px;}
 .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:16px;box-shadow:0 1px 3px rgba(0,0,0,0.06);margin-bottom:12px;}
-.ric-table{width:100%;border-collapse:collapse;background:var(--white);min-width:480px;}
-.ric-table thead tr{background:var(--near-black);}
+.ric-table{width:100%;border-collapse:separate;border-spacing:0;background:var(--white);min-width:480px;}
+.ric-table thead tr{background:var(--near-black);position:sticky;top:88px;z-index:10;}
 .ric-table thead th{padding:10px 8px;font-size:10px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:var(--white);text-align:left;white-space:nowrap;}
 .ric-table thead th:first-child{text-align:center;width:26px;}
 .ric-table tbody tr.data-row{border-bottom:1px solid var(--separator);cursor:pointer;transition:background 0.1s;}
@@ -171,14 +171,15 @@ body{background:var(--off-white);color:var(--near-black);font-family:-apple-syst
 .cv.resp{color:var(--red);font-weight:600;}
 
 /* TABELLA TUTTI */
+.tutti-nota{font-size:12px;color:var(--dark-gray);background:var(--orange-bg);border-radius:10px;padding:10px 12px;margin-bottom:10px;line-height:1.55;border-left:3px solid var(--orange);}
 .tutti-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:14px;box-shadow:0 1px 3px rgba(0,0,0,0.06);margin-bottom:12px;}
-.tutti-table{width:100%;border-collapse:collapse;background:var(--white);min-width:400px;font-size:12px;}
-.tutti-table thead tr{background:var(--near-black);}
+.tutti-table{width:100%;border-collapse:separate;border-spacing:0;background:var(--white);min-width:400px;font-size:12px;}
+.tutti-table thead tr{background:var(--near-black);position:sticky;top:88px;z-index:10;}
 .tutti-table thead th{padding:10px 8px;font-size:10px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:var(--white);text-align:left;white-space:nowrap;}
 .tutti-table tbody tr{border-bottom:1px solid var(--separator);}
 .tutti-table tbody tr:last-child{border-bottom:none;}
 .tutti-table tbody td{padding:9px 8px;vertical-align:top;}
-.t-parte{font-weight:500;}
+.t-nrg{font-weight:700;color:var(--blue);white-space:nowrap;font-size:11px;}.t-parte{font-weight:500;}
 .t-tipo{color:var(--dark-gray);}
 .t-data{color:var(--blue);font-weight:600;white-space:nowrap;}
 .t-esito-acc{color:var(--green-dark);font-weight:600;}
@@ -189,6 +190,7 @@ body{background:var(--off-white);color:var(--near-black);font-family:-apple-syst
 .scad-left{flex:1;min-width:0;}
 .scad-nr{font-size:11px;font-weight:700;color:var(--blue);margin-bottom:2px;}
 .scad-stab{font-size:14px;font-weight:700;color:var(--near-black);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.scad-ric{font-size:11px;color:var(--dark-gray);font-weight:500;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 .scad-tipo{font-size:11px;color:var(--gray);margin-top:2px;}
 .scad-right{text-align:right;flex-shrink:0;}
 .scad-data{font-size:14px;font-weight:700;white-space:nowrap;}
@@ -210,9 +212,9 @@ body{background:var(--off-white);color:var(--near-black);font-family:-apple-syst
 .ev-val.bold{font-weight:700;color:var(--near-black);}
 .ev-det-title{font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--blue);margin:10px 0 5px;padding-top:8px;border-top:1px solid var(--separator);}
 .ev-det-row{display:flex;gap:8px;margin-bottom:4px;align-items:baseline;padding:3px 6px;border-radius:6px;}
-.ev-det-row:first-child{background:var(--blue-bg);padding:6px 8px;border-radius:8px;margin-bottom:6px;}
-.ev-det-row:first-child .ev-det-lbl{color:var(--blue);}
-.ev-det-row:first-child .ev-det-val{font-weight:700;color:var(--near-black);}
+.ev-det-row.ev-det-first{background:var(--blue-bg);padding:6px 8px;border-radius:8px;margin-bottom:6px;}
+.ev-det-row.ev-det-first .ev-det-lbl{color:var(--blue);}
+.ev-det-row.ev-det-first .ev-det-val{font-weight:700;color:var(--near-black);}
 .ev-det-lbl{font-size:10px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:var(--dark-gray);min-width:90px;flex-shrink:0;}
 .ev-det-val{font-size:13px;color:var(--near-black);line-height:1.4;}
 /* FOOTER */
@@ -680,8 +682,8 @@ function renderUltimiEventi(data){
     // Dettaglio evento
     if(ev.det && ev.det.length){
       h += '<div class="ev-det-title">Dettaglio</div>';
-      ev.det.forEach(function(d){
-        h += '<div class="ev-det-row">';
+      ev.det.forEach(function(d,di){
+        h += '<div class="ev-det-row'+(di===0?' ev-det-first':'')+'">';
         h += '<span class="ev-det-lbl">'+esc(d.lbl)+'</span>';
         var style = d.color ? ' style="color:'+d.color+';font-weight:600"' : '';
         h += '<span class="ev-det-val"'+style+'>'+esc(d.val)+'</span>';
@@ -870,22 +872,27 @@ function renderProvvedimenti(data){
 
   // SUB: TUTTI
   h+='<div class="sub-panel" id="sub-tutti">';
+  h+='<div class="tutti-nota">In questa tabella sono elencati <strong>TUTTI</strong> i più recenti provvedimenti del TAR FVG (quindi anche non relativi ai ricorsi sui bandi delle concessioni balneari di Lignano Sabbiadoro).</div>';
   var tutti=[];
-  collAll.forEach(function(p){tutti.push({parte:p.parte,tipo:p.tipoProvvedimento,dataPubbl:p.dataPubblicazione,dataUd:p.dataUdienza,esito:p.esito});});
-  monoAll.forEach(function(p){tutti.push({parte:p.parte,tipo:p.tipoProvvedimento,dataPubbl:p.dataPubblicazione,dataUd:p.dataUdienza,esito:p.esito});});
+  collAll.forEach(function(p){tutti.push({nrg:p.nrgFascicolo,parte:p.parte,tipo:p.tipoProvvedimento,dataPubbl:p.dataPubblicazione,dataUd:p.dataUdienza,esito:p.esito});});
+  monoAll.forEach(function(p){tutti.push({nrg:p.nrgFascicolo,parte:p.parte,tipo:p.tipoProvvedimento,dataPubbl:p.dataPubblicazione,dataUd:p.dataUdienza,esito:p.esito});});
   tutti=sortByDate(tutti,function(p){return p.dataPubbl;});
 
   if(!tutti.length){
     h+='<div class="empty"><div class="empty-ico">⚖️</div><div class="empty-txt">Nessun provvedimento<br>negli ultimi 14 giorni</div></div>';
   } else {
-    h+='<div class="sec-lbl">'+tutti.length+' provvedimenti — ultimi 14 giorni</div>';
+    h+='<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">';
+    h+='<div class="sec-lbl" style="padding:0">'+tutti.length+' provvedimenti — ultimi 14 giorni</div>';
+    h+='<button onclick="esportaCSV()" style="font-size:11px;font-weight:700;padding:5px 10px;background:var(--green-bg);color:var(--green-dark);border:1px solid var(--green);border-radius:8px;cursor:pointer">⬇ Esporta CSV</button>';
+    h+='</div>';
     h+='<div class="tutti-wrap"><table class="tutti-table"><thead><tr>';
-    h+='<th>Parte</th><th>Tipo</th><th>Pubbl.</th><th>Udienza</th><th>Esito</th>';
+    h+='<th>NRG</th><th>Parte</th><th>Tipo</th><th>Pubbl.</th><th>Udienza</th><th>Esito</th>';
     h+='</tr></thead><tbody>';
     tutti.forEach(function(p){
       var ec=esitoClass(p.esito);
       var ecCls=ec==='acc'?'t-esito-acc':(ec==='resp'?'t-esito-resp':'');
       h+='<tr>';
+      h+='<td class="t-nrg">'+esc(nrgToNr(p.nrg||''))+'</td>';
       h+='<td class="t-parte">'+esc(p.parte||'')+'</td>';
       h+='<td class="t-tipo">'+esc(p.tipo||'')+'</td>';
       h+='<td class="t-data">'+esc(p.dataPubbl||'')+'</td>';
@@ -926,7 +933,7 @@ function renderScadenze(data){
       var dt=parseDate(d.data);
       // >= oggi: include oggi fino alle 23:59 (perché oggi è mezzanotte)
       if(dt&&dt>=oggi&&(!d.esito||d.esito==='')){
-        righe.push({nr:nr,stab:db?db.stab:null,luogo:db?db.luogo:'TAR FVG',tipo:d.tipo,giudizio:d.giudizio,data:dt,dataStr:d.data});
+        righe.push({nr:nr,stab:db?db.stab:null,luogo:db?db.luogo:'TAR FVG',ric:db?db.ric:null,tipo:d.tipo,giudizio:d.giudizio,data:dt,dataStr:d.data});
       }
     });
   });
@@ -947,6 +954,7 @@ function renderScadenze(data){
     var scadFonteLbl=row.luogo==='CdS'?'CdS':'TAR FVG';
     h+='<div class="scad-nr" style="display:flex;align-items:center;gap:5px">'+esc(row.nr)+'<span class="'+scadFonteCls+'" style="font-size:9px">'+scadFonteLbl+'</span></div>';
     h+='<div class="scad-stab">'+(row.stab?esc(row.stab):'—')+'</div>';
+    if(row.ric)h+='<div class="scad-ric">'+esc(row.ric)+'</div>';
     h+='<div class="scad-tipo">'+esc(row.tipo)+(row.giudizio?' · '+esc(row.giudizio):'')+'</div>';
     h+='</div>';
     h+='<div class="scad-right">';
@@ -961,6 +969,30 @@ function renderScadenze(data){
 /* ================================================================
    LOAD DATA
    ================================================================ */
+function esportaCSV(){
+  var data=_modalData;
+  if(!data){alert('Nessun dato disponibile. Aggiorna prima i dati.');return;}
+  var collAll=data.provvedimenti_collegiali||[];
+  var monoAll=data.provvedimenti_monocratici||[];
+  var tutti=[];
+  collAll.forEach(function(p){tutti.push({nrg:nrgToNr(p.nrgFascicolo||''),parte:p.parte||'',tipo:p.tipoProvvedimento||'',dataPubbl:p.dataPubblicazione||'',dataUd:p.dataUdienza||'',esito:p.esito||''});});
+  monoAll.forEach(function(p){tutti.push({nrg:nrgToNr(p.nrgFascicolo||''),parte:p.parte||'',tipo:p.tipoProvvedimento||'',dataPubbl:p.dataPubblicazione||'',dataUd:p.dataUdienza||'',esito:p.esito||''});});
+  tutti.sort(function(a,b){var da=parseDate(a.dataPubbl),db=parseDate(b.dataPubbl);return(!da&&!db)?0:(!da?1:(!db?-1:db-da));});
+  var bom='﻿';
+  var header='NRG;Parte;Tipo Provvedimento;Data Pubblicazione;Data Udienza;Esito
+';
+  var rows=tutti.map(function(p){
+    return [p.nrg,p.parte,p.tipo,p.dataPubbl,p.dataUd,p.esito].map(function(v){return '"'+String(v).replace(/"/g,'""')+'"';}).join(';');
+  }).join('
+');
+  var blob=new Blob([bom+header+rows],{type:'text/csv;charset=utf-8;'});
+  var url=URL.createObjectURL(blob);
+  var a=document.createElement('a');
+  a.href=url;a.download='provvedimenti_tar_fvg.csv';
+  document.body.appendChild(a);a.click();
+  document.body.removeChild(a);URL.revokeObjectURL(url);
+}
+
 var isLoading=false;
 function loadData(){
   if(isLoading)return;
