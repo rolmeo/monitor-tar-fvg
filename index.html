@@ -198,6 +198,21 @@ body{background:var(--off-white);color:var(--near-black);font-family:'Montserrat
 .scad-gg.presto{color:var(--orange);}
 .scad-gg.oggi  {color:var(--red);}
 
+/* ── EVENTI ── */
+.ev-card{background:var(--white);border-radius:16px;padding:16px;margin-bottom:10px;box-shadow:0 1px 3px rgba(0,0,0,0.06);border-left:3px solid var(--blue);}
+.ev-card.ev-futura{border-left-color:var(--green);background:var(--green-bg);}
+.ev-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;}
+.ev-data{font-size:15px;font-weight:700;color:var(--near-black);letter-spacing:-0.01em;}
+.ev-tipo{font-size:13px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:10px;}
+.ev-tipo.futura{color:var(--green-dark);}
+.ev-row{display:flex;gap:8px;margin-bottom:4px;align-items:baseline;}
+.ev-lbl{font-size:10px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:var(--gray);min-width:90px;flex-shrink:0;}
+.ev-val{font-size:13px;color:var(--near-black);line-height:1.4;}
+.ev-val.bold{font-weight:700;color:var(--near-black);}
+.ev-det-title{font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--blue);margin:10px 0 5px;padding-top:8px;border-top:1px solid var(--separator);}
+.ev-det-row{display:flex;gap:8px;margin-bottom:4px;align-items:baseline;}
+.ev-det-lbl{font-size:10px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:var(--dark-gray);min-width:90px;flex-shrink:0;}
+.ev-det-val{font-size:13px;color:var(--near-black);line-height:1.4;}
 /* FOOTER */
 .footer{text-align:center;padding:20px 0 4px;font-size:12px;color:var(--mid-gray);line-height:1.9;}
 
@@ -229,9 +244,9 @@ body{background:var(--off-white);color:var(--near-black);font-family:'Montserrat
     <span class="home-ts-val" id="home-ts-val">—</span>
   </div>
   <div class="home-grid">
-    <button class="home-tile t-blue"   onclick="showSection('dashboard')"><span class="tile-ico">📊</span><span class="tile-lbl">Dashboard</span><span class="tile-sub">Riepilogo e statistiche</span></button>
+    <button class="home-tile t-blue"   onclick="showSection('dashboard')"><span class="tile-ico">📊</span><span class="tile-lbl">Ultimi eventi</span><span class="tile-sub">Feed cronologico ricorsi</span></button>
     <button class="home-tile t-green"  onclick="showSection('ricorsi')"><span class="tile-ico">📋</span><span class="tile-lbl">Elenco Ricorsi</span><span class="tile-sub">Tutti i ricorsi monitorati</span></button>
-    <button class="home-tile t-orange" onclick="showSection('provv')"><span class="tile-ico">⚖️</span><span class="tile-lbl">Provvedimenti</span><span class="tile-sub">TAR FVG · ultimi 7 giorni</span></button>
+    <button class="home-tile t-orange" onclick="showSection('provv')"><span class="tile-ico">⚖️</span><span class="tile-lbl">Provvedimenti</span><span class="tile-sub">TAR FVG · ultimi 14 giorni</span></button>
     <button class="home-tile t-purple" onclick="showSection('scadenze')"><span class="tile-ico">📅</span><span class="tile-lbl">Scadenze</span><span class="tile-sub">Prossime udienze</span></button>
   </div>
   <button class="btn-refresh-home" onclick="loadData()">
@@ -288,16 +303,16 @@ body{background:var(--off-white);color:var(--near-black);font-family:'Montserrat
    Campi: p, luogo, nr, data, ric, ogg, stab, contro, neiConfrDi, mon
    ================================================================ */
 var RICORSI_DB = [
-  {p:1,  luogo:'TAR FVG', nr:'406/2024',  data:'25/11/2024', ric:'Albergo Italia Srl',               ogg:'Annullamento revoca bando',             stab:null,                    contro:'Comune di Lignano; Ente di Decentr. Reg. di Udine', neiConfrDi:'Bagni di Lignano di Augusto Angelo Marin Sas', mon:false},
+  {p:1,  luogo:'TAR FVG', nr:'406/2024',  data:'25/11/2024', ric:'Albergo Italia Srl',               ogg:'Annullamento revoca bando',             stab:'n.d.',                    contro:'Comune di Lignano; Ente di Decentr. Reg. di Udine', neiConfrDi:'Bagni di Lignano di Augusto Angelo Marin Sas', mon:true},
   {p:2,  luogo:'CdS',     nr:'1750/2025', data:'03/03/2025', ric:'Albergo Italia Srl',               ogg:'Riforma sentenza TAR su ric. 406/2024', stab:null,                    contro:'Comune di Lignano; Ente di Decentr. Reg. di Udine', neiConfrDi:'Bagni di Lignano di Augusto Angelo Marin Sas', mon:false},
-  {p:3,  luogo:'TAR FVG', nr:'257/2025',  data:'29/05/2025', ric:'Meotto Giuseppe Srl',              ogg:'Proroga',                               stab:'Portofino',             contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'n.d.', mon:false},
-  {p:4,  luogo:'TAR FVG', nr:'267/2025',  data:'30/05/2025', ric:'Pietro Ceiner Snc',                ogg:'Proroga',                               stab:'Ausonia',               contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'n.d.', mon:false},
-  {p:5,  luogo:'TAR FVG', nr:'268/2025',  data:'30/05/2025', ric:'Doggy Beach Srl',                  ogg:'Proroga',                               stab:'Spiaggia per cani',     contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'n.d.', mon:false},
-  {p:6,  luogo:'TAR FVG', nr:'270/2025',  data:'30/05/2025', ric:'Gigante Giancarlo',                ogg:'Proroga',                               stab:'Gabbiano',              contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'n.d.', mon:false},
-  {p:7,  luogo:'TAR FVG', nr:'399/2025',  data:'31/07/2025', ric:'Battiston MD Srl',                 ogg:'Proroga',                               stab:'Lido del Sole',         contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'n.d.', mon:false},
-  {p:8,  luogo:'TAR FVG', nr:'403/2025',  data:'01/08/2025', ric:'Paschetto G. / Neri R.',           ogg:'Proroga',                               stab:'Ufficio 7 bis (Pineta)',contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'Frontemare di Casarin Lorenzo Sas', mon:false},
-  {p:9,  luogo:'TAR FVG', nr:'404/2025',  data:'01/08/2025', ric:'Giardino Srl',                     ogg:'Proroga',                               stab:'La Sacca',              contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'n.d.', mon:false},
-  {p:10, luogo:'TAR FVG', nr:'405/2025',  data:'01/08/2025', ric:'Gest. Spiaggia Italia Snc',        ogg:'Proroga',                               stab:'Bagno Italia',          contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'n.d.', mon:false},
+  {p:3,  luogo:'TAR FVG', nr:'257/2025',  data:'29/05/2025', ric:'Meotto Giuseppe Srl',              ogg:'Proroga',                               stab:'Portofino',             contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'n.d.', mon:true},
+  {p:4,  luogo:'TAR FVG', nr:'267/2025',  data:'30/05/2025', ric:'Pietro Ceiner Snc',                ogg:'Proroga',                               stab:'Ausonia',               contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'n.d.', mon:true},
+  {p:5,  luogo:'TAR FVG', nr:'268/2025',  data:'30/05/2025', ric:'Doggy Beach Srl',                  ogg:'Proroga',                               stab:'Spiaggia per cani',     contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'n.d.', mon:true},
+  {p:6,  luogo:'TAR FVG', nr:'270/2025',  data:'30/05/2025', ric:'Gigante Giancarlo',                ogg:'Proroga',                               stab:'Gabbiano',              contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'n.d.', mon:true},
+  {p:7,  luogo:'TAR FVG', nr:'399/2025',  data:'31/07/2025', ric:'Battiston MD Srl',                 ogg:'Proroga',                               stab:'Lido del Sole',         contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'n.d.', mon:true},
+  {p:8,  luogo:'TAR FVG', nr:'403/2025',  data:'01/08/2025', ric:'Paschetto G. / Neri R.',           ogg:'Proroga',                               stab:'Ufficio 7 bis (Pineta)',contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'Frontemare di Casarin Lorenzo Sas', mon:true},
+  {p:9,  luogo:'TAR FVG', nr:'404/2025',  data:'01/08/2025', ric:'Giardino Srl',                     ogg:'Proroga',                               stab:'La Sacca',              contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'n.d.', mon:true},
+  {p:10, luogo:'TAR FVG', nr:'405/2025',  data:'01/08/2025', ric:'Gest. Spiaggia Italia Snc',        ogg:'Proroga',                               stab:'Bagno Italia',          contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'n.d.', mon:true},
   {p:11, luogo:'TAR FVG', nr:'479/2025',  data:'01/10/2025', ric:'Tiliaventum ASD',                  ogg:'Ritiro lotto Getur dalla gara',          stab:'Getur',                 contro:'Regione, Comune, Promoturismo', neiConfrDi:'Ge.Tur. Scarl', mon:true},
   {p:12, luogo:'TAR FVG', nr:'686/2025',  data:'19/12/2025', ric:'Gigante Giancarlo',                ogg:'Esclusione',                            stab:'Gabbiano',              contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'Di Notte Srl', mon:true},
   {p:13, luogo:'TAR FVG', nr:'689/2025',  data:'22/12/2025', ric:'Fenice Srl',                       ogg:'Aggiudicazione',                        stab:'La Sacca',              contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'Giardino Srl', mon:true},
@@ -311,7 +326,8 @@ var RICORSI_DB = [
   {p:21, luogo:'CdS',     nr:'1897/2026', data:'06/03/2026', ric:'Gest. Spiaggia Italia Snc',        ogg:'Aggiudicazione',                        stab:'Bagno Italia',          contro:'Comune di Lignano Sabbiadoro; Pregi Srl', neiConfrDi:'n.d.', mon:false},
   {p:22, luogo:'TAR FVG', nr:'123/2026',  data:'11/03/2026', ric:'Condominio Marinella/Marin',       ogg:'Non conformità urbanistica',            stab:'Bagno Italia',          contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'Pregi Srl', mon:true},
   {p:23, luogo:'CdS',     nr:'2039/2026', data:'11/03/2026', ric:'Beach Bar F.T. Sas',               ogg:'Riforma sentenza TAR su ric. 51/2026',  stab:'Bar Frecce Tricolori',  contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'Fuel Srl', mon:false},
-  {p:24, luogo:'TAR FVG', nr:'126/2026',  data:'13/03/2026', ric:'Gigante Giancarlo',                ogg:'Esclusione',                            stab:'Gabbiano',              contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'Jesolo Beach Service Sas; Aura Srl; Weiss Srl; Serenissima Ristorazione Srl', mon:true},
+  {p:24, luogo:'TAR FVG', nr:'125/2026',  data:'12/03/2026', ric:'Aura Srl',                          ogg:'Aggiudicazione',                        stab:'Gabbiano',              contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'Jesolo Beach Service Sas', mon:true},
+  {p:25, luogo:'TAR FVG', nr:'126/2026',  data:'13/03/2026', ric:'Gigante Giancarlo',                ogg:'Esclusione',                            stab:'Gabbiano',              contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'Jesolo Beach Service Sas; Aura Srl; Weiss Srl; Serenissima Ristorazione Srl', mon:true},
 ];
 
 /* ================================================================
@@ -398,132 +414,139 @@ function toggleRow(idx){
 }
 
 /* ================================================================
-   RENDER: DASHBOARD
+   RENDER: ULTIMI EVENTI
    ================================================================ */
 function renderDashboard(data){
-  var tot  = RICORSI_DB.length;
-  var nTar = RICORSI_DB.filter(function(r){return r.luogo==='TAR FVG';}).length;
-  var nCds = RICORSI_DB.filter(function(r){return r.luogo==='CdS';}).length;
+  return renderUltimiEventi(data);
+}
+function renderUltimiEventi(data){
+  var oggi = new Date(); oggi.setHours(0,0,0,0);
+  var tuttiRicorsi = (data.ricorsi_monitorati||[]).concat(data.cds_ricorsi_monitorati||[]);
+  var eventi = [];
 
-  // Totale provvedimenti da tutti i ricorsi monitorati
-  var totProv=0;
-  (data.ricorsi_monitorati||[]).forEach(function(r){
-    totProv+=(r.provvedimenti_collegiali||[]).length;
-    totProv+=(r.provvedimenti_monocratici||[]).length;
-  });
+  tuttiRicorsi.forEach(function(r){
+    var db = dbByNrg(r.nrg);
+    var nr = r.numero + '/' + r.anno;
+    var stab   = db ? (db.stab || '—') : '—';
+    var ric    = db ? db.ric : nr;
+    var ogg    = db ? db.ogg : (r.oggetto || '');
+    var fonte  = r.fonte || 'TAR FVG';
 
-  // Contatori provvedimenti per esito (su tutti i ricorsi monitorati)
-  var provAcc=0, provResp=0, provAltri=0;
-  (data.ricorsi_monitorati||[]).forEach(function(r){
-    var provv=[];
-    (r.provvedimenti_collegiali||[]).forEach(function(s){var p=parseColl(s);if(p.tipo)provv.push(p.esito||'');});
-    (r.provvedimenti_monocratici||[]).forEach(function(s){var p=parseMono(s);if(p.tipo)provv.push(p.esito||'');});
-    provv.forEach(function(es){
-      var u=(es||'').toUpperCase();
-      if(u.indexOf('ACCOGLIE')!==-1) provAcc++;
-      else if(u.indexOf('RESPINGE')!==-1) provResp++;
-      else provAltri++;
+    // Provvedimenti collegiali
+    (r.provvedimenti_collegiali||[]).forEach(function(s){
+      var p = parseColl(s);
+      if(!p.tipo || !p.data_pubbl) return;
+      var dt = parseDate(p.data_pubbl);
+      if(!dt) return;
+      var det = [];
+      if(p.tipo)       det.push({lbl:'Tipo provvedimento', val:p.tipo});
+      if(p.magistrato) det.push({lbl:'Relatore',           val:p.magistrato});
+      if(p.esito)      det.push({lbl:'Esito',              val:p.esito, color: esitoColor(p.esito)});
+      eventi.push({dt:dt, dataStr:p.data_pubbl, tipo:'Provvedimento collegiale', stab:stab, ric:ric, ogg:ogg, fonte:fonte, det:det});
+    });
+
+    // Provvedimenti monocratici
+    (r.provvedimenti_monocratici||[]).forEach(function(s){
+      var p = parseMono(s);
+      if(!p.tipo || !p.data) return;
+      var dt = parseDate(p.data);
+      if(!dt) return;
+      var det = [];
+      if(p.tipo)       det.push({lbl:'Tipo provvedimento', val:p.tipo});
+      if(p.magistrato) det.push({lbl:'Relatore',           val:p.magistrato});
+      if(p.esito)      det.push({lbl:'Esito',              val:p.esito, color: esitoColor(p.esito)});
+      eventi.push({dt:dt, dataStr:p.data, tipo:'Provvedimento monocratico', stab:stab, ric:ric, ogg:ogg, fonte:fonte, det:det});
+    });
+
+    // Discussioni
+    (r.discussioni||[]).forEach(function(s){
+      var d = parseDisc(s);
+      if(!d.data || !d.tipo) return;
+      var dt = parseDate(d.data);
+      if(!dt) return;
+      var det = [];
+      if(d.tipo)       det.push({lbl:'Tipo udienza',  val:d.tipo});
+      if(d.giudizio)   det.push({lbl:'Raggruppamento',val:d.giudizio});
+      if(d.magistrato) det.push({lbl:'Relatore',      val:d.magistrato});
+      if(d.esito)      det.push({lbl:'Esito',         val:d.esito, color: esitoColor(d.esito)});
+      var tipoEv = dt >= oggi ? 'Udienza futura' : 'Udienza';
+      eventi.push({dt:dt, dataStr:d.data, tipo:tipoEv, stab:stab, ric:ric, ogg:ogg, fonte:fonte, det:det, futura: dt >= oggi});
+    });
+
+    // Atti depositati
+    (r.atti||[]).forEach(function(s){
+      var a = parseAtto(s);
+      if(!a.tipo || (!a.data && !a.parte)) return;
+      var dt = a.data ? parseDate(a.data) : null;
+      if(!dt) return;
+      var det = [];
+      if(a.tipo)  det.push({lbl:'Tipo atto', val:a.tipo});
+      if(a.parte) det.push({lbl:'Parte',     val:a.parte});
+      eventi.push({dt:dt, dataStr:a.data, tipo:'Atto depositato', stab:stab, ric:ric, ogg:ogg, fonte:fonte, det:det});
     });
   });
 
-  // Ultimo provvedimento
-  var oggi=new Date();oggi.setHours(0,0,0,0);
-  var maxProv=null;
-  (data.ricorsi_monitorati||[]).forEach(function(r){
-    ['provvedimenti_collegiali','provvedimenti_monocratici'].forEach(function(f){
-      (r[f]||[]).forEach(function(s){
-        var m=s.match(/(\d{2}\/\d{2}\/\d{4})/);
-        if(m){var d=parseDate(m[1]);if(d&&d<=oggi&&(!maxProv||d>maxProv))maxProv=d;}
+  // Ordina: prima le future (per data asc), poi le passate (per data desc)
+  var future  = eventi.filter(function(e){return e.futura;}).sort(function(a,b){return a.dt-b.dt;});
+  var passati = eventi.filter(function(e){return !e.futura;}).sort(function(a,b){return b.dt-a.dt;});
+  var sorted  = future.concat(passati);
+
+  if(!sorted.length){
+    return '<div class="empty"><div class="empty-ico">📋</div><div class="empty-txt">Nessun evento disponibile.<br>Aggiorna i dati.</div></div>';
+  }
+
+  var h = '<div class="sec-lbl">'+sorted.length+' event'+(sorted.length===1?'o':'i')+' · ordinati per data</div>';
+
+  sorted.forEach(function(ev){
+    var isFutura = ev.futura;
+    var cardCls  = 'ev-card' + (isFutura ? ' ev-futura' : '');
+    var tipoCls  = isFutura ? 'ev-tipo futura' : 'ev-tipo';
+    var fonteCls = ev.fonte === 'CdS' ? 'badge b-purple' : 'badge b-blue';
+    var fonteLabel = ev.fonte === 'CdS' ? 'Consiglio di Stato' : 'TAR FVG';
+
+    h += '<div class="'+cardCls+'">';
+    // Header: data + tipo + fonte
+    h += '<div class="ev-head">';
+    h += '<div class="ev-data">'+esc(ev.dataStr)+'</div>';
+    h += '<span class="'+fonteCls+'" style="font-size:10px">'+fonteLabel+'</span>';
+    h += '</div>';
+    h += '<div class="'+tipoCls+'">'+esc(ev.tipo)+'</div>';
+    // Campi anagrafici
+    if(ev.stab && ev.stab !== '—' && ev.stab !== 'n.d.')
+      h += evRow('Stabilimento', ev.stab, true);
+    h += evRow('Ricorrente', ev.ric, false);
+    h += evRow('Oggetto',    ev.ogg, false);
+    // Dettaglio evento
+    if(ev.det && ev.det.length){
+      h += '<div class="ev-det-title">Dettaglio</div>';
+      ev.det.forEach(function(d){
+        h += '<div class="ev-det-row">';
+        h += '<span class="ev-det-lbl">'+esc(d.lbl)+'</span>';
+        var style = d.color ? ' style="color:'+d.color+';font-weight:600"' : '';
+        h += '<span class="ev-det-val"'+style+'>'+esc(d.val)+'</span>';
+        h += '</div>';
       });
-    });
+    }
+    h += '</div>';
   });
-
-  // Ultimo ricorso monitorato (da RICORSI_DB, quelli con mon:true)
-  var monitorati=RICORSI_DB.filter(function(r){return r.mon;});
-  monitorati.sort(function(a,b){var da=parseDate(a.data),db=parseDate(b.data);return(!da&&!db)?0:(!da?1:(!db?-1:db-da));});
-  var ultimoMon=monitorati[0]||null;
-
-  // Ultimo ricorso in assoluto (da scraper: anno_nuovi + ultimo_ricorso + dettagli)
-  var ultimoScraperNr=data.ultimo_ricorso||0;
-  var ultimoScraperAnno=data.anno_nuovi||2026;
-  var ultimoScraperR=null;
-  if(ultimoScraperNr){
-    ultimoScraperR=scraperByNr(ultimoScraperNr+'/'+ultimoScraperAnno, data.ricorsi_monitorati);
-  }
-
-  var h='<div class="stats-grid">';
-
-  // A) Totale ricorsi
-  h+='<div class="stat-card accent">';
-  h+='<div class="stat-lbl">Totale ricorsi</div>';
-  h+='<div class="stat-val blue">'+tot+'</div>';
-  h+='<div class="stat-sub">TAR FVG: <b>'+nTar+'</b> &nbsp;·&nbsp; CdS: <b>'+nCds+'</b></div>';
-  h+='</div>';
-
-  // B) Totale provvedimenti
-  h+='<div class="stat-card">';
-  h+='<div class="stat-lbl">Totale provvedimenti</div>';
-  h+='<div class="stat-val '+(totProv?'blue':'')+'">'+totProv+'</div>';
-  h+='<div class="stat-sub">sui ricorsi monitorati</div>';
-  h+='</div>';
-
-  // C) Provv. accoglimento
-  h+='<div class="stat-card">';
-  h+='<div class="stat-lbl">Provv. accoglimento</div>';
-  h+='<div class="stat-val '+(provAcc?'blue':'')+'">'+provAcc+'</div>';
-  h+='<div class="stat-sub" style="color:var(--green-dark)">esito ACCOGLIE</div>';
-  h+='</div>';
-
-  // D) Provv. respingimento
-  h+='<div class="stat-card">';
-  h+='<div class="stat-lbl">Provv. respingimento</div>';
-  h+='<div class="stat-val '+(provResp?'':'')+'">'+provResp+'</div>';
-  h+='<div class="stat-sub" style="color:var(--red)">esito RESPINGE</div>';
-  h+='</div>';
-
-  // D2) Altri provvedimenti
-  h+='<div class="stat-card">';
-  h+='<div class="stat-lbl">Altri provvedimenti</div>';
-  h+='<div class="stat-val">'+provAltri+'</div>';
-  h+='<div class="stat-sub">esito diverso o assente</div>';
-  h+='</div>';
-
-  // E) Data ultimo provvedimento
-  h+='<div class="stat-card full">';
-  h+='<div class="stat-lbl">Data ultimo provvedimento (ricorsi monitorati)</div>';
-  h+='<div class="stat-val sm '+(maxProv?'blue':'')+'">'+fmtDate(maxProv)+'</div>';
-  h+='</div>';
-
-  // F) Ultimo ricorso monitorato
-  if(ultimoMon){
-    h+='<div class="stat-card full">';
-    h+='<div class="stat-lbl">Ultimo ricorso monitorato</div>';
-    h+='<div class="stat-val xs">'+esc(ultimoMon.nr)+(ultimoMon.stab?' — '+esc(ultimoMon.stab):'')+'</div>';
-    h+='<div class="stat-sub">'+esc(ultimoMon.data)+' · '+esc(ultimoMon.ric)+'</div>';
-    h+='<div class="stat-sub" style="margin-top:3px"><span class="badge '+(ultimoMon.luogo==='CdS'?'b-purple':'b-blue')+'">'+esc(ultimoMon.luogo)+'</span></div>';
-    h+='</div>';
-  }
-
-  // G) Ultimo ricorso in generale (scraper)
-  h+='<div class="stat-card full">';
-  h+='<div class="stat-lbl">Nr ultimo ricorso su sito TAR FVG</div>';
-  h+='<div class="stat-val xs">'+esc(ultimoScraperAnno)+' / '+esc(ultimoScraperNr)+'</div>';
-  if(ultimoScraperR){
-    if(ultimoScraperR.data_deposito)h+='<div class="stat-sub">Depositato: <b>'+esc(ultimoScraperR.data_deposito)+'</b></div>';
-    if(ultimoScraperR.oggetto)h+='<div class="stat-sub">'+esc(ultimoScraperR.oggetto)+'</div>';
-  }
-  h+='</div>';
-
-  h+='</div>'; // /stats-grid
-
-  // Stato monitoraggio
-  h+='<div class="sec-lbl">Stato monitoraggio</div>';
-  h+='<div class="ts-box">';
-  h+='<div class="ts-row"><span class="ts-lbl">Ultimo controllo</span><span class="ts-val">'+(data.ultimo_controllo||'—')+'</span></div>';
-  h+='<div class="ts-row"><span class="ts-lbl">Ultima variazione</span><span class="ts-val">'+(data.ultima_variazione||'—')+'</span></div>';
-  h+='</div>';
 
   return h;
+}
+
+function evRow(lbl, val, bold){
+  if(!val || val === '—') return '';
+  return '<div class="ev-row">'
+    + '<span class="ev-lbl">'+esc(lbl)+'</span>'
+    + '<span class="ev-val'+(bold?' bold':'')+'">'+esc(val)+'</span>'
+    + '</div>';
+}
+
+function esitoColor(e){
+  if(!e) return null;
+  var u = e.toUpperCase();
+  if(u.indexOf('ACCOGLIE')!==-1) return 'var(--green-dark)';
+  if(u.indexOf('RESPINGE')!==-1) return 'var(--red)';
+  return null;
 }
 
 /* ================================================================
@@ -532,6 +555,7 @@ function renderDashboard(data){
 function renderRicorsiList(data){
   var oggi=new Date();oggi.setHours(0,0,0,0);
   var scraperList=data.ricorsi_monitorati||[];
+  var scraperCds=data.cds_ricorsi_monitorati||[];
 
   var h='<p class="table-hint">↔ scorri se necessario · tocca riga per dettaglio</p>';
   h+='<div class="table-wrap"><table class="ric-table"><thead><tr>';
@@ -540,6 +564,7 @@ function renderRicorsiList(data){
 
   RICORSI_DB.forEach(function(r,i){
     var scraperR=r.mon?scraperByNr(r.nr,scraperList):null;
+    if(!scraperR&&r.luogo==='CdS')scraperR=scraperByNr(r.nr,scraperCds);
     var luogoBadge='<span class="badge '+(r.luogo==='CdS'?'b-purple':'b-blue')+'" style="font-size:9px;padding:1px 5px;margin-left:3px">'+esc(r.luogo)+'</span>';
 
     h+='<tr class="data-row" id="row-'+i+'" onclick="toggleRow('+i+')">';
@@ -635,7 +660,7 @@ function detCr(label, valore){
    RENDER: PROVVEDIMENTI
    ================================================================ */
 function renderProvvedimenti(data){
-  var scraperList=data.ricorsi_monitorati||[];
+  var scraperList=(data.ricorsi_monitorati||[]).concat(data.cds_ricorsi_monitorati||[]);
   var collAll=data.provvedimenti_collegiali||[];
   var monoAll=data.provvedimenti_monocratici||[];
 
@@ -652,11 +677,11 @@ function renderProvvedimenti(data){
     var db=dbByNrg(r.nrg);
     (r.provvedimenti_collegiali||[]).forEach(function(s){
       var p=parseColl(s);
-      if(p.tipo)monProv.push({stab:db?db.stab:null,ric:db?db.ric:null,nrg:r.nrg,tipo:p.tipo,kind:'Collegiale',data:p.data_pubbl,mag:p.magistrato,esito:p.esito});
+      if(p.tipo)monProv.push({stab:db?db.stab:null,ric:db?db.ric:null,nrg:r.nrg,tipo:p.tipo,kind:'Collegiale',data:p.data_pubbl,mag:p.magistrato,esito:p.esito,fonte:r.fonte||'TAR FVG'});
     });
     (r.provvedimenti_monocratici||[]).forEach(function(s){
       var p=parseMono(s);
-      if(p.tipo)monProv.push({stab:db?db.stab:null,ric:db?db.ric:null,nrg:r.nrg,tipo:p.tipo,kind:'Monocratico',data:p.data,mag:p.magistrato,esito:p.esito});
+      if(p.tipo)monProv.push({stab:db?db.stab:null,ric:db?db.ric:null,nrg:r.nrg,tipo:p.tipo,kind:'Monocratico',data:p.data,mag:p.magistrato,esito:p.esito,fonte:r.fonte||'TAR FVG'});
     });
   });
   monProv=sortByDate(monProv,function(p){return p.data;});
@@ -670,6 +695,7 @@ function renderProvvedimenti(data){
       if(p.stab)h+='<div class="prov-stab">'+esc(p.stab)+'</div>';
       if(p.ric) h+='<div class="prov-ric"><span class="prov-ric-lbl">Ricorrente</span>'+esc(p.ric)+'</div>';
       h+='<div class="prov-nrg">NRG '+esc(p.nrg)+'</div>';
+      h+='<div class="cr"><span class="ck">Autorità</span><span class="cv">'+esc(p.fonte==='CdS'?'Consiglio di Stato':'TAR FVG')+'</span></div>';
       h+='<div class="cr"><span class="ck">Tipo</span><span class="cv">'+esc(p.tipo)+'</span></div>';
       if(p.data)h+='<div class="cr"><span class="ck">Pubbl.</span><span class="cv date">'+esc(p.data)+'</span></div>';
       if(p.mag)  h+='<div class="cr"><span class="ck">Magistrato</span><span class="cv">'+esc(p.mag)+'</span></div>';
@@ -688,9 +714,9 @@ function renderProvvedimenti(data){
   tutti=sortByDate(tutti,function(p){return p.dataPubbl;});
 
   if(!tutti.length){
-    h+='<div class="empty"><div class="empty-ico">⚖️</div><div class="empty-txt">Nessun provvedimento<br>negli ultimi 7 giorni</div></div>';
+    h+='<div class="empty"><div class="empty-ico">⚖️</div><div class="empty-txt">Nessun provvedimento<br>negli ultimi 14 giorni</div></div>';
   } else {
-    h+='<div class="sec-lbl">'+tutti.length+' provvedimenti — ultimi 7 giorni</div>';
+    h+='<div class="sec-lbl">'+tutti.length+' provvedimenti — ultimi 14 giorni</div>';
     h+='<div class="tutti-wrap"><table class="tutti-table"><thead><tr>';
     h+='<th>Parte</th><th>Tipo</th><th>Pubbl.</th><th>Udienza</th><th>Esito</th>';
     h+='</tr></thead><tbody>';
@@ -727,7 +753,7 @@ function showSubTabLocal(name,btn){
    ================================================================ */
 function renderScadenze(data){
   var oggi=new Date();oggi.setHours(0,0,0,0);
-  var scraperList=data.ricorsi_monitorati||[];
+  var scraperList=(data.ricorsi_monitorati||[]).concat(data.cds_ricorsi_monitorati||[]);
   var righe=[];
 
   scraperList.forEach(function(r){
