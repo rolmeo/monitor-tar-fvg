@@ -83,7 +83,7 @@ def inizializza_sessione():
 
 def get_dates():
     oggi = ora_locale()
-    ieri = oggi - timedelta(days=14)
+    ieri = oggi - timedelta(days=1)
     return ieri.strftime("%Y-%m-%d"), oggi.strftime("%Y-%m-%d")
 
 
@@ -147,15 +147,35 @@ def fetch_provvedimenti(tipo):
 
 
 def carica_stato():
+    # Prima prova il file locale (cache)
     if os.path.exists(STATO_FILE):
         with open(STATO_FILE, "r", encoding="utf-8") as f:
             return json.load(f)
+    # Fallback: legge da GitHub (evita messaggi duplicati se la cache è persa)
+    if GH_TOKEN and GH_REPO:
+        try:
+            api_url = "https://api.github.com/repos/" + GH_REPO + "/contents/" + STATO_FILE
+            headers = {"Authorization": "token " + GH_TOKEN, "Accept": "application/vnd.github.v3+json"}
+            resp = requests.get(api_url, headers=headers, timeout=10)
+            if resp.status_code == 200:
+                import base64 as b64
+                contenuto = b64.b64decode(resp.json()["content"]).decode("utf-8")
+                stato = json.loads(contenuto)
+                # Salva localmente per questa esecuzione
+                with open(STATO_FILE, "w", encoding="utf-8") as f:
+                    json.dump(stato, f, ensure_ascii=False, indent=2)
+                print("[INFO] tar_stato.json caricato da GitHub")
+                return stato
+        except Exception as e:
+            print("[WARN] Impossibile caricare stato da GitHub: " + str(e))
     return {"collegiale": [], "monocratico": []}
 
 
 def salva_stato(stato):
     with open(STATO_FILE, "w", encoding="utf-8") as f:
         json.dump(stato, f, ensure_ascii=False, indent=2)
+    # Pubblica su GitHub così lo stato è persistente anche senza cache
+    pubblica_su_github(STATO_FILE)
 
 
 def invia_telegram(messaggio):
@@ -184,14 +204,14 @@ def formatta_messaggio(tipo, provvedimenti):
     for p in provvedimenti:
         nrg = p.get("nrgFascicolo", "N/D")
         sezione = p.get("sezione", "N/D")
-        parte = p.get("parte", "N/D")
-        tipo_prov = p.get("tipoProvvedimento", "N/D")
-        data_pub = p.get("dataPubblicazione", "N/D")
-        num_prov = p.get("numProvvedimento", "N/D")
+        parte = p.get("parte") or "N/D"
+        tipo_prov = p.get("tipoProvvedimento") or "N/D"
+        data_pub = p.get("dataPubblicazione") or "N/D"
+        num_prov = p.get("numProvvedimento") or "N/D"
         msg += "NRG: " + nrg + "\n"
-        msg += "Sezione: " + sezione + " | N.Provv: " + num_prov + "\n"
-        msg += "Tipo: " + tipo_prov + " | Pubblicato: " + data_pub + "\n"
-        msg += "Parte: " + parte + "\n\n"
+        msg += "Sezione: " + str(sezione) + " | N.Provv: " + str(num_prov) + "\n"
+        msg += "Tipo: " + str(tipo_prov) + " | Pubblicato: " + str(data_pub) + "\n"
+        msg += "Parte: " + str(parte) + "\n\n"
     return msg
 
 
