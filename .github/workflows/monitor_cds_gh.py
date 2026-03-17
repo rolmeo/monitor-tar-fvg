@@ -198,12 +198,28 @@ def carica_stato():
     if os.path.exists(STATO_FILE):
         with open(STATO_FILE, "r", encoding="utf-8") as f:
             return json.load(f)
+    if GH_TOKEN and GH_REPO:
+        try:
+            api_url = "https://api.github.com/repos/" + GH_REPO + "/contents/" + STATO_FILE
+            headers = {"Authorization": "token " + GH_TOKEN, "Accept": "application/vnd.github.v3+json"}
+            resp = requests.get(api_url, headers=headers, timeout=10)
+            if resp.status_code == 200:
+                import base64 as b64
+                contenuto = b64.b64decode(resp.json()["content"]).decode("utf-8")
+                stato = json.loads(contenuto)
+                with open(STATO_FILE, "w", encoding="utf-8") as f:
+                    json.dump(stato, f, ensure_ascii=False, indent=2)
+                print("[CdS INFO] " + STATO_FILE + " caricato da GitHub")
+                return stato
+        except Exception as e:
+            print("[CdS WARN] Impossibile caricare stato da GitHub: " + str(e))
     return {"ricorsi_monitorati": {}}
 
 
 def salva_stato(stato):
     with open(STATO_FILE, "w", encoding="utf-8") as f:
         json.dump(stato, f, ensure_ascii=False, indent=2)
+    pubblica_su_github(STATO_FILE)
 
 
 def pubblica_su_github(filepath):
