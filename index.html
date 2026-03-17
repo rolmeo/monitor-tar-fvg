@@ -199,7 +199,7 @@ body{background:var(--off-white);color:var(--near-black);font-family:-apple-syst
 .scad-gg.presto{color:var(--orange);}
 .scad-gg.oggi  {color:var(--red);}
 
-/* ── EVENTI ── */
+/* -- EVENTI -- */
 .ev-card{background:var(--white);border-radius:16px;padding:16px;margin-bottom:10px;box-shadow:0 1px 3px rgba(0,0,0,0.06);border-left:3px solid var(--blue);}
 .ev-card.ev-futura{border-left-color:var(--green);background:var(--green-bg);}
 .ev-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;}
@@ -221,7 +221,7 @@ body{background:var(--off-white);color:var(--near-black);font-family:-apple-syst
 .footer{text-align:center;padding:20px 0 4px;font-size:12px;color:var(--mid-gray);line-height:1.9;}
 
 
-/* ── SUB-HEADER (sticky, visibile dentro le sezioni) ── */
+/* -- SUB-HEADER (sticky, visibile dentro le sezioni) -- */
 .sub-header{
   position:sticky;top:44px;z-index:190;
   background:rgba(245,245,247,0.97);
@@ -250,7 +250,7 @@ body{background:var(--off-white);color:var(--near-black);font-family:-apple-syst
   color:var(--near-black);text-align:center;
 }
 
-/* ── MODAL DETTAGLIO RICORSO ── */
+/* -- MODAL DETTAGLIO RICORSO -- */
 .modal-overlay{
   display:none;position:fixed;inset:0;z-index:500;
   background:rgba(0,0,0,0.45);
@@ -281,7 +281,7 @@ body{background:var(--off-white);color:var(--near-black);font-family:-apple-syst
 @keyframes fadeIn {from{opacity:0;}to{opacity:1;}}
 @keyframes slideUp{from{transform:translateY(60px);opacity:0;}to{transform:translateY(0);opacity:1;}}
 
-/* ── EVENTI CLICKABLE ── */
+/* -- EVENTI CLICKABLE -- */
 .ev-card{cursor:pointer;}
 .ev-card:active{opacity:0.85;}
 .scad-card{cursor:pointer;}
@@ -479,7 +479,7 @@ function showSection(name){
   window.scrollTo(0,0);
 }
 
-/* ── MODAL ── */
+/* -- MODAL -- */
 var _modalData=null;
 
 function openModal(nr, titolo){
@@ -488,8 +488,7 @@ function openModal(nr, titolo){
   var db=RICORSI_DB.find(function(r){return r.nr===nr;})||null;
   var scraperR=scraperByNr(nr,scraperList)||scraperByNr(nr,scraperCds)||null;
   var oggi=new Date();oggi.setHours(0,0,0,0);
-
-  document.getElementById('modal-title').textContent=titolo||(nr+(db&&db.stab&&db.stab!=='n.d.'?' — '+db.stab:''));
+  document.getElementById('modal-title').textContent=titolo||(nr+(db&&db.stab&&db.stab!=='n.d.'?' - '+db.stab:''));
   var h='';
   if(db){
     h+=detCr('Ricorrente',db.ric);
@@ -504,14 +503,17 @@ function openModal(nr, titolo){
     if(scraperR.tipo_ricorso) h+=detCr('Tipo ric.',scraperR.tipo_ricorso);
     if(scraperR.parti&&scraperR.parti.length){
       h+='<div class="det-sec"><div class="det-sec-title">Parti</div>';
-      scraperR.parti.forEach(function(s){var p=parseParte(s);if(p.tipo&&p.data)h+='<div class="det-item">'+esc(p.tipo)+' <span class="det-date">'+esc(p.data)+'</span></div>';});
+      scraperR.parti.forEach(function(s){
+        var p=parseParte(s);
+        if(p.tipo&&p.data)h+='<div class="det-item">'+esc(p.tipo)+' <span class="det-date">'+esc(p.data)+'</span></div>';
+      });
       h+='</div>';
     }
     if(scraperR.atti&&scraperR.atti.length){
       h+='<div class="det-sec"><div class="det-sec-title">Atti depositati</div>';
       sortByDate(scraperR.atti,function(s){return parseAtto(s).data;}).forEach(function(s){
         var a=parseAtto(s);
-        if(a.tipo&&(a.parte||a.data))h+='<div class="det-item">'+esc(a.tipo)+(a.parte?' · <span style="color:var(--gray)">'+esc(a.parte)+'</span>':'')+(a.data?' <span class="det-date">'+esc(a.data)+'</span>':'')+'</div>';
+        if(a.tipo&&(a.parte||a.data))h+='<div class="det-item">'+esc(a.tipo)+(a.parte?' - <span style="color:var(--gray)">'+esc(a.parte)+'</span>':'')+(a.data?' <span class="det-date">'+esc(a.data)+'</span>':'')+'</div>';
       });
       h+='</div>';
     }
@@ -521,9 +523,9 @@ function openModal(nr, titolo){
         var d=parseDisc(s);if(!d.data||!d.tipo)return;
         var dt=parseDate(d.data);
         var futura=dt&&dt>=oggi&&(!d.esito||d.esito==='');
-        h+='<div class="det-item'+(futura?' future':'')+'"><strong>'+esc(d.data)+'</strong> — '+esc(d.tipo);
-        if(d.giudizio)h+=' <span style="color:var(--gray)">· '+esc(d.giudizio)+'</span>';
-        if(d.magistrato)h+=' <span style="color:var(--gray)">· '+esc(d.magistrato)+'</span>';
+        h+='<div class="det-item'+(futura?' future':'')+'"><strong>'+esc(d.data)+'</strong> - '+esc(d.tipo);
+        if(d.giudizio)h+=' <span style="color:var(--gray)">'+esc(d.giudizio)+'</span>';
+        if(d.magistrato)h+=' <span style="color:var(--gray)">'+esc(d.magistrato)+'</span>';
         if(d.esito)h+=' <span class="det-esito">'+esc(d.esito)+'</span>';
         h+='</div>';
       });
@@ -532,14 +534,16 @@ function openModal(nr, titolo){
     if(scraperR.provvedimenti_collegiali&&scraperR.provvedimenti_collegiali.length){
       h+='<div class="det-sec"><div class="det-sec-title">Provvedimenti Collegiali</div>';
       sortByDate(scraperR.provvedimenti_collegiali,function(s){return parseColl(s).data_pubbl;}).forEach(function(s){
-        var p=parseColl(s);if(p.tipo&&p.data_pubbl)h+='<div class="det-item">'+esc(p.tipo)+' <span class="det-date">'+esc(p.data_pubbl)+'</span>'+(p.esito&&p.esito.trim()?' <span class="det-esito">'+esc(p.esito)+'</span>':'')+'</div>';
+        var p=parseColl(s);
+        if(p.tipo&&p.data_pubbl)h+='<div class="det-item">'+esc(p.tipo)+' <span class="det-date">'+esc(p.data_pubbl)+'</span>'+(p.esito&&p.esito.trim()?' <span class="det-esito">'+esc(p.esito)+'</span>':'')+'</div>';
       });
       h+='</div>';
     }
     if(scraperR.provvedimenti_monocratici&&scraperR.provvedimenti_monocratici.length){
       h+='<div class="det-sec"><div class="det-sec-title">Provvedimenti Monocratici</div>';
       sortByDate(scraperR.provvedimenti_monocratici,function(s){return parseMono(s).data;}).forEach(function(s){
-        var p=parseMono(s);if(p.tipo&&p.data)h+='<div class="det-item">'+esc(p.tipo)+' <span class="det-date">'+esc(p.data)+'</span>'+(p.esito&&p.esito.trim()?' <span class="det-esito">'+esc(p.esito)+'</span>':'')+'</div>';
+        var p=parseMono(s);
+        if(p.tipo&&p.data)h+='<div class="det-item">'+esc(p.tipo)+' <span class="det-date">'+esc(p.data)+'</span>'+(p.esito&&p.esito.trim()?' <span class="det-esito">'+esc(p.esito)+'</span>':'')+'</div>';
       });
       h+='</div>';
     }
@@ -978,19 +982,23 @@ function esportaCSV(){
   collAll.forEach(function(p){tutti.push({nrg:nrgToNr(p.nrgFascicolo||''),parte:p.parte||'',tipo:p.tipoProvvedimento||'',dataPubbl:p.dataPubblicazione||'',dataUd:p.dataUdienza||'',esito:p.esito||''});});
   monoAll.forEach(function(p){tutti.push({nrg:nrgToNr(p.nrgFascicolo||''),parte:p.parte||'',tipo:p.tipoProvvedimento||'',dataPubbl:p.dataPubblicazione||'',dataUd:p.dataUdienza||'',esito:p.esito||''});});
   tutti.sort(function(a,b){var da=parseDate(a.dataPubbl),db=parseDate(b.dataPubbl);return(!da&&!db)?0:(!da?1:(!db?-1:db-da));});
-  var bom='﻿';
-  var header='NRG;Parte;Tipo Provvedimento;Data Pubblicazione;Data Udienza;Esito
-';
-  var rows=tutti.map(function(p){
-    return [p.nrg,p.parte,p.tipo,p.dataPubbl,p.dataUd,p.esito].map(function(v){return '"'+String(v).replace(/"/g,'""')+'"';}).join(';');
-  }).join('
-');
-  var blob=new Blob([bom+header+rows],{type:'text/csv;charset=utf-8;'});
+  var bom='\uFEFF';
+  var sep=';';
+  var righe=['NRG'+sep+'Parte'+sep+'Tipo Provvedimento'+sep+'Data Pubblicazione'+sep+'Data Udienza'+sep+'Esito'];
+  tutti.forEach(function(p){
+    var cella=function(v){return '"'+String(v||'').replace(/"/g,'""')+'"';};
+    righe.push([p.nrg,p.parte,p.tipo,p.dataPubbl,p.dataUd,p.esito].map(cella).join(sep));
+  });
+  var csv=bom+righe.join('\r\n');
+  var blob=new Blob([csv],{type:'text/csv;charset=utf-8;'});
   var url=URL.createObjectURL(blob);
   var a=document.createElement('a');
-  a.href=url;a.download='provvedimenti_tar_fvg.csv';
-  document.body.appendChild(a);a.click();
-  document.body.removeChild(a);URL.revokeObjectURL(url);
+  a.href=url;
+  a.download='provvedimenti_tar_fvg.csv';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
 }
 
 var isLoading=false;
