@@ -124,8 +124,8 @@ body{background:var(--off-white);color:var(--near-black);font-family:-apple-syst
 .table-hint{font-size:11px;color:var(--gray);text-align:right;margin-bottom:4px;}
 .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:16px;box-shadow:0 1px 3px rgba(0,0,0,0.06);margin-bottom:12px;}
 .ric-table{width:100%;border-collapse:separate;border-spacing:0;background:var(--white);min-width:480px;}
-.ric-table thead tr{background:var(--near-black);position:sticky;top:88px;z-index:10;}
-.ric-table thead th{padding:10px 8px;font-size:10px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:var(--white);text-align:left;white-space:nowrap;}
+.ric-table thead tr{background:var(--near-black);}
+.ric-table thead th{padding:10px 8px;font-size:10px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:var(--white);text-align:left;white-space:nowrap;position:sticky;top:88px;z-index:10;background:var(--near-black);box-shadow:0 2px 0 var(--near-black);}
 .ric-table thead th:first-child{text-align:center;width:26px;}
 .ric-table tbody tr.data-row{border-bottom:1px solid var(--separator);cursor:pointer;transition:background 0.1s;}
 .ric-table tbody tr.data-row:active{background:var(--blue-bg);}
@@ -174,8 +174,8 @@ body{background:var(--off-white);color:var(--near-black);font-family:-apple-syst
 .tutti-nota{font-size:12px;color:var(--dark-gray);background:var(--orange-bg);border-radius:10px;padding:10px 12px;margin-bottom:10px;line-height:1.55;border-left:3px solid var(--orange);}
 .tutti-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:14px;box-shadow:0 1px 3px rgba(0,0,0,0.06);margin-bottom:12px;}
 .tutti-table{width:100%;border-collapse:separate;border-spacing:0;background:var(--white);min-width:400px;font-size:12px;}
-.tutti-table thead tr{background:var(--near-black);position:sticky;top:88px;z-index:10;}
-.tutti-table thead th{padding:10px 8px;font-size:10px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:var(--white);text-align:left;white-space:nowrap;}
+.tutti-table thead tr{background:var(--near-black);}
+.tutti-table thead th{padding:10px 8px;font-size:10px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:var(--white);text-align:left;white-space:nowrap;position:sticky;top:88px;z-index:10;background:var(--near-black);box-shadow:0 2px 0 var(--near-black);}
 .tutti-table tbody tr{border-bottom:1px solid var(--separator);}
 .tutti-table tbody tr:last-child{border-bottom:none;}
 .tutti-table tbody td{padding:9px 8px;vertical-align:top;}
@@ -183,6 +183,7 @@ body{background:var(--off-white);color:var(--near-black);font-family:-apple-syst
 .t-tipo{color:var(--dark-gray);}
 .t-data{color:var(--blue);font-weight:600;white-space:nowrap;}
 .t-esito-acc{color:var(--green-dark);font-weight:600;}
+.t-gg{text-align:right;font-size:11px;color:var(--dark-gray);white-space:nowrap;}
 .t-esito-resp{color:var(--red);font-weight:600;}
 
 /* SCADENZE */
@@ -890,7 +891,7 @@ function renderProvvedimenti(data){
     h+='<button onclick="esportaCSV()" style="font-size:11px;font-weight:700;padding:5px 10px;background:var(--green-bg);color:var(--green-dark);border:1px solid var(--green);border-radius:8px;cursor:pointer">⬇ Esporta CSV</button>';
     h+='</div>';
     h+='<div class="tutti-wrap"><table class="tutti-table"><thead><tr>';
-    h+='<th>NRG</th><th>Parte</th><th>Tipo</th><th>Pubbl.</th><th>Udienza</th><th>Esito</th>';
+    h+='<th>NRG</th><th>Parte</th><th>Tipo</th><th>Pubbl.</th><th>Udienza</th><th>Esito</th><th>Gg cal.</th><th>Gg lav.</th>';
     h+='</tr></thead><tbody>';
     tutti.forEach(function(p){
       var ec=esitoClass(p.esito);
@@ -902,6 +903,10 @@ function renderProvvedimenti(data){
       h+='<td class="t-data">'+esc(p.dataPubbl||'')+'</td>';
       h+='<td class="t-data">'+esc(p.dataUd||'')+'</td>';
       h+='<td class="'+ecCls+'">'+esc(p.esito||'')+'</td>';
+      var gcal=calcolaGgCal(p.dataPubbl,p.dataUd);
+      var glav=calcolaGgLav(p.dataPubbl,p.dataUd);
+      h+='<td class="t-gg">'+gcal+'</td>';
+      h+='<td class="t-gg">'+glav+'</td>';
       h+='</tr>';
     });
     h+='</tbody></table></div>';
@@ -973,6 +978,32 @@ function renderScadenze(data){
 /* ================================================================
    LOAD DATA
    ================================================================ */
+function calcolaGgCal(dataPubbl, dataUd){
+  var d1=parseDate(dataPubbl), d2=parseDate(dataUd);
+  if(!d1||!d2) return 'n.d.';
+  var diff=Math.round((d2-d1)/86400000);
+  return diff>=0?String(diff):'n.d.';
+}
+
+function calcolaGgLav(dataPubbl, dataUd){
+  var d1=parseDate(dataPubbl), d2=parseDate(dataUd);
+  if(!d1||!d2) return 'n.d.';
+  if(d2<d1) return 'n.d.';
+  // Feste nazionali italiane fisse (gg/mm)
+  var feste=['01/01','06/01','25/04','01/05','02/06','15/08','01/11','08/12','25/12','26/12'];
+  var cur=new Date(d1.getTime());
+  var gg=0;
+  while(cur<d2){
+    cur.setDate(cur.getDate()+1);
+    var dow=cur.getDay(); // 0=dom, 6=sab
+    if(dow===0||dow===6) continue;
+    var ddmm=String(cur.getDate()).padStart(2,'0')+'/'+String(cur.getMonth()+1).padStart(2,'0');
+    if(feste.indexOf(ddmm)!==-1) continue;
+    gg++;
+  }
+  return String(gg);
+}
+
 function esportaCSV(){
   var data=_modalData;
   if(!data){alert('Nessun dato disponibile. Aggiorna prima i dati.');return;}
