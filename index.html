@@ -122,10 +122,10 @@ body{background:var(--off-white);color:var(--near-black);font-family:-apple-syst
 
 /* TABELLA RICORSI */
 .table-hint{font-size:11px;color:var(--gray);text-align:right;margin-bottom:4px;}
-.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:16px;box-shadow:0 1px 3px rgba(0,0,0,0.06);margin-bottom:12px;}
+.table-wrap{overflow:auto;-webkit-overflow-scrolling:touch;border-radius:16px;box-shadow:0 1px 3px rgba(0,0,0,0.06);margin-bottom:12px;max-height:70vh;}
 .ric-table{width:100%;border-collapse:separate;border-spacing:0;background:var(--white);min-width:480px;}
 .ric-table thead tr{background:var(--near-black);}
-.ric-table thead th{padding:10px 8px;font-size:10px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:var(--white);text-align:left;white-space:nowrap;position:sticky;top:88px;z-index:10;background:var(--near-black);box-shadow:0 2px 0 var(--near-black);}
+.ric-table thead th{padding:10px 8px;font-size:10px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:var(--white);text-align:left;white-space:nowrap;position:sticky;top:0;z-index:2;background:var(--near-black);}
 .ric-table thead th:first-child{text-align:center;width:26px;}
 .ric-table tbody tr.data-row{border-bottom:1px solid var(--separator);cursor:pointer;transition:background 0.1s;}
 .ric-table tbody tr.data-row:active{background:var(--blue-bg);}
@@ -172,10 +172,10 @@ body{background:var(--off-white);color:var(--near-black);font-family:-apple-syst
 
 /* TABELLA TUTTI */
 .tutti-nota{font-size:12px;color:var(--dark-gray);background:var(--orange-bg);border-radius:10px;padding:10px 12px;margin-bottom:10px;line-height:1.55;border-left:3px solid var(--orange);}
-.tutti-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:14px;box-shadow:0 1px 3px rgba(0,0,0,0.06);margin-bottom:12px;}
+.tutti-wrap{overflow:auto;-webkit-overflow-scrolling:touch;border-radius:14px;box-shadow:0 1px 3px rgba(0,0,0,0.06);margin-bottom:12px;max-height:65vh;}
 .tutti-table{width:100%;border-collapse:separate;border-spacing:0;background:var(--white);min-width:400px;font-size:12px;}
 .tutti-table thead tr{background:var(--near-black);}
-.tutti-table thead th{padding:10px 8px;font-size:10px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:var(--white);text-align:left;white-space:nowrap;position:sticky;top:88px;z-index:10;background:var(--near-black);box-shadow:0 2px 0 var(--near-black);}
+.tutti-table thead th{padding:10px 8px;font-size:10px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:var(--white);text-align:left;white-space:nowrap;position:sticky;top:0;z-index:2;background:var(--near-black);}
 .tutti-table tbody tr{border-bottom:1px solid var(--separator);}
 .tutti-table tbody tr:last-child{border-bottom:none;}
 .tutti-table tbody td{padding:9px 8px;vertical-align:top;}
@@ -981,14 +981,14 @@ function renderScadenze(data){
 function calcolaGgCal(dataPubbl, dataUd){
   var d1=parseDate(dataPubbl), d2=parseDate(dataUd);
   if(!d1||!d2) return 'n.d.';
-  var diff=Math.round((d2-d1)/86400000);
-  return diff>=0?String(diff):'n.d.';
+  var diff=Math.abs(Math.round((d2-d1)/86400000));
+  return String(diff);
 }
 
 function calcolaGgLav(dataPubbl, dataUd){
   var d1=parseDate(dataPubbl), d2=parseDate(dataUd);
   if(!d1||!d2) return 'n.d.';
-  if(d2<d1) return 'n.d.';
+  if(d2<d1){var tmp=d1;d1=d2;d2=tmp;}
   // Feste nazionali italiane fisse (gg/mm)
   var feste=['01/01','06/01','25/04','01/05','02/06','15/08','01/11','08/12','25/12','26/12'];
   var cur=new Date(d1.getTime());
