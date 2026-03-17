@@ -216,6 +216,75 @@ body{background:var(--off-white);color:var(--near-black);font-family:'Montserrat
 /* FOOTER */
 .footer{text-align:center;padding:20px 0 4px;font-size:12px;color:var(--mid-gray);line-height:1.9;}
 
+
+/* ── SUB-HEADER (sticky, visibile dentro le sezioni) ── */
+.sub-header{
+  position:sticky;top:44px;z-index:190;
+  background:rgba(245,245,247,0.97);
+  backdrop-filter:saturate(180%) blur(20px);
+  -webkit-backdrop-filter:saturate(180%) blur(20px);
+  border-bottom:1px solid var(--separator);
+  display:none;
+}
+.sub-header.visible{display:block;}
+.sub-header-inner{
+  max-width:640px;margin:0 auto;
+  padding:8px 16px;
+  display:grid;grid-template-columns:auto 1fr auto;
+  align-items:center;gap:8px;
+}
+.btn-menu-main{
+  background:transparent;border:none;cursor:pointer;
+  font-family:'Montserrat',sans-serif;
+  font-size:16px;font-weight:700;color:var(--blue);
+  display:flex;align-items:center;gap:4px;
+  padding:4px 0;white-space:nowrap;
+}
+.btn-menu-main:active{opacity:0.5;}
+.sub-header-title{
+  font-size:15px;font-weight:700;letter-spacing:-0.02em;
+  color:var(--near-black);text-align:center;
+}
+
+/* ── MODAL DETTAGLIO RICORSO ── */
+.modal-overlay{
+  display:none;position:fixed;inset:0;z-index:500;
+  background:rgba(0,0,0,0.45);
+  align-items:flex-end;justify-content:center;
+}
+.modal-overlay.open{display:flex;animation:fadeIn 0.2s ease;}
+.modal-sheet{
+  background:var(--white);border-radius:22px 22px 0 0;
+  width:100%;max-width:640px;
+  max-height:90vh;overflow-y:auto;
+  padding:0 0 max(env(safe-area-inset-bottom,16px),16px);
+  animation:slideUp 0.25s ease;
+}
+.modal-handle{width:36px;height:4px;background:var(--mid-gray);border-radius:2px;margin:12px auto 0;}
+.modal-close{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 16px 8px;
+}
+.modal-close-btn{
+  background:var(--light-gray);border:none;cursor:pointer;
+  border-radius:50%;width:28px;height:28px;
+  font-size:16px;display:flex;align-items:center;justify-content:center;
+  color:var(--dark-gray);font-weight:700;
+}
+.modal-close-title{font-size:15px;font-weight:700;color:var(--near-black);}
+.modal-body{padding:0 16px 8px;}
+
+@keyframes fadeIn {from{opacity:0;}to{opacity:1;}}
+@keyframes slideUp{from{transform:translateY(60px);opacity:0;}to{transform:translateY(0);opacity:1;}}
+
+/* ── EVENTI CLICKABLE ── */
+.ev-card{cursor:pointer;}
+.ev-card:active{opacity:0.85;}
+.scad-card{cursor:pointer;}
+.scad-card:active{opacity:0.85;}
+.prov-card{cursor:pointer;}
+.prov-card:active{opacity:0.85;}
+
 @keyframes fadeUp  {from{opacity:0;transform:translateY(9px);}to{opacity:1;transform:translateY(0);}}
 @keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.45;transform:scale(0.8);}}
 @keyframes spin    {to{transform:rotate(360deg);}}
@@ -230,6 +299,13 @@ body{background:var(--off-white);color:var(--near-black);font-family:'Montserrat
       <div class="status-dot" id="statusDot"></div>
       <span id="liveLabel">–</span>
     </div>
+  </div>
+</div>
+<div class="sub-header" id="sub-header">
+  <div class="sub-header-inner">
+    <button class="btn-menu-main" onclick="showHome()">👉 Menu</button>
+    <span class="sub-header-title" id="sub-header-title"></span>
+    <span></span>
   </div>
 </div>
 
@@ -261,37 +337,21 @@ body{background:var(--off-white);color:var(--near-black);font-family:'Montserrat
 
   <!-- DASHBOARD -->
   <div class="panel" id="panel-dashboard">
-    <div class="sec-topbar">
-      <button class="btn-menu" onclick="showHome()">‹ Menu</button>
-      <span class="sec-topbar-title">Dashboard</span>
-    </div>
     <div id="cnt-dashboard"><div class="loading"><div class="spinner"></div><div class="loading-txt">Caricamento…</div></div></div>
   </div>
 
   <!-- RICORSI -->
   <div class="panel" id="panel-ricorsi">
-    <div class="sec-topbar">
-      <button class="btn-menu" onclick="showHome()">‹ Menu</button>
-      <span class="sec-topbar-title">Elenco Ricorsi</span>
-    </div>
     <div id="cnt-ricorsi"><div class="loading"><div class="spinner"></div><div class="loading-txt">Caricamento…</div></div></div>
   </div>
 
   <!-- PROVVEDIMENTI -->
   <div class="panel" id="panel-provv">
-    <div class="sec-topbar">
-      <button class="btn-menu" onclick="showHome()">‹ Menu</button>
-      <span class="sec-topbar-title">Provvedimenti</span>
-    </div>
     <div id="cnt-provv"><div class="loading"><div class="spinner"></div><div class="loading-txt">Caricamento…</div></div></div>
   </div>
 
   <!-- SCADENZE -->
   <div class="panel" id="panel-scadenze">
-    <div class="sec-topbar">
-      <button class="btn-menu" onclick="showHome()">‹ Menu</button>
-      <span class="sec-topbar-title">Scadenze</span>
-    </div>
     <div id="cnt-scadenze"><div class="loading"><div class="spinner"></div><div class="loading-txt">Caricamento…</div></div></div>
   </div>
 
@@ -382,9 +442,13 @@ function esitoClass(e){
 /* ================================================================
    NAVIGATION
    ================================================================ */
+var SECTION_NAMES={dashboard:'Ultimi eventi',ricorsi:'Elenco Ricorsi',provv:'Provvedimenti',scadenze:'Scadenze'};
+
 function showHome(){
   document.getElementById('home-screen').style.display='flex';
   document.getElementById('main-content').style.display='none';
+  document.getElementById('sub-header').classList.remove('visible');
+  closeModalDirect();
   window.scrollTo(0,0);
 }
 function showSection(name){
@@ -393,7 +457,93 @@ function showSection(name){
   document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('on');});
   var el=document.getElementById('panel-'+name);
   if(el)el.classList.add('on');
+  var sh=document.getElementById('sub-header');
+  sh.classList.add('visible');
+  var titleEl=document.getElementById('sub-header-title');
+  if(titleEl)titleEl.textContent=SECTION_NAMES[name]||name;
+  closeModalDirect();
   window.scrollTo(0,0);
+}
+
+/* ── MODAL ── */
+var _modalData=null;
+
+function openModal(nr, titolo){
+  var scraperList=(_modalData&&_modalData.ricorsi_monitorati)||[];
+  var scraperCds =(_modalData&&_modalData.cds_ricorsi_monitorati)||[];
+  var db=RICORSI_DB.find(function(r){return r.nr===nr;})||null;
+  var scraperR=scraperByNr(nr,scraperList)||scraperByNr(nr,scraperCds)||null;
+  var oggi=new Date();oggi.setHours(0,0,0,0);
+
+  document.getElementById('modal-title').textContent=titolo||(nr+(db&&db.stab&&db.stab!=='n.d.'?' — '+db.stab:''));
+  var h='';
+  if(db){
+    h+=detCr('Ricorrente',db.ric);
+    if(val(db.contro))    h+=detCr('Contro',db.contro);
+    if(val(db.neiConfrDi))h+=detCr('Nei confronti di',db.neiConfrDi);
+    h+=detCr('Oggetto',db.ogg);
+    h+=detCr('Presso',db.luogo);
+    h+=detCr('Deposito',db.data);
+  }
+  if(scraperR){
+    if(scraperR.sezione)      h+=detCr('Sezione',scraperR.sezione);
+    if(scraperR.tipo_ricorso) h+=detCr('Tipo ric.',scraperR.tipo_ricorso);
+    if(scraperR.parti&&scraperR.parti.length){
+      h+='<div class="det-sec"><div class="det-sec-title">Parti</div>';
+      scraperR.parti.forEach(function(s){var p=parseParte(s);if(p.tipo&&p.data)h+='<div class="det-item">'+esc(p.tipo)+' <span class="det-date">'+esc(p.data)+'</span></div>';});
+      h+='</div>';
+    }
+    if(scraperR.atti&&scraperR.atti.length){
+      h+='<div class="det-sec"><div class="det-sec-title">Atti depositati</div>';
+      sortByDate(scraperR.atti,function(s){return parseAtto(s).data;}).forEach(function(s){
+        var a=parseAtto(s);
+        if(a.tipo&&(a.parte||a.data))h+='<div class="det-item">'+esc(a.tipo)+(a.parte?' · <span style="color:var(--gray)">'+esc(a.parte)+'</span>':'')+(a.data?' <span class="det-date">'+esc(a.data)+'</span>':'')+'</div>';
+      });
+      h+='</div>';
+    }
+    if(scraperR.discussioni&&scraperR.discussioni.length){
+      h+='<div class="det-sec"><div class="det-sec-title">Discussioni</div>';
+      sortByDate(scraperR.discussioni,function(s){return s.split('|')[0].trim();},false).forEach(function(s){
+        var d=parseDisc(s);if(!d.data||!d.tipo)return;
+        var dt=parseDate(d.data);
+        var futura=dt&&dt>=oggi&&(!d.esito||d.esito==='');
+        h+='<div class="det-item'+(futura?' future':'')+'"><strong>'+esc(d.data)+'</strong> — '+esc(d.tipo);
+        if(d.giudizio)h+=' <span style="color:var(--gray)">· '+esc(d.giudizio)+'</span>';
+        if(d.magistrato)h+=' <span style="color:var(--gray)">· '+esc(d.magistrato)+'</span>';
+        if(d.esito)h+=' <span class="det-esito">'+esc(d.esito)+'</span>';
+        h+='</div>';
+      });
+      h+='</div>';
+    }
+    if(scraperR.provvedimenti_collegiali&&scraperR.provvedimenti_collegiali.length){
+      h+='<div class="det-sec"><div class="det-sec-title">Provvedimenti Collegiali</div>';
+      sortByDate(scraperR.provvedimenti_collegiali,function(s){return parseColl(s).data_pubbl;}).forEach(function(s){
+        var p=parseColl(s);if(p.tipo&&p.data_pubbl)h+='<div class="det-item">'+esc(p.tipo)+' <span class="det-date">'+esc(p.data_pubbl)+'</span>'+(p.esito&&p.esito.trim()?' <span class="det-esito">'+esc(p.esito)+'</span>':'')+'</div>';
+      });
+      h+='</div>';
+    }
+    if(scraperR.provvedimenti_monocratici&&scraperR.provvedimenti_monocratici.length){
+      h+='<div class="det-sec"><div class="det-sec-title">Provvedimenti Monocratici</div>';
+      sortByDate(scraperR.provvedimenti_monocratici,function(s){return parseMono(s).data;}).forEach(function(s){
+        var p=parseMono(s);if(p.tipo&&p.data)h+='<div class="det-item">'+esc(p.tipo)+' <span class="det-date">'+esc(p.data)+'</span>'+(p.esito&&p.esito.trim()?' <span class="det-esito">'+esc(p.esito)+'</span>':'')+'</div>';
+      });
+      h+='</div>';
+    }
+  } else {
+    h+='<div class="det-nodata">Dati scraper non ancora disponibili</div>';
+  }
+  document.getElementById('modal-body').innerHTML=h;
+  document.getElementById('modal-overlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeModal(e){
+  if(e&&e.target!==document.getElementById('modal-overlay'))return;
+  closeModalDirect();
+}
+function closeModalDirect(){
+  var o=document.getElementById('modal-overlay');
+  if(o)o.classList.remove('open');
+  document.body.style.overflow='';
 }
 
 /* ================================================================
@@ -486,10 +636,8 @@ function renderUltimiEventi(data){
     });
   });
 
-  // Ordina: prima le future (per data asc), poi le passate (per data desc)
-  var future  = eventi.filter(function(e){return e.futura;}).sort(function(a,b){return a.dt-b.dt;});
-  var passati = eventi.filter(function(e){return !e.futura;}).sort(function(a,b){return b.dt-a.dt;});
-  var sorted  = future.concat(passati);
+  // Solo eventi passati, ordine cronologico decrescente
+  var sorted = eventi.filter(function(e){return !e.futura;}).sort(function(a,b){return b.dt-a.dt;});
 
   if(!sorted.length){
     return '<div class="empty"><div class="empty-ico">📋</div><div class="empty-txt">Nessun evento disponibile.<br>Aggiorna i dati.</div></div>';
@@ -504,7 +652,8 @@ function renderUltimiEventi(data){
     var fonteCls = ev.fonte === 'CdS' ? 'badge b-purple' : 'badge b-blue';
     var fonteLabel = ev.fonte === 'CdS' ? 'Consiglio di Stato' : 'TAR FVG';
 
-    h += '<div class="'+cardCls+'">';
+    var evNr=ev.nr||'';
+    h += '<div class="'+cardCls+'" onclick="openModal(\''+evNr+'\',\''+esc(ev.stab||ev.ric||evNr)+'\')">';
     // Header: data + tipo + fonte
     h += '<div class="ev-head">';
     h += '<div class="ev-data">'+esc(ev.dataStr)+'</div>';
@@ -691,7 +840,8 @@ function renderProvvedimenti(data){
   } else {
     monProv.forEach(function(p){
       var ec=esitoClass(p.esito);
-      h+='<div class="prov-card">';
+      var pNr=nrgToNr(p.nrg||'');
+      h+='<div class="prov-card" onclick="openModal(\''+pNr+'\',\''+esc(p.stab||pNr)+'\')">';
       if(p.stab)h+='<div class="prov-stab">'+esc(p.stab)+'</div>';
       if(p.ric) h+='<div class="prov-ric"><span class="prov-ric-lbl">Ricorrente</span>'+esc(p.ric)+'</div>';
       h+='<div class="prov-nrg">NRG '+esc(p.nrg)+'</div>';
@@ -779,7 +929,7 @@ function renderScadenze(data){
     var gg=diffGg(row.data);
     var ggCls=gg===0?'oggi':(gg<=7?'presto':'ok');
     var ggTxt=gg===0?'OGGI':(gg===1?'domani':'tra '+gg+' gg');
-    h+='<div class="scad-card">';
+    h+='<div class="scad-card" onclick="openModal(\''+esc(row.nr)+'\',\''+(row.stab?esc(row.stab):esc(row.nr))+'\')">';
     h+='<div class="scad-left">';
     h+='<div class="scad-nr">'+esc(row.nr)+'</div>';
     h+='<div class="scad-stab">'+(row.stab?esc(row.stab):'—')+'</div>';
@@ -817,6 +967,7 @@ function loadData(){
       document.getElementById('cnt-ricorsi').innerHTML   = renderRicorsiList(data);
       document.getElementById('cnt-provv').innerHTML     = renderProvvedimenti(data);
       document.getElementById('cnt-scadenze').innerHTML  = renderScadenze(data);
+      _modalData = data;
     })
     .catch(function(e){
       document.getElementById('liveLabel').textContent='Offline';
@@ -838,5 +989,16 @@ function loadData(){
 loadData();
 setInterval(loadData,5*60*1000);
 </script>
+<!-- MODAL DETTAGLIO -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
+  <div class="modal-sheet" id="modal-sheet">
+    <div class="modal-handle"></div>
+    <div class="modal-close">
+      <span class="modal-close-title" id="modal-title">Dettaglio ricorso</span>
+      <button class="modal-close-btn" onclick="closeModalDirect()">✕</button>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
 </body>
 </html>
