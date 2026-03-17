@@ -1,5 +1,5 @@
 {
-  "ultimo_ricorso": 128,
+  "ultimo_ricorso": 130,
   "anno_nuovi": 2026,
   "ricorsi_monitorati": [
     {
@@ -427,9 +427,13 @@
         "DOMANDA DI MISURE CAUTELARI MONOCRATICHE ART.56 C.P.A. | 2026001107 | RICORRENTE PRINCIPALE | 13/03/2026",
         "RICORSO | 2026001105 | RICORRENTE PRINCIPALE | 13/03/2026"
       ],
-      "discussioni": [],
+      "discussioni": [
+        "09/04/2026 | CAMERA DI CONSIGLIO |  | DA ASSEGNARE MAGISTRATO | Giudizio Cautelare | "
+      ],
       "provvedimenti_collegiali": [],
-      "provvedimenti_monocratici": []
+      "provvedimenti_monocratici": [
+        "DECRETO CAUTELARE | MODICA DE MOHAC DI GRISI' CARLO | 17/03/2026 | ACCOGLIE FISSA CAMERA DI CONSIGLIO"
+      ]
     },
     {
       "nrg": "2024000406",
@@ -784,6 +788,6 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "16/03/2026 19:22",
-  "ultimo_controllo": "16/03/2026 19:22"
+  "ultimo_aggiornamento": "17/03/2026 08:13",
+  "ultimo_controllo": "17/03/2026 08:13"
 }
