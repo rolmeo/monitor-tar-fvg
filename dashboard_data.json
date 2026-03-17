@@ -798,8 +798,34 @@
         "SENTENZA | SINIGOI MANUELA | 14/02/2026 | 09/02/2026 | UP | IMPROCEDIBILE PER SOPRAVVENUTA CARENZA DI INTERESSE"
       ],
       "provvedimenti_monocratici": []
+    },
+    {
+      "nrg": "2026000125",
+      "anno": 2026,
+      "numero": 125,
+      "sezione": "1",
+      "data_deposito": "12/03/2026",
+      "tipo_ricorso": "ORDINARIO",
+      "oggetto": "CONCESSIONE DEMANIALE MARITTIMA CON FINALITÀ TURISTICO-RICREATIVA SITA IN VIA LUNGOMARE TRIESTE, STABILIMENTO BALNEARE «GABBIANO», INDIVIDUATA DAL PUD N. 219 – AGGIUDICAZIONE",
+      "parti": [
+        "RICORRENTE | 12/03/2026 | ",
+        "CONTROINTERESSATO |  | ",
+        "RESISTENTE |  | ",
+        "RESISTENTE |  | ",
+        "CONTROINTERESSATO | 13/03/2026 | ",
+        "RESISTENTE | 16/03/2026 | "
+      ],
+      "atti": [
+        "ISTANZA DI FISSAZIONE UDIENZA | 2026000116 | RICORRENTE PRINCIPALE | 12/03/2026",
+        "ATTO DI COSTITUZIONE | 2026001100 | CONTROINTERESSATO | 13/03/2026",
+        "RICORSO | 2026001097 | RICORRENTE PRINCIPALE | 12/03/2026",
+        "ATTO DI COSTITUZIONE | 2026001112 | AMMINISTRAZIONE INTIMATA | 16/03/2026"
+      ],
+      "discussioni": [],
+      "provvedimenti_collegiali": [],
+      "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "17/03/2026 16:45",
-  "ultimo_controllo": "17/03/2026 16:45"
+  "ultimo_aggiornamento": "17/03/2026 16:50",
+  "ultimo_controllo": "17/03/2026 16:50"
 }
