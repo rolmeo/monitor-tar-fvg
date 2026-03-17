@@ -7,8 +7,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="Monitor Ricorsi">
 <title>Monitor Ricorsi — TAR / CdS</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
 :root {
   --white:      #ffffff;
@@ -33,7 +32,7 @@
 }
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
-body{background:var(--off-white);color:var(--near-black);font-family:'Montserrat',-apple-system,sans-serif;min-height:100vh;font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;}
+body{background:var(--off-white);color:var(--near-black);font-family:-apple-system,'SF Pro Display','Helvetica Neue',Arial,sans-serif;min-height:100vh;font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;}
 
 /* HEADER */
 .header{background:rgba(245,245,247,0.92);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--separator);position:sticky;top:0;z-index:200;padding:max(env(safe-area-inset-top,0px),0px) 0 0;}
@@ -52,7 +51,7 @@ body{background:var(--off-white);color:var(--near-black);font-family:'Montserrat
 .home-ts-lbl{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;color:var(--gray);}
 .home-ts-val{font-size:12px;font-weight:600;color:var(--near-black);}
 .home-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;flex:1;margin-bottom:16px;}
-.home-tile{background:var(--white);border-radius:22px;padding:26px 14px 22px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;border:none;cursor:pointer;box-shadow:0 2px 12px rgba(0,0,0,0.07);transition:transform 0.14s;font-family:'Montserrat',sans-serif;min-height:148px;position:relative;overflow:hidden;}
+.home-tile{background:var(--white);border-radius:22px;padding:26px 14px 22px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;border:none;cursor:pointer;box-shadow:0 2px 12px rgba(0,0,0,0.07);transition:transform 0.14s;font-family:-apple-system,'SF Pro Display','Helvetica Neue',Arial,sans-serif;min-height:148px;position:relative;overflow:hidden;}
 .home-tile::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;border-radius:22px 22px 0 0;}
 .home-tile.t-blue::before  {background:var(--blue);}
 .home-tile.t-green::before {background:var(--green);}
@@ -64,7 +63,7 @@ body{background:var(--off-white);color:var(--near-black);font-family:'Montserrat
 .tile-sub{font-size:11px;color:var(--gray);text-align:center;}
 
 /* REFRESH su home */
-.btn-refresh-home{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:15px;background:var(--blue);border:none;border-radius:14px;color:white;font-family:'Montserrat',sans-serif;font-size:15px;font-weight:600;cursor:pointer;box-shadow:0 4px 16px rgba(0,113,227,0.28);transition:all 0.15s;margin-bottom:6px;}
+.btn-refresh-home{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:15px;background:var(--blue);border:none;border-radius:14px;color:white;font-family:-apple-system,'SF Pro Display','Helvetica Neue',Arial,sans-serif;font-size:15px;font-weight:600;cursor:pointer;box-shadow:0 4px 16px rgba(0,113,227,0.28);transition:all 0.15s;margin-bottom:6px;}
 .btn-refresh-home:active{transform:scale(0.97);background:#005ec9;}
 .refresh-ico{font-size:17px;display:inline-block;}
 .spinning{animation:spin 0.7s linear infinite!important;}
@@ -77,7 +76,7 @@ body{background:var(--off-white);color:var(--near-black);font-family:'Montserrat
 /* Barra in cima a ogni sezione */
 .sec-topbar{display:flex;align-items:center;gap:12px;padding:12px 0 8px;}
 .sec-topbar-title{font-size:19px;font-weight:700;letter-spacing:-0.02em;color:var(--near-black);flex:1;}
-.btn-menu{display:flex;align-items:center;gap:5px;background:transparent;border:none;cursor:pointer;color:var(--blue);font-family:'Montserrat',sans-serif;font-size:14px;font-weight:600;padding:6px 0;white-space:nowrap;}
+.btn-menu{display:flex;align-items:center;gap:5px;background:transparent;border:none;cursor:pointer;color:var(--blue);font-family:-apple-system,'SF Pro Display','Helvetica Neue',Arial,sans-serif;font-size:14px;font-weight:600;padding:6px 0;white-space:nowrap;}
 .btn-menu:active{opacity:0.5;}
 
 /* SEC LABEL */
@@ -156,7 +155,7 @@ body{background:var(--off-white);color:var(--near-black);font-family:'Montserrat
 
 /* PROVVEDIMENTI */
 .sub-tabs{display:grid;grid-template-columns:1fr 1fr;background:var(--light-gray);border-radius:12px;padding:3px;margin-bottom:14px;}
-.sub-tab{padding:9px 6px;background:transparent;border:none;border-radius:10px;color:var(--gray);font-family:'Montserrat',sans-serif;font-size:13px;font-weight:500;cursor:pointer;text-align:center;transition:all 0.2s;}
+.sub-tab{padding:9px 6px;background:transparent;border:none;border-radius:10px;color:var(--gray);font-family:-apple-system,'SF Pro Display','Helvetica Neue',Arial,sans-serif;font-size:13px;font-weight:500;cursor:pointer;text-align:center;transition:all 0.2s;}
 .sub-tab.on{background:var(--white);color:var(--near-black);font-weight:700;box-shadow:0 1px 4px rgba(0,0,0,0.1);}
 .sub-panel{display:none;}
 .sub-panel.on{display:block;animation:fadeUp 0.25s ease both;}
@@ -238,7 +237,7 @@ body{background:var(--off-white);color:var(--near-black);font-family:'Montserrat
 }
 .btn-menu-main{
   background:transparent;border:none;cursor:pointer;
-  font-family:'Montserrat',sans-serif;
+  font-family:-apple-system,'SF Pro Display','Helvetica Neue',Arial,sans-serif;
   font-size:16px;font-weight:700;color:var(--blue);
   display:flex;align-items:center;gap:4px;
   padding:4px 0;white-space:nowrap;
