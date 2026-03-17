@@ -210,7 +210,10 @@ body{background:var(--off-white);color:var(--near-black);font-family:'Montserrat
 .ev-val{font-size:13px;color:var(--near-black);line-height:1.4;}
 .ev-val.bold{font-weight:700;color:var(--near-black);}
 .ev-det-title{font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--blue);margin:10px 0 5px;padding-top:8px;border-top:1px solid var(--separator);}
-.ev-det-row{display:flex;gap:8px;margin-bottom:4px;align-items:baseline;}
+.ev-det-row{display:flex;gap:8px;margin-bottom:4px;align-items:baseline;padding:3px 6px;border-radius:6px;}
+.ev-det-row:first-child{background:var(--blue-bg);padding:6px 8px;border-radius:8px;margin-bottom:6px;}
+.ev-det-row:first-child .ev-det-lbl{color:var(--blue);}
+.ev-det-row:first-child .ev-det-val{font-weight:700;color:var(--near-black);}
 .ev-det-lbl{font-size:10px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:var(--dark-gray);min-width:90px;flex-shrink:0;}
 .ev-det-val{font-size:13px;color:var(--near-black);line-height:1.4;}
 /* FOOTER */
@@ -364,7 +367,7 @@ body{background:var(--off-white);color:var(--near-black);font-family:'Montserrat
    ================================================================ */
 var RICORSI_DB = [
   {p:1,  luogo:'TAR FVG', nr:'406/2024',  data:'25/11/2024', ric:'Albergo Italia Srl',               ogg:'Annullamento revoca bando',             stab:'n.d.',                    contro:'Comune di Lignano; Ente di Decentr. Reg. di Udine', neiConfrDi:'Bagni di Lignano di Augusto Angelo Marin Sas', mon:true},
-  {p:2,  luogo:'CdS',     nr:'1750/2025', data:'03/03/2025', ric:'Albergo Italia Srl',               ogg:'Riforma sentenza TAR su ric. 406/2024', stab:null,                    contro:'Comune di Lignano; Ente di Decentr. Reg. di Udine', neiConfrDi:'Bagni di Lignano di Augusto Angelo Marin Sas', mon:false},
+  {p:2,  luogo:'CdS',     nr:'1750/2025', data:'03/03/2025', ric:'Albergo Italia Srl',               ogg:'Riforma sentenza TAR su ric. 406/2024', stab:'n.d.',                    contro:'Comune di Lignano; Ente di Decentr. Reg. di Udine', neiConfrDi:'Bagni di Lignano di Augusto Angelo Marin Sas', mon:false},
   {p:3,  luogo:'TAR FVG', nr:'257/2025',  data:'29/05/2025', ric:'Meotto Giuseppe Srl',              ogg:'Proroga',                               stab:'Portofino',             contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'n.d.', mon:true},
   {p:4,  luogo:'TAR FVG', nr:'267/2025',  data:'30/05/2025', ric:'Pietro Ceiner Snc',                ogg:'Proroga',                               stab:'Ausonia',               contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'n.d.', mon:true},
   {p:5,  luogo:'TAR FVG', nr:'268/2025',  data:'30/05/2025', ric:'Doggy Beach Srl',                  ogg:'Proroga',                               stab:'Spiaggia per cani',     contro:'Comune di Lignano Sabbiadoro', neiConfrDi:'n.d.', mon:true},
@@ -403,6 +406,16 @@ function parseDate(s){
   m=s.match(/(\d{4})-(\d{2})-(\d{2})/);
   if(m)return new Date(+m[1],+m[2]-1,+m[3]);
   return null;
+}
+var GIORNI=['domenica','lunedì','martedì','mercoledì','giovedì','venerdì','sabato'];
+function fmtDataEvento(s){
+  var d=parseDate(s);
+  if(!d)return s||'—';
+  var dd=String(d.getDate()).padStart(2,'0');
+  var mm=String(d.getMonth()+1).padStart(2,'0');
+  var yy=d.getFullYear();
+  var gg=GIORNI[d.getDay()];
+  return dd+'/'+mm+'/'+yy+' — '+gg;
 }
 function fmtDate(d){
   if(!d)return'—';
@@ -592,7 +605,7 @@ function renderUltimiEventi(data){
       if(p.tipo)       det.push({lbl:'Tipo provvedimento', val:p.tipo});
       if(p.magistrato) det.push({lbl:'Relatore',           val:p.magistrato});
       if(p.esito)      det.push({lbl:'Esito',              val:p.esito, color: esitoColor(p.esito)});
-      eventi.push({dt:dt, dataStr:p.data_pubbl, tipo:'Provvedimento collegiale', stab:stab, ric:ric, ogg:ogg, fonte:fonte, det:det});
+      eventi.push({nr:nr, dt:dt, dataStr:p.data_pubbl, tipo:'Provvedimento collegiale', stab:stab, ric:ric, ogg:ogg, fonte:fonte, det:det});
     });
 
     // Provvedimenti monocratici
@@ -605,7 +618,7 @@ function renderUltimiEventi(data){
       if(p.tipo)       det.push({lbl:'Tipo provvedimento', val:p.tipo});
       if(p.magistrato) det.push({lbl:'Relatore',           val:p.magistrato});
       if(p.esito)      det.push({lbl:'Esito',              val:p.esito, color: esitoColor(p.esito)});
-      eventi.push({dt:dt, dataStr:p.data, tipo:'Provvedimento monocratico', stab:stab, ric:ric, ogg:ogg, fonte:fonte, det:det});
+      eventi.push({nr:nr, dt:dt, dataStr:p.data, tipo:'Provvedimento monocratico', stab:stab, ric:ric, ogg:ogg, fonte:fonte, det:det});
     });
 
     // Discussioni
@@ -620,7 +633,7 @@ function renderUltimiEventi(data){
       if(d.magistrato) det.push({lbl:'Relatore',      val:d.magistrato});
       if(d.esito)      det.push({lbl:'Esito',         val:d.esito, color: esitoColor(d.esito)});
       var tipoEv = dt >= oggi ? 'Udienza futura' : 'Udienza';
-      eventi.push({dt:dt, dataStr:d.data, tipo:tipoEv, stab:stab, ric:ric, ogg:ogg, fonte:fonte, det:det, futura: dt >= oggi});
+      eventi.push({nr:nr, dt:dt, dataStr:d.data, tipo:tipoEv, stab:stab, ric:ric, ogg:ogg, fonte:fonte, det:det, futura: dt >= oggi});
     });
 
     // Atti depositati
@@ -632,7 +645,7 @@ function renderUltimiEventi(data){
       var det = [];
       if(a.tipo)  det.push({lbl:'Tipo atto', val:a.tipo});
       if(a.parte) det.push({lbl:'Parte',     val:a.parte});
-      eventi.push({dt:dt, dataStr:a.data, tipo:'Atto depositato', stab:stab, ric:ric, ogg:ogg, fonte:fonte, det:det});
+      eventi.push({nr:nr, dt:dt, dataStr:a.data, tipo:'Atto depositato', stab:stab, ric:ric, ogg:ogg, fonte:fonte, det:det});
     });
   });
 
@@ -656,7 +669,7 @@ function renderUltimiEventi(data){
     h += '<div class="'+cardCls+'" onclick="openModal(\''+evNr+'\',\''+esc(ev.stab||ev.ric||evNr)+'\')">';
     // Header: data + tipo + fonte
     h += '<div class="ev-head">';
-    h += '<div class="ev-data">'+esc(ev.dataStr)+'</div>';
+    h += '<div class="ev-data">'+esc(fmtDataEvento(ev.dataStr))+'</div>';
     h += '<span class="'+fonteCls+'" style="font-size:10px">'+fonteLabel+'</span>';
     h += '</div>';
     h += '<div class="'+tipoCls+'">'+esc(ev.tipo)+'</div>';
@@ -914,7 +927,7 @@ function renderScadenze(data){
       var dt=parseDate(d.data);
       // >= oggi: include oggi fino alle 23:59 (perché oggi è mezzanotte)
       if(dt&&dt>=oggi&&(!d.esito||d.esito==='')){
-        righe.push({nr:nr,stab:db?db.stab:null,tipo:d.tipo,giudizio:d.giudizio,data:dt,dataStr:d.data});
+        righe.push({nr:nr,stab:db?db.stab:null,luogo:db?db.luogo:'TAR FVG',tipo:d.tipo,giudizio:d.giudizio,data:dt,dataStr:d.data});
       }
     });
   });
@@ -931,7 +944,9 @@ function renderScadenze(data){
     var ggTxt=gg===0?'OGGI':(gg===1?'domani':'tra '+gg+' gg');
     h+='<div class="scad-card" onclick="openModal(\''+esc(row.nr)+'\',\''+(row.stab?esc(row.stab):esc(row.nr))+'\')">';
     h+='<div class="scad-left">';
-    h+='<div class="scad-nr">'+esc(row.nr)+'</div>';
+    var scadFonteCls=row.luogo==='CdS'?'badge b-purple':'badge b-blue';
+    var scadFonteLbl=row.luogo==='CdS'?'CdS':'TAR FVG';
+    h+='<div class="scad-nr" style="display:flex;align-items:center;gap:5px">'+esc(row.nr)+'<span class="'+scadFonteCls+'" style="font-size:9px">'+scadFonteLbl+'</span></div>';
     h+='<div class="scad-stab">'+(row.stab?esc(row.stab):'—')+'</div>';
     h+='<div class="scad-tipo">'+esc(row.tipo)+(row.giudizio?' · '+esc(row.giudizio):'')+'</div>';
     h+='</div>';
