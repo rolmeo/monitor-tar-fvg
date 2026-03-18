@@ -364,7 +364,9 @@
         "ATTO DI COSTITUZIONE | 2026001054 | CONTROINTERESSATO | 09/03/2026",
         "RICORSO | 2026001015 | RICORRENTE PRINCIPALE | 05/03/2026"
       ],
-      "discussioni": [],
+      "discussioni": [
+        "24/03/2026 | CAMERA DI CONSIGLIO |  | DA ASSEGNARE MAGISTRATO | Giudizio Cautelare | "
+      ],
       "provvedimenti_collegiali": [],
       "provvedimenti_monocratici": []
     },
@@ -389,7 +391,9 @@
         "RICORSO | 2026001024 | RICORRENTE PRINCIPALE | 06/03/2026",
         "ATTO DI COSTITUZIONE | 2026001086 | CONTROINTERESSATO | 11/03/2026"
       ],
-      "discussioni": [],
+      "discussioni": [
+        "24/03/2026 | CAMERA DI CONSIGLIO |  | DA ASSEGNARE MAGISTRATO | Giudizio Cautelare | "
+      ],
       "provvedimenti_collegiali": [],
       "provvedimenti_monocratici": []
     },
@@ -822,13 +826,15 @@
         "RICORSO | 2026001097 | RICORRENTE PRINCIPALE | 12/03/2026",
         "ATTO DI COSTITUZIONE | 2026001112 | AMMINISTRAZIONE INTIMATA | 16/03/2026"
       ],
-      "discussioni": [],
+      "discussioni": [
+        "24/03/2026 | CAMERA DI CONSIGLIO |  | DA ASSEGNARE MAGISTRATO | Giudizio Cautelare | "
+      ],
       "provvedimenti_collegiali": [],
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "18/03/2026 19:09",
-  "ultimo_controllo": "18/03/2026 19:09",
+  "ultimo_aggiornamento": "18/03/2026 19:14",
+  "ultimo_controllo": "18/03/2026 19:14",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
