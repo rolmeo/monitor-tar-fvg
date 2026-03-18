@@ -826,6 +826,55 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "18/03/2026 12:29",
-  "ultimo_controllo": "18/03/2026 12:29"
+  "ultimo_aggiornamento": "18/03/2026 12:31",
+  "ultimo_controllo": "18/03/2026 12:31",
+  "provvedimenti_collegiali": [
+    {
+      "nrgFascicolo": "202500145",
+      "sezione": "1",
+      "parte": "W.H.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "09/02/2026",
+      "numProvvedimento": "202600092",
+      "dataPubblicazione": "17/03/2026",
+      "tipoProvvedimento": "DECRETO COLLEGIALE",
+      "codiceTipoProvvedimento": "36",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "LIQUIDA IL COMPENSO     ",
+      "nomeFile": "202600092_36.xml"
+    },
+    {
+      "nrgFascicolo": "202500209",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "UP",
+      "dataUdienza": "27/01/2026",
+      "numProvvedimento": "202600091",
+      "dataPubblicazione": "17/03/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RESPINGE     ",
+      "nomeFile": "202600091_01.xml"
+    }
+  ],
+  "provvedimenti_monocratici": [
+    {
+      "nrgFascicolo": "202600126",
+      "sezione": "1",
+      "parte": null,
+      "tipoUdienza": null,
+      "dataUdienza": null,
+      "numProvvedimento": "202600034",
+      "dataPubblicazione": "17/03/2026",
+      "tipoProvvedimento": "DECRETO CAUTELARE",
+      "codiceTipoProvvedimento": "06",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": null,
+      "esito": "ACCOGLIE  FISSA CAMERA DI CONSIGLIO    ",
+      "nomeFile": "202600034_06.xml"
+    }
+  ]
 }
