@@ -277,7 +277,23 @@ def aggiorna_dashboard(prov_collegiali, prov_monocratici, ha_variazioni=False):
     # Prima scarica da GitHub per avere i dati già accumulati
     dati = carica_dashboard_da_github()
     # Le chiavi scritte dagli altri script sono già in 'dati' (scaricato da GitHub).
-    # Non serve leggere file locali: in GitHub Actions non sono affidabili.
+    # Se cds_ricorsi_monitorati manca (es. primo run o loop vizioso),
+    # lo ricostruisce scaricando cds_ricorsi_stato.json da GitHub.
+    if "cds_ricorsi_monitorati" not in dati or not dati["cds_ricorsi_monitorati"]:
+        try:
+            api_url = "https://api.github.com/repos/" + GH_REPO + "/contents/cds_ricorsi_stato.json"
+            headers = {"Authorization": "token " + GH_TOKEN, "Accept": "application/vnd.github.v3+json"}
+            resp = requests.get(api_url, headers=headers, timeout=10)
+            if resp.status_code == 200:
+                import base64 as _b64
+                stato_cds = json.loads(_b64.b64decode(resp.json()["content"]).decode("utf-8"))
+                ricorsi_cds = list(stato_cds.get("ricorsi_monitorati", {}).values())
+                if ricorsi_cds:
+                    dati["cds_ricorsi_monitorati"] = ricorsi_cds
+                    print("[INFO] cds_ricorsi_monitorati recuperato da cds_ricorsi_stato.json (" +
+                          str(len(ricorsi_cds)) + " ricorsi)")
+        except Exception as e:
+            print("[WARN] Impossibile recuperare cds_ricorsi_stato.json: " + str(e))
 
     ora_str = ora_locale().strftime("%d/%m/%Y %H:%M")
     dati["ultimo_aggiornamento"] = ora_str
