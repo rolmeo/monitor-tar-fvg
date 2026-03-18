@@ -215,24 +215,67 @@ def formatta_messaggio(tipo, provvedimenti):
     return msg
 
 
+def carica_dashboard_da_github():
+    """Scarica dashboard_data.json da GitHub per recuperare i dati accumulati."""
+    if not GH_TOKEN or not GH_REPO:
+        return {}
+    try:
+        api_url = "https://api.github.com/repos/" + GH_REPO + "/contents/" + DASHBOARD_FILE
+        headers = {"Authorization": "token " + GH_TOKEN, "Accept": "application/vnd.github.v3+json"}
+        resp = requests.get(api_url, headers=headers, timeout=10)
+        if resp.status_code == 200:
+            import base64 as b64
+            contenuto = b64.b64decode(resp.json()["content"]).decode("utf-8")
+            dati = json.loads(contenuto)
+            print("[INFO] dashboard_data.json caricato da GitHub (" +
+                  str(len(dati.get("provvedimenti_collegiali",[]))) + " coll, " +
+                  str(len(dati.get("provvedimenti_monocratici",[]))) + " mono)")
+            return dati
+    except Exception as e:
+        print("[WARN] Impossibile caricare dashboard da GitHub: " + str(e))
+    return {}
+
+
 def aggiorna_dashboard(prov_collegiali, prov_monocratici, ha_variazioni=False):
-    """Legge dashboard_data.json esistente, aggiorna la sezione provvedimenti e salva."""
-    # Carica dati esistenti (potrebbero esserci dati ricorsi scritti da monitor_ricorsi_gh.py)
-    dati = {}
+    """Accumula i provvedimenti in modo cumulativo: non cancella mai i vecchi."""
+    # Prima scarica da GitHub per avere i dati già accumulati
+    dati = carica_dashboard_da_github()
+    # Se c'è anche un file locale (scritto da monitor_ricorsi_gh.py), uniscili
     if os.path.exists(DASHBOARD_FILE):
         try:
             with open(DASHBOARD_FILE, "r", encoding="utf-8") as f:
-                dati = json.load(f)
+                dati_locali = json.load(f)
+            # Mantieni i campi ricorsi scritti dagli altri script
+            for k in ["ricorsi_monitorati", "cds_ricorsi_monitorati",
+                      "ultimo_ricorso", "anno_nuovi", "ultima_variazione"]:
+                if k in dati_locali and k not in dati:
+                    dati[k] = dati_locali[k]
         except Exception:
-            dati = {}
+            pass
 
     ora_str = ora_locale().strftime("%d/%m/%Y %H:%M")
     dati["ultimo_aggiornamento"] = ora_str
     dati["ultimo_controllo"] = ora_str
     if ha_variazioni:
         dati["ultima_variazione"] = ora_str
-    dati["provvedimenti_collegiali"] = prov_collegiali[:20]
-    dati["provvedimenti_monocratici"] = prov_monocratici[:20]
+
+    # Accumulo cumulativo: unisce vecchi e nuovi deduplicando per nrgFascicolo+numProvvedimento
+    def accumula(esistenti, nuovi):
+        # Chiave univoca: NRG + numero provvedimento
+        visti = {}
+        for p in esistenti:
+            k = str(p.get("nrgFascicolo","")) + "_" + str(p.get("numProvvedimento",""))
+            visti[k] = p
+        for p in nuovi:
+            k = str(p.get("nrgFascicolo","")) + "_" + str(p.get("numProvvedimento",""))
+            visti[k] = p  # il nuovo sovrascrive (aggiorna eventuali campi cambiati)
+        return list(visti.values())
+
+    dati["provvedimenti_collegiali"]  = accumula(dati.get("provvedimenti_collegiali", []),  prov_collegiali)
+    dati["provvedimenti_monocratici"] = accumula(dati.get("provvedimenti_monocratici", []), prov_monocratici)
+
+    print("[INFO] Tot. collegiali accumulati: " + str(len(dati["provvedimenti_collegiali"])))
+    print("[INFO] Tot. monocratici accumulati: " + str(len(dati["provvedimenti_monocratici"])))
 
     with open(DASHBOARD_FILE, "w", encoding="utf-8") as f:
         json.dump(dati, f, ensure_ascii=False, indent=2)
