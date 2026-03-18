@@ -1045,9 +1045,7 @@ function loadData(){
   document.getElementById('liveLabel').textContent='–';
   document.getElementById('statusDot').style.background='var(--gray)';
 
-  // Usa l'API GitHub per bypassare la cache CDN di raw.githubusercontent.com
-  fetch('https://api.github.com/repos/rolmeo/monitor-tar-fvg/contents/dashboard_data.json',
-    {headers:{'Accept':'application/vnd.github.v3.raw','Cache-Control':'no-cache'}})
+  fetch('https://raw.githubusercontent.com/rolmeo/monitor-tar-fvg/main/dashboard_data.json?nocache='+Date.now()+'&r='+Math.random(),{cache:'no-store'})
     .then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json();})
     .then(function(data){
       document.getElementById('statusDot').style.background='var(--green)';
