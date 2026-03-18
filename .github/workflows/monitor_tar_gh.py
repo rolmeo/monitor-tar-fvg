@@ -314,6 +314,19 @@ def pubblica_su_github(filepath):
         resp = requests.put(api_url, headers=headers, json=payload, timeout=15)
         if resp.status_code in (200, 201):
             print("[OK] " + filepath + " pubblicato su GitHub")
+        elif resp.status_code in (409, 422):
+            # SHA conflict: ri-scarica SHA aggiornato e riprova una volta
+            print("[WARN] SHA conflict, retry...")
+            resp2 = requests.get(api_url, headers=headers, timeout=10)
+            if resp2.status_code == 200:
+                payload["sha"] = resp2.json().get("sha")
+                resp3 = requests.put(api_url, headers=headers, json=payload, timeout=15)
+                if resp3.status_code in (200, 201):
+                    print("[OK] " + filepath + " pubblicato su GitHub (retry OK)")
+                else:
+                    print("[ERRORE] GitHub API retry: " + str(resp3.status_code) + " " + resp3.text[:200])
+            else:
+                print("[ERRORE] SHA retry GET: " + str(resp2.status_code))
         else:
             print("[ERRORE] GitHub API: " + str(resp.status_code) + " " + resp.text[:200])
     except Exception as e:
