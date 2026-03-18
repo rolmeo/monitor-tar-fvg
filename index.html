@@ -596,9 +596,6 @@ function renderUltimiEventi(data){
   var oggi = new Date(); oggi.setHours(0,0,0,0);
   var tuttiRicorsi = (data.ricorsi_monitorati||[]).concat(data.cds_ricorsi_monitorati||[]);
   var eventi = [];
-  // Data di rilevazione globale: usata come data evento per le discussioni
-  var dtRilevazione = parseDate((data.ultimo_aggiornamento||'').split(' ')[0]) || oggi;
-  var strRilevazione = (data.ultimo_aggiornamento||'').split(' ')[0] || fmtDate(oggi);
 
   tuttiRicorsi.forEach(function(r){
     var db = dbByNrg(r.nrg);
@@ -634,17 +631,19 @@ function renderUltimiEventi(data){
       eventi.push({nr:nr, dt:dt, dataStr:p.data, tipo:'Provvedimento monocratico', stab:stab, ric:ric, ogg:ogg, fonte:fonte, det:det});
     });
 
-    // Discussioni — data evento = ultimo_aggiornamento (data rilevazione variazione)
+    // Discussioni
     (r.discussioni||[]).forEach(function(s){
       var d = parseDisc(s);
-      if(!d.tipo) return;
+      if(!d.data || !d.tipo) return;
+      var dt = parseDate(d.data);
+      if(!dt) return;
       var det = [];
-      if(d.data)       det.push({lbl:'Data udienza',   val:d.data});
-      if(d.tipo)       det.push({lbl:'Tipo udienza',   val:d.tipo});
-      if(d.giudizio)   det.push({lbl:'Raggruppamento', val:d.giudizio});
-      if(d.magistrato) det.push({lbl:'Relatore',       val:d.magistrato});
-      if(d.esito)      det.push({lbl:'Esito',          val:d.esito, color: esitoColor(d.esito)});
-      eventi.push({nr:nr, dt:dtRilevazione, dataStr:strRilevazione, tipo:'Discussione fissata', stab:stab, ric:ric, ogg:ogg, fonte:fonte, det:det});
+      if(d.tipo)       det.push({lbl:'Tipo udienza',  val:d.tipo});
+      if(d.giudizio)   det.push({lbl:'Raggruppamento',val:d.giudizio});
+      if(d.magistrato) det.push({lbl:'Relatore',      val:d.magistrato});
+      if(d.esito)      det.push({lbl:'Esito',         val:d.esito, color: esitoColor(d.esito)});
+      var tipoEv = dt >= oggi ? 'Udienza futura' : 'Udienza';
+      eventi.push({nr:nr, dt:dt, dataStr:d.data, tipo:tipoEv, stab:stab, ric:ric, ogg:ogg, fonte:fonte, det:det, futura: dt >= oggi});
     });
 
     // Atti depositati
@@ -660,8 +659,8 @@ function renderUltimiEventi(data){
     });
   });
 
-  // Tutti gli eventi, ordine cronologico decrescente
-  var sorted = eventi.sort(function(a,b){return b.dt-a.dt;});
+  // Solo eventi passati, ordine cronologico decrescente
+  var sorted = eventi.filter(function(e){return !e.futura;}).sort(function(a,b){return b.dt-a.dt;});
 
   if(!sorted.length){
     return '<div class="empty"><div class="empty-ico">📋</div><div class="empty-txt">Nessun evento disponibile.<br>Aggiorna i dati.</div></div>';
@@ -670,8 +669,9 @@ function renderUltimiEventi(data){
   var h = '<div class="sec-lbl">'+sorted.length+' event'+(sorted.length===1?'o':'i')+' · ordinati per data</div>';
 
   sorted.forEach(function(ev){
-    var cardCls  = 'ev-card';
-    var tipoCls  = 'ev-tipo';
+    var isFutura = ev.futura;
+    var cardCls  = 'ev-card' + (isFutura ? ' ev-futura' : '');
+    var tipoCls  = isFutura ? 'ev-tipo futura' : 'ev-tipo';
     var fonteCls = ev.fonte === 'CdS' ? 'badge b-purple' : 'badge b-blue';
     var fonteLabel = ev.fonte === 'CdS' ? 'Consiglio di Stato' : 'TAR FVG';
 
