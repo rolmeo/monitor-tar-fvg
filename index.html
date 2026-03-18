@@ -631,7 +631,7 @@ function renderUltimiEventi(data){
       eventi.push({nr:nr, dt:dt, dataStr:p.data, tipo:'Provvedimento monocratico', stab:stab, ric:ric, ogg:ogg, fonte:fonte, det:det});
     });
 
-    // Discussioni — sia passate che future (le future mostrano data udienza come info)
+    // Discussioni — sia passate che future
     (r.discussioni||[]).forEach(function(s){
       var d = parseDisc(s);
       if(!d.data || !d.tipo) return;
@@ -639,16 +639,13 @@ function renderUltimiEventi(data){
       if(!dt) return;
       var det = [];
       var isFutura = dt >= oggi;
-      // Per udienze future: mostra la data udienza come dettaglio, usa oggi come data evento
       var dtEvento = isFutura ? oggi : dt;
-      var dataStrEvento = isFutura ? d.data : d.data; // mostra sempre la data udienza
       if(d.tipo)       det.push({lbl:'Data udienza',  val:d.data});
       if(d.tipo)       det.push({lbl:'Tipo udienza',  val:d.tipo});
       if(d.giudizio)   det.push({lbl:'Raggruppamento',val:d.giudizio});
       if(d.magistrato) det.push({lbl:'Relatore',      val:d.magistrato});
       if(d.esito)      det.push({lbl:'Esito',         val:d.esito, color: esitoColor(d.esito)});
-      var tipoEv = isFutura ? 'Udienza fissata' : (d.esito ? 'Udienza' : 'Udienza');
-      // Tutte le discussioni entrano negli eventi (future con dt=oggi per ordinarle in cima)
+      var tipoEv = isFutura ? 'Udienza fissata' : 'Udienza';
       eventi.push({nr:nr, dt:dtEvento, dataStr:d.data, tipo:tipoEv, stab:stab, ric:ric, ogg:ogg, fonte:fonte, det:det, futura:false});
     });
 
