@@ -282,6 +282,42 @@ def scarica_dashboard_da_github():
         print("[CdS WARN] Impossibile scaricare dashboard: " + str(e))
     return {}
 
+def pubblica_dashboard_diretto(contenuto_str):
+    """Pubblica dashboard_data.json direttamente dal contenuto in memoria."""
+    if not GH_TOKEN or not GH_REPO:
+        print("[CdS WARN] GH_TOKEN o GH_REPO non configurati, skip")
+        return
+    try:
+        import base64 as _b64
+        contenuto_b64 = _b64.b64encode(contenuto_str.encode("utf-8")).decode("utf-8")
+        api_url = "https://api.github.com/repos/" + GH_REPO + "/contents/" + DASHBOARD_FILE
+        headers = {"Authorization": "token " + GH_TOKEN, "Accept": "application/vnd.github.v3+json"}
+        sha = None
+        resp = requests.get(api_url, headers=headers, timeout=10)
+        if resp.status_code == 200:
+            sha = resp.json().get("sha")
+        payload = {"message": "Aggiorna " + DASHBOARD_FILE, "content": contenuto_b64}
+        if sha:
+            payload["sha"] = sha
+        resp = requests.put(api_url, headers=headers, json=payload, timeout=15)
+        if resp.status_code in (200, 201):
+            print("[CdS OK] dashboard_data.json pubblicato su GitHub")
+        elif resp.status_code in (409, 422):
+            print("[CdS WARN] SHA conflict, retry...")
+            resp2 = requests.get(api_url, headers=headers, timeout=10)
+            if resp2.status_code == 200:
+                payload["sha"] = resp2.json().get("sha")
+                resp3 = requests.put(api_url, headers=headers, json=payload, timeout=15)
+                if resp3.status_code in (200, 201):
+                    print("[CdS OK] dashboard_data.json pubblicato su GitHub (retry OK)")
+                else:
+                    print("[CdS ERRORE] retry: " + str(resp3.status_code) + " " + resp3.text[:200])
+        else:
+            print("[CdS ERRORE] GitHub API: " + str(resp.status_code) + " " + resp.text[:200])
+    except Exception as e:
+        print("[CdS ERRORE] pubblica_dashboard_diretto: " + str(e))
+
+
 def aggiorna_dashboard(stato, ha_variazioni=False):
     """Scarica da GitHub, aggiunge i dati CdS, risalva."""
     # Scarica sempre da GitHub per non perdere i provvedimenti scritti da monitor_tar_gh.py
@@ -306,10 +342,13 @@ def aggiorna_dashboard(stato, ha_variazioni=False):
         ricorsi_cds.append(dettagli)
     dati["cds_ricorsi_monitorati"] = ricorsi_cds
 
+    # Serializza e pubblica direttamente dai dati in memoria
+    # (evita di rileggere il file locale che potrebbe essere vecchio)
+    contenuto_str = json.dumps(dati, ensure_ascii=False, indent=2)
     with open(DASHBOARD_FILE, "w", encoding="utf-8") as f:
-        json.dump(dati, f, ensure_ascii=False, indent=2)
+        f.write(contenuto_str)
 
-    pubblica_su_github(DASHBOARD_FILE)
+    pubblica_dashboard_diretto(contenuto_str)
 
 
 # ============================================================
