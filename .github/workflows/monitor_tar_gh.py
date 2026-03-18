@@ -3,7 +3,7 @@ import json
 import os
 import re
 import base64
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, timedelta, timezone
 import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -14,46 +14,21 @@ TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN", "")
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "")
 GH_TOKEN = os.environ.get("GH_TOKEN", "")
 GH_REPO = os.environ.get("GH_REPO", "")
-STATO_FILE = "tar_ricorsi_stato.json"
+STATO_FILE = "tar_stato.json"
 DASHBOARD_FILE = "dashboard_data.json"
 
-# Anno usato per la ricerca di NUOVI ricorsi
-ANNO_NUOVI = 2026
-
-# Ricorsi specifici da monitorare per variazioni.
-RICORSI_DA_MONITORARE = [
-    # 2024
-    (2024, 406),
-    # 2025
-    (2025, 257),
-    (2025, 267),
-    (2025, 268),
-    (2025, 270),
-    (2025, 399),
-    (2025, 403),
-    (2025, 404),
-    (2025, 405),
-    (2025, 479),
-    (2025, 686),
-    (2025, 689),
-    # 2026
-    (2026, 51),
-    (2026, 74),
-    (2026, 80),
-    (2026, 99),
-    (2026, 100),
-    (2026, 120),
-    (2026, 121),
-    (2026, 123),
-    (2026, 125),
-    (2026, 126),
-]
-
 # ============================================================
-# URL e portlet
+# URL
 # ============================================================
-PORTLET = "it_indra_ga_institutional_area_JurisdictionalActivityAppealsWebPortlet_INSTANCE_7cHhL3QMaX4o"
-URL_HOME = "https://www.giustizia-amministrativa.it/web/guest/ricorsi-tar-friuli-venezia-giulia"
+BASE = "https://www.giustizia-amministrativa.it/web/guest/provvedimenti-tar-friuli-venezia-giulia"
+PORTLET = "it_indra_ga_institutional_area_JurisdictionalActivityAdministrativeActsWebPortlet_INSTANCE_pCcjFrTc2Yfg"
+URL_HOME = BASE
+URL_SEARCH = (
+    BASE + "?p_p_id=" + PORTLET
+    + "&p_p_lifecycle=2&p_p_state=normal&p_p_mode=view"
+    + "&p_p_resource_id=/administrative-acts/search/results"
+    + "&p_p_cacheability=cacheLevelPage"
+)
 
 sessione = requests.Session()
 sessione.headers.update({
@@ -62,14 +37,24 @@ sessione.headers.update({
 })
 p_auth_token = ""
 
+COLUMNS = [
+    {"data": "nrgFascicolo",     "name": "", "searchable": True, "orderable": True, "search": {"value": "", "regex": False}},
+    {"data": "sezione",          "name": "", "searchable": True, "orderable": True, "search": {"value": "", "regex": False}},
+    {"data": "parte",            "name": "", "searchable": True, "orderable": True, "search": {"value": "", "regex": False}},
+    {"data": "tipoUdienza",      "name": "", "searchable": True, "orderable": True, "search": {"value": "", "regex": False}},
+    {"data": "dataUdienza",      "name": "", "searchable": True, "orderable": True, "search": {"value": "", "regex": False}},
+    {"data": "numProvvedimento", "name": "", "searchable": True, "orderable": True, "search": {"value": "", "regex": False}},
+    {"data": "dataPubblicazione","name": "", "searchable": True, "orderable": True, "search": {"value": "", "regex": False}},
+    {"data": "tipoProvvedimento","name": "", "searchable": True, "orderable": True, "search": {"value": "", "regex": False}},
+    {"data": "relatore",         "name": "", "searchable": True, "orderable": True, "search": {"value": "", "regex": False}},
+    {"data": "presidente",       "name": "", "searchable": True, "orderable": True, "search": {"value": "", "regex": False}},
+    {"data": "esito",            "name": "", "searchable": True, "orderable": True, "search": {"value": "", "regex": False}},
+]
+
 
 def ora_locale():
     return datetime.now(timezone.utc) + timedelta(hours=1)
 
-
-# ============================================================
-# Funzioni base
-# ============================================================
 
 def inizializza_sessione():
     global p_auth_token
@@ -96,137 +81,77 @@ def inizializza_sessione():
         return False
 
 
-def fetch_ricorso(anno, numero):
-    url = (
-        URL_HOME + "?p_p_id=" + PORTLET
-        + "&p_p_lifecycle=1&p_p_state=normal&p_p_mode=view"
-        + "&_" + PORTLET + "_javax.portlet.action=/appeals/detail"
-        + "&p_auth=" + p_auth_token
-    )
-    form_data = {
-        "_" + PORTLET + "_formDate": (None, str(int(ora_locale().timestamp() * 1000))),
-        "_" + PORTLET + "_year": (None, str(anno)),
-        "_" + PORTLET + "_number": (None, str(numero)),
-        "_" + PORTLET + "_search": (None, ""),
+def get_dates():
+    oggi = ora_locale()
+    ieri = oggi - timedelta(days=1)
+    return ieri.strftime("%Y-%m-%d"), oggi.strftime("%Y-%m-%d")
+
+
+def fetch_provvedimenti(tipo):
+    date_from, date_to = get_dates()
+    additional_info = json.dumps({
+        "schema": "TAR_TRIESTE",
+        "type": tipo,
+        "year": "",
+        "number": "",
+        "hearingDateFrom": None,
+        "hearingDateTo": None,
+        "publishDateFrom": date_from,
+        "publishDateTo": date_to,
+        "hearingType": None,
+        "nrg": None,
+        "section": "",
+        "provisionSpecification": "",
+        "president": "",
+        "draftingJudge": "",
+        "subjectMatter": None,
+        "page": None,
+        "size": None,
+        "orderBy": None,
+        "orderStrategy": None,
+        "queryString": None
+    })
+    payload = {
+        "draw": 1,
+        "columns": COLUMNS,
+        "order": [{"column": 6, "dir": "desc"}, {"column": 5, "dir": "desc"}],
+        "start": 0,
+        "length": 100,
+        "search": {"value": "", "regex": False},
+        "additionalInfo": additional_info,
     }
-    headers = {
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-        "Referer": URL_HOME,
-        "Origin": "https://www.giustizia-amministrativa.it",
+    url = URL_SEARCH
+    if p_auth_token:
+        url += "&p_auth=" + p_auth_token
+    headers_post = {
+        "Accept": "application/json, text/javascript, */*; q=0.01",
+        "Content-Type": "application/json",
         "X-Requested-With": "XMLHttpRequest",
         "X-PJAX": "true",
+        "Referer": URL_HOME,
+        "Origin": "https://www.giustizia-amministrativa.it",
     }
     try:
-        resp = sessione.post(url, headers=headers, files=form_data, timeout=30, verify=False)
+        resp = sessione.post(url, headers=headers_post, json=payload, timeout=30, verify=False)
         resp.raise_for_status()
-        html = resp.text
-        ha_dati = (
-            "Elenco parti del fascicolo" in html and
-            "[ERROR - detailException]" not in html
-        )
-        if ha_dati:
-            return html
-        return None
-    except Exception as e:
-        print("[ERRORE] fetch_ricorso " + str(anno) + "/" + str(numero) + ": " + str(e))
-        return None
-
-
-def estrai_dettagli(html, anno, numero):
-    dettagli = {
-        "nrg": str(anno) + str(numero).zfill(6),
-        "anno": anno,
-        "numero": numero,
-        "sezione": "",
-        "data_deposito": "",
-        "tipo_ricorso": "",
-        "oggetto": "",
-        "parti": [],
-        "atti": [],
-        "discussioni": [],
-        "provvedimenti_collegiali": [],
-        "provvedimenti_monocratici": [],
-    }
-
-    m = re.search(r'id="valoreSezione"[^>]*>([^<]+)<', html)
-    if m:
-        dettagli["sezione"] = m.group(1).strip()
-
-    m = re.search(r'id="valoreDataDeposito"[^>]*>([^<]+)<', html)
-    if m:
-        dettagli["data_deposito"] = m.group(1).strip()
-
-    m = re.search(r'id="valoreTipologiaRicorso"[^>]*>([^<]+)<', html)
-    if m:
-        dettagli["tipo_ricorso"] = m.group(1).strip()
-
-    m = re.search(r'id="valoreOggetto"[^>]*>([^<]+)<', html)
-    if m:
-        dettagli["oggetto"] = m.group(1).strip()[:200]
-
-    def estrai_righe_tabella(html, titolo_sezione, titolo_fine):
-        pattern = titolo_sezione + r'.*?<tbody>(.*?)</tbody>.*?' + titolo_fine
-        m = re.search(pattern, html, re.DOTALL | re.IGNORECASE)
-        if not m:
+        if not resp.text.strip():
+            print("[WARN] Risposta vuota per " + tipo)
             return []
-        tbody = m.group(1)
-        righe = re.findall(r'<tr[^>]*>(.*?)</tr>', tbody, re.DOTALL)
-        risultato = []
-        for riga in righe:
-            celle = re.findall(r'<td[^>]*>(.*?)</td>', riga, re.DOTALL)
-            celle = [re.sub(r'<[^>]+>', '', c).strip() for c in celle]
-            celle = [re.sub(r'\s+', ' ', c) for c in celle]
-            if any(c for c in celle):
-                risultato.append(' | '.join(celle))
-        return risultato
-
-    dettagli["parti"] = estrai_righe_tabella(html, "Elenco parti del fascicolo", "Atti depositati")
-    dettagli["atti"] = estrai_righe_tabella(html, "Atti depositati", "Discussioni")
-    dettagli["discussioni"] = estrai_righe_tabella(html, "Discussioni", "Provvedimenti collegiali")
-    dettagli["provvedimenti_collegiali"] = estrai_righe_tabella(html, "Provvedimenti collegiali", "Provvedimenti monocratici")
-    dettagli["provvedimenti_monocratici"] = estrai_righe_tabella(html, "Provvedimenti monocratici", "INDIETRO")
-
-    return dettagli
-
-
-def confronta_dettagli(vecchio, nuovo):
-    differenze = []
-    sezioni = ["parti", "atti", "discussioni", "provvedimenti_collegiali", "provvedimenti_monocratici"]
-    nomi = {
-        "parti": "Elenco parti",
-        "atti": "Atti depositati",
-        "discussioni": "Discussioni",
-        "provvedimenti_collegiali": "Provvedimenti collegiali",
-        "provvedimenti_monocratici": "Provvedimenti monocratici",
-    }
-    for sezione in sezioni:
-        vecchi = set(vecchio.get(sezione, []))
-        nuovi = set(nuovo.get(sezione, []))
-        aggiunti = nuovi - vecchi
-        rimossi = vecchi - nuovi
-        if aggiunti:
-            differenze.append("➕ " + nomi[sezione] + " - Aggiunto:\n" + "\n".join("  • " + r for r in aggiunti))
-        if rimossi:
-            differenze.append("➖ " + nomi[sezione] + " - Rimosso:\n" + "\n".join("  • " + r for r in rimossi))
-    return differenze
-
-
-def invia_telegram(messaggio):
-    url = "https://api.telegram.org/bot" + TELEGRAM_TOKEN + "/sendMessage"
-    if len(messaggio) > 4000:
-        messaggio = messaggio[:4000] + "\n...(troncato)"
-    try:
-        resp = requests.post(url, json={"chat_id": TELEGRAM_CHAT_ID, "text": messaggio}, timeout=10)
-        resp.raise_for_status()
-        print("[OK] Notifica Telegram inviata")
+        data = resp.json()
+        risultati = data.get("data", [])
+        print("[INFO] " + tipo + ": " + str(len(risultati)) + " provvedimenti trovati")
+        return risultati
     except Exception as e:
-        print("[ERRORE] Telegram: " + str(e))
+        print("[ERRORE] " + tipo + ": " + str(e))
+        return []
 
 
 def carica_stato():
+    # Prima prova il file locale (cache)
     if os.path.exists(STATO_FILE):
         with open(STATO_FILE, "r", encoding="utf-8") as f:
             return json.load(f)
+    # Fallback: legge da GitHub (evita messaggi duplicati se la cache è persa)
     if GH_TOKEN and GH_REPO:
         try:
             api_url = "https://api.github.com/repos/" + GH_REPO + "/contents/" + STATO_FILE
@@ -236,86 +161,88 @@ def carica_stato():
                 import base64 as b64
                 contenuto = b64.b64decode(resp.json()["content"]).decode("utf-8")
                 stato = json.loads(contenuto)
+                # Salva localmente per questa esecuzione
                 with open(STATO_FILE, "w", encoding="utf-8") as f:
                     json.dump(stato, f, ensure_ascii=False, indent=2)
-                print("[INFO] " + STATO_FILE + " caricato da GitHub")
+                print("[INFO] tar_stato.json caricato da GitHub")
                 return stato
         except Exception as e:
             print("[WARN] Impossibile caricare stato da GitHub: " + str(e))
-    return {"ultimo_numero": 120, "ricorsi_monitorati": {}}
+    return {"collegiale": [], "monocratico": []}
 
 
 def salva_stato(stato):
     with open(STATO_FILE, "w", encoding="utf-8") as f:
         json.dump(stato, f, ensure_ascii=False, indent=2)
+    # Pubblica su GitHub così lo stato è persistente anche senza cache
     pubblica_su_github(STATO_FILE)
 
 
-def pubblica_su_github(filepath):
-    if not GH_TOKEN or not GH_REPO:
-        print("[WARN] GH_TOKEN o GH_REPO non configurati, skip pubblicazione")
-        return
+def invia_telegram(messaggio):
+    url = "https://api.telegram.org/bot" + TELEGRAM_TOKEN + "/sendMessage"
     try:
-        with open(filepath, "rb") as f:
-            contenuto = base64.b64encode(f.read()).decode("utf-8")
-
-        api_url = "https://api.github.com/repos/" + GH_REPO + "/contents/" + filepath
-        headers = {
-            "Authorization": "token " + GH_TOKEN,
-            "Accept": "application/vnd.github.v3+json",
-        }
-        sha = None
-        resp = requests.get(api_url, headers=headers, timeout=10)
-        if resp.status_code == 200:
-            sha = resp.json().get("sha")
-
-        payload = {
-            "message": "Aggiorna " + filepath,
-            "content": contenuto,
-        }
-        if sha:
-            payload["sha"] = sha
-
-        resp = requests.put(api_url, headers=headers, json=payload, timeout=15)
-        if resp.status_code in (200, 201):
-            print("[OK] " + filepath + " pubblicato su GitHub")
-        elif resp.status_code in (409, 422):
-            # SHA conflict: ri-scarica SHA aggiornato e riprova una volta
-            print("[WARN] SHA conflict, retry...")
-            resp2 = requests.get(api_url, headers=headers, timeout=10)
-            if resp2.status_code == 200:
-                payload["sha"] = resp2.json().get("sha")
-                resp3 = requests.put(api_url, headers=headers, json=payload, timeout=15)
-                if resp3.status_code in (200, 201):
-                    print("[OK] " + filepath + " pubblicato su GitHub (retry OK)")
-                else:
-                    print("[ERRORE] GitHub API retry: " + str(resp3.status_code) + " " + resp3.text[:200])
-            else:
-                print("[ERRORE] SHA retry GET: " + str(resp2.status_code))
-        else:
-            print("[ERRORE] GitHub API: " + str(resp.status_code) + " " + resp.text[:200])
+        resp = requests.post(url, json={"chat_id": TELEGRAM_CHAT_ID, "text": messaggio, "parse_mode": "HTML"}, timeout=10)
+        resp.raise_for_status()
+        print("[OK] Notifica Telegram inviata")
     except Exception as e:
-        print("[ERRORE] pubblica_su_github: " + str(e))
+        print("[ERRORE] Telegram: " + str(e))
 
 
-def scarica_dashboard_da_github():
-    """Scarica dashboard_data.json da GitHub per avere sempre la versione più aggiornata."""
+def estrai_ids(provvedimenti):
+    return [p.get("nrgFascicolo", "") for p in provvedimenti if p.get("nrgFascicolo")]
+
+
+def controlla_nuovi(nuovi, visti):
+    ids_visti = set(visti)
+    return [p for p in nuovi if p.get("nrgFascicolo") not in ids_visti]
+
+
+def formatta_messaggio(tipo, provvedimenti):
+    ora = ora_locale().strftime("%d/%m/%Y %H:%M")
+    msg = "🔔 TAR Friuli - Nuovi provvedimenti " + tipo + "\n"
+    msg += "Rilevati il " + ora + "\n\n"
+    for p in provvedimenti:
+        nrg = p.get("nrgFascicolo", "N/D")
+        sezione = p.get("sezione", "N/D")
+        parte = p.get("parte") or "N/D"
+        tipo_prov = p.get("tipoProvvedimento") or "N/D"
+        data_pub = p.get("dataPubblicazione") or "N/D"
+        num_prov = p.get("numProvvedimento") or "N/D"
+        msg += "NRG: " + nrg + "\n"
+        msg += "Sezione: " + str(sezione) + " | N.Provv: " + str(num_prov) + "\n"
+        msg += "Tipo: " + str(tipo_prov) + " | Pubblicato: " + str(data_pub) + "\n"
+        msg += "Parte: " + str(parte) + "\n\n"
+    return msg
+
+
+def carica_dashboard_da_github():
+    """Scarica dashboard_data.json da GitHub, con retry se i dati risultano vuoti."""
     if not GH_TOKEN or not GH_REPO:
         return {}
-    try:
-        api_url = "https://api.github.com/repos/" + GH_REPO + "/contents/" + DASHBOARD_FILE
-        headers = {"Authorization": "token " + GH_TOKEN, "Accept": "application/vnd.github.v3+json"}
-        resp = requests.get(api_url, headers=headers, timeout=10)
-        if resp.status_code == 200:
-            contenuto = base64.b64decode(resp.json()["content"]).decode("utf-8")
-            dati = json.loads(contenuto)
-            print("[INFO] dashboard scaricato da GitHub (ricorsi_gh): " +
-                  str(len(dati.get("provvedimenti_collegiali",[]))) + " coll, " +
-                  str(len(dati.get("provvedimenti_monocratici",[]))) + " mono")
-            return dati
-    except Exception as e:
-        print("[WARN] Impossibile scaricare dashboard: " + str(e))
+    import base64 as b64
+    import time
+    api_url = "https://api.github.com/repos/" + GH_REPO + "/contents/" + DASHBOARD_FILE
+    headers = {"Authorization": "token " + GH_TOKEN, "Accept": "application/vnd.github.v3+json"}
+    for tentativo in range(1, 4):
+        try:
+            resp = requests.get(api_url, headers=headers, timeout=10)
+            if resp.status_code == 200:
+                contenuto = b64.b64decode(resp.json()["content"]).decode("utf-8")
+                dati = json.loads(contenuto)
+                coll = len(dati.get("provvedimenti_collegiali", []))
+                mono = len(dati.get("provvedimenti_monocratici", []))
+                print("[INFO] dashboard_data.json caricato da GitHub (" +
+                      str(coll) + " coll, " + str(mono) + " mono) - tentativo " + str(tentativo))
+                if coll > 0 or mono > 0 or tentativo == 3:
+                    return dati
+                print("[INFO] Dashboard vuoto, riprovo tra 5 secondi...")
+                time.sleep(5)
+        except Exception as e:
+            print("[WARN] Impossibile caricare dashboard da GitHub: " + str(e))
+            if tentativo < 3:
+                time.sleep(5)
     return {}
+
 
 def pubblica_dashboard_diretto(contenuto_str):
     """Pubblica dashboard_data.json direttamente dal contenuto in memoria."""
@@ -353,44 +280,21 @@ def pubblica_dashboard_diretto(contenuto_str):
         print("[ERRORE] pubblica_dashboard_diretto: " + str(e))
 
 
-def aggiorna_dashboard(stato, ha_variazioni=False):
-    """Scarica da GitHub, aggiorna la sezione ricorsi, risalva."""
-    # Scarica sempre da GitHub per non perdere i provvedimenti scritti da monitor_tar_gh.py
-    dati = scarica_dashboard_da_github()
-    # Fallback: legge il file locale se GitHub non risponde
-    if not dati and os.path.exists(DASHBOARD_FILE):
-        try:
-            with open(DASHBOARD_FILE, "r", encoding="utf-8") as f:
-                dati = json.load(f)
-        except Exception:
-            dati = {}
-
-    # Se provvedimenti mancano (ritardo API GitHub), li recupera da tar_stato.json
-    if not dati.get("provvedimenti_collegiali") and not dati.get("provvedimenti_monocratici"):
-        try:
-            api_url = "https://api.github.com/repos/" + GH_REPO + "/contents/tar_stato.json"
-            headers = {"Authorization": "token " + GH_TOKEN, "Accept": "application/vnd.github.v3+json"}
-            resp = requests.get(api_url, headers=headers, timeout=10)
-            if resp.status_code == 200:
-                stato_tar = json.loads(base64.b64decode(resp.json()["content"]).decode("utf-8"))
-                coll = stato_tar.get("provvedimenti_collegiali", [])
-                mono = stato_tar.get("provvedimenti_monocratici", [])
-                if coll or mono:
-                    dati["provvedimenti_collegiali"] = coll
-                    dati["provvedimenti_monocratici"] = mono
-                    print("[INFO] Provvedimenti recuperati da tar_stato.json (" +
-                          str(len(coll)) + " coll, " + str(len(mono)) + " mono)")
-        except Exception as e:
-            print("[WARN] Impossibile recuperare tar_stato.json: " + str(e))
-
-    # Se cds_ricorsi_monitorati manca, lo recupera da cds_ricorsi_stato.json
-    if not dati.get("cds_ricorsi_monitorati"):
+def aggiorna_dashboard(prov_collegiali, prov_monocratici, ha_variazioni=False):
+    """Accumula i provvedimenti in modo cumulativo: non cancella mai i vecchi."""
+    # Prima scarica da GitHub per avere i dati già accumulati
+    dati = carica_dashboard_da_github()
+    # Le chiavi scritte dagli altri script sono già in 'dati' (scaricato da GitHub).
+    # Se cds_ricorsi_monitorati manca (es. primo run o loop vizioso),
+    # lo ricostruisce scaricando cds_ricorsi_stato.json da GitHub.
+    if "cds_ricorsi_monitorati" not in dati or not dati["cds_ricorsi_monitorati"]:
         try:
             api_url = "https://api.github.com/repos/" + GH_REPO + "/contents/cds_ricorsi_stato.json"
             headers = {"Authorization": "token " + GH_TOKEN, "Accept": "application/vnd.github.v3+json"}
             resp = requests.get(api_url, headers=headers, timeout=10)
             if resp.status_code == 200:
-                stato_cds = json.loads(base64.b64decode(resp.json()["content"]).decode("utf-8"))
+                import base64 as _b64
+                stato_cds = json.loads(_b64.b64decode(resp.json()["content"]).decode("utf-8"))
                 ricorsi_cds = list(stato_cds.get("ricorsi_monitorati", {}).values())
                 if ricorsi_cds:
                     dati["cds_ricorsi_monitorati"] = ricorsi_cds
@@ -404,118 +308,111 @@ def aggiorna_dashboard(stato, ha_variazioni=False):
     dati["ultimo_controllo"] = ora_str
     if ha_variazioni:
         dati["ultima_variazione"] = ora_str
-    dati["ultimo_ricorso"] = stato.get("ultimo_numero", 0)
-    dati["anno_nuovi"] = ANNO_NUOVI
 
-    # Lista ricorsi monitorati con dettagli
-    ricorsi = []
-    for chiave, dettagli in stato.get("ricorsi_monitorati", {}).items():
-        ricorsi.append(dettagli)
-    dati["ricorsi_monitorati"] = ricorsi
+    # Accumulo cumulativo: unisce vecchi e nuovi deduplicando per nrgFascicolo+numProvvedimento
+    def accumula(esistenti, nuovi):
+        # Chiave univoca: NRG + numero provvedimento
+        visti = {}
+        for p in esistenti:
+            k = str(p.get("nrgFascicolo","")) + "_" + str(p.get("numProvvedimento",""))
+            visti[k] = p
+        for p in nuovi:
+            k = str(p.get("nrgFascicolo","")) + "_" + str(p.get("numProvvedimento",""))
+            visti[k] = p  # il nuovo sovrascrive (aggiorna eventuali campi cambiati)
+        return list(visti.values())
 
-    # Log esplicito per debug
-    print("[INFO] Provvedimenti preservati: " +
-          str(len(dati.get("provvedimenti_collegiali", []))) + " coll, " +
-          str(len(dati.get("provvedimenti_monocratici", []))) + " mono")
+    dati["provvedimenti_collegiali"]  = accumula(dati.get("provvedimenti_collegiali", []),  prov_collegiali)
+    dati["provvedimenti_monocratici"] = accumula(dati.get("provvedimenti_monocratici", []), prov_monocratici)
 
-    # Serializza e pubblica direttamente dai dati in memoria
-    # (evita di rileggere il file locale che potrebbe essere vecchio)
+    print("[INFO] Tot. collegiali accumulati: " + str(len(dati["provvedimenti_collegiali"])))
+    print("[INFO] Tot. monocratici accumulati: " + str(len(dati["provvedimenti_monocratici"])))
+
+    # Pubblica direttamente dai dati in memoria (non rilegge il file locale)
     contenuto_str = json.dumps(dati, ensure_ascii=False, indent=2)
     with open(DASHBOARD_FILE, "w", encoding="utf-8") as f:
         f.write(contenuto_str)
-
     pubblica_dashboard_diretto(contenuto_str)
 
 
-# ============================================================
-# Logica principale
-# ============================================================
+def pubblica_su_github(filepath):
+    """Commit del file su GitHub tramite API."""
+    if not GH_TOKEN or not GH_REPO:
+        print("[WARN] GH_TOKEN o GH_REPO non configurati, skip pubblicazione")
+        return
+    try:
+        with open(filepath, "rb") as f:
+            contenuto = base64.b64encode(f.read()).decode("utf-8")
 
-def controlla_nuovi_ricorsi(stato):
-    ultimo = stato.get("ultimo_numero", 120)
-    trovati = []
+        api_url = "https://api.github.com/repos/" + GH_REPO + "/contents/" + filepath
+        headers = {
+            "Authorization": "token " + GH_TOKEN,
+            "Accept": "application/vnd.github.v3+json",
+        }
+        # Recupera SHA attuale (necessario per aggiornare file esistente)
+        sha = None
+        resp = requests.get(api_url, headers=headers, timeout=10)
+        if resp.status_code == 200:
+            sha = resp.json().get("sha")
 
-    while True:
-        prossimo = ultimo + 1
-        print("[INFO] Provo ricorso " + str(ANNO_NUOVI) + "/" + str(prossimo) + "...")
-        html = fetch_ricorso(ANNO_NUOVI, prossimo)
-        if html is None:
-            print("[INFO] Ricorso " + str(ANNO_NUOVI) + "/" + str(prossimo) + " non trovato - stop")
-            break
-        dettagli = estrai_dettagli(html, ANNO_NUOVI, prossimo)
-        trovati.append(dettagli)
-        print("[INFO] Trovato nuovo ricorso " + str(ANNO_NUOVI) + "/" + str(prossimo) + "!")
-        ultimo = prossimo
+        payload = {
+            "message": "Aggiorna " + filepath,
+            "content": contenuto,
+        }
+        if sha:
+            payload["sha"] = sha
 
-    if trovati:
-        stato["ultimo_numero"] = ultimo
-        ora = ora_locale().strftime("%d/%m/%Y %H:%M")
-        for d in trovati:
-            msg = "🆕 TAR Friuli - Nuovo ricorso\nRilevato il " + ora + "\n\n"
-            msg += "NRG: " + d["nrg"] + " | Sezione: " + d["sezione"] + "\n"
-            msg += "Data deposito: " + d["data_deposito"] + "\n"
-            msg += "Tipo: " + d["tipo_ricorso"] + "\n"
-            msg += "Oggetto: " + d["oggetto"] + "\n"
-            invia_telegram(msg)
-
-    return stato
-
-
-def controlla_variazioni_ricorso(stato, anno, numero):
-    print("[INFO] Controllo variazioni ricorso " + str(anno) + "/" + str(numero) + "...")
-    html = fetch_ricorso(anno, numero)
-    if html is None:
-        print("[WARN] Impossibile recuperare ricorso " + str(anno) + "/" + str(numero))
-        return stato, False
-
-    dettagli_nuovi = estrai_dettagli(html, anno, numero)
-    chiave = str(anno) + "_" + str(numero)
-
-    if chiave not in stato["ricorsi_monitorati"]:
-        stato["ricorsi_monitorati"][chiave] = dettagli_nuovi
-        print("[INFO] Ricorso " + str(anno) + "/" + str(numero) + ": stato iniziale salvato")
-        return stato, False
-
-    dettagli_vecchi = stato["ricorsi_monitorati"][chiave]
-    differenze = confronta_dettagli(dettagli_vecchi, dettagli_nuovi)
-
-    if differenze:
-        ora = ora_locale().strftime("%d/%m/%Y %H:%M")
-        msg = "🔔 TAR Friuli - Variazione ricorso " + str(anno) + "/" + str(numero) + "\nRilevata il " + ora + "\n\n"
-        msg += "\n\n".join(differenze)
-        invia_telegram(msg)
-        stato["ricorsi_monitorati"][chiave] = dettagli_nuovi
-        print("[INFO] Ricorso " + str(anno) + "/" + str(numero) + ": " + str(len(differenze)) + " variazioni trovate")
-        return stato, True
-    else:
-        print("[INFO] Ricorso " + str(anno) + "/" + str(numero) + ": nessuna variazione")
-
-    return stato, False
+        resp = requests.put(api_url, headers=headers, json=payload, timeout=15)
+        if resp.status_code in (200, 201):
+            print("[OK] " + filepath + " pubblicato su GitHub")
+        elif resp.status_code in (409, 422):
+            # SHA conflict: ri-scarica SHA aggiornato e riprova una volta
+            print("[WARN] SHA conflict, retry...")
+            resp2 = requests.get(api_url, headers=headers, timeout=10)
+            if resp2.status_code == 200:
+                payload["sha"] = resp2.json().get("sha")
+                resp3 = requests.put(api_url, headers=headers, json=payload, timeout=15)
+                if resp3.status_code in (200, 201):
+                    print("[OK] " + filepath + " pubblicato su GitHub (retry OK)")
+                else:
+                    print("[ERRORE] GitHub API retry: " + str(resp3.status_code) + " " + resp3.text[:200])
+            else:
+                print("[ERRORE] SHA retry GET: " + str(resp2.status_code))
+        else:
+            print("[ERRORE] GitHub API: " + str(resp.status_code) + " " + resp.text[:200])
+    except Exception as e:
+        print("[ERRORE] pubblica_su_github: " + str(e))
 
 
 def main():
-    print("[INFO] Avvio controllo ricorsi: " + ora_locale().strftime("%d/%m/%Y %H:%M"))
+    print("[INFO] Avvio controllo provvedimenti: " + ora_locale().strftime("%d/%m/%Y %H:%M"))
+    stato = carica_stato()
 
     if not inizializza_sessione():
         print("[ERRORE] Impossibile connettersi al sito")
         return
 
-    stato = carica_stato()
+    prov_collegiali = fetch_provvedimenti("COLLEGIALE")
+    nuovi_collegiali = controlla_nuovi(prov_collegiali, stato["collegiale"])
+    if nuovi_collegiali:
+        invia_telegram(formatta_messaggio("COLLEGIALI", nuovi_collegiali))
 
-    stato = controlla_nuovi_ricorsi(stato)
+    prov_monocratici = fetch_provvedimenti("MONOCRATICO")
+    nuovi_monocratici = controlla_nuovi(prov_monocratici, stato["monocratico"])
+    if nuovi_monocratici:
+        invia_telegram(formatta_messaggio("MONOCRATICI", nuovi_monocratici))
 
-    ha_variazioni = False
-    for anno, numero in RICORSI_DA_MONITORARE:
-        stato, variato = controlla_variazioni_ricorso(stato, anno, numero)
-        if variato:
-            ha_variazioni = True
+    if prov_collegiali:
+        stato["collegiale"] = estrai_ids(prov_collegiali)
+    if prov_monocratici:
+        stato["monocratico"] = estrai_ids(prov_monocratici)
 
     salva_stato(stato)
 
     # Aggiorna dashboard
-    aggiorna_dashboard(stato, ha_variazioni)
+    ha_variazioni = bool(nuovi_collegiali or nuovi_monocratici)
+    aggiorna_dashboard(prov_collegiali, prov_monocratici, ha_variazioni)
 
-    print("[INFO] Fine controllo ricorsi")
+    print("[INFO] Fine. Nuovi: " + str(len(nuovi_collegiali)) + " collegiali, " + str(len(nuovi_monocratici)) + " monocratici")
 
 
 if __name__ == "__main__":
