@@ -45,7 +45,8 @@
       "parti": [
         "APPELLANTE | 06/03/2026 | ",
         "APPELLATO | 10/03/2026 | ",
-        "APPELLATO | 11/03/2026 | "
+        "APPELLATO | 11/03/2026 | ",
+        "ALTRE PARTI NON RITUALI |  | "
       ],
       "atti": [
         "ISTANZA DI FISSAZIONE UDIENZA | 2026001834 | APPELLANTE | 06/03/2026",
@@ -62,7 +63,9 @@
       "discussioni": [
         "17/03/2026 | CAMERA DI CONSIGLIO | DISCUSSO | BRUNELLA BRUNO | Giudizio Cautelare | 33"
       ],
-      "provvedimenti_collegiali": [],
+      "provvedimenti_collegiali": [
+        "ORDINANZA CAUTELARE | BRUNO BRUNELLA | 18/03/2026 | 17/03/2026 | CC | RESPINGE"
+      ],
       "provvedimenti_monocratici": [
         "DECRETO CAUTELARE | CONTESSA CLAUDIO | 13/03/2026 | RESPINGE",
         "DECRETO CAUTELARE | LIPARI MARCO | 07/03/2026 | ACCOGLIE"
