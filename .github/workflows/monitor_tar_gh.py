@@ -276,18 +276,8 @@ def aggiorna_dashboard(prov_collegiali, prov_monocratici, ha_variazioni=False):
     """Accumula i provvedimenti in modo cumulativo: non cancella mai i vecchi."""
     # Prima scarica da GitHub per avere i dati già accumulati
     dati = carica_dashboard_da_github()
-    # Se c'è anche un file locale (scritto da monitor_ricorsi_gh.py), uniscili
-    if os.path.exists(DASHBOARD_FILE):
-        try:
-            with open(DASHBOARD_FILE, "r", encoding="utf-8") as f:
-                dati_locali = json.load(f)
-            # Mantieni i campi ricorsi scritti dagli altri script
-            for k in ["ricorsi_monitorati", "cds_ricorsi_monitorati",
-                      "ultimo_ricorso", "anno_nuovi", "ultima_variazione"]:
-                if k in dati_locali and k not in dati:
-                    dati[k] = dati_locali[k]
-        except Exception:
-            pass
+    # Le chiavi scritte dagli altri script sono già in 'dati' (scaricato da GitHub).
+    # Non serve leggere file locali: in GitHub Actions non sono affidabili.
 
     ora_str = ora_locale().strftime("%d/%m/%Y %H:%M")
     dati["ultimo_aggiornamento"] = ora_str
