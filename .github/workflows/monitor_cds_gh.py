@@ -250,10 +250,31 @@ def pubblica_su_github(filepath):
         print("[CdS ERRORE] pubblica_su_github: " + str(e))
 
 
+def scarica_dashboard_da_github():
+    """Scarica dashboard_data.json da GitHub per avere sempre la versione più aggiornata."""
+    if not GH_TOKEN or not GH_REPO:
+        return {}
+    try:
+        api_url = "https://api.github.com/repos/" + GH_REPO + "/contents/" + DASHBOARD_FILE
+        headers = {"Authorization": "token " + GH_TOKEN, "Accept": "application/vnd.github.v3+json"}
+        resp = requests.get(api_url, headers=headers, timeout=10)
+        if resp.status_code == 200:
+            contenuto = base64.b64decode(resp.json()["content"]).decode("utf-8")
+            dati = json.loads(contenuto)
+            print("[CdS INFO] dashboard scaricato da GitHub: " +
+                  str(len(dati.get("provvedimenti_collegiali",[]))) + " coll, " +
+                  str(len(dati.get("provvedimenti_monocratici",[]))) + " mono")
+            return dati
+    except Exception as e:
+        print("[CdS WARN] Impossibile scaricare dashboard: " + str(e))
+    return {}
+
 def aggiorna_dashboard(stato, ha_variazioni=False):
-    """Aggiunge i dati CdS al dashboard_data.json esistente."""
-    dati = {}
-    if os.path.exists(DASHBOARD_FILE):
+    """Scarica da GitHub, aggiunge i dati CdS, risalva."""
+    # Scarica sempre da GitHub per non perdere i provvedimenti scritti da monitor_tar_gh.py
+    dati = scarica_dashboard_da_github()
+    # Fallback: legge il file locale se GitHub non risponde
+    if not dati and os.path.exists(DASHBOARD_FILE):
         try:
             with open(DASHBOARD_FILE, "r", encoding="utf-8") as f:
                 dati = json.load(f)
