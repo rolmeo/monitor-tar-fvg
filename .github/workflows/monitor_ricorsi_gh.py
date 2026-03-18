@@ -365,6 +365,40 @@ def aggiorna_dashboard(stato, ha_variazioni=False):
         except Exception:
             dati = {}
 
+    # Se provvedimenti mancano (ritardo API GitHub), li recupera da tar_stato.json
+    if not dati.get("provvedimenti_collegiali") and not dati.get("provvedimenti_monocratici"):
+        try:
+            api_url = "https://api.github.com/repos/" + GH_REPO + "/contents/tar_stato.json"
+            headers = {"Authorization": "token " + GH_TOKEN, "Accept": "application/vnd.github.v3+json"}
+            resp = requests.get(api_url, headers=headers, timeout=10)
+            if resp.status_code == 200:
+                stato_tar = json.loads(base64.b64decode(resp.json()["content"]).decode("utf-8"))
+                coll = stato_tar.get("provvedimenti_collegiali", [])
+                mono = stato_tar.get("provvedimenti_monocratici", [])
+                if coll or mono:
+                    dati["provvedimenti_collegiali"] = coll
+                    dati["provvedimenti_monocratici"] = mono
+                    print("[INFO] Provvedimenti recuperati da tar_stato.json (" +
+                          str(len(coll)) + " coll, " + str(len(mono)) + " mono)")
+        except Exception as e:
+            print("[WARN] Impossibile recuperare tar_stato.json: " + str(e))
+
+    # Se cds_ricorsi_monitorati manca, lo recupera da cds_ricorsi_stato.json
+    if not dati.get("cds_ricorsi_monitorati"):
+        try:
+            api_url = "https://api.github.com/repos/" + GH_REPO + "/contents/cds_ricorsi_stato.json"
+            headers = {"Authorization": "token " + GH_TOKEN, "Accept": "application/vnd.github.v3+json"}
+            resp = requests.get(api_url, headers=headers, timeout=10)
+            if resp.status_code == 200:
+                stato_cds = json.loads(base64.b64decode(resp.json()["content"]).decode("utf-8"))
+                ricorsi_cds = list(stato_cds.get("ricorsi_monitorati", {}).values())
+                if ricorsi_cds:
+                    dati["cds_ricorsi_monitorati"] = ricorsi_cds
+                    print("[INFO] cds_ricorsi_monitorati recuperato da cds_ricorsi_stato.json (" +
+                          str(len(ricorsi_cds)) + " ricorsi)")
+        except Exception as e:
+            print("[WARN] Impossibile recuperare cds_ricorsi_stato.json: " + str(e))
+
     ora_str = ora_locale().strftime("%d/%m/%Y %H:%M")
     dati["ultimo_aggiornamento"] = ora_str
     dati["ultimo_controllo"] = ora_str
