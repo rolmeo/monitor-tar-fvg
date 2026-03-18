@@ -382,6 +382,7 @@ def controlla_variazioni_ricorso(stato, anno, numero):
         print("[CdS] Ricorso " + str(anno) + "/" + str(numero) + ": " + str(len(differenze)) + " variazioni trovate")
         return stato, True
     else:
+        stato["ricorsi_monitorati"][chiave] = dettagli_nuovi
         print("[CdS] Ricorso " + str(anno) + "/" + str(numero) + ": nessuna variazione")
 
     return stato, False
