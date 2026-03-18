@@ -330,6 +330,25 @@ def aggiorna_dashboard(stato, ha_variazioni=False):
         except Exception:
             dati = {}
 
+    # Se provvedimenti mancano (ritardo API GitHub), li recupera da tar_stato.json
+    if not dati.get("provvedimenti_collegiali") and not dati.get("provvedimenti_monocratici"):
+        try:
+            api_url = "https://api.github.com/repos/" + GH_REPO + "/contents/tar_stato.json"
+            headers = {"Authorization": "token " + GH_TOKEN, "Accept": "application/vnd.github.v3+json"}
+            resp = requests.get(api_url, headers=headers, timeout=10)
+            if resp.status_code == 200:
+                import base64 as _b64
+                stato_tar = json.loads(_b64.b64decode(resp.json()["content"]).decode("utf-8"))
+                coll = stato_tar.get("provvedimenti_collegiali", [])
+                mono = stato_tar.get("provvedimenti_monocratici", [])
+                if coll or mono:
+                    dati["provvedimenti_collegiali"] = coll
+                    dati["provvedimenti_monocratici"] = mono
+                    print("[CdS INFO] Provvedimenti recuperati da tar_stato.json (" +
+                          str(len(coll)) + " coll, " + str(len(mono)) + " mono)")
+        except Exception as e:
+            print("[CdS WARN] Impossibile recuperare tar_stato.json: " + str(e))
+
     ora_str = ora_locale().strftime("%d/%m/%Y %H:%M")
     dati["ultimo_aggiornamento"] = ora_str
     dati["ultimo_controllo"]     = ora_str
@@ -382,7 +401,6 @@ def controlla_variazioni_ricorso(stato, anno, numero):
         print("[CdS] Ricorso " + str(anno) + "/" + str(numero) + ": " + str(len(differenze)) + " variazioni trovate")
         return stato, True
     else:
-        stato["ricorsi_monitorati"][chiave] = dettagli_nuovi
         print("[CdS] Ricorso " + str(anno) + "/" + str(numero) + ": nessuna variazione")
 
     return stato, False
