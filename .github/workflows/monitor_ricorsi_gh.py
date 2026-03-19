@@ -484,6 +484,7 @@ def controlla_variazioni_ricorso(stato, anno, numero):
         msg = "🔔 TAR Friuli - Variazione ricorso " + str(anno) + "/" + str(numero) + "\nRilevata il " + ora + "\n\n"
         msg += "\n\n".join(differenze)
         invia_telegram(msg)
+        dettagli_nuovi["data_rilevazione"] = ora
         stato["ricorsi_monitorati"][chiave] = dettagli_nuovi
         print("[INFO] Ricorso " + str(anno) + "/" + str(numero) + ": " + str(len(differenze)) + " variazioni trovate")
         return stato, True
