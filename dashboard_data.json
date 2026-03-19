@@ -818,11 +818,13 @@
         "RESISTENTE |  | ",
         "RESISTENTE |  | ",
         "CONTROINTERESSATO | 13/03/2026 | ",
-        "RESISTENTE | 16/03/2026 | "
+        "RESISTENTE | 16/03/2026 | ",
+        "ALTRE PARTI NON RITUALI |  | "
       ],
       "atti": [
         "ISTANZA DI FISSAZIONE UDIENZA | 2026000116 | RICORRENTE PRINCIPALE | 12/03/2026",
         "ATTO DI COSTITUZIONE | 2026001100 | CONTROINTERESSATO | 13/03/2026",
+        "ISTANZA DI ACCESSO AL FASCICOLO TELEMATICO DELLA PARTE NON COSTITUITA | 2026001163 | ALTRE PARTI NON RITUALI | 19/03/2026",
         "RICORSO | 2026001097 | RICORRENTE PRINCIPALE | 12/03/2026",
         "ATTO DI COSTITUZIONE | 2026001112 | AMMINISTRAZIONE INTIMATA | 16/03/2026"
       ],
@@ -833,8 +835,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "19/03/2026 14:55",
-  "ultimo_controllo": "19/03/2026 14:55",
+  "ultimo_aggiornamento": "19/03/2026 15:00",
+  "ultimo_controllo": "19/03/2026 15:00",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
