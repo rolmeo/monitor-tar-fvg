@@ -30,7 +30,7 @@
         "DOCUMENTI | 2026000825 | RICORRENTE PRINCIPALE | 20/02/2026"
       ],
       "discussioni": [
-        "24/03/2026 | CAMERA DI CONSIGLIO |  | DANIELE BUSICO | Giudizio Cautelare | "
+        "24/03/2026 | CAMERA DI CONSIGLIO |  | DANIELE BUSICO | Giudizio Cautelare | 3"
       ],
       "provvedimenti_collegiali": [],
       "provvedimenti_monocratici": [
@@ -62,7 +62,7 @@
         "DOCUMENTI | 2026000935 | RICORRENTE PRINCIPALE | 02/03/2026"
       ],
       "discussioni": [
-        "24/03/2026 | CAMERA DI CONSIGLIO |  | CLAUDIA MICELLI | Giudizio Cautelare | "
+        "24/03/2026 | CAMERA DI CONSIGLIO |  | CLAUDIA MICELLI | Giudizio Cautelare | 6"
       ],
       "provvedimenti_collegiali": [],
       "provvedimenti_monocratici": [
@@ -142,19 +142,19 @@
         "ALTRE PARTI NON RITUALI |  | "
       ],
       "atti": [
-        "ISTANZA DI ACCESSO AL FASCICOLO TELEMATICO DELLA PARTE NON COSTITUITA | 2026000602 | ALTRE PARTI NON RITUALI | 04/02/2026",
-        "RICORSO | 2026000598 | RICORRENTE PRINCIPALE | 04/02/2026",
-        "ISTANZA DI FISSAZIONE UDIENZA | 2026000066 | RICORRENTE PRINCIPALE | 04/02/2026",
-        "DOCUMENTI | 2026000889 | RICORRENTE INCIDENTALE | 24/02/2026",
-        "ATTO DI COSTITUZIONE | 2026000974 | AMMINISTRAZIONE INTIMATA | 03/03/2026",
+        "MEMORIA | 2026000822 | AMMINISTRAZIONE INTIMATA | 20/02/2026",
+        "ATTO DI COSTITUZIONE | 2026000719 | AMMINISTRAZIONE INTIMATA | 13/02/2026",
         "RICORSO INCIDENTALE | 2026000792 | RICORRENTE INCIDENTALE | 19/02/2026",
         "DOCUMENTI | 2026000599 | RICORRENTE PRINCIPALE | 04/02/2026",
+        "ISTANZA DI ACCESSO AL FASCICOLO TELEMATICO DELLA PARTE NON COSTITUITA | 2026000602 | ALTRE PARTI NON RITUALI | 04/02/2026",
         "CONTRIBUTO UNIFICATO | 2026000670 | RICORRENTE PRINCIPALE | 09/02/2026",
-        "MEMORIA | 2026000822 | AMMINISTRAZIONE INTIMATA | 20/02/2026",
-        "ATTO DI COSTITUZIONE | 2026000719 | AMMINISTRAZIONE INTIMATA | 13/02/2026"
+        "DOCUMENTI | 2026000889 | RICORRENTE INCIDENTALE | 24/02/2026",
+        "RICORSO | 2026000598 | RICORRENTE PRINCIPALE | 04/02/2026",
+        "ISTANZA DI FISSAZIONE UDIENZA | 2026000066 | RICORRENTE PRINCIPALE | 04/02/2026",
+        "ATTO DI COSTITUZIONE | 2026000974 | AMMINISTRAZIONE INTIMATA | 03/03/2026"
       ],
       "discussioni": [
-        "24/03/2026 | CAMERA DI CONSIGLIO |  | MANUELA SINIGOI | Giudizio Cautelare | ",
+        "24/03/2026 | CAMERA DI CONSIGLIO |  | MANUELA SINIGOI | Giudizio Cautelare | 5",
         "24/02/2026 | CAMERA DI CONSIGLIO | RINVIO AD ALTRA DATA | MANUELA SINIGOI | Giudizio Cautelare | 15"
       ],
       "provvedimenti_collegiali": [],
@@ -365,7 +365,7 @@
         "RICORSO | 2026001015 | RICORRENTE PRINCIPALE | 05/03/2026"
       ],
       "discussioni": [
-        "24/03/2026 | CAMERA DI CONSIGLIO |  | MANUELA SINIGOI | Giudizio Cautelare | "
+        "24/03/2026 | CAMERA DI CONSIGLIO |  | MANUELA SINIGOI | Giudizio Cautelare | 1"
       ],
       "provvedimenti_collegiali": [],
       "provvedimenti_monocratici": []
@@ -392,7 +392,7 @@
         "ATTO DI COSTITUZIONE | 2026001086 | CONTROINTERESSATO | 11/03/2026"
       ],
       "discussioni": [
-        "24/03/2026 | CAMERA DI CONSIGLIO |  | DANIELE BUSICO | Giudizio Cautelare | "
+        "24/03/2026 | CAMERA DI CONSIGLIO |  | DANIELE BUSICO | Giudizio Cautelare | 2"
       ],
       "provvedimenti_collegiali": [],
       "provvedimenti_monocratici": []
@@ -827,7 +827,7 @@
         "ATTO DI COSTITUZIONE | 2026001112 | AMMINISTRAZIONE INTIMATA | 16/03/2026"
       ],
       "discussioni": [
-        "24/03/2026 | CAMERA DI CONSIGLIO |  | MANUELA SINIGOI | Giudizio Cautelare | "
+        "24/03/2026 | CAMERA DI CONSIGLIO |  | MANUELA SINIGOI | Giudizio Cautelare | 4"
       ],
       "provvedimenti_collegiali": [],
       "provvedimenti_monocratici": []
@@ -983,5 +983,6 @@
       "esito": "ACCOGLIE  FISSA CAMERA DI CONSIGLIO    ",
       "nomeFile": "202600034_06.xml"
     }
-  ]
+  ],
+  "ultima_variazione": "19/03/2026 08:13"
 }
