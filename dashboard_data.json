@@ -233,7 +233,8 @@
         "MEMORIA | 2026000114 | AMMINISTRAZIONE INTIMATA | 09/01/2026",
         "DOCUMENTI | 2026001095 | AMMINISTRAZIONE INTIMATA | 12/03/2026",
         "MOTIVI AGGIUNTI | 2026000995 | RICORRENTE PRINCIPALE | 04/03/2026",
-        "CONTRIBUTO UNIFICATO | 2026001141 | RICORRENTE PRINCIPALE | 18/03/2026"
+        "CONTRIBUTO UNIFICATO | 2026001141 | RICORRENTE PRINCIPALE | 18/03/2026",
+        "MEMORIA | 2026001180 | AMMINISTRAZIONE INTIMATA | 20/03/2026"
       ],
       "discussioni": [
         "22/04/2026 | UDIENZA PUBBLICA |  | DA ASSEGNARE MAGISTRATO | Merito | ",
@@ -835,8 +836,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "20/03/2026 10:15",
-  "ultimo_controllo": "20/03/2026 10:15",
+  "ultimo_aggiornamento": "20/03/2026 10:20",
+  "ultimo_controllo": "20/03/2026 10:20",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
