@@ -485,6 +485,14 @@ def controlla_variazioni_ricorso(stato, anno, numero):
         msg += "\n\n".join(differenze)
         invia_telegram(msg)
         dettagli_nuovi["data_rilevazione"] = ora
+        # Salva timestamp per ogni singolo evento nuovo (per ordinamento preciso nel feed)
+        ts_eventi = dict(dettagli_vecchi.get("ts_eventi", {}))
+        for sezione in ["atti", "discussioni", "provvedimenti_collegiali", "provvedimenti_monocratici"]:
+            vecchi_set = set(dettagli_vecchi.get(sezione, []))
+            for item in dettagli_nuovi.get(sezione, []):
+                if item not in vecchi_set:
+                    ts_eventi[item] = ora
+        dettagli_nuovi["ts_eventi"] = ts_eventi
         stato["ricorsi_monitorati"][chiave] = dettagli_nuovi
         print("[INFO] Ricorso " + str(anno) + "/" + str(numero) + ": " + str(len(differenze)) + " variazioni trovate")
         return stato, True
