@@ -367,6 +367,7 @@
       ],
       "atti": [
         "ATTO DI COSTITUZIONE | 2026001075 | AMMINISTRAZIONE INTIMATA | 10/03/2026",
+        "MEMORIA | 2026001200 | CONTROINTERESSATO | 20/03/2026",
         "ISTANZA DI FISSAZIONE UDIENZA | 2026000110 | RICORRENTE PRINCIPALE | 05/03/2026",
         "ATTO DI COSTITUZIONE | 2026001054 | CONTROINTERESSATO | 09/03/2026",
         "RICORSO | 2026001015 | RICORRENTE PRINCIPALE | 05/03/2026"
@@ -375,7 +376,8 @@
         "24/03/2026 | CAMERA DI CONSIGLIO |  | MANUELA SINIGOI | Giudizio Cautelare | 1"
       ],
       "provvedimenti_collegiali": [],
-      "provvedimenti_monocratici": []
+      "provvedimenti_monocratici": [],
+      "data_rilevazione": "20/03/2026 13:30"
     },
     "2026_121": {
       "nrg": "2026000121",
@@ -399,6 +401,7 @@
         "ATTO DI INTERVENTO AD OPPONENDUM | 2026001197 | INTERVENIENTE OPPONENDUM | 20/03/2026",
         "ATTO DI COSTITUZIONE | 2026001076 | AMMINISTRAZIONE INTIMATA | 10/03/2026",
         "ISTANZA DI ACCESSO AL FASCICOLO TELEMATICO DELLA PARTE NON COSTITUITA | 2026001078 | ALTRE PARTI NON RITUALI | 10/03/2026",
+        "MEMORIA | 2026001201 | AMMINISTRAZIONE INTIMATA | 20/03/2026",
         "RICORSO | 2026001024 | RICORRENTE PRINCIPALE | 06/03/2026",
         "ATTO DI COSTITUZIONE | 2026001086 | CONTROINTERESSATO | 11/03/2026"
       ],
@@ -407,7 +410,7 @@
       ],
       "provvedimenti_collegiali": [],
       "provvedimenti_monocratici": [],
-      "data_rilevazione": "20/03/2026 12:53"
+      "data_rilevazione": "20/03/2026 13:30"
     },
     "2026_123": {
       "nrg": "2026000123",
