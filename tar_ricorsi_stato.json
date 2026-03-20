@@ -372,6 +372,7 @@
         "MEMORIA | 2026001200 | CONTROINTERESSATO | 20/03/2026",
         "ISTANZA DI FISSAZIONE UDIENZA | 2026000110 | RICORRENTE PRINCIPALE | 05/03/2026",
         "ATTO DI COSTITUZIONE | 2026001054 | CONTROINTERESSATO | 09/03/2026",
+        "MEMORIA | 2026001211 | AMMINISTRAZIONE INTIMATA | 20/03/2026",
         "RICORSO | 2026001015 | RICORRENTE PRINCIPALE | 05/03/2026"
       ],
       "discussioni": [
@@ -379,7 +380,7 @@
       ],
       "provvedimenti_collegiali": [],
       "provvedimenti_monocratici": [],
-      "data_rilevazione": "20/03/2026 13:30"
+      "data_rilevazione": "20/03/2026 18:25"
     },
     "2026_121": {
       "nrg": "2026000121",
