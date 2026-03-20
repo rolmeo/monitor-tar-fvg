@@ -151,7 +151,8 @@
         "DOCUMENTI | 2026000889 | RICORRENTE INCIDENTALE | 24/02/2026",
         "RICORSO | 2026000598 | RICORRENTE PRINCIPALE | 04/02/2026",
         "ISTANZA DI FISSAZIONE UDIENZA | 2026000066 | RICORRENTE PRINCIPALE | 04/02/2026",
-        "ATTO DI COSTITUZIONE | 2026000974 | AMMINISTRAZIONE INTIMATA | 03/03/2026"
+        "ATTO DI COSTITUZIONE | 2026000974 | AMMINISTRAZIONE INTIMATA | 03/03/2026",
+        "MEMORIA | 2026001183 | RICORRENTE PRINCIPALE | 20/03/2026"
       ],
       "discussioni": [
         "24/03/2026 | CAMERA DI CONSIGLIO |  | MANUELA SINIGOI | Giudizio Cautelare | 5",
@@ -836,8 +837,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "20/03/2026 11:15",
-  "ultimo_controllo": "20/03/2026 11:15",
+  "ultimo_aggiornamento": "20/03/2026 11:20",
+  "ultimo_controllo": "20/03/2026 11:20",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
