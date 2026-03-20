@@ -833,6 +833,9 @@
         "RESISTENTE |  | ",
         "CONTROINTERESSATO | 13/03/2026 | ",
         "RESISTENTE | 16/03/2026 | ",
+        "ALTRE PARTI NON RITUALI |  | ",
+        "ALTRE PARTI NON RITUALI |  | ",
+        "ALTRE PARTI NON RITUALI |  | ",
         "ALTRE PARTI NON RITUALI |  | "
       ],
       "atti": [
@@ -840,6 +843,7 @@
         "ATTO DI COSTITUZIONE | 2026001100 | CONTROINTERESSATO | 13/03/2026",
         "ISTANZA DI ACCESSO AL FASCICOLO TELEMATICO DELLA PARTE NON COSTITUITA | 2026001163 | ALTRE PARTI NON RITUALI | 19/03/2026",
         "RICORSO | 2026001097 | RICORRENTE PRINCIPALE | 12/03/2026",
+        "DICHIARAZIONE DI RINUNZIA ALLA MISURA CAUTELARE | 2026001208 | RICORRENTE PRINCIPALE | 20/03/2026",
         "ATTO DI COSTITUZIONE | 2026001112 | AMMINISTRAZIONE INTIMATA | 16/03/2026"
       ],
       "discussioni": [
@@ -849,8 +853,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "20/03/2026 17:05",
-  "ultimo_controllo": "20/03/2026 17:05",
+  "ultimo_aggiornamento": "20/03/2026 17:10",
+  "ultimo_controllo": "20/03/2026 17:10",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
