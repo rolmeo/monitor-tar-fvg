@@ -142,6 +142,7 @@
       ],
       "atti": [
         "MEMORIA | 2026000822 | AMMINISTRAZIONE INTIMATA | 20/02/2026",
+        "MEMORIA | 2026001194 | AMMINISTRAZIONE INTIMATA | 20/03/2026",
         "ATTO DI COSTITUZIONE | 2026000719 | AMMINISTRAZIONE INTIMATA | 13/02/2026",
         "RICORSO INCIDENTALE | 2026000792 | RICORRENTE INCIDENTALE | 19/02/2026",
         "DOCUMENTI | 2026000599 | RICORRENTE PRINCIPALE | 04/02/2026",
@@ -159,7 +160,7 @@
       ],
       "provvedimenti_collegiali": [],
       "provvedimenti_monocratici": [],
-      "data_rilevazione": "20/03/2026 11:55"
+      "data_rilevazione": "20/03/2026 12:27"
     },
     "2026_51": {
       "nrg": "2026000051",
@@ -765,6 +766,7 @@
         "CONTRIBUTO UNIFICATO | 2025002520 | RICORRENTE PRINCIPALE | 04/09/2025",
         "ATTO DI COSTITUZIONE | 2025003815 | AMMINISTRAZIONE INTIMATA | 13/12/2025",
         "MEMORIA | 2026000107 | AMMINISTRAZIONE INTIMATA | 09/01/2026",
+        "MEMORIA | 2026001193 | AMMINISTRAZIONE INTIMATA | 20/03/2026",
         "ISTANZA DI RINVIO | 2026000518 | RICORRENTE PRINCIPALE | 29/01/2026"
       ],
       "discussioni": [
@@ -772,7 +774,8 @@
         "09/02/2026 | UDIENZA PUBBLICA | RINVIO AD ALTRA DATA | MANUELA SINIGOI | Merito | 13"
       ],
       "provvedimenti_collegiali": [],
-      "provvedimenti_monocratici": []
+      "provvedimenti_monocratici": [],
+      "data_rilevazione": "20/03/2026 12:27"
     },
     "2025_405": {
       "nrg": "2025000405",
