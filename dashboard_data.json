@@ -143,6 +143,7 @@
       ],
       "atti": [
         "MEMORIA | 2026000822 | AMMINISTRAZIONE INTIMATA | 20/02/2026",
+        "MEMORIA | 2026001194 | AMMINISTRAZIONE INTIMATA | 20/03/2026",
         "ATTO DI COSTITUZIONE | 2026000719 | AMMINISTRAZIONE INTIMATA | 13/02/2026",
         "RICORSO INCIDENTALE | 2026000792 | RICORRENTE INCIDENTALE | 19/02/2026",
         "DOCUMENTI | 2026000599 | RICORRENTE PRINCIPALE | 04/02/2026",
@@ -839,8 +840,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "20/03/2026 12:20",
-  "ultimo_controllo": "20/03/2026 12:20",
+  "ultimo_aggiornamento": "20/03/2026 12:25",
+  "ultimo_controllo": "20/03/2026 12:25",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
