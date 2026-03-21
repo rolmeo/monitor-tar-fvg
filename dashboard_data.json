@@ -403,6 +403,7 @@
         "ISTANZA DI ACCESSO AL FASCICOLO TELEMATICO DELLA PARTE NON COSTITUITA | 2026001078 | ALTRE PARTI NON RITUALI | 10/03/2026",
         "MEMORIA | 2026001201 | AMMINISTRAZIONE INTIMATA | 20/03/2026",
         "RICORSO | 2026001024 | RICORRENTE PRINCIPALE | 06/03/2026",
+        "MEMORIA | 2026001228 | CONTROINTERESSATO | 21/03/2026",
         "ATTO DI COSTITUZIONE | 2026001086 | CONTROINTERESSATO | 11/03/2026"
       ],
       "discussioni": [
@@ -854,8 +855,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "21/03/2026 09:05",
-  "ultimo_controllo": "21/03/2026 09:05",
+  "ultimo_aggiornamento": "21/03/2026 09:10",
+  "ultimo_controllo": "21/03/2026 09:10",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
