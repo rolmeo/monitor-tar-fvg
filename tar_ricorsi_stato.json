@@ -20,6 +20,7 @@
       "atti": [
         "DOCUMENTI | 2026000826 | RICORRENTE PRINCIPALE | 20/02/2026",
         "DOCUMENTI | 2026000824 | RICORRENTE PRINCIPALE | 20/02/2026",
+        "MEMORIA | 2026001230 | CONTROINTERESSATO | 21/03/2026",
         "ISTANZA DI FISSAZIONE UDIENZA | 2026000092 | RICORRENTE PRINCIPALE | 20/02/2026",
         "DOCUMENTI | 2026000830 | RICORRENTE PRINCIPALE | 20/02/2026",
         "DOMANDA DI MISURE CAUTELARI MONOCRATICHE ART.56 C.P.A. | 2026000876 | RICORRENTE PRINCIPALE | 23/02/2026",
@@ -34,7 +35,11 @@
       "provvedimenti_collegiali": [],
       "provvedimenti_monocratici": [
         "DECRETO CAUTELARE | MODICA DE MOHAC DI GRISI' CARLO | 25/02/2026 | ACCOGLIE FISSA CAMERA DI CONSIGLIO"
-      ]
+      ],
+      "data_rilevazione": "21/03/2026 09:29",
+      "ts_eventi": {
+        "MEMORIA | 2026001230 | CONTROINTERESSATO | 21/03/2026": "21/03/2026 09:29"
+      }
     },
     "2026_100": {
       "nrg": "2026000100",
@@ -406,6 +411,7 @@
         "ISTANZA DI ACCESSO AL FASCICOLO TELEMATICO DELLA PARTE NON COSTITUITA | 2026001078 | ALTRE PARTI NON RITUALI | 10/03/2026",
         "MEMORIA | 2026001201 | AMMINISTRAZIONE INTIMATA | 20/03/2026",
         "RICORSO | 2026001024 | RICORRENTE PRINCIPALE | 06/03/2026",
+        "MEMORIA | 2026001228 | CONTROINTERESSATO | 21/03/2026",
         "ATTO DI COSTITUZIONE | 2026001086 | CONTROINTERESSATO | 11/03/2026"
       ],
       "discussioni": [
@@ -413,7 +419,10 @@
       ],
       "provvedimenti_collegiali": [],
       "provvedimenti_monocratici": [],
-      "data_rilevazione": "20/03/2026 13:30"
+      "data_rilevazione": "21/03/2026 09:29",
+      "ts_eventi": {
+        "MEMORIA | 2026001228 | CONTROINTERESSATO | 21/03/2026": "21/03/2026 09:29"
+      }
     },
     "2026_123": {
       "nrg": "2026000123",
