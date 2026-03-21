@@ -61,6 +61,7 @@
       "atti": [
         "RICORSO | 2026000850 | RICORRENTE PRINCIPALE | 21/02/2026",
         "ATTO DI COSTITUZIONE | 2026000981 | CONTROINTERESSATO | 03/03/2026",
+        "MEMORIA | 2026001241 | RICORRENTE PRINCIPALE | 21/03/2026",
         "ATTO DI COSTITUZIONE | 2026000921 | AMMINISTRAZIONE INTIMATA | 27/02/2026",
         "DOMANDA DI MISURE CAUTELARI MONOCRATICHE ART.56 C.P.A. | 2026000932 | RICORRENTE PRINCIPALE | 27/02/2026",
         "MEMORIA | 2026001199 | AMMINISTRAZIONE INTIMATA | 20/03/2026",
@@ -77,7 +78,10 @@
       "provvedimenti_monocratici": [
         "DECRETO CAUTELARE | MODICA DE MOHAC DI GRISI' CARLO | 04/03/2026 | ACCOGLIE FISSA CAMERA DI CONSIGLIO"
       ],
-      "data_rilevazione": "20/03/2026 16:12"
+      "data_rilevazione": "21/03/2026 11:50",
+      "ts_eventi": {
+        "MEMORIA | 2026001241 | RICORRENTE PRINCIPALE | 21/03/2026": "21/03/2026 11:50"
+      }
     },
     {
       "nrg": "2026000080",
@@ -1029,5 +1033,5 @@
       "nomeFile": "202600034_06.xml"
     }
   ],
-  "ultima_variazione": "21/03/2026 11:24"
+  "ultima_variazione": "21/03/2026 11:50"
 }
