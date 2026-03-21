@@ -20,6 +20,7 @@
       ],
       "atti": [
         "DOCUMENTI | 2026000826 | RICORRENTE PRINCIPALE | 20/02/2026",
+        "MEMORIA | 2026001240 | RICORRENTE PRINCIPALE | 21/03/2026",
         "DOCUMENTI | 2026000824 | RICORRENTE PRINCIPALE | 20/02/2026",
         "MEMORIA | 2026001230 | CONTROINTERESSATO | 21/03/2026",
         "ISTANZA DI FISSAZIONE UDIENZA | 2026000092 | RICORRENTE PRINCIPALE | 20/02/2026",
@@ -37,9 +38,10 @@
       "provvedimenti_monocratici": [
         "DECRETO CAUTELARE | MODICA DE MOHAC DI GRISI' CARLO | 25/02/2026 | ACCOGLIE FISSA CAMERA DI CONSIGLIO"
       ],
-      "data_rilevazione": "21/03/2026 09:29",
+      "data_rilevazione": "21/03/2026 11:24",
       "ts_eventi": {
-        "MEMORIA | 2026001230 | CONTROINTERESSATO | 21/03/2026": "21/03/2026 09:29"
+        "MEMORIA | 2026001230 | CONTROINTERESSATO | 21/03/2026": "21/03/2026 09:29",
+        "MEMORIA | 2026001240 | RICORRENTE PRINCIPALE | 21/03/2026": "21/03/2026 11:24"
       }
     },
     {
@@ -1027,5 +1029,5 @@
       "nomeFile": "202600034_06.xml"
     }
   ],
-  "ultima_variazione": "21/03/2026 10:56"
+  "ultima_variazione": "21/03/2026 11:24"
 }
