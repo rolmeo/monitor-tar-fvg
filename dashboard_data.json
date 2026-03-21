@@ -251,7 +251,9 @@
         "22/04/2026 | UDIENZA PUBBLICA |  | DA ASSEGNARE MAGISTRATO | Merito | ",
         "13/01/2026 | CAMERA DI CONSIGLIO | DISCUSSO | CARLO MODICA DE MOHAC DI GRISI' | Giudizio Cautelare | 4"
       ],
-      "provvedimenti_collegiali": [],
+      "provvedimenti_collegiali": [
+        "ORDINANZA CAUTELARE | MODICA DE MOHAC DI GRISI' CARLO | 14/01/2026 | 13/01/2026 | CC | PRENDE ATTO RINUNZIA ALLA ISTANZA CAUTELARE FISSA UDIENZA PUBBLICA"
+      ],
       "provvedimenti_monocratici": []
     },
     {
@@ -449,7 +451,7 @@
       "oggetto": "AVVISO DI SELEZIONE PUBBLICA N. 3 PER L’AFFIDAMENTO DI UNA CONCESSIONE DEMANIALE MARITTIMA CON FINALITÀ TURISTICO-RICREATIVA SITA IN VIA LUNGOMARE TRIESTE, STAB. BALNEARE «GABBIANO», PUD N. 219 - AGGI",
       "parti": [
         "RICORRENTE | 13/03/2026 | ",
-        "RESISTENTE |  | ",
+        "RESISTENTE | 21/03/2026 | ",
         "CONTROINTERESSATO |  | ",
         "CONTROINTERESSATO |  | ",
         "CONTROINTERESSATO |  | ",
@@ -458,6 +460,7 @@
       "atti": [
         "ISTANZA DI FISSAZIONE UDIENZA | 2026000118 | RICORRENTE PRINCIPALE | 13/03/2026",
         "DOMANDA DI MISURE CAUTELARI MONOCRATICHE ART.56 C.P.A. | 2026001107 | RICORRENTE PRINCIPALE | 13/03/2026",
+        "ATTO DI COSTITUZIONE | 2026001245 | AMMINISTRAZIONE INTIMATA | 21/03/2026",
         "RICORSO | 2026001105 | RICORRENTE PRINCIPALE | 13/03/2026"
       ],
       "discussioni": [
@@ -859,8 +862,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "21/03/2026 14:10",
-  "ultimo_controllo": "21/03/2026 14:10",
+  "ultimo_aggiornamento": "21/03/2026 14:15",
+  "ultimo_controllo": "21/03/2026 14:15",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
