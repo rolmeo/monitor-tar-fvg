@@ -1013,6 +1013,37 @@
       "presidente": null,
       "esito": "ACCOGLIE  FISSA CAMERA DI CONSIGLIO    ",
       "nomeFile": "202600034_06.xml"
+    },
+    {
+      "nrgFascicolo": "202600122",
+      "sezione": "1",
+      "parte": null,
+      "tipoUdienza": null,
+      "dataUdienza": null,
+      "numProvvedimento": "202600006",
+      "dataPubblicazione": "23/03/2026",
+      "tipoProvvedimento": "GRATUITO PATROCINIO",
+      "codiceTipoProvvedimento": "40",
+      "relatore": "BUSICO DANIELE",
+      "presidente": null,
+      "esito": "ACCOGLIE      ",
+      "nomeFile": "202600006_40.xml"
+    },
+    {
+      "nrgFascicolo": "202600036",
+      "sezione": "1",
+      "parte": null,
+      "tipoUdienza": null,
+      "dataUdienza": null,
+      "numProvvedimento": "202600005",
+      "dataPubblicazione": "23/03/2026",
+      "tipoProvvedimento": "GRATUITO PATROCINIO",
+      "codiceTipoProvvedimento": "40",
+      "relatore": "BUSICO DANIELE",
+      "presidente": null,
+      "esito": "ACCOGLIE      ",
+      "nomeFile": "202600005_40.xml"
     }
-  ]
+  ],
+  "ultima_variazione": "24/03/2026 08:30"
 }
