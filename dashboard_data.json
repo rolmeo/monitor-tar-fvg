@@ -274,6 +274,7 @@
       ],
       "atti": [
         "DOCUMENTI | 2026000067 | AMMINISTRAZIONE INTIMATA | 07/01/2026",
+        "DOCUMENTI | 2026001299 | AMMINISTRAZIONE INTIMATA | 26/03/2026",
         "ISTANZA DI FISSAZIONE UDIENZA | 2025000672 | RICORRENTE PRINCIPALE | 19/12/2025",
         "ALTRO | 2026000169 | AMMINISTRAZIONE INTIMATA | 12/01/2026",
         "MEMORIA | 2026000134 | RICORRENTE PRINCIPALE | 09/01/2026",
@@ -865,8 +866,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "26/03/2026 11:45",
-  "ultimo_controllo": "26/03/2026 11:45",
+  "ultimo_aggiornamento": "26/03/2026 11:50",
+  "ultimo_controllo": "26/03/2026 11:50",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
