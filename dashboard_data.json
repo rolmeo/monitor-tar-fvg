@@ -386,9 +386,12 @@
         "RICORSO | 2026001015 | RICORRENTE PRINCIPALE | 05/03/2026"
       ],
       "discussioni": [
+        "18/11/2026 | UDIENZA PUBBLICA |  | DA ASSEGNARE MAGISTRATO | Merito | ",
         "24/03/2026 | CAMERA DI CONSIGLIO | DISCUSSO | MANUELA SINIGOI | Giudizio Cautelare | 1"
       ],
-      "provvedimenti_collegiali": [],
+      "provvedimenti_collegiali": [
+        "ORDINANZA CAUTELARE | SINIGOI MANUELA | 27/03/2026 | 24/03/2026 | CC | RESPINGE FISSA UDIENZA PUBBLICA"
+      ],
       "provvedimenti_monocratici": []
     },
     {
@@ -419,9 +422,12 @@
         "MEMORIA | 2026001201 | AMMINISTRAZIONE INTIMATA | 20/03/2026"
       ],
       "discussioni": [
+        "18/11/2026 | UDIENZA PUBBLICA |  | DA ASSEGNARE MAGISTRATO | Merito | ",
         "24/03/2026 | CAMERA DI CONSIGLIO | DISCUSSO | DANIELE BUSICO | Giudizio Cautelare | 2"
       ],
-      "provvedimenti_collegiali": [],
+      "provvedimenti_collegiali": [
+        "ORDINANZA CAUTELARE | BUSICO DANIELE | 27/03/2026 | 24/03/2026 | CC | RESPINGE FISSA UDIENZA PUBBLICA"
+      ],
       "provvedimenti_monocratici": []
     },
     {
@@ -869,8 +875,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "27/03/2026 07:55",
-  "ultimo_controllo": "27/03/2026 07:55",
+  "ultimo_aggiornamento": "27/03/2026 08:01",
+  "ultimo_controllo": "27/03/2026 08:01",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
