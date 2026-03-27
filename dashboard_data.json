@@ -165,10 +165,13 @@
         "ATTO DI COSTITUZIONE | 2026000719 | AMMINISTRAZIONE INTIMATA | 13/02/2026"
       ],
       "discussioni": [
+        "07/10/2026 | UDIENZA PUBBLICA |  | DA ASSEGNARE MAGISTRATO | Merito | ",
         "24/03/2026 | CAMERA DI CONSIGLIO | DISCUSSO | MANUELA SINIGOI | Giudizio Cautelare | 5",
         "24/02/2026 | CAMERA DI CONSIGLIO | RINVIO AD ALTRA DATA | MANUELA SINIGOI | Giudizio Cautelare | 15"
       ],
-      "provvedimenti_collegiali": [],
+      "provvedimenti_collegiali": [
+        "ORDINANZA CAUTELARE | SINIGOI MANUELA | 27/03/2026 | 24/03/2026 | CC | RESPINGE FISSA UDIENZA PUBBLICA"
+      ],
       "provvedimenti_monocratici": []
     },
     {
@@ -866,8 +869,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "27/03/2026 07:50",
-  "ultimo_controllo": "27/03/2026 07:50",
+  "ultimo_aggiornamento": "27/03/2026 07:55",
+  "ultimo_controllo": "27/03/2026 07:55",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
