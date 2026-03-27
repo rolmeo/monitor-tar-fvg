@@ -21,11 +21,11 @@
       "atti": [
         "RICORSO | 2026000823 | RICORRENTE PRINCIPALE | 20/02/2026",
         "DOCUMENTI | 2026001244 | AMMINISTRAZIONE INTIMATA | 21/03/2026",
-        "ISTANZA DI FISSAZIONE UDIENZA | 2026000092 | RICORRENTE PRINCIPALE | 20/02/2026",
+        "ALTRO | 2026001257 | RICORRENTE PRINCIPALE | 23/03/2026",
+        "MEMORIA | 2026001240 | RICORRENTE PRINCIPALE | 21/03/2026",
         "DOCUMENTI | 2026000824 | RICORRENTE PRINCIPALE | 20/02/2026",
         "DOCUMENTI | 2026000825 | RICORRENTE PRINCIPALE | 20/02/2026",
-        "MEMORIA | 2026001240 | RICORRENTE PRINCIPALE | 21/03/2026",
-        "ALTRO | 2026001257 | RICORRENTE PRINCIPALE | 23/03/2026",
+        "ISTANZA DI FISSAZIONE UDIENZA | 2026000092 | RICORRENTE PRINCIPALE | 20/02/2026",
         "MEMORIA | 2026001243 | AMMINISTRAZIONE INTIMATA | 21/03/2026",
         "ATTO DI COSTITUZIONE | 2026000873 | CONTROINTERESSATO | 23/02/2026",
         "DOCUMENTI | 2026000830 | RICORRENTE PRINCIPALE | 20/02/2026",
@@ -35,9 +35,12 @@
         "DOMANDA DI MISURE CAUTELARI MONOCRATICHE ART.56 C.P.A. | 2026000876 | RICORRENTE PRINCIPALE | 23/02/2026"
       ],
       "discussioni": [
+        "18/11/2026 | UDIENZA PUBBLICA |  | DA ASSEGNARE MAGISTRATO | Merito | ",
         "24/03/2026 | CAMERA DI CONSIGLIO | DISCUSSO | DANIELE BUSICO | Giudizio Cautelare | 3"
       ],
-      "provvedimenti_collegiali": [],
+      "provvedimenti_collegiali": [
+        "ORDINANZA CAUTELARE | BUSICO DANIELE | 27/03/2026 | 24/03/2026 | CC | RESPINGE FISSA UDIENZA PUBBLICA"
+      ],
       "provvedimenti_monocratici": [
         "DECRETO CAUTELARE | MODICA DE MOHAC DI GRISI' CARLO | 25/02/2026 | ACCOGLIE FISSA CAMERA DI CONSIGLIO"
       ]
@@ -71,9 +74,12 @@
         "MEMORIA | 2026001203 | CONTROINTERESSATO | 20/03/2026"
       ],
       "discussioni": [
+        "07/10/2026 | UDIENZA PUBBLICA |  | DA ASSEGNARE MAGISTRATO | Merito | ",
         "24/03/2026 | CAMERA DI CONSIGLIO | DISCUSSO | CLAUDIA MICELLI | Giudizio Cautelare | 6"
       ],
-      "provvedimenti_collegiali": [],
+      "provvedimenti_collegiali": [
+        "ORDINANZA CAUTELARE | MICELLI CLAUDIA | 27/03/2026 | 24/03/2026 | CC | RESPINGE FISSA UDIENZA PUBBLICA"
+      ],
       "provvedimenti_monocratici": [
         "DECRETO CAUTELARE | MODICA DE MOHAC DI GRISI' CARLO | 04/03/2026 | ACCOGLIE FISSA CAMERA DI CONSIGLIO"
       ]
@@ -869,14 +875,17 @@
         "MEMORIA | 2026001238 | AMMINISTRAZIONE INTIMATA | 21/03/2026"
       ],
       "discussioni": [
+        "05/11/2026 | UDIENZA PUBBLICA |  | DA ASSEGNARE MAGISTRATO | Merito | ",
         "24/03/2026 | CAMERA DI CONSIGLIO | DISCUSSO | MANUELA SINIGOI | Giudizio Cautelare | 4"
       ],
-      "provvedimenti_collegiali": [],
+      "provvedimenti_collegiali": [
+        "ORDINANZA CAUTELARE | SINIGOI MANUELA | 27/03/2026 | 24/03/2026 | CC | PRENDE ATTO RINUNZIA ALLA ISTANZA CAUTELARE FISSA UDIENZA PUBBLICA"
+      ],
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "27/03/2026 08:01",
-  "ultimo_controllo": "27/03/2026 08:01",
+  "ultimo_aggiornamento": "27/03/2026 08:05",
+  "ultimo_controllo": "27/03/2026 08:05",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
