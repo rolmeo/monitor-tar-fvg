@@ -895,10 +895,14 @@
       "discussioni": [
         "09/02/2026 | UDIENZA PUBBLICA | DISCUSSO | MANUELA SINIGOI | Merito | 14"
       ],
-      "provvedimenti_collegiali": [],
+      "provvedimenti_collegiali": [
+        "SENTENZA | SINIGOI MANUELA | 14/02/2026 | 09/02/2026 | UP | IMPROCEDIBILE PER SOPRAVVENUTA CARENZA DI INTERESSE"
+      ],
       "provvedimenti_monocratici": [],
-      "data_rilevazione": "28/03/2026 22:49",
-      "ts_eventi": {}
+      "data_rilevazione": "28/03/2026 23:13",
+      "ts_eventi": {
+        "SENTENZA | SINIGOI MANUELA | 14/02/2026 | 09/02/2026 | UP | IMPROCEDIBILE PER SOPRAVVENUTA CARENZA DI INTERESSE": "28/03/2026 23:13"
+      }
     },
     {
       "nrg": "2026000125",
@@ -946,8 +950,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "28/03/2026 23:12",
-  "ultimo_controllo": "28/03/2026 23:12",
+  "ultimo_aggiornamento": "28/03/2026 23:13",
+  "ultimo_controllo": "28/03/2026 23:13",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -1609,5 +1613,5 @@
       "nomeFile": "202600034_06.xml"
     }
   ],
-  "ultima_variazione": "28/03/2026 22:49"
+  "ultima_variazione": "28/03/2026 23:13"
 }
