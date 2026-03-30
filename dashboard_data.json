@@ -1036,9 +1036,10 @@
       "parti": [
         "APPELLANTE | 11/03/2026 | ",
         "APPELLATO | 16/03/2026 | ",
-        "CONTROINTERESSATO |  | "
+        "CONTROINTERESSATO | 20/03/2026 | "
       ],
       "atti": [
+        "ATTO DI COSTITUZIONE | 2026021518 | CONTROINTERESSATO | 20/03/2026",
         "ATTO DI COSTITUZIONE | 2026020189 | APPELLATO | 16/03/2026",
         "ISTANZA DI FISSAZIONE UDIENZA | 2026001972 | APPELLANTE | 11/03/2026",
         "RICORSO | 2026018793 | APPELLANTE | 11/03/2026"
@@ -1049,7 +1050,8 @@
       "provvedimenti_collegiali": [],
       "provvedimenti_monocratici": [
         "DECRETO CAUTELARE | CONTESSA CLAUDIO | 13/03/2026 | RESPINGE FISSA CAMERA DI CONSIGLIO"
-      ]
+      ],
+      "data_rilevazione": "20/03/2026 18:25"
     }
   ],
   "provvedimenti_collegiali": [
