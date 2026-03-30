@@ -21,11 +21,11 @@
       "atti": [
         "RICORSO | 2026000823 | RICORRENTE PRINCIPALE | 20/02/2026",
         "DOCUMENTI | 2026001244 | AMMINISTRAZIONE INTIMATA | 21/03/2026",
-        "ISTANZA DI FISSAZIONE UDIENZA | 2026000092 | RICORRENTE PRINCIPALE | 20/02/2026",
+        "ALTRO | 2026001257 | RICORRENTE PRINCIPALE | 23/03/2026",
+        "MEMORIA | 2026001240 | RICORRENTE PRINCIPALE | 21/03/2026",
         "DOCUMENTI | 2026000824 | RICORRENTE PRINCIPALE | 20/02/2026",
         "DOCUMENTI | 2026000825 | RICORRENTE PRINCIPALE | 20/02/2026",
-        "MEMORIA | 2026001240 | RICORRENTE PRINCIPALE | 21/03/2026",
-        "ALTRO | 2026001257 | RICORRENTE PRINCIPALE | 23/03/2026",
+        "ISTANZA DI FISSAZIONE UDIENZA | 2026000092 | RICORRENTE PRINCIPALE | 20/02/2026",
         "MEMORIA | 2026001243 | AMMINISTRAZIONE INTIMATA | 21/03/2026",
         "ATTO DI COSTITUZIONE | 2026000873 | CONTROINTERESSATO | 23/02/2026",
         "DOCUMENTI | 2026000830 | RICORRENTE PRINCIPALE | 20/02/2026",
@@ -43,18 +43,7 @@
       ],
       "provvedimenti_monocratici": [
         "DECRETO CAUTELARE | MODICA DE MOHAC DI GRISI' CARLO | 25/02/2026 | ACCOGLIE FISSA CAMERA DI CONSIGLIO"
-      ],
-      "data_rilevazione": "27/03/2026 08:45",
-      "ts_eventi": {
-        "MEMORIA | 2026001230 | CONTROINTERESSATO | 21/03/2026": "21/03/2026 09:29",
-        "MEMORIA | 2026001240 | RICORRENTE PRINCIPALE | 21/03/2026": "21/03/2026 11:24",
-        "MEMORIA | 2026001243 | AMMINISTRAZIONE INTIMATA | 21/03/2026": "21/03/2026 12:11",
-        "DOCUMENTI | 2026001244 | AMMINISTRAZIONE INTIMATA | 21/03/2026": "21/03/2026 14:06",
-        "ALTRO | 2026001257 | RICORRENTE PRINCIPALE | 23/03/2026": "23/03/2026 18:30",
-        "24/03/2026 | CAMERA DI CONSIGLIO | DISCUSSO | DANIELE BUSICO | Giudizio Cautelare | 3": "24/03/2026 15:08",
-        "18/11/2026 | UDIENZA PUBBLICA |  | DA ASSEGNARE MAGISTRATO | Merito | ": "27/03/2026 08:45",
-        "ORDINANZA CAUTELARE | BUSICO DANIELE | 27/03/2026 | 24/03/2026 | CC | RESPINGE FISSA UDIENZA PUBBLICA": "27/03/2026 08:45"
-      }
+      ]
     },
     {
       "nrg": "2026000100",
@@ -93,15 +82,7 @@
       ],
       "provvedimenti_monocratici": [
         "DECRETO CAUTELARE | MODICA DE MOHAC DI GRISI' CARLO | 04/03/2026 | ACCOGLIE FISSA CAMERA DI CONSIGLIO"
-      ],
-      "data_rilevazione": "27/03/2026 08:45",
-      "ts_eventi": {
-        "MEMORIA | 2026001241 | RICORRENTE PRINCIPALE | 21/03/2026": "21/03/2026 11:50",
-        "DOCUMENTI | 2026001255 | RICORRENTE PRINCIPALE | 23/03/2026": "23/03/2026 16:42",
-        "24/03/2026 | CAMERA DI CONSIGLIO | DISCUSSO | CLAUDIA MICELLI | Giudizio Cautelare | 6": "24/03/2026 15:08",
-        "07/10/2026 | UDIENZA PUBBLICA |  | DA ASSEGNARE MAGISTRATO | Merito | ": "27/03/2026 08:45",
-        "ORDINANZA CAUTELARE | MICELLI CLAUDIA | 27/03/2026 | 24/03/2026 | CC | RESPINGE FISSA UDIENZA PUBBLICA": "27/03/2026 08:45"
-      }
+      ]
     },
     {
       "nrg": "2026000080",
@@ -197,13 +178,7 @@
       "provvedimenti_collegiali": [
         "ORDINANZA CAUTELARE | SINIGOI MANUELA | 27/03/2026 | 24/03/2026 | CC | RESPINGE FISSA UDIENZA PUBBLICA"
       ],
-      "provvedimenti_monocratici": [],
-      "data_rilevazione": "27/03/2026 08:45",
-      "ts_eventi": {
-        "24/03/2026 | CAMERA DI CONSIGLIO | DISCUSSO | MANUELA SINIGOI | Giudizio Cautelare | 5": "24/03/2026 15:08",
-        "07/10/2026 | UDIENZA PUBBLICA |  | DA ASSEGNARE MAGISTRATO | Merito | ": "27/03/2026 08:45",
-        "ORDINANZA CAUTELARE | SINIGOI MANUELA | 27/03/2026 | 24/03/2026 | CC | RESPINGE FISSA UDIENZA PUBBLICA": "27/03/2026 08:45"
-      }
+      "provvedimenti_monocratici": []
     },
     {
       "nrg": "2026000051",
@@ -291,12 +266,7 @@
       "provvedimenti_collegiali": [
         "ORDINANZA CAUTELARE | MODICA DE MOHAC DI GRISI' CARLO | 14/01/2026 | 13/01/2026 | CC | PRENDE ATTO RINUNZIA ALLA ISTANZA CAUTELARE FISSA UDIENZA PUBBLICA"
       ],
-      "provvedimenti_monocratici": [],
-      "data_rilevazione": "25/03/2026 15:21",
-      "ts_eventi": {
-        "22/04/2026 | UDIENZA PUBBLICA |  | MANUELA SINIGOI | Merito | ": "24/03/2026 16:17",
-        "CONTRIBUTO UNIFICATO | 2026001284 | RICORRENTE PRINCIPALE | 25/03/2026": "25/03/2026 15:21"
-      }
+      "provvedimenti_monocratici": []
     },
     {
       "nrg": "2025000686",
@@ -332,11 +302,7 @@
       ],
       "provvedimenti_monocratici": [
         "DECRETO CAUTELARE | MODICA DE MOHAC DI GRISI' CARLO | 22/12/2025 | ACCOGLIE FISSA CAMERA DI CONSIGLIO"
-      ],
-      "data_rilevazione": "26/03/2026 12:31",
-      "ts_eventi": {
-        "DOCUMENTI | 2026001299 | AMMINISTRAZIONE INTIMATA | 26/03/2026": "26/03/2026 12:31"
-      }
+      ]
     },
     {
       "nrg": "2025000479",
@@ -432,13 +398,7 @@
       "provvedimenti_collegiali": [
         "ORDINANZA CAUTELARE | SINIGOI MANUELA | 27/03/2026 | 24/03/2026 | CC | RESPINGE FISSA UDIENZA PUBBLICA"
       ],
-      "provvedimenti_monocratici": [],
-      "data_rilevazione": "27/03/2026 08:45",
-      "ts_eventi": {
-        "24/03/2026 | CAMERA DI CONSIGLIO | DISCUSSO | MANUELA SINIGOI | Giudizio Cautelare | 1": "24/03/2026 15:08",
-        "18/11/2026 | UDIENZA PUBBLICA |  | DA ASSEGNARE MAGISTRATO | Merito | ": "27/03/2026 08:45",
-        "ORDINANZA CAUTELARE | SINIGOI MANUELA | 27/03/2026 | 24/03/2026 | CC | RESPINGE FISSA UDIENZA PUBBLICA": "27/03/2026 08:45"
-      }
+      "provvedimenti_monocratici": []
     },
     {
       "nrg": "2026000121",
@@ -474,14 +434,7 @@
       "provvedimenti_collegiali": [
         "ORDINANZA CAUTELARE | BUSICO DANIELE | 27/03/2026 | 24/03/2026 | CC | RESPINGE FISSA UDIENZA PUBBLICA"
       ],
-      "provvedimenti_monocratici": [],
-      "data_rilevazione": "27/03/2026 08:45",
-      "ts_eventi": {
-        "MEMORIA | 2026001228 | CONTROINTERESSATO | 21/03/2026": "21/03/2026 09:29",
-        "24/03/2026 | CAMERA DI CONSIGLIO | DISCUSSO | DANIELE BUSICO | Giudizio Cautelare | 2": "24/03/2026 15:08",
-        "18/11/2026 | UDIENZA PUBBLICA |  | DA ASSEGNARE MAGISTRATO | Merito | ": "27/03/2026 08:45",
-        "ORDINANZA CAUTELARE | BUSICO DANIELE | 27/03/2026 | 24/03/2026 | CC | RESPINGE FISSA UDIENZA PUBBLICA": "27/03/2026 08:45"
-      }
+      "provvedimenti_monocratici": []
     },
     {
       "nrg": "2026000123",
@@ -535,11 +488,7 @@
       "provvedimenti_collegiali": [],
       "provvedimenti_monocratici": [
         "DECRETO CAUTELARE | MODICA DE MOHAC DI GRISI' CARLO | 17/03/2026 | ACCOGLIE FISSA CAMERA DI CONSIGLIO"
-      ],
-      "data_rilevazione": "21/03/2026 14:50",
-      "ts_eventi": {
-        "ATTO DI COSTITUZIONE | 2026001245 | AMMINISTRAZIONE INTIMATA | 21/03/2026": "21/03/2026 14:50"
-      }
+      ]
     },
     {
       "nrg": "2024000406",
@@ -860,11 +809,7 @@
         "09/02/2026 | UDIENZA PUBBLICA | RINVIO AD ALTRA DATA | MANUELA SINIGOI | Merito | 13"
       ],
       "provvedimenti_collegiali": [],
-      "provvedimenti_monocratici": [],
-      "data_rilevazione": "24/03/2026 16:17",
-      "ts_eventi": {
-        "22/04/2026 | UDIENZA PUBBLICA |  | MANUELA SINIGOI | Merito | ": "24/03/2026 16:17"
-      }
+      "provvedimenti_monocratici": []
     },
     {
       "nrg": "2025000405",
@@ -882,15 +827,15 @@
         "RESISTENTE | 13/12/2025 | "
       ],
       "atti": [
-        "RICORSO | 2025002332 | RICORRENTE PRINCIPALE | 01/08/2025",
-        "CONTRIBUTO UNIFICATO | 2025002518 | RICORRENTE PRINCIPALE | 04/09/2025",
-        "DOCUMENTI | 2026000033 | AMMINISTRAZIONE INTIMATA | 05/01/2026",
         "MEMORIA | 2026000122 | RICORRENTE PRINCIPALE | 09/01/2026",
-        "ATTO DI COSTITUZIONE | 2025003816 | AMMINISTRAZIONE INTIMATA | 13/12/2025",
-        "MEMORIA | 2026000106 | AMMINISTRAZIONE INTIMATA | 09/01/2026",
-        "ISTANZA DI FISSAZIONE UDIENZA | 2025000390 | RICORRENTE PRINCIPALE | 01/08/2025",
+        "CONTRIBUTO UNIFICATO | 2025002518 | RICORRENTE PRINCIPALE | 04/09/2025",
         "DOCUMENTI | 2025002804 | ALTRE PARTI NON RITUALI | 03/10/2025",
-        "DICHIARAZIONE DI SOPRAVVENUTO DIFETTO DI INTERESSE | 2026000538 | RICORRENTE PRINCIPALE | 30/01/2026"
+        "DICHIARAZIONE DI SOPRAVVENUTO DIFETTO DI INTERESSE | 2026000538 | RICORRENTE PRINCIPALE | 30/01/2026",
+        "RICORSO | 2025002332 | RICORRENTE PRINCIPALE | 01/08/2025",
+        "ATTO DI COSTITUZIONE | 2025003816 | AMMINISTRAZIONE INTIMATA | 13/12/2025",
+        "DOCUMENTI | 2026000033 | AMMINISTRAZIONE INTIMATA | 05/01/2026",
+        "ISTANZA DI FISSAZIONE UDIENZA | 2025000390 | RICORRENTE PRINCIPALE | 01/08/2025",
+        "MEMORIA | 2026000106 | AMMINISTRAZIONE INTIMATA | 09/01/2026"
       ],
       "discussioni": [
         "09/02/2026 | UDIENZA PUBBLICA | DISCUSSO | MANUELA SINIGOI | Merito | 14"
@@ -898,11 +843,7 @@
       "provvedimenti_collegiali": [
         "SENTENZA | SINIGOI MANUELA | 14/02/2026 | 09/02/2026 | UP | IMPROCEDIBILE PER SOPRAVVENUTA CARENZA DI INTERESSE"
       ],
-      "provvedimenti_monocratici": [],
-      "data_rilevazione": "28/03/2026 23:13",
-      "ts_eventi": {
-        "SENTENZA | SINIGOI MANUELA | 14/02/2026 | 09/02/2026 | UP | IMPROCEDIBILE PER SOPRAVVENUTA CARENZA DI INTERESSE": "28/03/2026 23:13"
-      }
+      "provvedimenti_monocratici": []
     },
     {
       "nrg": "2026000125",
@@ -940,18 +881,11 @@
       "provvedimenti_collegiali": [
         "ORDINANZA CAUTELARE | SINIGOI MANUELA | 27/03/2026 | 24/03/2026 | CC | PRENDE ATTO RINUNZIA ALLA ISTANZA CAUTELARE FISSA UDIENZA PUBBLICA"
       ],
-      "provvedimenti_monocratici": [],
-      "data_rilevazione": "27/03/2026 08:45",
-      "ts_eventi": {
-        "MEMORIA | 2026001238 | AMMINISTRAZIONE INTIMATA | 21/03/2026": "21/03/2026 10:56",
-        "24/03/2026 | CAMERA DI CONSIGLIO | DISCUSSO | MANUELA SINIGOI | Giudizio Cautelare | 4": "24/03/2026 15:08",
-        "05/11/2026 | UDIENZA PUBBLICA |  | DA ASSEGNARE MAGISTRATO | Merito | ": "27/03/2026 08:45",
-        "ORDINANZA CAUTELARE | SINIGOI MANUELA | 27/03/2026 | 24/03/2026 | CC | PRENDE ATTO RINUNZIA ALLA ISTANZA CAUTELARE FISSA UDIENZA PUBBLICA": "27/03/2026 08:45"
-      }
+      "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "30/03/2026 07:08",
-  "ultimo_controllo": "30/03/2026 07:08",
+  "ultimo_aggiornamento": "30/03/2026 08:25",
+  "ultimo_controllo": "30/03/2026 08:25",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -1036,10 +970,9 @@
       "parti": [
         "APPELLANTE | 11/03/2026 | ",
         "APPELLATO | 16/03/2026 | ",
-        "CONTROINTERESSATO | 20/03/2026 | "
+        "CONTROINTERESSATO |  | "
       ],
       "atti": [
-        "ATTO DI COSTITUZIONE | 2026021518 | CONTROINTERESSATO | 20/03/2026",
         "ATTO DI COSTITUZIONE | 2026020189 | APPELLATO | 16/03/2026",
         "ISTANZA DI FISSAZIONE UDIENZA | 2026001972 | APPELLANTE | 11/03/2026",
         "RICORSO | 2026018793 | APPELLANTE | 11/03/2026"
@@ -1050,8 +983,7 @@
       "provvedimenti_collegiali": [],
       "provvedimenti_monocratici": [
         "DECRETO CAUTELARE | CONTESSA CLAUDIO | 13/03/2026 | RESPINGE FISSA CAMERA DI CONSIGLIO"
-      ],
-      "data_rilevazione": "20/03/2026 18:25"
+      ]
     }
   ],
   "provvedimenti_collegiali": [
@@ -1084,516 +1016,6 @@
       "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
       "esito": "RESPINGE     ",
       "nomeFile": "202600091_01.xml"
-    },
-    {
-      "nrgFascicolo": "202300217",
-      "sezione": "1",
-      "parte": "RAMONDA ABBIGLIAMENTO SRL",
-      "tipoUdienza": "UP",
-      "dataUdienza": "09/02/2026",
-      "numProvvedimento": "202600115",
-      "dataPubblicazione": "27/03/2026",
-      "tipoProvvedimento": "SENTENZA",
-      "codiceTipoProvvedimento": "01",
-      "relatore": "BUSICO DANIELE",
-      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
-      "esito": "ACCOGLIE DICHIARA INAMMISSIBILE    ",
-      "nomeFile": "202600115_01.xml"
-    },
-    {
-      "nrgFascicolo": "202500231",
-      "sezione": "1",
-      "parte": "XXX_OMISSIS_XXX",
-      "tipoUdienza": "UP",
-      "dataUdienza": "24/02/2026",
-      "numProvvedimento": "202600114",
-      "dataPubblicazione": "27/03/2026",
-      "tipoProvvedimento": "SENTENZA",
-      "codiceTipoProvvedimento": "01",
-      "relatore": "SINIGOI MANUELA",
-      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
-      "esito": "RESPINGE     ",
-      "nomeFile": "202600114_01.xml"
-    },
-    {
-      "nrgFascicolo": "202500234",
-      "sezione": "1",
-      "parte": "XXX_OMISSIS_XXX",
-      "tipoUdienza": "UP",
-      "dataUdienza": "24/02/2026",
-      "numProvvedimento": "202600113",
-      "dataPubblicazione": "27/03/2026",
-      "tipoProvvedimento": "SENTENZA",
-      "codiceTipoProvvedimento": "01",
-      "relatore": "SINIGOI MANUELA",
-      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
-      "esito": "RESPINGE     ",
-      "nomeFile": "202600113_01.xml"
-    },
-    {
-      "nrgFascicolo": "202500293",
-      "sezione": "1",
-      "parte": "G.L.",
-      "tipoUdienza": "UP",
-      "dataUdienza": "24/03/2026",
-      "numProvvedimento": "202600112",
-      "dataPubblicazione": "27/03/2026",
-      "tipoProvvedimento": "SENTENZA",
-      "codiceTipoProvvedimento": "01",
-      "relatore": "BUSICO DANIELE",
-      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
-      "esito": "RESPINGE     ",
-      "nomeFile": "202600112_01.xml"
-    },
-    {
-      "nrgFascicolo": "202200182",
-      "sezione": "1",
-      "parte": "LA SACCA S.R.L.",
-      "tipoUdienza": "UP",
-      "dataUdienza": "09/02/2026",
-      "numProvvedimento": "202600111",
-      "dataPubblicazione": "27/03/2026",
-      "tipoProvvedimento": "SENTENZA",
-      "codiceTipoProvvedimento": "01",
-      "relatore": "BUSICO DANIELE",
-      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
-      "esito": "RESPINGE     ",
-      "nomeFile": "202600111_01.xml"
-    },
-    {
-      "nrgFascicolo": "202500314",
-      "sezione": "1",
-      "parte": "XXX_OMISSIS_XXX",
-      "tipoUdienza": "UP",
-      "dataUdienza": "24/03/2026",
-      "numProvvedimento": "202600110",
-      "dataPubblicazione": "27/03/2026",
-      "tipoProvvedimento": "SENTENZA",
-      "codiceTipoProvvedimento": "01",
-      "relatore": "BUSICO DANIELE",
-      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
-      "esito": "ACCOGLIE     ",
-      "nomeFile": "202600110_01.xml"
-    },
-    {
-      "nrgFascicolo": "202500187",
-      "sezione": "1",
-      "parte": "XXX_OMISSIS_XXX",
-      "tipoUdienza": "UP",
-      "dataUdienza": "27/01/2026",
-      "numProvvedimento": "202600109",
-      "dataPubblicazione": "27/03/2026",
-      "tipoProvvedimento": "SENTENZA",
-      "codiceTipoProvvedimento": "01",
-      "relatore": "MICELLI CLAUDIA",
-      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
-      "esito": "RESPINGE     ",
-      "nomeFile": "202600109_01.xml"
-    },
-    {
-      "nrgFascicolo": "202500363",
-      "sezione": "1",
-      "parte": "R.G.",
-      "tipoUdienza": "UP",
-      "dataUdienza": "09/02/2026",
-      "numProvvedimento": "202600108",
-      "dataPubblicazione": "27/03/2026",
-      "tipoProvvedimento": "SENTENZA",
-      "codiceTipoProvvedimento": "01",
-      "relatore": "BUSICO DANIELE",
-      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
-      "esito": "RESPINGE DICHIARA INAMMISSIBILE    ",
-      "nomeFile": "202600108_01.xml"
-    },
-    {
-      "nrgFascicolo": "202500188",
-      "sezione": "1",
-      "parte": "XXX_OMISSIS_XXX",
-      "tipoUdienza": "UP",
-      "dataUdienza": "27/01/2026",
-      "numProvvedimento": "202600107",
-      "dataPubblicazione": "27/03/2026",
-      "tipoProvvedimento": "SENTENZA",
-      "codiceTipoProvvedimento": "01",
-      "relatore": "MICELLI CLAUDIA",
-      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
-      "esito": "RESPINGE     ",
-      "nomeFile": "202600107_01.xml"
-    },
-    {
-      "nrgFascicolo": "202400416",
-      "sezione": "1",
-      "parte": "XXX_OMISSIS_XXX",
-      "tipoUdienza": "UP",
-      "dataUdienza": "27/01/2026",
-      "numProvvedimento": "202600106",
-      "dataPubblicazione": "27/03/2026",
-      "tipoProvvedimento": "SENTENZA",
-      "codiceTipoProvvedimento": "01",
-      "relatore": "MICELLI CLAUDIA",
-      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
-      "esito": "IMPROCEDIBILE PER SOPRAVVENUTA CARENZA DI INTERESSE     ",
-      "nomeFile": "202600106_01.xml"
-    },
-    {
-      "nrgFascicolo": "202500413",
-      "sezione": "1",
-      "parte": "XXX_OMISSIS_XXX",
-      "tipoUdienza": "UP",
-      "dataUdienza": "24/03/2026",
-      "numProvvedimento": "202600105",
-      "dataPubblicazione": "27/03/2026",
-      "tipoProvvedimento": "SENTENZA",
-      "codiceTipoProvvedimento": "01",
-      "relatore": "SINIGOI MANUELA",
-      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
-      "esito": "IMPROCEDIBILE PER SOPRAVVENUTA CARENZA DI INTERESSE     ",
-      "nomeFile": "202600105_01.xml"
-    },
-    {
-      "nrgFascicolo": "202400419",
-      "sezione": "1",
-      "parte": "XXX_OMISSIS_XXX",
-      "tipoUdienza": "UP",
-      "dataUdienza": "27/01/2026",
-      "numProvvedimento": "202600104",
-      "dataPubblicazione": "27/03/2026",
-      "tipoProvvedimento": "SENTENZA",
-      "codiceTipoProvvedimento": "01",
-      "relatore": "MICELLI CLAUDIA",
-      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
-      "esito": "IMPROCEDIBILE PER SOPRAVVENUTA CARENZA DI INTERESSE     ",
-      "nomeFile": "202600104_01.xml"
-    },
-    {
-      "nrgFascicolo": "202500424",
-      "sezione": "1",
-      "parte": "XXX_OMISSIS_XXX",
-      "tipoUdienza": "UP",
-      "dataUdienza": "24/03/2026",
-      "numProvvedimento": "202600103",
-      "dataPubblicazione": "27/03/2026",
-      "tipoProvvedimento": "SENTENZA",
-      "codiceTipoProvvedimento": "01",
-      "relatore": "SINIGOI MANUELA",
-      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
-      "esito": "DICHIARA ESTINTO     ",
-      "nomeFile": "202600103_01.xml"
-    },
-    {
-      "nrgFascicolo": "202500496",
-      "sezione": "1",
-      "parte": "XXX_OMISSIS_XXX",
-      "tipoUdienza": "UP",
-      "dataUdienza": "09/02/2026",
-      "numProvvedimento": "202600102",
-      "dataPubblicazione": "27/03/2026",
-      "tipoProvvedimento": "SENTENZA",
-      "codiceTipoProvvedimento": "01",
-      "relatore": "MICELLI CLAUDIA",
-      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
-      "esito": "RESPINGE     ",
-      "nomeFile": "202600102_01.xml"
-    },
-    {
-      "nrgFascicolo": "202500383",
-      "sezione": "1",
-      "parte": "D.B.P.",
-      "tipoUdienza": "UP",
-      "dataUdienza": "24/03/2026",
-      "numProvvedimento": "202600101",
-      "dataPubblicazione": "27/03/2026",
-      "tipoProvvedimento": "ORDINANZA COLLEGIALE",
-      "codiceTipoProvvedimento": "08",
-      "relatore": "SINIGOI MANUELA",
-      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
-      "esito": "INTERLOCUTORIO/A FISSA UDIENZA PUBBLICA    ",
-      "nomeFile": "202600101_08.xml"
-    },
-    {
-      "nrgFascicolo": "202500529",
-      "sezione": "1",
-      "parte": "OFFICINE SOCIALI SOCIETÀ COOPERATIVA SOCIALE",
-      "tipoUdienza": "UP",
-      "dataUdienza": "24/03/2026",
-      "numProvvedimento": "202600100",
-      "dataPubblicazione": "27/03/2026",
-      "tipoProvvedimento": "SENTENZA",
-      "codiceTipoProvvedimento": "01",
-      "relatore": "BUSICO DANIELE",
-      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
-      "esito": "IMPROCEDIBILE PER SOPRAVVENUTA CARENZA DI INTERESSE     ",
-      "nomeFile": "202600100_01.xml"
-    },
-    {
-      "nrgFascicolo": "202500561",
-      "sezione": "1",
-      "parte": "P.R.",
-      "tipoUdienza": "UP",
-      "dataUdienza": "24/03/2026",
-      "numProvvedimento": "202600099",
-      "dataPubblicazione": "27/03/2026",
-      "tipoProvvedimento": "SENTENZA",
-      "codiceTipoProvvedimento": "01",
-      "relatore": "BUSICO DANIELE",
-      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
-      "esito": "RESPINGE     ",
-      "nomeFile": "202600099_01.xml"
-    },
-    {
-      "nrgFascicolo": "202600048",
-      "sezione": "1",
-      "parte": "XXX_OMISSIS_XXX",
-      "tipoUdienza": "CC",
-      "dataUdienza": "24/02/2026",
-      "numProvvedimento": "202600098",
-      "dataPubblicazione": "27/03/2026",
-      "tipoProvvedimento": "SENTENZA BREVE",
-      "codiceTipoProvvedimento": "20",
-      "relatore": "MICELLI CLAUDIA",
-      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
-      "esito": "ACCOGLIE     ",
-      "nomeFile": "202600098_20.xml"
-    },
-    {
-      "nrgFascicolo": "202600056",
-      "sezione": "1",
-      "parte": "XXX_OMISSIS_XXX",
-      "tipoUdienza": "CC",
-      "dataUdienza": "10/03/2026",
-      "numProvvedimento": "202600097",
-      "dataPubblicazione": "27/03/2026",
-      "tipoProvvedimento": "SENTENZA",
-      "codiceTipoProvvedimento": "01",
-      "relatore": "MICELLI CLAUDIA",
-      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
-      "esito": "ACCOGLIE NOMINA COMMISSARIO AD ACTA    ",
-      "nomeFile": "202600097_01.xml"
-    },
-    {
-      "nrgFascicolo": "202600102",
-      "sezione": "1",
-      "parte": "XXX_OMISSIS_XXX",
-      "tipoUdienza": "CC",
-      "dataUdienza": "10/03/2026",
-      "numProvvedimento": "202600096",
-      "dataPubblicazione": "27/03/2026",
-      "tipoProvvedimento": "SENTENZA BREVE",
-      "codiceTipoProvvedimento": "20",
-      "relatore": "SINIGOI MANUELA",
-      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
-      "esito": "DICHIARA INAMMISSIBILE     ",
-      "nomeFile": "202600096_20.xml"
-    },
-    {
-      "nrgFascicolo": "202600114",
-      "sezione": "1",
-      "parte": "XXX_OMISSIS_XXX",
-      "tipoUdienza": "CC",
-      "dataUdienza": "24/03/2026",
-      "numProvvedimento": "202600095",
-      "dataPubblicazione": "27/03/2026",
-      "tipoProvvedimento": "SENTENZA BREVE",
-      "codiceTipoProvvedimento": "20",
-      "relatore": "BUSICO DANIELE",
-      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
-      "esito": "ACCOGLIE     ",
-      "nomeFile": "202600095_20.xml"
-    },
-    {
-      "nrgFascicolo": "202600088",
-      "sezione": "1",
-      "parte": "XXX_OMISSIS_XXX",
-      "tipoUdienza": "CC",
-      "dataUdienza": "10/03/2026",
-      "numProvvedimento": "202600094",
-      "dataPubblicazione": "27/03/2026",
-      "tipoProvvedimento": "SENTENZA BREVE",
-      "codiceTipoProvvedimento": "20",
-      "relatore": "SINIGOI MANUELA",
-      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
-      "esito": "DICHIARA INAMMISSIBILE DICHIARA DIFETTO DI GIURISDIZIONE    ",
-      "nomeFile": "202600094_20.xml"
-    },
-    {
-      "nrgFascicolo": "202600128",
-      "sezione": "1",
-      "parte": "COR.EL S.R.L.",
-      "tipoUdienza": "CC",
-      "dataUdienza": "24/03/2026",
-      "numProvvedimento": "202600093",
-      "dataPubblicazione": "27/03/2026",
-      "tipoProvvedimento": "SENTENZA BREVE",
-      "codiceTipoProvvedimento": "20",
-      "relatore": "BUSICO DANIELE",
-      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
-      "esito": "ACCOGLIE     ",
-      "nomeFile": "202600093_20.xml"
-    },
-    {
-      "nrgFascicolo": "202600122",
-      "sezione": "1",
-      "parte": "XXX_OMISSIS_XXX",
-      "tipoUdienza": "CC",
-      "dataUdienza": "24/03/2026",
-      "numProvvedimento": "202600045",
-      "dataPubblicazione": "27/03/2026",
-      "tipoProvvedimento": "ORDINANZA CAUTELARE",
-      "codiceTipoProvvedimento": "05",
-      "relatore": "MICELLI CLAUDIA",
-      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
-      "esito": "ACCOGLIE FISSA UDIENZA PUBBLICA    ",
-      "nomeFile": "202600045_05.xml"
-    },
-    {
-      "nrgFascicolo": "202600104",
-      "sezione": "1",
-      "parte": "D.G.R.",
-      "tipoUdienza": "CC",
-      "dataUdienza": "24/03/2026",
-      "numProvvedimento": "202600044",
-      "dataPubblicazione": "27/03/2026",
-      "tipoProvvedimento": "ORDINANZA CAUTELARE",
-      "codiceTipoProvvedimento": "05",
-      "relatore": "BUSICO DANIELE",
-      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
-      "esito": "PRENDE ATTO RINUNZIA ALLA ISTANZA CAUTELARE FISSA UDIENZA PUBBLICA    ",
-      "nomeFile": "202600044_05.xml"
-    },
-    {
-      "nrgFascicolo": "202600081",
-      "sezione": "1",
-      "parte": "FONDAZIONE MARCO LUCHETTA, ALESSANDRO OTA, DARIO D’ANGELO E MIRAN HROVATIN – ETS",
-      "tipoUdienza": "CC",
-      "dataUdienza": "24/03/2026",
-      "numProvvedimento": "202600043",
-      "dataPubblicazione": "27/03/2026",
-      "tipoProvvedimento": "ORDINANZA CAUTELARE",
-      "codiceTipoProvvedimento": "05",
-      "relatore": "SINIGOI MANUELA",
-      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
-      "esito": "ACCOGLIE NEI LIMITI PRECISATI IN MOTIVAZIONE INTERLOCUTORIO/A FISSA UDIENZA PUBBLICA   ",
-      "nomeFile": "202600043_05.xml"
-    },
-    {
-      "nrgFascicolo": "202600112",
-      "sezione": "1",
-      "parte": "XXX_OMISSIS_XXX",
-      "tipoUdienza": "CC",
-      "dataUdienza": "24/03/2026",
-      "numProvvedimento": "202600042",
-      "dataPubblicazione": "27/03/2026",
-      "tipoProvvedimento": "ORDINANZA CAUTELARE",
-      "codiceTipoProvvedimento": "05",
-      "relatore": "MICELLI CLAUDIA",
-      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
-      "esito": "PRENDE ATTO RINUNZIA ALLA ISTANZA CAUTELARE FISSA UDIENZA PUBBLICA    ",
-      "nomeFile": "202600042_05.xml"
-    },
-    {
-      "nrgFascicolo": "202600036",
-      "sezione": "1",
-      "parte": "XXX_OMISSIS_XXX",
-      "tipoUdienza": "CC",
-      "dataUdienza": "24/03/2026",
-      "numProvvedimento": "202600041",
-      "dataPubblicazione": "27/03/2026",
-      "tipoProvvedimento": "ORDINANZA CAUTELARE",
-      "codiceTipoProvvedimento": "05",
-      "relatore": "MICELLI CLAUDIA",
-      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
-      "esito": "ACCOGLIE FISSA UDIENZA PUBBLICA    ",
-      "nomeFile": "202600041_05.xml"
-    },
-    {
-      "nrgFascicolo": "202600125",
-      "sezione": "1",
-      "parte": "AURA SRL",
-      "tipoUdienza": "CC",
-      "dataUdienza": "24/03/2026",
-      "numProvvedimento": "202600040",
-      "dataPubblicazione": "27/03/2026",
-      "tipoProvvedimento": "ORDINANZA CAUTELARE",
-      "codiceTipoProvvedimento": "05",
-      "relatore": "SINIGOI MANUELA",
-      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
-      "esito": "PRENDE ATTO RINUNZIA ALLA ISTANZA CAUTELARE FISSA UDIENZA PUBBLICA    ",
-      "nomeFile": "202600040_05.xml"
-    },
-    {
-      "nrgFascicolo": "202600099",
-      "sezione": "1",
-      "parte": "MEOTTO GIUSEPPE S.R.L.",
-      "tipoUdienza": "CC",
-      "dataUdienza": "24/03/2026",
-      "numProvvedimento": "202600039",
-      "dataPubblicazione": "27/03/2026",
-      "tipoProvvedimento": "ORDINANZA CAUTELARE",
-      "codiceTipoProvvedimento": "05",
-      "relatore": "BUSICO DANIELE",
-      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
-      "esito": "RESPINGE FISSA UDIENZA PUBBLICA    ",
-      "nomeFile": "202600039_05.xml"
-    },
-    {
-      "nrgFascicolo": "202600100",
-      "sezione": "1",
-      "parte": "S.A.S.T. DEGLI EREDI SAPIENZA & PASQUIN DONATELLA S.A.S.",
-      "tipoUdienza": "CC",
-      "dataUdienza": "24/03/2026",
-      "numProvvedimento": "202600038",
-      "dataPubblicazione": "27/03/2026",
-      "tipoProvvedimento": "ORDINANZA CAUTELARE",
-      "codiceTipoProvvedimento": "05",
-      "relatore": "MICELLI CLAUDIA",
-      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
-      "esito": "RESPINGE FISSA UDIENZA PUBBLICA    ",
-      "nomeFile": "202600038_05.xml"
-    },
-    {
-      "nrgFascicolo": "202600121",
-      "sezione": "1",
-      "parte": "MATAJUR 3000 SRL",
-      "tipoUdienza": "CC",
-      "dataUdienza": "24/03/2026",
-      "numProvvedimento": "202600037",
-      "dataPubblicazione": "27/03/2026",
-      "tipoProvvedimento": "ORDINANZA CAUTELARE",
-      "codiceTipoProvvedimento": "05",
-      "relatore": "BUSICO DANIELE",
-      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
-      "esito": "RESPINGE FISSA UDIENZA PUBBLICA    ",
-      "nomeFile": "202600037_05.xml"
-    },
-    {
-      "nrgFascicolo": "202600120",
-      "sezione": "1",
-      "parte": "MATAJUR 3000 SRL",
-      "tipoUdienza": "CC",
-      "dataUdienza": "24/03/2026",
-      "numProvvedimento": "202600036",
-      "dataPubblicazione": "27/03/2026",
-      "tipoProvvedimento": "ORDINANZA CAUTELARE",
-      "codiceTipoProvvedimento": "05",
-      "relatore": "SINIGOI MANUELA",
-      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
-      "esito": "RESPINGE FISSA UDIENZA PUBBLICA    ",
-      "nomeFile": "202600036_05.xml"
-    },
-    {
-      "nrgFascicolo": "202600074",
-      "sezione": "1",
-      "parte": "ALBERGO ITALIA S.R.L.",
-      "tipoUdienza": "CC",
-      "dataUdienza": "24/03/2026",
-      "numProvvedimento": "202600035",
-      "dataPubblicazione": "27/03/2026",
-      "tipoProvvedimento": "ORDINANZA CAUTELARE",
-      "codiceTipoProvvedimento": "05",
-      "relatore": "SINIGOI MANUELA",
-      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
-      "esito": "RESPINGE FISSA UDIENZA PUBBLICA    ",
-      "nomeFile": "202600035_05.xml"
     }
   ],
   "provvedimenti_monocratici": [
@@ -1612,6 +1034,5 @@
       "esito": "ACCOGLIE  FISSA CAMERA DI CONSIGLIO    ",
       "nomeFile": "202600034_06.xml"
     }
-  ],
-  "ultima_variazione": "28/03/2026 23:13"
+  ]
 }
