@@ -102,6 +102,30 @@
       "ts_eventi": {
         "14/04/2026 | CAMERA DI CONSIGLIO |  | LAURA MARZANO | Giudizio Cautelare | ": "31/03/2026 12:58"
       }
+    },
+    "2026_2696": {
+      "nrg": "2026002696",
+      "anno": 2026,
+      "numero": 2696,
+      "fonte": "CdS",
+      "sezione": "*",
+      "data_deposito": "31/03/2026",
+      "tipo_ricorso": "APPELLO AVVERSO ORDINANZA CAUTELARE",
+      "oggetto": "",
+      "parti": [
+        "APPELLANTE | 31/03/2026 | ",
+        "APPELLATO |  | ",
+        "CONTROINTERESSATO |  | ",
+        "CONTROINTERESSATO |  | "
+      ],
+      "atti": [
+        "DOCUMENTI | 2026024474 | APPELLANTE | 31/03/2026",
+        "RICORSO | 2026024448 | APPELLANTE | 31/03/2026",
+        "ISTANZA DI FISSAZIONE UDIENZA | 2026002629 | APPELLANTE | 31/03/2026"
+      ],
+      "discussioni": [],
+      "provvedimenti_collegiali": [],
+      "provvedimenti_monocratici": []
     }
   }
 }
