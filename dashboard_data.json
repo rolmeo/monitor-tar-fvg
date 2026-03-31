@@ -21,11 +21,11 @@
       "atti": [
         "RICORSO | 2026000823 | RICORRENTE PRINCIPALE | 20/02/2026",
         "DOCUMENTI | 2026001244 | AMMINISTRAZIONE INTIMATA | 21/03/2026",
-        "ALTRO | 2026001257 | RICORRENTE PRINCIPALE | 23/03/2026",
-        "MEMORIA | 2026001240 | RICORRENTE PRINCIPALE | 21/03/2026",
+        "ISTANZA DI FISSAZIONE UDIENZA | 2026000092 | RICORRENTE PRINCIPALE | 20/02/2026",
         "DOCUMENTI | 2026000824 | RICORRENTE PRINCIPALE | 20/02/2026",
         "DOCUMENTI | 2026000825 | RICORRENTE PRINCIPALE | 20/02/2026",
-        "ISTANZA DI FISSAZIONE UDIENZA | 2026000092 | RICORRENTE PRINCIPALE | 20/02/2026",
+        "MEMORIA | 2026001240 | RICORRENTE PRINCIPALE | 21/03/2026",
+        "ALTRO | 2026001257 | RICORRENTE PRINCIPALE | 23/03/2026",
         "MEMORIA | 2026001243 | AMMINISTRAZIONE INTIMATA | 21/03/2026",
         "ATTO DI COSTITUZIONE | 2026000873 | CONTROINTERESSATO | 23/02/2026",
         "DOCUMENTI | 2026000830 | RICORRENTE PRINCIPALE | 20/02/2026",
@@ -43,7 +43,18 @@
       ],
       "provvedimenti_monocratici": [
         "DECRETO CAUTELARE | MODICA DE MOHAC DI GRISI' CARLO | 25/02/2026 | ACCOGLIE FISSA CAMERA DI CONSIGLIO"
-      ]
+      ],
+      "data_rilevazione": "27/03/2026 08:45",
+      "ts_eventi": {
+        "MEMORIA | 2026001230 | CONTROINTERESSATO | 21/03/2026": "21/03/2026 09:29",
+        "MEMORIA | 2026001240 | RICORRENTE PRINCIPALE | 21/03/2026": "21/03/2026 11:24",
+        "MEMORIA | 2026001243 | AMMINISTRAZIONE INTIMATA | 21/03/2026": "21/03/2026 12:11",
+        "DOCUMENTI | 2026001244 | AMMINISTRAZIONE INTIMATA | 21/03/2026": "21/03/2026 14:06",
+        "ALTRO | 2026001257 | RICORRENTE PRINCIPALE | 23/03/2026": "23/03/2026 18:30",
+        "24/03/2026 | CAMERA DI CONSIGLIO | DISCUSSO | DANIELE BUSICO | Giudizio Cautelare | 3": "24/03/2026 15:08",
+        "18/11/2026 | UDIENZA PUBBLICA |  | DA ASSEGNARE MAGISTRATO | Merito | ": "27/03/2026 08:45",
+        "ORDINANZA CAUTELARE | BUSICO DANIELE | 27/03/2026 | 24/03/2026 | CC | RESPINGE FISSA UDIENZA PUBBLICA": "27/03/2026 08:45"
+      }
     },
     {
       "nrg": "2026000100",
@@ -82,7 +93,15 @@
       ],
       "provvedimenti_monocratici": [
         "DECRETO CAUTELARE | MODICA DE MOHAC DI GRISI' CARLO | 04/03/2026 | ACCOGLIE FISSA CAMERA DI CONSIGLIO"
-      ]
+      ],
+      "data_rilevazione": "27/03/2026 08:45",
+      "ts_eventi": {
+        "MEMORIA | 2026001241 | RICORRENTE PRINCIPALE | 21/03/2026": "21/03/2026 11:50",
+        "DOCUMENTI | 2026001255 | RICORRENTE PRINCIPALE | 23/03/2026": "23/03/2026 16:42",
+        "24/03/2026 | CAMERA DI CONSIGLIO | DISCUSSO | CLAUDIA MICELLI | Giudizio Cautelare | 6": "24/03/2026 15:08",
+        "07/10/2026 | UDIENZA PUBBLICA |  | DA ASSEGNARE MAGISTRATO | Merito | ": "27/03/2026 08:45",
+        "ORDINANZA CAUTELARE | MICELLI CLAUDIA | 27/03/2026 | 24/03/2026 | CC | RESPINGE FISSA UDIENZA PUBBLICA": "27/03/2026 08:45"
+      }
     },
     {
       "nrg": "2026000080",
@@ -178,7 +197,13 @@
       "provvedimenti_collegiali": [
         "ORDINANZA CAUTELARE | SINIGOI MANUELA | 27/03/2026 | 24/03/2026 | CC | RESPINGE FISSA UDIENZA PUBBLICA"
       ],
-      "provvedimenti_monocratici": []
+      "provvedimenti_monocratici": [],
+      "data_rilevazione": "27/03/2026 08:45",
+      "ts_eventi": {
+        "24/03/2026 | CAMERA DI CONSIGLIO | DISCUSSO | MANUELA SINIGOI | Giudizio Cautelare | 5": "24/03/2026 15:08",
+        "07/10/2026 | UDIENZA PUBBLICA |  | DA ASSEGNARE MAGISTRATO | Merito | ": "27/03/2026 08:45",
+        "ORDINANZA CAUTELARE | SINIGOI MANUELA | 27/03/2026 | 24/03/2026 | CC | RESPINGE FISSA UDIENZA PUBBLICA": "27/03/2026 08:45"
+      }
     },
     {
       "nrg": "2026000051",
@@ -266,7 +291,12 @@
       "provvedimenti_collegiali": [
         "ORDINANZA CAUTELARE | MODICA DE MOHAC DI GRISI' CARLO | 14/01/2026 | 13/01/2026 | CC | PRENDE ATTO RINUNZIA ALLA ISTANZA CAUTELARE FISSA UDIENZA PUBBLICA"
       ],
-      "provvedimenti_monocratici": []
+      "provvedimenti_monocratici": [],
+      "data_rilevazione": "25/03/2026 15:21",
+      "ts_eventi": {
+        "22/04/2026 | UDIENZA PUBBLICA |  | MANUELA SINIGOI | Merito | ": "24/03/2026 16:17",
+        "CONTRIBUTO UNIFICATO | 2026001284 | RICORRENTE PRINCIPALE | 25/03/2026": "25/03/2026 15:21"
+      }
     },
     {
       "nrg": "2025000686",
@@ -302,7 +332,11 @@
       ],
       "provvedimenti_monocratici": [
         "DECRETO CAUTELARE | MODICA DE MOHAC DI GRISI' CARLO | 22/12/2025 | ACCOGLIE FISSA CAMERA DI CONSIGLIO"
-      ]
+      ],
+      "data_rilevazione": "26/03/2026 12:31",
+      "ts_eventi": {
+        "DOCUMENTI | 2026001299 | AMMINISTRAZIONE INTIMATA | 26/03/2026": "26/03/2026 12:31"
+      }
     },
     {
       "nrg": "2025000479",
@@ -398,7 +432,13 @@
       "provvedimenti_collegiali": [
         "ORDINANZA CAUTELARE | SINIGOI MANUELA | 27/03/2026 | 24/03/2026 | CC | RESPINGE FISSA UDIENZA PUBBLICA"
       ],
-      "provvedimenti_monocratici": []
+      "provvedimenti_monocratici": [],
+      "data_rilevazione": "27/03/2026 08:45",
+      "ts_eventi": {
+        "24/03/2026 | CAMERA DI CONSIGLIO | DISCUSSO | MANUELA SINIGOI | Giudizio Cautelare | 1": "24/03/2026 15:08",
+        "18/11/2026 | UDIENZA PUBBLICA |  | DA ASSEGNARE MAGISTRATO | Merito | ": "27/03/2026 08:45",
+        "ORDINANZA CAUTELARE | SINIGOI MANUELA | 27/03/2026 | 24/03/2026 | CC | RESPINGE FISSA UDIENZA PUBBLICA": "27/03/2026 08:45"
+      }
     },
     {
       "nrg": "2026000121",
@@ -434,7 +474,14 @@
       "provvedimenti_collegiali": [
         "ORDINANZA CAUTELARE | BUSICO DANIELE | 27/03/2026 | 24/03/2026 | CC | RESPINGE FISSA UDIENZA PUBBLICA"
       ],
-      "provvedimenti_monocratici": []
+      "provvedimenti_monocratici": [],
+      "data_rilevazione": "27/03/2026 08:45",
+      "ts_eventi": {
+        "MEMORIA | 2026001228 | CONTROINTERESSATO | 21/03/2026": "21/03/2026 09:29",
+        "24/03/2026 | CAMERA DI CONSIGLIO | DISCUSSO | DANIELE BUSICO | Giudizio Cautelare | 2": "24/03/2026 15:08",
+        "18/11/2026 | UDIENZA PUBBLICA |  | DA ASSEGNARE MAGISTRATO | Merito | ": "27/03/2026 08:45",
+        "ORDINANZA CAUTELARE | BUSICO DANIELE | 27/03/2026 | 24/03/2026 | CC | RESPINGE FISSA UDIENZA PUBBLICA": "27/03/2026 08:45"
+      }
     },
     {
       "nrg": "2026000123",
@@ -488,7 +535,11 @@
       "provvedimenti_collegiali": [],
       "provvedimenti_monocratici": [
         "DECRETO CAUTELARE | MODICA DE MOHAC DI GRISI' CARLO | 17/03/2026 | ACCOGLIE FISSA CAMERA DI CONSIGLIO"
-      ]
+      ],
+      "data_rilevazione": "21/03/2026 14:50",
+      "ts_eventi": {
+        "ATTO DI COSTITUZIONE | 2026001245 | AMMINISTRAZIONE INTIMATA | 21/03/2026": "21/03/2026 14:50"
+      }
     },
     {
       "nrg": "2024000406",
@@ -809,7 +860,11 @@
         "09/02/2026 | UDIENZA PUBBLICA | RINVIO AD ALTRA DATA | MANUELA SINIGOI | Merito | 13"
       ],
       "provvedimenti_collegiali": [],
-      "provvedimenti_monocratici": []
+      "provvedimenti_monocratici": [],
+      "data_rilevazione": "24/03/2026 16:17",
+      "ts_eventi": {
+        "22/04/2026 | UDIENZA PUBBLICA |  | MANUELA SINIGOI | Merito | ": "24/03/2026 16:17"
+      }
     },
     {
       "nrg": "2025000405",
@@ -827,15 +882,15 @@
         "RESISTENTE | 13/12/2025 | "
       ],
       "atti": [
-        "MEMORIA | 2026000122 | RICORRENTE PRINCIPALE | 09/01/2026",
-        "CONTRIBUTO UNIFICATO | 2025002518 | RICORRENTE PRINCIPALE | 04/09/2025",
-        "DOCUMENTI | 2025002804 | ALTRE PARTI NON RITUALI | 03/10/2025",
-        "DICHIARAZIONE DI SOPRAVVENUTO DIFETTO DI INTERESSE | 2026000538 | RICORRENTE PRINCIPALE | 30/01/2026",
         "RICORSO | 2025002332 | RICORRENTE PRINCIPALE | 01/08/2025",
-        "ATTO DI COSTITUZIONE | 2025003816 | AMMINISTRAZIONE INTIMATA | 13/12/2025",
+        "CONTRIBUTO UNIFICATO | 2025002518 | RICORRENTE PRINCIPALE | 04/09/2025",
         "DOCUMENTI | 2026000033 | AMMINISTRAZIONE INTIMATA | 05/01/2026",
+        "MEMORIA | 2026000122 | RICORRENTE PRINCIPALE | 09/01/2026",
+        "ATTO DI COSTITUZIONE | 2025003816 | AMMINISTRAZIONE INTIMATA | 13/12/2025",
+        "MEMORIA | 2026000106 | AMMINISTRAZIONE INTIMATA | 09/01/2026",
         "ISTANZA DI FISSAZIONE UDIENZA | 2025000390 | RICORRENTE PRINCIPALE | 01/08/2025",
-        "MEMORIA | 2026000106 | AMMINISTRAZIONE INTIMATA | 09/01/2026"
+        "DOCUMENTI | 2025002804 | ALTRE PARTI NON RITUALI | 03/10/2025",
+        "DICHIARAZIONE DI SOPRAVVENUTO DIFETTO DI INTERESSE | 2026000538 | RICORRENTE PRINCIPALE | 30/01/2026"
       ],
       "discussioni": [
         "09/02/2026 | UDIENZA PUBBLICA | DISCUSSO | MANUELA SINIGOI | Merito | 14"
@@ -843,7 +898,11 @@
       "provvedimenti_collegiali": [
         "SENTENZA | SINIGOI MANUELA | 14/02/2026 | 09/02/2026 | UP | IMPROCEDIBILE PER SOPRAVVENUTA CARENZA DI INTERESSE"
       ],
-      "provvedimenti_monocratici": []
+      "provvedimenti_monocratici": [],
+      "data_rilevazione": "28/03/2026 23:13",
+      "ts_eventi": {
+        "SENTENZA | SINIGOI MANUELA | 14/02/2026 | 09/02/2026 | UP | IMPROCEDIBILE PER SOPRAVVENUTA CARENZA DI INTERESSE": "28/03/2026 23:13"
+      }
     },
     {
       "nrg": "2026000125",
@@ -881,7 +940,14 @@
       "provvedimenti_collegiali": [
         "ORDINANZA CAUTELARE | SINIGOI MANUELA | 27/03/2026 | 24/03/2026 | CC | PRENDE ATTO RINUNZIA ALLA ISTANZA CAUTELARE FISSA UDIENZA PUBBLICA"
       ],
-      "provvedimenti_monocratici": []
+      "provvedimenti_monocratici": [],
+      "data_rilevazione": "27/03/2026 08:45",
+      "ts_eventi": {
+        "MEMORIA | 2026001238 | AMMINISTRAZIONE INTIMATA | 21/03/2026": "21/03/2026 10:56",
+        "24/03/2026 | CAMERA DI CONSIGLIO | DISCUSSO | MANUELA SINIGOI | Giudizio Cautelare | 4": "24/03/2026 15:08",
+        "05/11/2026 | UDIENZA PUBBLICA |  | DA ASSEGNARE MAGISTRATO | Merito | ": "27/03/2026 08:45",
+        "ORDINANZA CAUTELARE | SINIGOI MANUELA | 27/03/2026 | 24/03/2026 | CC | PRENDE ATTO RINUNZIA ALLA ISTANZA CAUTELARE FISSA UDIENZA PUBBLICA": "27/03/2026 08:45"
+      }
     }
   ],
   "ultimo_aggiornamento": "31/03/2026 16:53",
