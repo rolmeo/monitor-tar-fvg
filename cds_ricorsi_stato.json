@@ -92,13 +92,16 @@
         "RICORSO | 2026018793 | APPELLANTE | 11/03/2026"
       ],
       "discussioni": [
-        "14/04/2026 | CAMERA DI CONSIGLIO |  | DA ASSEGNARE MAGISTRATO | Giudizio Cautelare | "
+        "14/04/2026 | CAMERA DI CONSIGLIO |  | LAURA MARZANO | Giudizio Cautelare | "
       ],
       "provvedimenti_collegiali": [],
       "provvedimenti_monocratici": [
         "DECRETO CAUTELARE | CONTESSA CLAUDIO | 13/03/2026 | RESPINGE FISSA CAMERA DI CONSIGLIO"
       ],
-      "data_rilevazione": "20/03/2026 18:25"
+      "data_rilevazione": "31/03/2026 12:58",
+      "ts_eventi": {
+        "14/04/2026 | CAMERA DI CONSIGLIO |  | LAURA MARZANO | Giudizio Cautelare | ": "31/03/2026 12:58"
+      }
     }
   }
 }
