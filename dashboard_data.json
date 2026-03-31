@@ -950,8 +950,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "31/03/2026 06:23",
-  "ultimo_controllo": "31/03/2026 06:23",
+  "ultimo_aggiornamento": "31/03/2026 07:46",
+  "ultimo_controllo": "31/03/2026 07:46",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -1084,6 +1084,36 @@
       "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
       "esito": "RESPINGE     ",
       "nomeFile": "202600091_01.xml"
+    },
+    {
+      "nrgFascicolo": "202500713",
+      "sezione": "1",
+      "parte": "ITALGAS RETI S.P.A.",
+      "tipoUdienza": "UP",
+      "dataUdienza": "10/03/2026",
+      "numProvvedimento": "202600117",
+      "dataPubblicazione": "31/03/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "SINIGOI MANUELA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "ACCOGLIE     ",
+      "nomeFile": "202600117_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600052",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "CC",
+      "dataUdienza": "24/02/2026",
+      "numProvvedimento": "202600116",
+      "dataPubblicazione": "31/03/2026",
+      "tipoProvvedimento": "SENTENZA BREVE",
+      "codiceTipoProvvedimento": "20",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "DICHIARA IMPROCEDIBILE     ",
+      "nomeFile": "202600116_20.xml"
     }
   ],
   "provvedimenti_monocratici": [
@@ -1102,5 +1132,6 @@
       "esito": "ACCOGLIE  FISSA CAMERA DI CONSIGLIO    ",
       "nomeFile": "202600034_06.xml"
     }
-  ]
+  ],
+  "ultima_variazione": "31/03/2026 07:46"
 }
