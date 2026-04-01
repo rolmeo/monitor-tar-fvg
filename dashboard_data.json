@@ -889,8 +889,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "01/04/2026 19:59",
-  "ultimo_controllo": "01/04/2026 19:59",
+  "ultimo_aggiornamento": "01/04/2026 19:04",
+  "ultimo_controllo": "01/04/2026 19:04",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -1021,6 +1021,66 @@
       "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
       "esito": "RESPINGE     ",
       "nomeFile": "202600091_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600118",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "CC",
+      "dataUdienza": "24/03/2026",
+      "numProvvedimento": "202600119",
+      "dataPubblicazione": "01/04/2026",
+      "tipoProvvedimento": "SENTENZA BREVE",
+      "codiceTipoProvvedimento": "20",
+      "relatore": "SINIGOI MANUELA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RESPINGE     ",
+      "nomeFile": "202600119_20.xml"
+    },
+    {
+      "nrgFascicolo": "202500255",
+      "sezione": "1",
+      "parte": "CENTRO CULTURALE ISLAMICO DARUS SALAAM",
+      "tipoUdienza": "UP",
+      "dataUdienza": "24/02/2026",
+      "numProvvedimento": "202600118",
+      "dataPubblicazione": "01/04/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "DICHIARA INAMMISSIBILE     ",
+      "nomeFile": "202600118_01.xml"
+    },
+    {
+      "nrgFascicolo": "202500713",
+      "sezione": "1",
+      "parte": "ITALGAS RETI S.P.A.",
+      "tipoUdienza": "UP",
+      "dataUdienza": "10/03/2026",
+      "numProvvedimento": "202600117",
+      "dataPubblicazione": "31/03/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "SINIGOI MANUELA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "ACCOGLIE     ",
+      "nomeFile": "202600117_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600052",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "CC",
+      "dataUdienza": "24/02/2026",
+      "numProvvedimento": "202600116",
+      "dataPubblicazione": "31/03/2026",
+      "tipoProvvedimento": "SENTENZA BREVE",
+      "codiceTipoProvvedimento": "20",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "DICHIARA IMPROCEDIBILE     ",
+      "nomeFile": "202600116_20.xml"
     }
   ],
   "provvedimenti_monocratici": [
