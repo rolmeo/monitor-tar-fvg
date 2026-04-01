@@ -124,12 +124,18 @@
         "ISTANZA DI FISSAZIONE UDIENZA | 2026002629 | APPELLANTE | 31/03/2026",
         "ATTO DI COSTITUZIONE | 2026024563 | CONTROINTERESSATO | 01/04/2026"
       ],
-      "discussioni": [],
+      "discussioni": [
+        "21/04/2026 | CAMERA DI CONSIGLIO |  | DA ASSEGNARE MAGISTRATO | Giudizio Cautelare | "
+      ],
       "provvedimenti_collegiali": [],
-      "provvedimenti_monocratici": [],
-      "data_rilevazione": "01/04/2026 12:34",
+      "provvedimenti_monocratici": [
+        "DECRETO CAUTELARE | CHIEPPA ROBERTO | 01/04/2026 | RESPINGE FISSA CAMERA DI CONSIGLIO"
+      ],
+      "data_rilevazione": "01/04/2026 15:04",
       "ts_eventi": {
-        "ATTO DI COSTITUZIONE | 2026024563 | CONTROINTERESSATO | 01/04/2026": "01/04/2026 10:35"
+        "ATTO DI COSTITUZIONE | 2026024563 | CONTROINTERESSATO | 01/04/2026": "01/04/2026 10:35",
+        "21/04/2026 | CAMERA DI CONSIGLIO |  | DA ASSEGNARE MAGISTRATO | Giudizio Cautelare | ": "01/04/2026 15:04",
+        "DECRETO CAUTELARE | CHIEPPA ROBERTO | 01/04/2026 | RESPINGE FISSA CAMERA DI CONSIGLIO": "01/04/2026 15:04"
       }
     }
   }
