@@ -477,12 +477,14 @@
         "CONTROINTERESSATO |  | ",
         "CONTROINTERESSATO |  | ",
         "CONTROINTERESSATO |  | ",
-        "CONTROINTERESSATO |  | "
+        "CONTROINTERESSATO |  | ",
+        "RESISTENTE | 01/04/2026 | "
       ],
       "atti": [
-        "ISTANZA DI FISSAZIONE UDIENZA | 2026000118 | RICORRENTE PRINCIPALE | 13/03/2026",
         "DOMANDA DI MISURE CAUTELARI MONOCRATICHE ART.56 C.P.A. | 2026001107 | RICORRENTE PRINCIPALE | 13/03/2026",
         "ATTO DI COSTITUZIONE | 2026001245 | AMMINISTRAZIONE INTIMATA | 21/03/2026",
+        "ATTO DI COSTITUZIONE | 2026001352 | AMMINISTRAZIONE INTIMATA | 01/04/2026",
+        "ISTANZA DI FISSAZIONE UDIENZA | 2026000118 | RICORRENTE PRINCIPALE | 13/03/2026",
         "RICORSO | 2026001105 | RICORRENTE PRINCIPALE | 13/03/2026"
       ],
       "discussioni": [
@@ -887,8 +889,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "01/04/2026 13:51",
-  "ultimo_controllo": "01/04/2026 13:51",
+  "ultimo_aggiornamento": "01/04/2026 13:52",
+  "ultimo_controllo": "01/04/2026 13:52",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
