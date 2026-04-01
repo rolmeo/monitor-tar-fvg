@@ -251,6 +251,7 @@
         "RICORSO | 2025003919 | RICORRENTE PRINCIPALE | 22/12/2025",
         "CONTRIBUTO UNIFICATO | 2026000493 | RICORRENTE PRINCIPALE | 29/01/2026",
         "MEMORIA | 2026001189 | AMMINISTRAZIONE INTIMATA | 20/03/2026",
+        "MEMORIA DI REPLICA | 2026001340 | AMMINISTRAZIONE INTIMATA | 01/04/2026",
         "CONTRIBUTO UNIFICATO | 2026001141 | RICORRENTE PRINCIPALE | 18/03/2026",
         "MOTIVI AGGIUNTI | 2026000464 | RICORRENTE PRINCIPALE | 28/01/2026",
         "MOTIVI AGGIUNTI | 2026000995 | RICORRENTE PRINCIPALE | 04/03/2026",
@@ -885,8 +886,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "01/04/2026 10:22",
-  "ultimo_controllo": "01/04/2026 10:22",
+  "ultimo_aggiornamento": "01/04/2026 10:27",
+  "ultimo_controllo": "01/04/2026 10:27",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
