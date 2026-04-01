@@ -950,8 +950,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "01/04/2026 06:12",
-  "ultimo_controllo": "01/04/2026 06:12",
+  "ultimo_aggiornamento": "01/04/2026 07:55",
+  "ultimo_controllo": "01/04/2026 07:55",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -1141,6 +1141,36 @@
       "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
       "esito": "DICHIARA IMPROCEDIBILE     ",
       "nomeFile": "202600116_20.xml"
+    },
+    {
+      "nrgFascicolo": "202600118",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "CC",
+      "dataUdienza": "24/03/2026",
+      "numProvvedimento": "202600119",
+      "dataPubblicazione": "01/04/2026",
+      "tipoProvvedimento": "SENTENZA BREVE",
+      "codiceTipoProvvedimento": "20",
+      "relatore": "SINIGOI MANUELA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RESPINGE     ",
+      "nomeFile": "202600119_20.xml"
+    },
+    {
+      "nrgFascicolo": "202500255",
+      "sezione": "1",
+      "parte": "CENTRO CULTURALE ISLAMICO DARUS SALAAM",
+      "tipoUdienza": "UP",
+      "dataUdienza": "24/02/2026",
+      "numProvvedimento": "202600118",
+      "dataPubblicazione": "01/04/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "DICHIARA INAMMISSIBILE     ",
+      "nomeFile": "202600118_01.xml"
     }
   ],
   "provvedimenti_monocratici": [
@@ -1159,5 +1189,6 @@
       "esito": "ACCOGLIE  FISSA CAMERA DI CONSIGLIO    ",
       "nomeFile": "202600034_06.xml"
     }
-  ]
+  ],
+  "ultima_variazione": "01/04/2026 07:55"
 }
