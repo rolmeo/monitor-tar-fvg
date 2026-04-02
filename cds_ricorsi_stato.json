@@ -125,17 +125,18 @@
         "ATTO DI COSTITUZIONE | 2026024563 | CONTROINTERESSATO | 01/04/2026"
       ],
       "discussioni": [
-        "21/04/2026 | CAMERA DI CONSIGLIO |  | DA ASSEGNARE MAGISTRATO | Giudizio Cautelare | "
+        "21/04/2026 | CAMERA DI CONSIGLIO |  | MICHELE TECCHIA | Giudizio Cautelare | "
       ],
       "provvedimenti_collegiali": [],
       "provvedimenti_monocratici": [
         "DECRETO CAUTELARE | CHIEPPA ROBERTO | 01/04/2026 | RESPINGE FISSA CAMERA DI CONSIGLIO"
       ],
-      "data_rilevazione": "01/04/2026 15:04",
+      "data_rilevazione": "02/04/2026 08:50",
       "ts_eventi": {
         "ATTO DI COSTITUZIONE | 2026024563 | CONTROINTERESSATO | 01/04/2026": "01/04/2026 10:35",
         "21/04/2026 | CAMERA DI CONSIGLIO |  | DA ASSEGNARE MAGISTRATO | Giudizio Cautelare | ": "01/04/2026 15:04",
-        "DECRETO CAUTELARE | CHIEPPA ROBERTO | 01/04/2026 | RESPINGE FISSA CAMERA DI CONSIGLIO": "01/04/2026 15:04"
+        "DECRETO CAUTELARE | CHIEPPA ROBERTO | 01/04/2026 | RESPINGE FISSA CAMERA DI CONSIGLIO": "01/04/2026 15:04",
+        "21/04/2026 | CAMERA DI CONSIGLIO |  | MICHELE TECCHIA | Giudizio Cautelare | ": "02/04/2026 08:50"
       }
     }
   }
