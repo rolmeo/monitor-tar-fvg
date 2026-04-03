@@ -890,8 +890,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "03/04/2026 16:05",
-  "ultimo_controllo": "03/04/2026 16:05",
+  "ultimo_aggiornamento": "03/04/2026 15:10",
+  "ultimo_controllo": "03/04/2026 15:10",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -1039,6 +1039,21 @@
       "presidente": null,
       "esito": "ACCOGLIE  FISSA CAMERA DI CONSIGLIO    ",
       "nomeFile": "202600034_06.xml"
+    },
+    {
+      "nrgFascicolo": "202600124",
+      "sezione": "1",
+      "parte": null,
+      "tipoUdienza": null,
+      "dataUdienza": null,
+      "numProvvedimento": "202600007",
+      "dataPubblicazione": "02/04/2026",
+      "tipoProvvedimento": "GRATUITO PATROCINIO",
+      "codiceTipoProvvedimento": "40",
+      "relatore": "BUSICO DANIELE",
+      "presidente": null,
+      "esito": "ACCOGLIE      ",
+      "nomeFile": "202600007_40.xml"
     }
   ]
 }
