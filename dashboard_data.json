@@ -290,6 +290,7 @@
         "ISTANZA DI FISSAZIONE UDIENZA | 2025000672 | RICORRENTE PRINCIPALE | 19/12/2025",
         "ALTRO | 2026000169 | AMMINISTRAZIONE INTIMATA | 12/01/2026",
         "MEMORIA | 2026000134 | RICORRENTE PRINCIPALE | 09/01/2026",
+        "MEMORIA | 2026001390 | RICORRENTE PRINCIPALE | 03/04/2026",
         "MEMORIA | 2026000154 | AMMINISTRAZIONE INTIMATA | 10/01/2026",
         "RICORSO | 2025003909 | RICORRENTE PRINCIPALE | 19/12/2025",
         "CONTRIBUTO UNIFICATO | 2025004038 | RICORRENTE PRINCIPALE | 30/12/2025",
@@ -890,8 +891,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "03/04/2026 19:05",
-  "ultimo_controllo": "03/04/2026 19:05",
+  "ultimo_aggiornamento": "03/04/2026 19:10",
+  "ultimo_controllo": "03/04/2026 19:10",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
