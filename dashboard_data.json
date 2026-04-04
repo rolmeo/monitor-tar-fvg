@@ -575,7 +575,10 @@
         "10/09/2025 | CAMERA DI CONSIGLIO | DISCUSSO | MANUELA SINIGOI | Giudizio Cautelare | 8",
         "15/07/2025 | CAMERA DI CONSIGLIO | RINVIO AD ALTRA DATA | MANUELA SINIGOI | Giudizio Cautelare | 7"
       ],
-      "provvedimenti_collegiali": [],
+      "provvedimenti_collegiali": [
+        "SENTENZA | SINIGOI MANUELA | 20/02/2026 | 09/02/2026 | UP | IMPROCEDIBILE PER SOPRAVVENUTA CARENZA DI INTERESSE",
+        "ORDINANZA CAUTELARE | SINIGOI MANUELA | 13/09/2025 | 10/09/2025 | CC | PRENDE ATTO RINUNZIA ALLA ISTANZA CAUTELARE FISSA UDIENZA PUBBLICA"
+      ],
       "provvedimenti_monocratici": [
         "DECRETO CAUTELARE | MODICA DE MOHAC DI GRISI' CARLO | 03/06/2025 | RESPINGE FISSA CAMERA DI CONSIGLIO"
       ]
@@ -891,8 +894,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "04/04/2026 19:15",
-  "ultimo_controllo": "04/04/2026 19:15",
+  "ultimo_aggiornamento": "04/04/2026 19:20",
+  "ultimo_controllo": "04/04/2026 19:20",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
