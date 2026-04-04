@@ -286,6 +286,7 @@
       ],
       "atti": [
         "DOCUMENTI | 2026000067 | AMMINISTRAZIONE INTIMATA | 07/01/2026",
+        "MEMORIA EX ART.73 C.P.A. | 2026001397 | AMMINISTRAZIONE INTIMATA | 04/04/2026",
         "DOCUMENTI | 2026001299 | AMMINISTRAZIONE INTIMATA | 26/03/2026",
         "ISTANZA DI FISSAZIONE UDIENZA | 2025000672 | RICORRENTE PRINCIPALE | 19/12/2025",
         "ALTRO | 2026000169 | AMMINISTRAZIONE INTIMATA | 12/01/2026",
@@ -892,8 +893,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "04/04/2026 11:05",
-  "ultimo_controllo": "04/04/2026 11:05",
+  "ultimo_aggiornamento": "04/04/2026 11:10",
+  "ultimo_controllo": "04/04/2026 11:10",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
