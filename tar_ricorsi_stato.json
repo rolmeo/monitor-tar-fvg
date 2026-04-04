@@ -591,10 +591,14 @@
       "discussioni": [
         "18/12/2024 | CAMERA DI CONSIGLIO | DISCUSSO | CLAUDIA MICELLI | Giudizio Cautelare | 3"
       ],
-      "provvedimenti_collegiali": [],
+      "provvedimenti_collegiali": [
+        "SENTENZA BREVE | MICELLI CLAUDIA | 28/01/2025 | 18/12/2024 | CC | DICHIARA INAMMISSIBILE"
+      ],
       "provvedimenti_monocratici": [],
-      "data_rilevazione": "04/04/2026 22:16",
-      "ts_eventi": {}
+      "data_rilevazione": "04/04/2026 22:47",
+      "ts_eventi": {
+        "SENTENZA BREVE | MICELLI CLAUDIA | 28/01/2025 | 18/12/2024 | CC | DICHIARA INAMMISSIBILE": "04/04/2026 22:47"
+      }
     },
     "2025_257": {
       "nrg": "2025000257",
