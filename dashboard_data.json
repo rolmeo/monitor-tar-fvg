@@ -302,7 +302,9 @@
         "06/05/2026 | UDIENZA PUBBLICA |  | DA ASSEGNARE MAGISTRATO | Merito | ",
         "13/01/2026 | CAMERA DI CONSIGLIO | DISCUSSO | CARLO MODICA DE MOHAC DI GRISI' | Giudizio Cautelare | 5"
       ],
-      "provvedimenti_collegiali": [],
+      "provvedimenti_collegiali": [
+        "ORDINANZA CAUTELARE | MODICA DE MOHAC DI GRISI' CARLO | 14/01/2026 | 13/01/2026 | CC | PRENDE ATTO RINUNZIA ALLA ISTANZA CAUTELARE FISSA UDIENZA PUBBLICA"
+      ],
       "provvedimenti_monocratici": [
         "DECRETO CAUTELARE | MODICA DE MOHAC DI GRISI' CARLO | 22/12/2025 | ACCOGLIE FISSA CAMERA DI CONSIGLIO"
       ]
@@ -893,8 +895,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "08/04/2026 17:45",
-  "ultimo_controllo": "08/04/2026 17:45",
+  "ultimo_aggiornamento": "08/04/2026 17:50",
+  "ultimo_controllo": "08/04/2026 17:50",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
