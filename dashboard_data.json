@@ -175,9 +175,7 @@
         "24/03/2026 | CAMERA DI CONSIGLIO | DISCUSSO | MANUELA SINIGOI | Giudizio Cautelare | 5",
         "24/02/2026 | CAMERA DI CONSIGLIO | RINVIO AD ALTRA DATA | MANUELA SINIGOI | Giudizio Cautelare | 15"
       ],
-      "provvedimenti_collegiali": [
-        "ORDINANZA CAUTELARE | SINIGOI MANUELA | 27/03/2026 | 24/03/2026 | CC | RESPINGE FISSA UDIENZA PUBBLICA"
-      ],
+      "provvedimenti_collegiali": [],
       "provvedimenti_monocratici": []
     },
     {
@@ -895,8 +893,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "08/04/2026 14:25",
-  "ultimo_controllo": "08/04/2026 14:25",
+  "ultimo_aggiornamento": "08/04/2026 14:30",
+  "ultimo_controllo": "08/04/2026 14:30",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
