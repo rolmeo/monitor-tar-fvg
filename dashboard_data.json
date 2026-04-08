@@ -490,7 +490,8 @@
         "MEMORIA | 2026001396 | AMMINISTRAZIONE INTIMATA | 04/04/2026",
         "ISTANZA DI FISSAZIONE UDIENZA | 2026000118 | RICORRENTE PRINCIPALE | 13/03/2026",
         "RICORSO | 2026001105 | RICORRENTE PRINCIPALE | 13/03/2026",
-        "MEMORIA | 2026001399 | AMMINISTRAZIONE INTIMATA | 04/04/2026"
+        "MEMORIA | 2026001399 | AMMINISTRAZIONE INTIMATA | 04/04/2026",
+        "ALTRO | 2026001413 | AMMINISTRAZIONE INTIMATA | 08/04/2026"
       ],
       "discussioni": [
         "09/04/2026 | CAMERA DI CONSIGLIO |  | MANUELA SINIGOI | Giudizio Cautelare | 4"
@@ -894,8 +895,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "08/04/2026 14:20",
-  "ultimo_controllo": "08/04/2026 14:20",
+  "ultimo_aggiornamento": "08/04/2026 14:25",
+  "ultimo_controllo": "08/04/2026 14:25",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
