@@ -159,6 +159,7 @@
       ],
       "atti": [
         "MEMORIA | 2026001194 | AMMINISTRAZIONE INTIMATA | 20/03/2026",
+        "CONTRIBUTO UNIFICATO | 2026001439 | RICORRENTE INCIDENTALE | 10/04/2026",
         "MEMORIA | 2026001183 | RICORRENTE PRINCIPALE | 20/03/2026",
         "ISTANZA DI ACCESSO AL FASCICOLO TELEMATICO DELLA PARTE NON COSTITUITA | 2026000602 | ALTRE PARTI NON RITUALI | 04/02/2026",
         "RICORSO | 2026000598 | RICORRENTE PRINCIPALE | 04/02/2026",
@@ -896,8 +897,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "10/04/2026 15:24",
-  "ultimo_controllo": "10/04/2026 15:24",
+  "ultimo_aggiornamento": "10/04/2026 15:29",
+  "ultimo_controllo": "10/04/2026 15:29",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
