@@ -53,7 +53,7 @@ COLUMNS = [
 
 
 def ora_locale():
-    return datetime.now(timezone.utc) + timedelta(hours=1)
+    return datetime.now(timezone.utc) + timedelta(hours=2)
 
 
 def inizializza_sessione():
