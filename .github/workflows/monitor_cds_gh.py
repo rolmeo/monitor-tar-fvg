@@ -40,7 +40,7 @@ p_auth_token = ""
 
 
 def ora_locale():
-    return datetime.now(timezone.utc) + timedelta(hours=1)
+    return datetime.now(timezone.utc) + timedelta(hours=2)
 
 
 # ============================================================
