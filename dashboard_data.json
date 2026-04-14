@@ -213,7 +213,9 @@
         "15/07/2026 | UDIENZA PUBBLICA |  | DA ASSEGNARE MAGISTRATO | Merito | ",
         "09/02/2026 | CAMERA DI CONSIGLIO | DISCUSSO | MANUELA SINIGOI | Giudizio Cautelare | 12"
       ],
-      "provvedimenti_collegiali": [],
+      "provvedimenti_collegiali": [
+        "ORDINANZA CAUTELARE | SINIGOI MANUELA | 11/02/2026 | 09/02/2026 | CC | RESPINGE FISSA UDIENZA PUBBLICA"
+      ],
       "provvedimenti_monocratici": [
         "DECRETO PRESIDENZIALE | MODICA DE MOHAC DI GRISI' CARLO | 26/01/2026 | ACCOGLIE L'ISTANZA DI ABBREVIAZIONE TERMINI"
       ]
@@ -898,8 +900,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "14/04/2026 22:10",
-  "ultimo_controllo": "14/04/2026 22:10",
+  "ultimo_aggiornamento": "14/04/2026 22:15",
+  "ultimo_controllo": "14/04/2026 22:15",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
