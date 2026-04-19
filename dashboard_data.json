@@ -378,10 +378,7 @@
         "09/02/2026 | UDIENZA PUBBLICA | RINVIO AD ALTRA DATA | MANUELA SINIGOI | Merito | 6",
         "22/10/2025 | CAMERA DI CONSIGLIO | DISCUSSO | MANUELA SINIGOI | Giudizio Cautelare | 21"
       ],
-      "provvedimenti_collegiali": [
-        "ORDINANZA CAUTELARE | SINIGOI MANUELA | 02/03/2026 | 24/02/2026 | CC | RESPINGE",
-        "ORDINANZA CAUTELARE | SINIGOI MANUELA | 29/10/2025 | 22/10/2025 | CC | PRENDE ATTO RINUNZIA ALLA ISTANZA CAUTELARE FISSA UDIENZA PUBBLICA"
-      ],
+      "provvedimenti_collegiali": [],
       "provvedimenti_monocratici": []
     },
     {
@@ -909,8 +906,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "19/04/2026 12:07",
-  "ultimo_controllo": "19/04/2026 12:07",
+  "ultimo_aggiornamento": "19/04/2026 12:09",
+  "ultimo_controllo": "19/04/2026 12:09",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
