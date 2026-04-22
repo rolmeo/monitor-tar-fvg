@@ -272,7 +272,8 @@
         "CONTRIBUTO UNIFICATO | 2026001284 | RICORRENTE PRINCIPALE | 25/03/2026"
       ],
       "discussioni": [
-        "22/04/2026 | UDIENZA PUBBLICA |  | MANUELA SINIGOI | Merito | 2",
+        "14/07/2026 | UDIENZA PUBBLICA |  | DA ASSEGNARE MAGISTRATO | Merito | ",
+        "22/04/2026 | UDIENZA PUBBLICA | RINVIO AD ALTRA DATA | MANUELA SINIGOI | Merito | 2",
         "13/01/2026 | CAMERA DI CONSIGLIO | DISCUSSO | CARLO MODICA DE MOHAC DI GRISI' | Giudizio Cautelare | 4"
       ],
       "provvedimenti_collegiali": [
@@ -830,7 +831,8 @@
         "DOCUMENTI | 2025002807 | ALTRE PARTI NON RITUALI | 03/10/2025"
       ],
       "discussioni": [
-        "22/04/2026 | UDIENZA PUBBLICA |  | MANUELA SINIGOI | Merito | 1",
+        "14/07/2026 | UDIENZA PUBBLICA |  | DA ASSEGNARE MAGISTRATO | Merito | ",
+        "22/04/2026 | UDIENZA PUBBLICA | RINVIO AD ALTRA DATA | MANUELA SINIGOI | Merito | 1",
         "09/02/2026 | UDIENZA PUBBLICA | RINVIO AD ALTRA DATA | MANUELA SINIGOI | Merito | 13"
       ],
       "provvedimenti_collegiali": [],
@@ -909,8 +911,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "22/04/2026 11:42",
-  "ultimo_controllo": "22/04/2026 11:42",
+  "ultimo_aggiornamento": "22/04/2026 11:45",
+  "ultimo_controllo": "22/04/2026 11:45",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
