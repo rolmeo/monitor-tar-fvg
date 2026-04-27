@@ -890,10 +890,12 @@
         "ALTRE PARTI NON RITUALI |  | ",
         "ALTRE PARTI NON RITUALI |  | ",
         "ALTRE PARTI NON RITUALI |  | ",
-        "ALTRE PARTI NON RITUALI |  | "
+        "ALTRE PARTI NON RITUALI |  | ",
+        "ALTRI RICORRENTI | 27/04/2026 | "
       ],
       "atti": [
         "DICHIARAZIONE DI RINUNZIA ALLA MISURA CAUTELARE | 2026001208 | RICORRENTE PRINCIPALE | 20/03/2026",
+        "ATTO DI COSTITUZIONE | 2026001606 | ALTRI RICORRENTI | 27/04/2026",
         "ISTANZA DI FISSAZIONE UDIENZA | 2026000116 | RICORRENTE PRINCIPALE | 12/03/2026",
         "ATTO DI COSTITUZIONE | 2026001100 | CONTROINTERESSATO | 13/03/2026",
         "ISTANZA DI ACCESSO AL FASCICOLO TELEMATICO DELLA PARTE NON COSTITUITA | 2026001163 | ALTRE PARTI NON RITUALI | 19/03/2026",
@@ -911,8 +913,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "27/04/2026 07:26",
-  "ultimo_controllo": "27/04/2026 07:26",
+  "ultimo_aggiornamento": "27/04/2026 10:47",
+  "ultimo_controllo": "27/04/2026 10:47",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
