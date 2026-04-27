@@ -176,6 +176,7 @@
         "DOCUMENTI | 2026000599 | RICORRENTE PRINCIPALE | 04/02/2026",
         "CONTRIBUTO UNIFICATO | 2026000670 | RICORRENTE PRINCIPALE | 09/02/2026",
         "MOTIVI AGGIUNTI | 2026001506 | RICORRENTE PRINCIPALE | 16/04/2026",
+        "CONTRIBUTO UNIFICATO | 2026001613 | RICORRENTE PRINCIPALE | 27/04/2026",
         "MEMORIA | 2026000822 | AMMINISTRAZIONE INTIMATA | 20/02/2026",
         "ATTO DI COSTITUZIONE | 2026000719 | AMMINISTRAZIONE INTIMATA | 13/02/2026"
       ],
@@ -913,8 +914,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "27/04/2026 17:38",
-  "ultimo_controllo": "27/04/2026 17:38",
+  "ultimo_aggiornamento": "27/04/2026 17:42",
+  "ultimo_controllo": "27/04/2026 17:42",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
