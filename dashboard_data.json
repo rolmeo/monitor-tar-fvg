@@ -468,9 +468,10 @@
         "RESISTENTE | 17/03/2026 | "
       ],
       "atti": [
+        "ATTO DI COSTITUZIONE | 2026001088 | CONTROINTERESSATO | 11/03/2026",
         "RICORSO | 2026001087 | RICORRENTE PRINCIPALE | 11/03/2026",
         "ATTO DI COSTITUZIONE | 2026001128 | AMMINISTRAZIONE INTIMATA | 17/03/2026",
-        "ATTO DI COSTITUZIONE | 2026001088 | CONTROINTERESSATO | 11/03/2026",
+        "CONTRIBUTO UNIFICATO | 2026001617 | RICORRENTE PRINCIPALE | 28/04/2026",
         "ISTANZA DI FISSAZIONE UDIENZA | 2026000113 | RICORRENTE PRINCIPALE | 11/03/2026"
       ],
       "discussioni": [],
@@ -914,8 +915,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "28/04/2026 10:23",
-  "ultimo_controllo": "28/04/2026 10:23",
+  "ultimo_aggiornamento": "28/04/2026 10:28",
+  "ultimo_controllo": "28/04/2026 10:28",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
