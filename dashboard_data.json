@@ -311,7 +311,7 @@
         "MEMORIA DI REPLICA | 2026001466 | AMMINISTRAZIONE INTIMATA | 15/04/2026"
       ],
       "discussioni": [
-        "06/05/2026 | UDIENZA PUBBLICA |  | MANUELA SINIGOI | Merito | ",
+        "06/05/2026 | UDIENZA PUBBLICA |  | MANUELA SINIGOI | Merito | 1",
         "13/01/2026 | CAMERA DI CONSIGLIO | DISCUSSO | CARLO MODICA DE MOHAC DI GRISI' | Giudizio Cautelare | 5"
       ],
       "provvedimenti_collegiali": [
@@ -915,8 +915,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "30/04/2026 09:28",
-  "ultimo_controllo": "30/04/2026 09:28",
+  "ultimo_aggiornamento": "30/04/2026 10:18",
+  "ultimo_controllo": "30/04/2026 10:18",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
