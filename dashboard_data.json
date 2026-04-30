@@ -58,9 +58,11 @@
         "RICORRENTE | 21/02/2026 | ",
         "RESISTENTE | 27/02/2026 | ",
         "CONTROINTERESSATO | 03/03/2026 | ",
+        "ALTRE PARTI NON RITUALI |  | ",
         "ALTRE PARTI NON RITUALI |  | "
       ],
       "atti": [
+        "MOTIVI AGGIUNTI > RICHIESTA MISURA CAUTELARE E CAUTELARE URGENTE | 2026001651 | RICORRENTE PRINCIPALE | 30/04/2026",
         "DOCUMENTI | 2026001255 | RICORRENTE PRINCIPALE | 23/03/2026",
         "ATTO DI COSTITUZIONE | 2026000921 | AMMINISTRAZIONE INTIMATA | 27/02/2026",
         "DOMANDA DI MISURE CAUTELARI MONOCRATICHE ART.56 C.P.A. | 2026000932 | RICORRENTE PRINCIPALE | 27/02/2026",
@@ -915,8 +917,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "30/04/2026 10:18",
-  "ultimo_controllo": "30/04/2026 10:18",
+  "ultimo_aggiornamento": "30/04/2026 10:23",
+  "ultimo_controllo": "30/04/2026 10:23",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
