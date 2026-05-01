@@ -84,6 +84,7 @@
         "ORDINANZA CAUTELARE | MICELLI CLAUDIA | 27/03/2026 | 24/03/2026 | CC | RESPINGE FISSA UDIENZA PUBBLICA"
       ],
       "provvedimenti_monocratici": [
+        "DECRETO CAUTELARE | MODICA DE MOHAC DI GRISI' CARLO | 01/05/2026 | RESPINGE FISSA CAMERA DI CONSIGLIO",
         "DECRETO CAUTELARE | MODICA DE MOHAC DI GRISI' CARLO | 04/03/2026 | ACCOGLIE FISSA CAMERA DI CONSIGLIO"
       ]
     },
@@ -917,8 +918,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "01/05/2026 12:13",
-  "ultimo_controllo": "01/05/2026 12:13",
+  "ultimo_aggiornamento": "01/05/2026 12:17",
+  "ultimo_controllo": "01/05/2026 12:17",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
