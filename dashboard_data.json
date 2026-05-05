@@ -73,6 +73,7 @@
         "RICORSO | 2026000850 | RICORRENTE PRINCIPALE | 21/02/2026",
         "CONTRIBUTO UNIFICATO | 2026000900 | RICORRENTE PRINCIPALE | 25/02/2026",
         "MEMORIA | 2026001241 | RICORRENTE PRINCIPALE | 21/03/2026",
+        "CONTRIBUTO UNIFICATO | 2026001699 | RICORRENTE PRINCIPALE | 05/05/2026",
         "ATTO DI COSTITUZIONE | 2026000981 | CONTROINTERESSATO | 03/03/2026",
         "MEMORIA | 2026001203 | CONTROINTERESSATO | 20/03/2026"
       ],
@@ -920,8 +921,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "05/05/2026 17:15",
-  "ultimo_controllo": "05/05/2026 17:15",
+  "ultimo_aggiornamento": "05/05/2026 17:20",
+  "ultimo_controllo": "05/05/2026 17:20",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
