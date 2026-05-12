@@ -134,6 +134,7 @@
         "ATTO DI COSTITUZIONE | 2026000720 | AMMINISTRAZIONE INTIMATA | 13/02/2026"
       ],
       "discussioni": [
+        "21/10/2026 | UDIENZA PUBBLICA |  | DA ASSEGNARE MAGISTRATO | Merito | ",
         "24/02/2026 | CAMERA DI CONSIGLIO | DISCUSSO | MANUELA SINIGOI | Giudizio Cautelare | 14"
       ],
       "provvedimenti_collegiali": [
@@ -517,7 +518,7 @@
         "ALTRO | 2026001413 | AMMINISTRAZIONE INTIMATA | 08/04/2026"
       ],
       "discussioni": [
-        "02/12/2026 | UDIENZA PUBBLICA |  | DA ASSEGNARE MAGISTRATO | Merito | ",
+        "21/10/2026 | UDIENZA PUBBLICA |  | DA ASSEGNARE MAGISTRATO | Merito | ",
         "09/04/2026 | CAMERA DI CONSIGLIO | DISCUSSO | MANUELA SINIGOI | Giudizio Cautelare | 4"
       ],
       "provvedimenti_collegiali": [
@@ -918,6 +919,7 @@
         "MEMORIA | 2026001238 | AMMINISTRAZIONE INTIMATA | 21/03/2026"
       ],
       "discussioni": [
+        "21/10/2026 | UDIENZA PUBBLICA |  | DA ASSEGNARE MAGISTRATO | Merito | ",
         "24/03/2026 | CAMERA DI CONSIGLIO | DISCUSSO | MANUELA SINIGOI | Giudizio Cautelare | 4"
       ],
       "provvedimenti_collegiali": [
@@ -926,8 +928,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "12/05/2026 11:39",
-  "ultimo_controllo": "12/05/2026 11:39",
+  "ultimo_aggiornamento": "12/05/2026 11:44",
+  "ultimo_controllo": "12/05/2026 11:44",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
