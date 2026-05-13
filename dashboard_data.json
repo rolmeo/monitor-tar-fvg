@@ -1060,81 +1060,6 @@
       "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
       "esito": "RESPINGE     ",
       "nomeFile": "202600091_01.xml"
-    },
-    {
-      "nrgFascicolo": "202500622",
-      "sezione": "1",
-      "parte": "IREN GREEN GENERATION TECH S.R.L",
-      "tipoUdienza": "CC",
-      "dataUdienza": "06/05/2026",
-      "numProvvedimento": "202600202",
-      "dataPubblicazione": "13/05/2026",
-      "tipoProvvedimento": "SENTENZA",
-      "codiceTipoProvvedimento": "01",
-      "relatore": "MICELLI CLAUDIA",
-      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
-      "esito": "ACCOGLIE     ",
-      "nomeFile": "202600202_01.xml"
-    },
-    {
-      "nrgFascicolo": "202500432",
-      "sezione": "1",
-      "parte": "COMUNE DI SAN VITO AL TAGLIAMENTO (PN)",
-      "tipoUdienza": "UP",
-      "dataUdienza": "24/03/2026",
-      "numProvvedimento": "202600201",
-      "dataPubblicazione": "13/05/2026",
-      "tipoProvvedimento": "SENTENZA",
-      "codiceTipoProvvedimento": "01",
-      "relatore": "MICELLI CLAUDIA",
-      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
-      "esito": "RESPINGE     ",
-      "nomeFile": "202600201_01.xml"
-    },
-    {
-      "nrgFascicolo": "202500575",
-      "sezione": "1",
-      "parte": "XXX_OMISSIS_XXX",
-      "tipoUdienza": "UP",
-      "dataUdienza": "24/03/2026",
-      "numProvvedimento": "202600200",
-      "dataPubblicazione": "13/05/2026",
-      "tipoProvvedimento": "SENTENZA",
-      "codiceTipoProvvedimento": "01",
-      "relatore": "MICELLI CLAUDIA",
-      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
-      "esito": "RESPINGE     ",
-      "nomeFile": "202600200_01.xml"
-    },
-    {
-      "nrgFascicolo": "202500211",
-      "sezione": "1",
-      "parte": "BANCA DI UDINE CREDITO COOPERATIVO SOC. COOP.",
-      "tipoUdienza": "UP",
-      "dataUdienza": "06/05/2026",
-      "numProvvedimento": "202600199",
-      "dataPubblicazione": "13/05/2026",
-      "tipoProvvedimento": "SENTENZA",
-      "codiceTipoProvvedimento": "01",
-      "relatore": "SINIGOI MANUELA",
-      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
-      "esito": "RESPINGE     ",
-      "nomeFile": "202600199_01.xml"
-    },
-    {
-      "nrgFascicolo": "202500513",
-      "sezione": "1",
-      "parte": "A.M.",
-      "tipoUdienza": "UP",
-      "dataUdienza": "06/05/2026",
-      "numProvvedimento": "202600198",
-      "dataPubblicazione": "13/05/2026",
-      "tipoProvvedimento": "SENTENZA",
-      "codiceTipoProvvedimento": "01",
-      "relatore": "MICELLI CLAUDIA",
-      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
-      "esito": "DICHIARA CESSATA MATERIA DEL CONTENDERE     ",
-      "nomeFile": "202600198_01.xml"
     }
   ],
   "provvedimenti_monocratici": [
@@ -1152,22 +1077,6 @@
       "presidente": null,
       "esito": "ACCOGLIE  FISSA CAMERA DI CONSIGLIO    ",
       "nomeFile": "202600034_06.xml"
-    },
-    {
-      "nrgFascicolo": "202600192",
-      "sezione": "1",
-      "parte": null,
-      "tipoUdienza": null,
-      "dataUdienza": null,
-      "numProvvedimento": "202600056",
-      "dataPubblicazione": "13/05/2026",
-      "tipoProvvedimento": "DECRETO CAUTELARE",
-      "codiceTipoProvvedimento": "06",
-      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
-      "presidente": null,
-      "esito": "RESPINGE  FISSA CAMERA DI CONSIGLIO    ",
-      "nomeFile": "202600056_06.xml"
     }
-  ],
-  "ultima_variazione": "13/05/2026 12:01"
+  ]
 }
