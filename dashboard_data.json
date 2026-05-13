@@ -445,6 +445,7 @@
         "ALTRO | 2026000639 | AMMINISTRAZIONE INTIMATA | 06/02/2026",
         "DOCUMENTI | 2025002957 | AMMINISTRAZIONE INTIMATA | 17/10/2025",
         "ATTO DI COSTITUZIONE | 2026000751 | AMMINISTRAZIONE INTIMATA | 17/02/2026",
+        "MEMORIA DI REPLICA | 2026001812 | AMMINISTRAZIONE INTIMATA | 13/05/2026",
         "MEMORIA DI REPLICA | 2026000260 | AMMINISTRAZIONE INTIMATA | 19/01/2026",
         "MEMORIA EX ART.73 C.P.A. | 2026001663 | RICORRENTE PRINCIPALE | 04/05/2026",
         "MEMORIA | 2026000852 | AMMINISTRAZIONE INTIMATA | 21/02/2026"
@@ -460,10 +461,11 @@
         "ORDINANZA CAUTELARE | SINIGOI MANUELA | 29/10/2025 | 22/10/2025 | CC | PRENDE ATTO RINUNZIA ALLA ISTANZA CAUTELARE FISSA UDIENZA PUBBLICA"
       ],
       "provvedimenti_monocratici": [],
-      "data_rilevazione": "07/05/2026 07:38",
+      "data_rilevazione": "13/05/2026 20:13",
       "ts_eventi": {
         "MEMORIA EX ART.73 C.P.A. | 2026001663 | RICORRENTE PRINCIPALE | 04/05/2026": "04/05/2026 10:09",
-        "04/06/2026 | UDIENZA PUBBLICA |  | MANUELA SINIGOI | Merito | ": "07/05/2026 07:38"
+        "04/06/2026 | UDIENZA PUBBLICA |  | MANUELA SINIGOI | Merito | ": "07/05/2026 07:38",
+        "MEMORIA DI REPLICA | 2026001812 | AMMINISTRAZIONE INTIMATA | 13/05/2026": "13/05/2026 20:13"
       }
     },
     {
@@ -1071,8 +1073,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "13/05/2026 21:13",
-  "ultimo_controllo": "13/05/2026 21:13",
+  "ultimo_aggiornamento": "13/05/2026 20:13",
+  "ultimo_controllo": "13/05/2026 20:13",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -1487,5 +1489,6 @@
       "esito": "RESPINGE  FISSA CAMERA DI CONSIGLIO    ",
       "nomeFile": "202600056_06.xml"
     }
-  ]
+  ],
+  "ultima_variazione": "13/05/2026 20:13"
 }
