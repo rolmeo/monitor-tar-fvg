@@ -422,9 +422,7 @@
         "18/11/2026 | UDIENZA PUBBLICA |  | DA ASSEGNARE MAGISTRATO | Merito | ",
         "24/03/2026 | CAMERA DI CONSIGLIO | DISCUSSO | MANUELA SINIGOI | Giudizio Cautelare | 1"
       ],
-      "provvedimenti_collegiali": [
-        "ORDINANZA CAUTELARE | SINIGOI MANUELA | 27/03/2026 | 24/03/2026 | CC | RESPINGE FISSA UDIENZA PUBBLICA"
-      ],
+      "provvedimenti_collegiali": [],
       "provvedimenti_monocratici": []
     },
     {
@@ -932,8 +930,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "19/05/2026 20:14",
-  "ultimo_controllo": "19/05/2026 20:14",
+  "ultimo_aggiornamento": "19/05/2026 20:19",
+  "ultimo_controllo": "19/05/2026 20:19",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
