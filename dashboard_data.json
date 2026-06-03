@@ -72,6 +72,7 @@
         "ALTRO | 2026002087 | AMMINISTRAZIONE INTIMATA | 03/06/2026",
         "ISTANZA DI FISSAZIONE UDIENZA | 2026000102 | RICORRENTE PRINCIPALE | 03/03/2026",
         "DOCUMENTI | 2026000935 | RICORRENTE PRINCIPALE | 02/03/2026",
+        "DOCUMENTI | 2026002108 | CONTROINTERESSATO | 03/06/2026",
         "RICORSO | 2026000850 | RICORRENTE PRINCIPALE | 21/02/2026",
         "CONTRIBUTO UNIFICATO | 2026000900 | RICORRENTE PRINCIPALE | 25/02/2026",
         "MEMORIA | 2026001241 | RICORRENTE PRINCIPALE | 21/03/2026",
@@ -938,8 +939,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "03/06/2026 15:52",
-  "ultimo_controllo": "03/06/2026 15:52",
+  "ultimo_aggiornamento": "03/06/2026 15:57",
+  "ultimo_controllo": "03/06/2026 15:57",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
