@@ -939,8 +939,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "03/06/2026 16:57",
-  "ultimo_controllo": "03/06/2026 16:57",
+  "ultimo_aggiornamento": "03/06/2026 17:01",
+  "ultimo_controllo": "03/06/2026 17:01",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -1071,6 +1071,21 @@
       "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
       "esito": "RESPINGE     ",
       "nomeFile": "202600091_01.xml"
+    },
+    {
+      "nrgFascicolo": "202500440",
+      "sezione": "1",
+      "parte": "SOCIETA' AGRICOLA GOBBI FRATTINI S.R.L.",
+      "tipoUdienza": "UP",
+      "dataUdienza": "09/04/2026",
+      "numProvvedimento": "202600219",
+      "dataPubblicazione": "03/06/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RESPINGE     ",
+      "nomeFile": "202600219_01.xml"
     }
   ],
   "provvedimenti_monocratici": [
@@ -1089,5 +1104,6 @@
       "esito": "ACCOGLIE  FISSA CAMERA DI CONSIGLIO    ",
       "nomeFile": "202600034_06.xml"
     }
-  ]
+  ],
+  "ultima_variazione": "03/06/2026 17:01"
 }
