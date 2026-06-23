@@ -1114,8 +1114,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "23/06/2026 13:10",
-  "ultimo_controllo": "23/06/2026 13:10",
+  "ultimo_aggiornamento": "23/06/2026 14:10",
+  "ultimo_controllo": "23/06/2026 14:10",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -1200,20 +1200,91 @@
       "parti": [
         "APPELLANTE | 11/03/2026 | ",
         "APPELLATO | 16/03/2026 | ",
-        "CONTROINTERESSATO |  | "
+        "CONTROINTERESSATO | 20/03/2026 | ",
+        "ALTRE PARTI NON RITUALI |  | "
       ],
       "atti": [
+        "ATTO DI COSTITUZIONE | 2026021518 | CONTROINTERESSATO | 20/03/2026",
+        "MEMORIA | 2026026699 | CONTROINTERESSATO | 10/04/2026",
+        "ALTRO | 2026027423 | CONTROINTERESSATO | 13/04/2026",
         "ATTO DI COSTITUZIONE | 2026020189 | APPELLATO | 16/03/2026",
         "ISTANZA DI FISSAZIONE UDIENZA | 2026001972 | APPELLANTE | 11/03/2026",
+        "MEMORIA | 2026026816 | APPELLANTE | 10/04/2026",
+        "MEMORIA | 2026027127 | APPELLATO | 11/04/2026",
         "RICORSO | 2026018793 | APPELLANTE | 11/03/2026"
       ],
       "discussioni": [
-        "14/04/2026 | CAMERA DI CONSIGLIO |  | DA ASSEGNARE MAGISTRATO | Giudizio Cautelare | "
+        "14/04/2026 | CAMERA DI CONSIGLIO | DISCUSSO | LAURA MARZANO | Giudizio Cautelare | 17"
       ],
-      "provvedimenti_collegiali": [],
+      "provvedimenti_collegiali": [
+        "ORDINANZA CAUTELARE | MARZANO LAURA | 16/04/2026 | 14/04/2026 | CC | RESPINGE"
+      ],
       "provvedimenti_monocratici": [
         "DECRETO CAUTELARE | CONTESSA CLAUDIO | 13/03/2026 | RESPINGE FISSA CAMERA DI CONSIGLIO"
-      ]
+      ],
+      "data_rilevazione": "16/04/2026 14:10",
+      "ts_eventi": {
+        "14/04/2026 | CAMERA DI CONSIGLIO |  | LAURA MARZANO | Giudizio Cautelare | ": "31/03/2026 12:58",
+        "14/04/2026 | CAMERA DI CONSIGLIO |  | LAURA MARZANO | Giudizio Cautelare | 17": "07/04/2026 10:36",
+        "MEMORIA | 2026026699 | CONTROINTERESSATO | 10/04/2026": "10/04/2026 09:43",
+        "MEMORIA | 2026026816 | APPELLANTE | 10/04/2026": "10/04/2026 11:41",
+        "MEMORIA | 2026027127 | APPELLATO | 11/04/2026": "11/04/2026 10:28",
+        "ALTRO | 2026027423 | CONTROINTERESSATO | 13/04/2026": "13/04/2026 12:38",
+        "14/04/2026 | CAMERA DI CONSIGLIO | DISCUSSO | LAURA MARZANO | Giudizio Cautelare | 17": "14/04/2026 09:52",
+        "ORDINANZA CAUTELARE | MARZANO LAURA | 16/04/2026 | 14/04/2026 | CC | RESPINGE": "16/04/2026 14:10"
+      }
+    },
+    {
+      "nrg": "2026002696",
+      "anno": 2026,
+      "numero": 2696,
+      "fonte": "CdS",
+      "sezione": "7",
+      "data_deposito": "31/03/2026",
+      "tipo_ricorso": "APPELLO AVVERSO ORDINANZA CAUTELARE",
+      "oggetto": "AVVISO DI SELEZIONE PUBBLICA L’AFFIDAMENTO DI UNA CONCESSIONE DEMANIALE MARITTIMA CON FINALITÀ TURISTICO RICREATIVA - AGGIUDICAZIONE - RICONSEGNA DEL BENE - MCP",
+      "parti": [
+        "APPELLANTE | 31/03/2026 | ",
+        "APPELLATO | 02/04/2026 | ",
+        "CONTROINTERESSATO |  | ",
+        "CONTROINTERESSATO | 01/04/2026 | ",
+        "ALTRE PARTI NON RITUALI |  | "
+      ],
+      "atti": [
+        "RICORSO | 2026024448 | APPELLANTE | 31/03/2026",
+        "DOCUMENTI | 2026024474 | APPELLANTE | 31/03/2026",
+        "ISTANZA DI FISSAZIONE UDIENZA | 2026002629 | APPELLANTE | 31/03/2026",
+        "ATTO DI COSTITUZIONE | 2026025037 | APPELLATO | 02/04/2026",
+        "MEMORIA | 2026029132 | APPELLATO | 18/04/2026",
+        "ATTO DI COSTITUZIONE | 2026024563 | CONTROINTERESSATO | 01/04/2026",
+        "ALTRO | 2026028257 | APPELLATO | 15/04/2026",
+        "MEMORIA | 2026029122 | APPELLANTE | 18/04/2026",
+        "MEMORIA | 2026029101 | CONTROINTERESSATO | 18/04/2026"
+      ],
+      "discussioni": [
+        "21/04/2026 | CAMERA DI CONSIGLIO | DISCUSSO | MICHELE TECCHIA | Giudizio Cautelare | 43"
+      ],
+      "provvedimenti_collegiali": [
+        "ORDINANZA CAUTELARE | TECCHIA MICHELE | 22/04/2026 | 21/04/2026 | CC | RESPINGE"
+      ],
+      "provvedimenti_monocratici": [
+        "DECRETO CAUTELARE | CHIEPPA ROBERTO | 01/04/2026 | RESPINGE FISSA CAMERA DI CONSIGLIO"
+      ],
+      "data_rilevazione": "22/04/2026 12:20",
+      "ts_eventi": {
+        "ATTO DI COSTITUZIONE | 2026024563 | CONTROINTERESSATO | 01/04/2026": "01/04/2026 10:35",
+        "21/04/2026 | CAMERA DI CONSIGLIO |  | DA ASSEGNARE MAGISTRATO | Giudizio Cautelare | ": "01/04/2026 15:04",
+        "DECRETO CAUTELARE | CHIEPPA ROBERTO | 01/04/2026 | RESPINGE FISSA CAMERA DI CONSIGLIO": "01/04/2026 15:04",
+        "21/04/2026 | CAMERA DI CONSIGLIO |  | MICHELE TECCHIA | Giudizio Cautelare | ": "02/04/2026 08:50",
+        "ATTO DI COSTITUZIONE | 2026025037 | APPELLATO | 02/04/2026": "02/04/2026 14:53",
+        "21/04/2026 | CAMERA DI CONSIGLIO |  | MICHELE TECCHIA | Giudizio Cautelare | 43": "08/04/2026 09:19",
+        "ALTRO | 2026028257 | APPELLATO | 15/04/2026": "15/04/2026 16:02",
+        "MEMORIA | 2026029101 | CONTROINTERESSATO | 18/04/2026": "18/04/2026 09:44",
+        "MEMORIA | 2026029122 | APPELLANTE | 18/04/2026": "18/04/2026 11:25",
+        "MEMORIA | 2026029132 | APPELLATO | 18/04/2026": "18/04/2026 12:05",
+        "21/04/2026 | CAMERA DI CONSIGLIO | DISCUSSO | MICHELE TECCHIA | Giudizio Cautelare | 43": "21/04/2026 10:11",
+        "ORDINANZA CAUTELARE | TECCHIA MICHELE | 22/04/2026 | 21/04/2026 | CC | RESPINGE": "22/04/2026 12:20"
+      }
     }
   ],
   "provvedimenti_collegiali": [
