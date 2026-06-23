@@ -132,6 +132,26 @@ def fetch_ricorso(anno, numero):
         return None
 
 
+def estrai_righe_tabella(html, titolo_sezione, titolo_fine):
+    """Estrae tutte le righe dalle tabelle comprese tra due titoli di sezione."""
+    idx_start = html.find(titolo_sezione)
+    idx_end = html.find(titolo_fine, idx_start)
+    if idx_start == -1 or idx_end == -1:
+        return []
+    sezione_html = html[idx_start:idx_end]
+
+    risultato = []
+    for tbody in re.findall(r'<tbody>(.*?)</tbody>', sezione_html, re.DOTALL):
+        righe = re.findall(r'<tr[^>]*>(.*?)</tr>', tbody, re.DOTALL)
+        for riga in righe:
+            celle = re.findall(r'<td[^>]*>(.*?)</td>', riga, re.DOTALL)
+            celle = [re.sub(r'<[^>]+>', '', c).strip() for c in celle]
+            celle = [re.sub(r'\s+', ' ', c) for c in celle]
+            if any(c for c in celle):
+                risultato.append(' | '.join(celle))
+    return risultato
+
+
 def estrai_dettagli(html, anno, numero):
     dettagli = {
         "nrg": str(anno) + str(numero).zfill(6),
@@ -163,26 +183,6 @@ def estrai_dettagli(html, anno, numero):
     m = re.search(r'id="valoreOggetto"[^>]*>([^<]+)<', html)
     if m:
         dettagli["oggetto"] = m.group(1).strip()[:200]
-
-    def estrai_righe_tabella(html, titolo_sezione, titolo_fine):
-    # Trova la porzione di HTML tra i due titoli
-    idx_start = html.find(titolo_sezione)
-    idx_end = html.find(titolo_fine, idx_start)
-    if idx_start == -1 or idx_end == -1:
-        return []
-    sezione_html = html[idx_start:idx_end]
-    
-    # Estrai tutte le righe da tutti i tbody nella sezione
-    risultato = []
-    for tbody in re.findall(r'<tbody>(.*?)</tbody>', sezione_html, re.DOTALL):
-        righe = re.findall(r'<tr[^>]*>(.*?)</tr>', tbody, re.DOTALL)
-        for riga in righe:
-            celle = re.findall(r'<td[^>]*>(.*?)</td>', riga, re.DOTALL)
-            celle = [re.sub(r'<[^>]+>', '', c).strip() for c in celle]
-            celle = [re.sub(r'\s+', ' ', c) for c in celle]
-            if any(c for c in celle):
-                risultato.append(' | '.join(celle))
-    return risultato
 
     dettagli["parti"] = estrai_righe_tabella(html, "Elenco parti del fascicolo", "Atti depositati")
     dettagli["atti"] = estrai_righe_tabella(html, "Atti depositati", "Discussioni")
@@ -284,7 +284,6 @@ def pubblica_su_github(filepath):
         if resp.status_code in (200, 201):
             print("[OK] " + filepath + " pubblicato su GitHub")
         elif resp.status_code in (409, 422):
-            # SHA conflict: ri-scarica SHA aggiornato e riprova una volta
             print("[WARN] SHA conflict, retry...")
             resp2 = requests.get(api_url, headers=headers, timeout=10)
             if resp2.status_code == 200:
@@ -320,6 +319,7 @@ def scarica_dashboard_da_github():
     except Exception as e:
         print("[WARN] Impossibile scaricare dashboard: " + str(e))
     return {}
+
 
 def pubblica_dashboard_diretto(contenuto_str):
     """Pubblica dashboard_data.json direttamente dal contenuto in memoria."""
@@ -359,9 +359,7 @@ def pubblica_dashboard_diretto(contenuto_str):
 
 def aggiorna_dashboard(stato, ha_variazioni=False):
     """Scarica da GitHub, aggiorna la sezione ricorsi, risalva."""
-    # Scarica sempre da GitHub per non perdere i provvedimenti scritti da monitor_tar_gh.py
     dati = scarica_dashboard_da_github()
-    # Fallback: legge il file locale se GitHub non risponde
     if not dati and os.path.exists(DASHBOARD_FILE):
         try:
             with open(DASHBOARD_FILE, "r", encoding="utf-8") as f:
@@ -369,7 +367,6 @@ def aggiorna_dashboard(stato, ha_variazioni=False):
         except Exception:
             dati = {}
 
-    # Se provvedimenti mancano (ritardo API GitHub), li recupera da tar_stato.json
     if not dati.get("provvedimenti_collegiali") and not dati.get("provvedimenti_monocratici"):
         try:
             api_url = "https://api.github.com/repos/" + GH_REPO + "/contents/tar_stato.json"
@@ -387,7 +384,6 @@ def aggiorna_dashboard(stato, ha_variazioni=False):
         except Exception as e:
             print("[WARN] Impossibile recuperare tar_stato.json: " + str(e))
 
-    # Se cds_ricorsi_monitorati manca, lo recupera da cds_ricorsi_stato.json
     if not dati.get("cds_ricorsi_monitorati"):
         try:
             api_url = "https://api.github.com/repos/" + GH_REPO + "/contents/cds_ricorsi_stato.json"
@@ -411,19 +407,15 @@ def aggiorna_dashboard(stato, ha_variazioni=False):
     dati["ultimo_ricorso"] = stato.get("ultimo_numero", 0)
     dati["anno_nuovi"] = ANNO_NUOVI
 
-    # Lista ricorsi monitorati con dettagli
     ricorsi = []
     for chiave, dettagli in stato.get("ricorsi_monitorati", {}).items():
         ricorsi.append(dettagli)
     dati["ricorsi_monitorati"] = ricorsi
 
-    # Log esplicito per debug
     print("[INFO] Provvedimenti preservati: " +
           str(len(dati.get("provvedimenti_collegiali", []))) + " coll, " +
           str(len(dati.get("provvedimenti_monocratici", []))) + " mono")
 
-    # Serializza e pubblica direttamente dai dati in memoria
-    # (evita di rileggere il file locale che potrebbe essere vecchio)
     contenuto_str = json.dumps(dati, ensure_ascii=False, indent=2)
     with open(DASHBOARD_FILE, "w", encoding="utf-8") as f:
         f.write(contenuto_str)
@@ -489,7 +481,6 @@ def controlla_variazioni_ricorso(stato, anno, numero):
         msg += "\n\n".join(differenze)
         invia_telegram(msg)
         dettagli_nuovi["data_rilevazione"] = ora
-        # Salva timestamp per ogni singolo evento nuovo (per ordinamento preciso nel feed)
         ts_eventi = dict(dettagli_vecchi.get("ts_eventi", {}))
         for sezione in ["atti", "discussioni", "provvedimenti_collegiali", "provvedimenti_monocratici"]:
             vecchi_set = set(dettagli_vecchi.get(sezione, []))
@@ -525,7 +516,6 @@ def main():
 
     salva_stato(stato)
 
-    # Aggiorna dashboard
     aggiorna_dashboard(stato, ha_variazioni)
 
     print("[INFO] Fine controllo ricorsi")
