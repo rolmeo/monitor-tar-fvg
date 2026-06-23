@@ -165,20 +165,24 @@ def estrai_dettagli(html, anno, numero):
         dettagli["oggetto"] = m.group(1).strip()[:200]
 
     def estrai_righe_tabella(html, titolo_sezione, titolo_fine):
-        pattern = titolo_sezione + r'.*?<tbody>(.*?)</tbody>.*?' + titolo_fine
-        m = re.search(pattern, html, re.DOTALL | re.IGNORECASE)
-        if not m:
-            return []
-        tbody = m.group(1)
+    # Trova la porzione di HTML tra i due titoli
+    idx_start = html.find(titolo_sezione)
+    idx_end = html.find(titolo_fine, idx_start)
+    if idx_start == -1 or idx_end == -1:
+        return []
+    sezione_html = html[idx_start:idx_end]
+    
+    # Estrai tutte le righe da tutti i tbody nella sezione
+    risultato = []
+    for tbody in re.findall(r'<tbody>(.*?)</tbody>', sezione_html, re.DOTALL):
         righe = re.findall(r'<tr[^>]*>(.*?)</tr>', tbody, re.DOTALL)
-        risultato = []
         for riga in righe:
             celle = re.findall(r'<td[^>]*>(.*?)</td>', riga, re.DOTALL)
             celle = [re.sub(r'<[^>]+>', '', c).strip() for c in celle]
             celle = [re.sub(r'\s+', ' ', c) for c in celle]
             if any(c for c in celle):
                 risultato.append(' | '.join(celle))
-        return risultato
+    return risultato
 
     dettagli["parti"] = estrai_righe_tabella(html, "Elenco parti del fascicolo", "Atti depositati")
     dettagli["atti"] = estrai_righe_tabella(html, "Atti depositati", "Discussioni")
