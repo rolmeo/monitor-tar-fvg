@@ -223,6 +223,7 @@
         "DOCUMENTI | 2026000326 | RICORRENTE PRINCIPALE | 22/01/2026",
         "MEMORIA | 2026000637 | AMMINISTRAZIONE INTIMATA | 06/02/2026",
         "MEMORIA | 2026002203 | CONTROINTERESSATO | 12/06/2026",
+        "MEMORIA DI REPLICA | 2026002368 | CONTROINTERESSATO | 24/06/2026",
         "ISTANZA DI FISSAZIONE UDIENZA | 2026000044 | RICORRENTE PRINCIPALE | 22/01/2026",
         "DOCUMENTI | 2026002135 | AMMINISTRAZIONE INTIMATA | 04/06/2026",
         "MEMORIA | 2026002278 | RICORRENTE PRINCIPALE | 16/06/2026",
@@ -932,8 +933,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "24/06/2026 10:59",
-  "ultimo_controllo": "24/06/2026 10:59",
+  "ultimo_aggiornamento": "24/06/2026 11:04",
+  "ultimo_controllo": "24/06/2026 11:04",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
