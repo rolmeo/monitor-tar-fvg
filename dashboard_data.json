@@ -933,8 +933,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "24/06/2026 17:54",
-  "ultimo_controllo": "24/06/2026 17:54",
+  "ultimo_aggiornamento": "24/06/2026 17:57",
+  "ultimo_controllo": "24/06/2026 17:57",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -1221,6 +1221,36 @@
       "presidente": null,
       "esito": "ACCOGLIE  FISSA CAMERA DI CONSIGLIO    ",
       "nomeFile": "202600034_06.xml"
+    },
+    {
+      "nrgFascicolo": "202600258",
+      "sezione": "1",
+      "parte": null,
+      "tipoUdienza": null,
+      "dataUdienza": null,
+      "numProvvedimento": "202600075",
+      "dataPubblicazione": "24/06/2026",
+      "tipoProvvedimento": "DECRETO CAUTELARE",
+      "codiceTipoProvvedimento": "06",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": null,
+      "esito": "ACCOGLIE  FISSA CAMERA DI CONSIGLIO    ",
+      "nomeFile": "202600075_06.xml"
+    },
+    {
+      "nrgFascicolo": "202600254",
+      "sezione": "1",
+      "parte": null,
+      "tipoUdienza": null,
+      "dataUdienza": null,
+      "numProvvedimento": "202600074",
+      "dataPubblicazione": "24/06/2026",
+      "tipoProvvedimento": "DECRETO CAUTELARE",
+      "codiceTipoProvvedimento": "06",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": null,
+      "esito": "RESPINGE  FISSA CAMERA DI CONSIGLIO    ",
+      "nomeFile": "202600074_06.xml"
     }
   ]
 }
