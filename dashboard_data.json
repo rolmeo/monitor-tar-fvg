@@ -111,12 +111,19 @@
         "ALTRE PARTI NON RITUALI |  | ",
         "ALTRE PARTI NON RITUALI |  | ",
         "ALTRE PARTI NON RITUALI |  | ",
+        "ALTRE PARTI NON RITUALI |  | ",
+        "ALTRE PARTI NON RITUALI |  | ",
+        "ALTRE PARTI NON RITUALI |  | ",
+        "ALTRE PARTI NON RITUALI |  | ",
+        "ALTRE PARTI NON RITUALI |  | ",
+        "ALTRE PARTI NON RITUALI |  | ",
         "ALTRE PARTI NON RITUALI |  | "
       ],
       "atti": [
         "DOCUMENTI | 2026000659 | RICORRENTE PRINCIPALE | 06/02/2026",
         "MOTIVI AGGIUNTI | 2026001106 | RICORRENTE PRINCIPALE | 13/03/2026",
         "MOTIVI AGGIUNTI | 2026001119 | RICORRENTE PRINCIPALE | 17/03/2026",
+        "MOTIVI AGGIUNTI | 2026002406 | RICORRENTE PRINCIPALE | 25/06/2026",
         "DOCUMENTI | 2026000657 | RICORRENTE PRINCIPALE | 06/02/2026",
         "MEMORIA | 2026000865 | AMMINISTRAZIONE INTIMATA | 21/02/2026",
         "MEMORIA | 2026000854 | CONTROINTERESSATO | 21/02/2026",
@@ -935,8 +942,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "25/06/2026 11:23",
-  "ultimo_controllo": "25/06/2026 11:23",
+  "ultimo_aggiornamento": "25/06/2026 11:29",
+  "ultimo_controllo": "25/06/2026 11:29",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
