@@ -239,8 +239,14 @@
       "discussioni": [
         "23/06/2026 | CAMERA DI CONSIGLIO | DISCUSSO | MICHELE TECCHIA | Giudizio Cautelare | 20"
       ],
-      "provvedimenti_collegiali": [],
-      "provvedimenti_monocratici": []
+      "provvedimenti_collegiali": [
+        "ORDINANZA CAUTELARE | TECCHIA MICHELE | 25/06/2026 | 23/06/2026 | CC | RESPINGE"
+      ],
+      "provvedimenti_monocratici": [],
+      "data_rilevazione": "25/06/2026 10:41",
+      "ts_eventi": {
+        "ORDINANZA CAUTELARE | TECCHIA MICHELE | 25/06/2026 | 23/06/2026 | CC | RESPINGE": "25/06/2026 10:41"
+      }
     }
   }
 }
