@@ -942,8 +942,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "25/06/2026 13:18",
-  "ultimo_controllo": "25/06/2026 13:18",
+  "ultimo_aggiornamento": "25/06/2026 13:21",
+  "ultimo_controllo": "25/06/2026 13:21",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -1236,6 +1236,52 @@
       "presidente": null,
       "esito": "ACCOGLIE  FISSA CAMERA DI CONSIGLIO    ",
       "nomeFile": "202600034_06.xml"
+    },
+    {
+      "nrgFascicolo": "202600213",
+      "sezione": "1",
+      "parte": null,
+      "tipoUdienza": null,
+      "dataUdienza": null,
+      "numProvvedimento": "202600004",
+      "dataPubblicazione": "25/06/2026",
+      "tipoProvvedimento": "DECRETO PRESIDENZIALE",
+      "codiceTipoProvvedimento": "24",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": null,
+      "esito": "RESPINGE L'ISTANZA DI ABBREVIAZIONE TERMINI      ",
+      "nomeFile": "202600004_24.xml"
+    },
+    {
+      "nrgFascicolo": "202600258",
+      "sezione": "1",
+      "parte": null,
+      "tipoUdienza": null,
+      "dataUdienza": null,
+      "numProvvedimento": "202600075",
+      "dataPubblicazione": "24/06/2026",
+      "tipoProvvedimento": "DECRETO CAUTELARE",
+      "codiceTipoProvvedimento": "06",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": null,
+      "esito": "ACCOGLIE  FISSA CAMERA DI CONSIGLIO    ",
+      "nomeFile": "202600075_06.xml"
+    },
+    {
+      "nrgFascicolo": "202600254",
+      "sezione": "1",
+      "parte": null,
+      "tipoUdienza": null,
+      "dataUdienza": null,
+      "numProvvedimento": "202600074",
+      "dataPubblicazione": "24/06/2026",
+      "tipoProvvedimento": "DECRETO CAUTELARE",
+      "codiceTipoProvvedimento": "06",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": null,
+      "esito": "RESPINGE  FISSA CAMERA DI CONSIGLIO    ",
+      "nomeFile": "202600074_06.xml"
     }
-  ]
+  ],
+  "ultima_variazione": "25/06/2026 13:21"
 }
