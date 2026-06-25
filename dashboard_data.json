@@ -935,8 +935,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "25/06/2026 10:28",
-  "ultimo_controllo": "25/06/2026 10:28",
+  "ultimo_aggiornamento": "25/06/2026 10:33",
+  "ultimo_controllo": "25/06/2026 10:33",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -1172,8 +1172,14 @@
       "discussioni": [
         "23/06/2026 | CAMERA DI CONSIGLIO | DISCUSSO | MICHELE TECCHIA | Giudizio Cautelare | 20"
       ],
-      "provvedimenti_collegiali": [],
-      "provvedimenti_monocratici": []
+      "provvedimenti_collegiali": [
+        "ORDINANZA CAUTELARE | TECCHIA MICHELE | 25/06/2026 | 23/06/2026 | CC | RESPINGE"
+      ],
+      "provvedimenti_monocratici": [],
+      "ts_eventi": {
+        "ORDINANZA CAUTELARE | TECCHIA MICHELE | 25/06/2026 | 23/06/2026 | CC | RESPINGE": "25/06/2026 10:33"
+      },
+      "data_rilevazione": "25/06/2026 10:33"
     }
   ],
   "provvedimenti_collegiali": [
