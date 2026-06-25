@@ -532,13 +532,15 @@
         "18/11/2026 | UDIENZA PUBBLICA |  | DA ASSEGNARE MAGISTRATO | Merito | ",
         "24/03/2026 | CAMERA DI CONSIGLIO | DISCUSSO | MANUELA SINIGOI | Giudizio Cautelare | 1"
       ],
-      "provvedimenti_collegiali": [],
+      "provvedimenti_collegiali": [
+        "ORDINANZA CAUTELARE | SINIGOI MANUELA | 27/03/2026 | 24/03/2026 | CC | RESPINGE FISSA UDIENZA PUBBLICA"
+      ],
       "provvedimenti_monocratici": [],
-      "data_rilevazione": "25/06/2026 02:36",
+      "data_rilevazione": "25/06/2026 06:49",
       "ts_eventi": {
         "24/03/2026 | CAMERA DI CONSIGLIO | DISCUSSO | MANUELA SINIGOI | Giudizio Cautelare | 1": "24/03/2026 15:08",
         "18/11/2026 | UDIENZA PUBBLICA |  | DA ASSEGNARE MAGISTRATO | Merito | ": "27/03/2026 08:45",
-        "ORDINANZA CAUTELARE | SINIGOI MANUELA | 27/03/2026 | 24/03/2026 | CC | RESPINGE FISSA UDIENZA PUBBLICA": "27/03/2026 08:45"
+        "ORDINANZA CAUTELARE | SINIGOI MANUELA | 27/03/2026 | 24/03/2026 | CC | RESPINGE FISSA UDIENZA PUBBLICA": "25/06/2026 06:49"
       }
     },
     {
@@ -1116,8 +1118,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "25/06/2026 07:49",
-  "ultimo_controllo": "25/06/2026 07:49",
+  "ultimo_aggiornamento": "25/06/2026 06:49",
+  "ultimo_controllo": "25/06/2026 06:49",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -1441,5 +1443,5 @@
       "nomeFile": "202600074_06.xml"
     }
   ],
-  "ultima_variazione": "25/06/2026 02:36"
+  "ultima_variazione": "25/06/2026 06:49"
 }
