@@ -221,6 +221,7 @@
         "DOCUMENTI | 2026000325 | RICORRENTE PRINCIPALE | 22/01/2026",
         "DOCUMENTI | 2026000327 | RICORRENTE PRINCIPALE | 22/01/2026",
         "ATTO DI COSTITUZIONE | 2026000532 | CONTROINTERESSATO | 30/01/2026",
+        "MEMORIA DI REPLICA | 2026002421 | AMMINISTRAZIONE INTIMATA | 26/06/2026",
         "RICORSO | 2026000323 | RICORRENTE PRINCIPALE | 22/01/2026",
         "DOCUMENTI | 2026000640 | RICORRENTE PRINCIPALE | 06/02/2026",
         "MEMORIA DI REPLICA | 2026002420 | RICORRENTE PRINCIPALE | 26/06/2026",
@@ -943,8 +944,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "26/06/2026 11:33",
-  "ultimo_controllo": "26/06/2026 11:33",
+  "ultimo_aggiornamento": "26/06/2026 11:38",
+  "ultimo_controllo": "26/06/2026 11:38",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
