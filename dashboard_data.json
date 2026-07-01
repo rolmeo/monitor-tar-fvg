@@ -945,8 +945,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "01/07/2026 18:37",
-  "ultimo_controllo": "01/07/2026 18:37",
+  "ultimo_aggiornamento": "01/07/2026 20:18",
+  "ultimo_controllo": "01/07/2026 20:18",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -1222,6 +1222,51 @@
       "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
       "esito": "RESPINGE     ",
       "nomeFile": "202600091_01.xml"
+    },
+    {
+      "nrgFascicolo": "202500600",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "UP",
+      "dataUdienza": "04/06/2026",
+      "numProvvedimento": "202600328",
+      "dataPubblicazione": "01/07/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "SINIGOI MANUELA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RESPINGE     ",
+      "nomeFile": "202600328_01.xml"
+    },
+    {
+      "nrgFascicolo": "202500628",
+      "sezione": "1",
+      "parte": "T.V.",
+      "tipoUdienza": "UP",
+      "dataUdienza": "17/06/2026",
+      "numProvvedimento": "202600327",
+      "dataPubblicazione": "01/07/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "SINIGOI MANUELA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "ACCOGLIE     ",
+      "nomeFile": "202600327_01.xml"
+    },
+    {
+      "nrgFascicolo": "202500578",
+      "sezione": "1",
+      "parte": "C.E.",
+      "tipoUdienza": "UP",
+      "dataUdienza": "20/05/2026",
+      "numProvvedimento": "202600326",
+      "dataPubblicazione": "01/07/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "SINIGOI MANUELA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "DICHIARA INAMMISSIBILE DICHIARA DIFETTO DI GIURISDIZIONE    ",
+      "nomeFile": "202600326_01.xml"
     }
   ],
   "provvedimenti_monocratici": [
