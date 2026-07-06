@@ -945,8 +945,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "06/07/2026 20:41",
-  "ultimo_controllo": "06/07/2026 20:41",
+  "ultimo_aggiornamento": "06/07/2026 22:27",
+  "ultimo_controllo": "06/07/2026 22:27",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -1222,6 +1222,36 @@
       "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
       "esito": "RESPINGE     ",
       "nomeFile": "202600091_01.xml"
+    },
+    {
+      "nrgFascicolo": "202500587",
+      "sezione": "1",
+      "parte": "B.D.",
+      "tipoUdienza": "UP",
+      "dataUdienza": "20/05/2026",
+      "numProvvedimento": "202600330",
+      "dataPubblicazione": "06/07/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "SINIGOI MANUELA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "ACCOGLIE     ",
+      "nomeFile": "202600330_01.xml"
+    },
+    {
+      "nrgFascicolo": "202500629",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "UP",
+      "dataUdienza": "17/06/2026",
+      "numProvvedimento": "202600329",
+      "dataPubblicazione": "06/07/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RESPINGE     ",
+      "nomeFile": "202600329_01.xml"
     }
   ],
   "provvedimenti_monocratici": [
