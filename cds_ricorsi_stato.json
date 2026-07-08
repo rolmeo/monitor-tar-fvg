@@ -87,9 +87,9 @@
         "ALTRE PARTI NON RITUALI |  | "
       ],
       "atti": [
+        "ALTRO | 2026027423 | CONTROINTERESSATO | 13/04/2026",
         "ATTO DI COSTITUZIONE | 2026021518 | CONTROINTERESSATO | 20/03/2026",
         "MEMORIA | 2026026699 | CONTROINTERESSATO | 10/04/2026",
-        "ALTRO | 2026027423 | CONTROINTERESSATO | 13/04/2026",
         "ATTO DI COSTITUZIONE | 2026020189 | APPELLATO | 16/03/2026",
         "ISTANZA DI FISSAZIONE UDIENZA | 2026001972 | APPELLANTE | 11/03/2026",
         "MEMORIA | 2026026816 | APPELLANTE | 10/04/2026",
@@ -99,13 +99,11 @@
       "discussioni": [
         "14/04/2026 | CAMERA DI CONSIGLIO | DISCUSSO | LAURA MARZANO | Giudizio Cautelare | 17"
       ],
-      "provvedimenti_collegiali": [
-        "ORDINANZA CAUTELARE | MARZANO LAURA | 16/04/2026 | 14/04/2026 | CC | RESPINGE"
-      ],
+      "provvedimenti_collegiali": [],
       "provvedimenti_monocratici": [
         "DECRETO CAUTELARE | CONTESSA CLAUDIO | 13/03/2026 | RESPINGE FISSA CAMERA DI CONSIGLIO"
       ],
-      "data_rilevazione": "16/04/2026 14:10",
+      "data_rilevazione": "08/07/2026 23:46",
       "ts_eventi": {
         "14/04/2026 | CAMERA DI CONSIGLIO |  | LAURA MARZANO | Giudizio Cautelare | ": "31/03/2026 12:58",
         "14/04/2026 | CAMERA DI CONSIGLIO |  | LAURA MARZANO | Giudizio Cautelare | 17": "07/04/2026 10:36",
