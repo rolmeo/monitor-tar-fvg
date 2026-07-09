@@ -771,10 +771,16 @@
         "10/09/2025 | CAMERA DI CONSIGLIO | DISCUSSO | MANUELA SINIGOI | Giudizio Cautelare | 8",
         "15/07/2025 | CAMERA DI CONSIGLIO | RINVIO AD ALTRA DATA | MANUELA SINIGOI | Giudizio Cautelare | 7"
       ],
-      "provvedimenti_collegiali": [],
+      "provvedimenti_collegiali": [
+        "SENTENZA | SINIGOI MANUELA | 20/02/2026 | 09/02/2026 | UP | IMPROCEDIBILE PER SOPRAVVENUTA CARENZA DI INTERESSE",
+        "ORDINANZA CAUTELARE | SINIGOI MANUELA | 13/09/2025 | 10/09/2025 | CC | PRENDE ATTO RINUNZIA ALLA ISTANZA CAUTELARE FISSA UDIENZA PUBBLICA"
+      ],
       "provvedimenti_monocratici": [],
-      "data_rilevazione": "09/07/2026 02:20",
-      "ts_eventi": {}
+      "data_rilevazione": "09/07/2026 06:12",
+      "ts_eventi": {
+        "SENTENZA | SINIGOI MANUELA | 20/02/2026 | 09/02/2026 | UP | IMPROCEDIBILE PER SOPRAVVENUTA CARENZA DI INTERESSE": "09/07/2026 06:12",
+        "ORDINANZA CAUTELARE | SINIGOI MANUELA | 13/09/2025 | 10/09/2025 | CC | PRENDE ATTO RINUNZIA ALLA ISTANZA CAUTELARE FISSA UDIENZA PUBBLICA": "09/07/2026 06:12"
+      }
     },
     {
       "nrg": "2025000267",
@@ -1131,8 +1137,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "09/07/2026 07:12",
-  "ultimo_controllo": "09/07/2026 07:12",
+  "ultimo_aggiornamento": "09/07/2026 06:12",
+  "ultimo_controllo": "09/07/2026 06:12",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -1432,5 +1438,5 @@
       "nomeFile": "202600034_06.xml"
     }
   ],
-  "ultima_variazione": "09/07/2026 02:20"
+  "ultima_variazione": "09/07/2026 06:12"
 }
