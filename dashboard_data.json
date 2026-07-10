@@ -242,7 +242,7 @@
         "MEMORIA | 2026000641 | CONTROINTERESSATO | 06/02/2026"
       ],
       "discussioni": [
-        "17/07/2026 | UDIENZA PUBBLICA |  | MANUELA SINIGOI | Merito | 4",
+        "17/07/2026 | UDIENZA PUBBLICA |  | MANUELA SINIGOI | Merito | 3",
         "09/02/2026 | CAMERA DI CONSIGLIO | DISCUSSO | MANUELA SINIGOI | Giudizio Cautelare | 12"
       ],
       "provvedimenti_collegiali": [
@@ -947,8 +947,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "10/07/2026 14:33",
-  "ultimo_controllo": "10/07/2026 14:33",
+  "ultimo_aggiornamento": "10/07/2026 14:38",
+  "ultimo_controllo": "10/07/2026 14:38",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
