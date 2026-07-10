@@ -406,7 +406,7 @@
         "MEMORIA | 2026000852 | AMMINISTRAZIONE INTIMATA | 21/02/2026"
       ],
       "discussioni": [
-        "16/07/2026 | CAMERA DI CONSIGLIO |  | DA ASSEGNARE MAGISTRATO | Giudizio Cautelare | ",
+        "16/07/2026 | CAMERA DI CONSIGLIO |  | MANUELA SINIGOI | Giudizio Cautelare | ",
         "04/06/2026 | UDIENZA PUBBLICA | RINVIO AD ALTRA DATA | MANUELA SINIGOI | Merito | 7",
         "24/02/2026 | CAMERA DI CONSIGLIO | DISCUSSO | MANUELA SINIGOI | Giudizio Cautelare | 13",
         "09/02/2026 | UDIENZA PUBBLICA | RINVIO AD ALTRA DATA | MANUELA SINIGOI | Merito | 6",
@@ -947,8 +947,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "10/07/2026 13:03",
-  "ultimo_controllo": "10/07/2026 13:03",
+  "ultimo_aggiornamento": "10/07/2026 13:08",
+  "ultimo_controllo": "10/07/2026 13:08",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
