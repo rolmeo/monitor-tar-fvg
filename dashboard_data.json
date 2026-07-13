@@ -955,8 +955,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "13/07/2026 19:29",
-  "ultimo_controllo": "13/07/2026 19:29",
+  "ultimo_aggiornamento": "13/07/2026 19:30",
+  "ultimo_controllo": "13/07/2026 19:30",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -1232,6 +1232,21 @@
       "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
       "esito": "RESPINGE     ",
       "nomeFile": "202600091_01.xml"
+    },
+    {
+      "nrgFascicolo": "202500443",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "CC",
+      "dataUdienza": "17/06/2026",
+      "numProvvedimento": "202600331",
+      "dataPubblicazione": "13/07/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "IMPROCEDIBILE PER SOPRAVVENUTA CARENZA DI INTERESSE     ",
+      "nomeFile": "202600331_01.xml"
     }
   ],
   "provvedimenti_monocratici": [
@@ -1249,6 +1264,36 @@
       "presidente": null,
       "esito": "ACCOGLIE  FISSA CAMERA DI CONSIGLIO    ",
       "nomeFile": "202600034_06.xml"
+    },
+    {
+      "nrgFascicolo": "202600283",
+      "sezione": "1",
+      "parte": null,
+      "tipoUdienza": null,
+      "dataUdienza": null,
+      "numProvvedimento": "202600078",
+      "dataPubblicazione": "13/07/2026",
+      "tipoProvvedimento": "DECRETO CAUTELARE",
+      "codiceTipoProvvedimento": "06",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": null,
+      "esito": "ACCOGLIE  FISSA CAMERA DI CONSIGLIO    ",
+      "nomeFile": "202600078_06.xml"
+    },
+    {
+      "nrgFascicolo": "202600288",
+      "sezione": "1",
+      "parte": null,
+      "tipoUdienza": null,
+      "dataUdienza": null,
+      "numProvvedimento": "202600077",
+      "dataPubblicazione": "13/07/2026",
+      "tipoProvvedimento": "DECRETO CAUTELARE",
+      "codiceTipoProvvedimento": "06",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": null,
+      "esito": "RESPINGE  FISSA CAMERA DI CONSIGLIO    ",
+      "nomeFile": "202600077_06.xml"
     }
   ]
 }
