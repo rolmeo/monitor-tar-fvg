@@ -1177,8 +1177,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "21/07/2026 10:47",
-  "ultimo_controllo": "21/07/2026 10:47",
+  "ultimo_aggiornamento": "21/07/2026 12:52",
+  "ultimo_controllo": "21/07/2026 12:52",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -1459,6 +1459,21 @@
       "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
       "esito": "RESPINGE     ",
       "nomeFile": "202600091_01.xml"
+    },
+    {
+      "nrgFascicolo": "202500525",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "CC",
+      "dataUdienza": "16/07/2026",
+      "numProvvedimento": "202600332",
+      "dataPubblicazione": "21/07/2026",
+      "tipoProvvedimento": "DECRETO COLLEGIALE",
+      "codiceTipoProvvedimento": "36",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "LIQUIDA IL COMPENSO     ",
+      "nomeFile": "202600332_36.xml"
     }
   ],
   "provvedimenti_monocratici": [
@@ -1568,5 +1583,5 @@
       "nomeFile": "202600006_24.xml"
     }
   ],
-  "ultima_variazione": "20/07/2026 10:46"
+  "ultima_variazione": "21/07/2026 12:52"
 }
