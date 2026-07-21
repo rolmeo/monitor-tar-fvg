@@ -1179,8 +1179,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "21/07/2026 19:25",
-  "ultimo_controllo": "21/07/2026 19:25",
+  "ultimo_aggiornamento": "21/07/2026 20:47",
+  "ultimo_controllo": "21/07/2026 20:47",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -1881,6 +1881,21 @@
       "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
       "esito": "ACCOGLIE DICHIARA IMPROCEDIBILE    ",
       "nomeFile": "202600343_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600230",
+      "sezione": "1",
+      "parte": "LAV LEGA ANTI VIVISEZIONE ETS",
+      "tipoUdienza": "CC",
+      "dataUdienza": "16/07/2026",
+      "numProvvedimento": "202600345",
+      "dataPubblicazione": "21/07/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "ACCOGLIE SUI MOTIVI AGGIUNTI DICHIARA IMPROCEDIBILE    ",
+      "nomeFile": "202600345_01.xml"
     }
   ],
   "provvedimenti_monocratici": [
@@ -1990,5 +2005,5 @@
       "nomeFile": "202600006_24.xml"
     }
   ],
-  "ultima_variazione": "21/07/2026 16:25"
+  "ultima_variazione": "21/07/2026 20:47"
 }
