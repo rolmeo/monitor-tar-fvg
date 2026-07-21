@@ -948,10 +948,16 @@
         "10/09/2025 | CAMERA DI CONSIGLIO | DISCUSSO | MANUELA SINIGOI | Giudizio Cautelare | 7",
         "15/07/2025 | CAMERA DI CONSIGLIO | RINVIO AD ALTRA DATA | MANUELA SINIGOI | Giudizio Cautelare | 6"
       ],
-      "provvedimenti_collegiali": [],
+      "provvedimenti_collegiali": [
+        "SENTENZA | SINIGOI MANUELA | 20/02/2026 | 09/02/2026 | UP | IMPROCEDIBILE PER SOPRAVVENUTA CARENZA DI INTERESSE",
+        "ORDINANZA CAUTELARE | SINIGOI MANUELA | 13/09/2025 | 10/09/2025 | CC | PRENDE ATTO RINUNZIA ALLA ISTANZA CAUTELARE FISSA UDIENZA PUBBLICA"
+      ],
       "provvedimenti_monocratici": [],
-      "data_rilevazione": "21/07/2026 19:47",
-      "ts_eventi": {}
+      "data_rilevazione": "21/07/2026 21:07",
+      "ts_eventi": {
+        "SENTENZA | SINIGOI MANUELA | 20/02/2026 | 09/02/2026 | UP | IMPROCEDIBILE PER SOPRAVVENUTA CARENZA DI INTERESSE": "21/07/2026 21:07",
+        "ORDINANZA CAUTELARE | SINIGOI MANUELA | 13/09/2025 | 10/09/2025 | CC | PRENDE ATTO RINUNZIA ALLA ISTANZA CAUTELARE FISSA UDIENZA PUBBLICA": "21/07/2026 21:07"
+      }
     },
     "2025_399": {
       "nrg": "2025000399",
