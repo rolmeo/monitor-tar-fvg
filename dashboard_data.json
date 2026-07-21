@@ -1179,8 +1179,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "21/07/2026 14:15",
-  "ultimo_controllo": "21/07/2026 14:15",
+  "ultimo_aggiornamento": "21/07/2026 16:25",
+  "ultimo_controllo": "21/07/2026 16:25",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -1851,6 +1851,36 @@
       "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
       "esito": "RESPINGE     ",
       "nomeFile": "202600081_05.xml"
+    },
+    {
+      "nrgFascicolo": "202600234",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "CC",
+      "dataUdienza": "16/07/2026",
+      "numProvvedimento": "202600344",
+      "dataPubblicazione": "21/07/2026",
+      "tipoProvvedimento": "SENTENZA BREVE",
+      "codiceTipoProvvedimento": "20",
+      "relatore": "SINIGOI MANUELA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "DICHIARA INAMMISSIBILE     ",
+      "nomeFile": "202600344_20.xml"
+    },
+    {
+      "nrgFascicolo": "202600231",
+      "sezione": "1",
+      "parte": "LNDC ANIMAL PROTECTION A.P.S.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "16/07/2026",
+      "numProvvedimento": "202600343",
+      "dataPubblicazione": "21/07/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "ACCOGLIE DICHIARA IMPROCEDIBILE    ",
+      "nomeFile": "202600343_01.xml"
     }
   ],
   "provvedimenti_monocratici": [
@@ -1960,5 +1990,5 @@
       "nomeFile": "202600006_24.xml"
     }
   ],
-  "ultima_variazione": "21/07/2026 13:15"
+  "ultima_variazione": "21/07/2026 16:25"
 }
