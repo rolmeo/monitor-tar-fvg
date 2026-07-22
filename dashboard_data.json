@@ -1182,8 +1182,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "22/07/2026 10:46",
-  "ultimo_controllo": "22/07/2026 10:46",
+  "ultimo_aggiornamento": "22/07/2026 12:53",
+  "ultimo_controllo": "22/07/2026 12:53",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -2066,7 +2066,22 @@
       "presidente": null,
       "esito": "ACCOGLIE  RINVIA AD ALTRA DATA    ",
       "nomeFile": "202600006_24.xml"
+    },
+    {
+      "nrgFascicolo": "202600227",
+      "sezione": "1",
+      "parte": null,
+      "tipoUdienza": null,
+      "dataUdienza": null,
+      "numProvvedimento": "202600007",
+      "dataPubblicazione": "22/07/2026",
+      "tipoProvvedimento": "DECRETO PRESIDENZIALE",
+      "codiceTipoProvvedimento": "24",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": null,
+      "esito": "ACCOGLIE L'ISTANZA DI ABBREVIAZIONE TERMINI      ",
+      "nomeFile": "202600007_24.xml"
     }
   ],
-  "ultima_variazione": "22/07/2026 10:46"
+  "ultima_variazione": "22/07/2026 12:53"
 }
