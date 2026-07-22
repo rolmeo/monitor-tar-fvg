@@ -1182,8 +1182,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "22/07/2026 23:14",
-  "ultimo_controllo": "22/07/2026 23:14",
+  "ultimo_aggiornamento": "23/07/2026 00:14",
+  "ultimo_controllo": "23/07/2026 00:14",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -1213,10 +1213,14 @@
       "discussioni": [
         "25/03/2025 | CAMERA DI CONSIGLIO | DISCUSSO | ANGELA ROTONDANO | Giudizio Cautelare | 8"
       ],
-      "provvedimenti_collegiali": [],
+      "provvedimenti_collegiali": [
+        "SENTENZA BREVE | ROTONDANO ANGELA | 04/04/2025 | 25/03/2025 | CC | ACCOGLIE"
+      ],
       "provvedimenti_monocratici": [],
-      "data_rilevazione": "22/07/2026 23:09",
-      "ts_eventi": {}
+      "data_rilevazione": "23/07/2026 00:14",
+      "ts_eventi": {
+        "SENTENZA BREVE | ROTONDANO ANGELA | 04/04/2025 | 25/03/2025 | CC | ACCOGLIE": "23/07/2026 00:14"
+      }
     },
     {
       "nrg": "2026001897",
@@ -2083,5 +2087,5 @@
       "nomeFile": "202600007_24.xml"
     }
   ],
-  "ultima_variazione": "22/07/2026 23:09"
+  "ultima_variazione": "23/07/2026 00:14"
 }
