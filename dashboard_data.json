@@ -1182,8 +1182,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "22/07/2026 08:16",
-  "ultimo_controllo": "22/07/2026 08:16",
+  "ultimo_aggiornamento": "22/07/2026 10:46",
+  "ultimo_controllo": "22/07/2026 10:46",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -1899,6 +1899,66 @@
       "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
       "esito": "ACCOGLIE SUI MOTIVI AGGIUNTI DICHIARA IMPROCEDIBILE    ",
       "nomeFile": "202600345_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600187",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "CC",
+      "dataUdienza": "17/07/2026",
+      "numProvvedimento": "202600348",
+      "dataPubblicazione": "22/07/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "BUSICO DANIELE",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "ACCOGLIE     ",
+      "nomeFile": "202600348_01.xml"
+    },
+    {
+      "nrgFascicolo": "202500621",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "UP",
+      "dataUdienza": "16/07/2026",
+      "numProvvedimento": "202600347",
+      "dataPubblicazione": "22/07/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "BUSICO DANIELE",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RESPINGE     ",
+      "nomeFile": "202600347_01.xml"
+    },
+    {
+      "nrgFascicolo": "202500375",
+      "sezione": "1",
+      "parte": "SOCIETÀ AGRICOLA SANTA CATERINA DI ZOLIN PAOLO, MATTEO E CATERINA S.S.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "17/07/2026",
+      "numProvvedimento": "202600346",
+      "dataPubblicazione": "22/07/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "BUSICO DANIELE",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "IMPROCEDIBILE PER SOPRAVVENUTA CARENZA DI INTERESSE     ",
+      "nomeFile": "202600346_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600261",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "CC",
+      "dataUdienza": "16/07/2026",
+      "numProvvedimento": "202600096",
+      "dataPubblicazione": "22/07/2026",
+      "tipoProvvedimento": "ORDINANZA CAUTELARE",
+      "codiceTipoProvvedimento": "05",
+      "relatore": "BUSICO DANIELE",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RESPINGE INTERLOCUTORIO/A INTEGRAZIONE DEL CONTRADDITTORIO FISSA CAMERA DI CONSIGLIO  ",
+      "nomeFile": "202600096_05.xml"
     }
   ],
   "provvedimenti_monocratici": [
@@ -2008,5 +2068,5 @@
       "nomeFile": "202600006_24.xml"
     }
   ],
-  "ultima_variazione": "21/07/2026 21:07"
+  "ultima_variazione": "22/07/2026 10:46"
 }
