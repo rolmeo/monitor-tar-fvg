@@ -1182,8 +1182,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "23/07/2026 08:20",
-  "ultimo_controllo": "23/07/2026 08:20",
+  "ultimo_aggiornamento": "23/07/2026 11:02",
+  "ultimo_controllo": "23/07/2026 11:02",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -2085,7 +2085,22 @@
       "presidente": null,
       "esito": "ACCOGLIE L'ISTANZA DI ABBREVIAZIONE TERMINI      ",
       "nomeFile": "202600007_24.xml"
+    },
+    {
+      "nrgFascicolo": "202600303",
+      "sezione": "1",
+      "parte": null,
+      "tipoUdienza": null,
+      "dataUdienza": null,
+      "numProvvedimento": "202600097",
+      "dataPubblicazione": "23/07/2026",
+      "tipoProvvedimento": "DECRETO CAUTELARE",
+      "codiceTipoProvvedimento": "06",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": null,
+      "esito": "ACCOGLIE  FISSA CAMERA DI CONSIGLIO    ",
+      "nomeFile": "202600097_06.xml"
     }
   ],
-  "ultima_variazione": "23/07/2026 00:14"
+  "ultima_variazione": "23/07/2026 11:02"
 }
