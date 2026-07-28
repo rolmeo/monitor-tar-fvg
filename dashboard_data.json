@@ -1200,8 +1200,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "28/07/2026 13:59",
-  "ultimo_controllo": "28/07/2026 13:59",
+  "ultimo_aggiornamento": "28/07/2026 14:59",
+  "ultimo_controllo": "28/07/2026 14:59",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -1454,6 +1454,33 @@
       "ts_eventi": {
         "ORDINANZA CAUTELARE | TECCHIA MICHELE | 25/06/2026 | 23/06/2026 | CC | RESPINGE": "25/06/2026 10:41"
       }
+    },
+    {
+      "nrg": "2026005945",
+      "anno": 2026,
+      "numero": 5945,
+      "fonte": "CdS",
+      "sezione": "7",
+      "data_deposito": "09/07/2026",
+      "tipo_ricorso": "APPELLO AVVERSO SENTENZA",
+      "oggetto": "AVVISO DI SELEZIONE PUBBLICA PER L'AFFIDAMENTO DI CONCESSIONE DEMANIALE MARITTIMA CON FINALITÀ TURISTICO-RICREATIVA - ESCLUSIONE",
+      "parti": [
+        "APPELLANTE | 09/07/2026 | ",
+        "APPELLATO | 10/07/2026 | ",
+        "CONTROINTERESSATO |  | "
+      ],
+      "atti": [
+        "ALTRO | 2026056187 | APPELLANTE | 27/07/2026",
+        "RICORSO | 2026051632 | APPELLANTE | 09/07/2026",
+        "ISTANZA DI FISSAZIONE UDIENZA | 2026005693 | APPELLANTE | 09/07/2026",
+        "MEMORIA | 2026055677 | APPELLATO | 25/07/2026",
+        "ATTO DI COSTITUZIONE | 2026051836 | APPELLATO | 10/07/2026"
+      ],
+      "discussioni": [
+        "28/07/2026 | CAMERA DI CONSIGLIO | DISCUSSO | CLAUDIO CONTESSA | Giudizio Cautelare | 136"
+      ],
+      "provvedimenti_collegiali": [],
+      "provvedimenti_monocratici": []
     }
   ],
   "provvedimenti_collegiali": [
