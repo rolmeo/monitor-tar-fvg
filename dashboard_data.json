@@ -1200,8 +1200,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "28/07/2026 08:09",
-  "ultimo_controllo": "28/07/2026 08:09",
+  "ultimo_aggiornamento": "28/07/2026 10:48",
+  "ultimo_controllo": "28/07/2026 10:48",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -2193,7 +2193,22 @@
       "presidente": null,
       "esito": "RESPINGE  ACCOGLIE    ",
       "nomeFile": "202600099_06.xml"
+    },
+    {
+      "nrgFascicolo": "202600283",
+      "sezione": "1",
+      "parte": null,
+      "tipoUdienza": null,
+      "dataUdienza": null,
+      "numProvvedimento": "202600016",
+      "dataPubblicazione": "27/07/2026",
+      "tipoProvvedimento": "GRATUITO PATROCINIO",
+      "codiceTipoProvvedimento": "40",
+      "relatore": "BUSICO DANIELE",
+      "presidente": null,
+      "esito": "RESPINGE      ",
+      "nomeFile": "202600016_40.xml"
     }
   ],
-  "ultima_variazione": "27/07/2026 15:59"
+  "ultima_variazione": "28/07/2026 10:48"
 }
