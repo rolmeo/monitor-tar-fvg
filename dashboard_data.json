@@ -1234,8 +1234,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "29/07/2026 12:00",
-  "ultimo_controllo": "29/07/2026 12:00",
+  "ultimo_aggiornamento": "29/07/2026 14:04",
+  "ultimo_controllo": "29/07/2026 14:04",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -2042,6 +2042,126 @@
       "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
       "esito": "RESPINGE INTERLOCUTORIO/A INTEGRAZIONE DEL CONTRADDITTORIO FISSA CAMERA DI CONSIGLIO  ",
       "nomeFile": "202600096_05.xml"
+    },
+    {
+      "nrgFascicolo": "202600162",
+      "sezione": "1",
+      "parte": "COR.EL S.R.L.",
+      "tipoUdienza": "UP",
+      "dataUdienza": "16/07/2026",
+      "numProvvedimento": "202600356",
+      "dataPubblicazione": "29/07/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "BUSICO DANIELE",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RESPINGE     ",
+      "nomeFile": "202600356_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600092",
+      "sezione": "1",
+      "parte": "EBIT S.R.L.",
+      "tipoUdienza": "UP",
+      "dataUdienza": "17/07/2026",
+      "numProvvedimento": "202600355",
+      "dataPubblicazione": "29/07/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "ACCOGLIE ACCOGLIE SUI MOTIVI AGGIUNTI RESPINGE IMPROCEDIBILE PER SOPRAVVENUTA CARENZA DI INTERESSE RESPINGE RICORSO INCIDENTALE ",
+      "nomeFile": "202600355_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600009",
+      "sezione": "1",
+      "parte": "I.GEN.CO ITALIANA S.R.L. – IMPRESA GENERALE COSTRUZIONE",
+      "tipoUdienza": "UP",
+      "dataUdienza": "16/07/2026",
+      "numProvvedimento": "202600354",
+      "dataPubblicazione": "29/07/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "SINIGOI MANUELA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RESPINGE IMPROCEDIBILE PER SOPRAVVENUTA CARENZA DI INTERESSE    ",
+      "nomeFile": "202600354_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600008",
+      "sezione": "1",
+      "parte": "C.A.",
+      "tipoUdienza": "UP",
+      "dataUdienza": "16/07/2026",
+      "numProvvedimento": "202600353",
+      "dataPubblicazione": "29/07/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "SINIGOI MANUELA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RESPINGE IMPROCEDIBILE PER SOPRAVVENUTA CARENZA DI INTERESSE    ",
+      "nomeFile": "202600353_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600007",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "UP",
+      "dataUdienza": "17/07/2026",
+      "numProvvedimento": "202600352",
+      "dataPubblicazione": "29/07/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "BUSICO DANIELE",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RESPINGE     ",
+      "nomeFile": "202600352_01.xml"
+    },
+    {
+      "nrgFascicolo": "202500634",
+      "sezione": "1",
+      "parte": "T.R.",
+      "tipoUdienza": "UP",
+      "dataUdienza": "16/07/2026",
+      "numProvvedimento": "202600351",
+      "dataPubblicazione": "29/07/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "SINIGOI MANUELA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "ACCOGLIE     ",
+      "nomeFile": "202600351_01.xml"
+    },
+    {
+      "nrgFascicolo": "202500482",
+      "sezione": "1",
+      "parte": "GRILLO & C. S.R.L.",
+      "tipoUdienza": "UP",
+      "dataUdienza": "17/07/2026",
+      "numProvvedimento": "202600350",
+      "dataPubblicazione": "29/07/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "BUSICO DANIELE",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RESPINGE RESPINGE SUI MOTIVI AGGIUNTI    ",
+      "nomeFile": "202600350_01.xml"
+    },
+    {
+      "nrgFascicolo": "202500383",
+      "sezione": "1",
+      "parte": "D.B.P.",
+      "tipoUdienza": "UP",
+      "dataUdienza": "16/07/2026",
+      "numProvvedimento": "202600349",
+      "dataPubblicazione": "29/07/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "SINIGOI MANUELA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "ACCOGLIE     ",
+      "nomeFile": "202600349_01.xml"
     }
   ],
   "provvedimenti_monocratici": [
@@ -2269,7 +2389,37 @@
       "presidente": null,
       "esito": "RESPINGE      ",
       "nomeFile": "202600016_40.xml"
+    },
+    {
+      "nrgFascicolo": "202600313",
+      "sezione": "1",
+      "parte": null,
+      "tipoUdienza": null,
+      "dataUdienza": null,
+      "numProvvedimento": "202600103",
+      "dataPubblicazione": "29/07/2026",
+      "tipoProvvedimento": "DECRETO CAUTELARE",
+      "codiceTipoProvvedimento": "06",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": null,
+      "esito": "RESPINGE  FISSA CAMERA DI CONSIGLIO    ",
+      "nomeFile": "202600103_06.xml"
+    },
+    {
+      "nrgFascicolo": "202600315",
+      "sezione": "1",
+      "parte": null,
+      "tipoUdienza": null,
+      "dataUdienza": null,
+      "numProvvedimento": "202600102",
+      "dataPubblicazione": "29/07/2026",
+      "tipoProvvedimento": "DECRETO CAUTELARE",
+      "codiceTipoProvvedimento": "06",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": null,
+      "esito": "RESPINGE  FISSA CAMERA DI CONSIGLIO    ",
+      "nomeFile": "202600102_06.xml"
     }
   ],
-  "ultima_variazione": "28/07/2026 10:48"
+  "ultima_variazione": "29/07/2026 14:04"
 }
