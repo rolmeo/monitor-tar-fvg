@@ -276,8 +276,14 @@
       "discussioni": [
         "28/07/2026 | CAMERA DI CONSIGLIO | DISCUSSO | CLAUDIO CONTESSA | Giudizio Cautelare | 136"
       ],
-      "provvedimenti_collegiali": [],
-      "provvedimenti_monocratici": []
+      "provvedimenti_collegiali": [
+        "ORDINANZA CAUTELARE | CONTESSA CLAUDIO | 31/07/2026 | 28/07/2026 | CC | RESPINGE"
+      ],
+      "provvedimenti_monocratici": [],
+      "data_rilevazione": "31/07/2026 09:36",
+      "ts_eventi": {
+        "ORDINANZA CAUTELARE | CONTESSA CLAUDIO | 31/07/2026 | 28/07/2026 | CC | RESPINGE": "31/07/2026 09:36"
+      }
     }
   }
 }
