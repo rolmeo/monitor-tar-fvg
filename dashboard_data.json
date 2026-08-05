@@ -1244,8 +1244,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "05/08/2026 09:08",
-  "ultimo_controllo": "05/08/2026 09:08",
+  "ultimo_aggiornamento": "05/08/2026 11:45",
+  "ultimo_controllo": "05/08/2026 11:45",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -2178,6 +2178,156 @@
       "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
       "esito": "ACCOGLIE     ",
       "nomeFile": "202600349_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600104",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "UP",
+      "dataUdienza": "16/07/2026",
+      "numProvvedimento": "202600366",
+      "dataPubblicazione": "05/08/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "BUSICO DANIELE",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RESPINGE     ",
+      "nomeFile": "202600366_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600051",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "UP",
+      "dataUdienza": "17/07/2026",
+      "numProvvedimento": "202600365",
+      "dataPubblicazione": "05/08/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "SINIGOI MANUELA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "IMPROCEDIBILE PER SOPRAVVENUTA CARENZA DI INTERESSE RESPINGE    ",
+      "nomeFile": "202600365_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600276",
+      "sezione": "1",
+      "parte": "MARINA AZZURRA S.P.A.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "17/07/2026",
+      "numProvvedimento": "202600364",
+      "dataPubblicazione": "05/08/2026",
+      "tipoProvvedimento": "SENTENZA BREVE",
+      "codiceTipoProvvedimento": "20",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "DICHIARA INAMMISSIBILE     ",
+      "nomeFile": "202600364_20.xml"
+    },
+    {
+      "nrgFascicolo": "202600275",
+      "sezione": "1",
+      "parte": "MARINA AZZURRA S.P.A.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "17/07/2026",
+      "numProvvedimento": "202600363",
+      "dataPubblicazione": "05/08/2026",
+      "tipoProvvedimento": "SENTENZA BREVE",
+      "codiceTipoProvvedimento": "20",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "DICHIARA INAMMISSIBILE     ",
+      "nomeFile": "202600363_20.xml"
+    },
+    {
+      "nrgFascicolo": "202600274",
+      "sezione": "1",
+      "parte": "MARINA AZZURRA S.P.A.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "17/07/2026",
+      "numProvvedimento": "202600362",
+      "dataPubblicazione": "05/08/2026",
+      "tipoProvvedimento": "SENTENZA BREVE",
+      "codiceTipoProvvedimento": "20",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "DICHIARA INAMMISSIBILE     ",
+      "nomeFile": "202600362_20.xml"
+    },
+    {
+      "nrgFascicolo": "202500689",
+      "sezione": "1",
+      "parte": "FENICE SRL",
+      "tipoUdienza": "UP",
+      "dataUdienza": "16/07/2026",
+      "numProvvedimento": "202600361",
+      "dataPubblicazione": "05/08/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RESPINGE DICHIARA INAMMISSIBILE    ",
+      "nomeFile": "202600361_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600273",
+      "sezione": "1",
+      "parte": "MARINA AZZURRA S.P.A.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "17/07/2026",
+      "numProvvedimento": "202600360",
+      "dataPubblicazione": "05/08/2026",
+      "tipoProvvedimento": "SENTENZA BREVE",
+      "codiceTipoProvvedimento": "20",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "DICHIARA INAMMISSIBILE     ",
+      "nomeFile": "202600360_20.xml"
+    },
+    {
+      "nrgFascicolo": "202500651",
+      "sezione": "1",
+      "parte": "LAUTO 2000 SRL",
+      "tipoUdienza": "CC",
+      "dataUdienza": "17/07/2026",
+      "numProvvedimento": "202600359",
+      "dataPubblicazione": "05/08/2026",
+      "tipoProvvedimento": "SENTENZA BREVE",
+      "codiceTipoProvvedimento": "20",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "ACCOGLIE     ",
+      "nomeFile": "202600359_20.xml"
+    },
+    {
+      "nrgFascicolo": "202600272",
+      "sezione": "1",
+      "parte": "MARINA AZZURRA S.P.A",
+      "tipoUdienza": "CC",
+      "dataUdienza": "17/07/2026",
+      "numProvvedimento": "202600358",
+      "dataPubblicazione": "05/08/2026",
+      "tipoProvvedimento": "SENTENZA BREVE",
+      "codiceTipoProvvedimento": "20",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "DICHIARA INAMMISSIBILE     ",
+      "nomeFile": "202600358_20.xml"
+    },
+    {
+      "nrgFascicolo": "202500404",
+      "sezione": "1",
+      "parte": "GIARDINO SRL",
+      "tipoUdienza": "UP",
+      "dataUdienza": "16/07/2026",
+      "numProvvedimento": "202600357",
+      "dataPubblicazione": "05/08/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "DICHIARA INAMMISSIBILE     ",
+      "nomeFile": "202600357_01.xml"
     }
   ],
   "provvedimenti_monocratici": [
@@ -2452,5 +2602,5 @@
       "nomeFile": "202600104_06.xml"
     }
   ],
-  "ultima_variazione": "31/07/2026 17:19"
+  "ultima_variazione": "05/08/2026 11:45"
 }
