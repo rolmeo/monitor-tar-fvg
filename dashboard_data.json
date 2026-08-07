@@ -1251,8 +1251,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "07/08/2026 11:42",
-  "ultimo_controllo": "07/08/2026 11:42",
+  "ultimo_aggiornamento": "07/08/2026 12:32",
+  "ultimo_controllo": "07/08/2026 12:32",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -2622,7 +2622,22 @@
       "presidente": null,
       "esito": "RESPINGE  FISSA CAMERA DI CONSIGLIO    ",
       "nomeFile": "202600105_06.xml"
+    },
+    {
+      "nrgFascicolo": "202600332",
+      "sezione": "1",
+      "parte": null,
+      "tipoUdienza": null,
+      "dataUdienza": null,
+      "numProvvedimento": "202600106",
+      "dataPubblicazione": "07/08/2026",
+      "tipoProvvedimento": "DECRETO CAUTELARE",
+      "codiceTipoProvvedimento": "06",
+      "relatore": "SINIGOI MANUELA",
+      "presidente": null,
+      "esito": "ACCOGLIE  FISSA CAMERA DI CONSIGLIO    ",
+      "nomeFile": "202600106_06.xml"
     }
   ],
-  "ultima_variazione": "06/08/2026 11:31"
+  "ultima_variazione": "07/08/2026 12:32"
 }
