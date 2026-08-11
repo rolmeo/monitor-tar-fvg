@@ -1251,8 +1251,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "11/08/2026 12:31",
-  "ultimo_controllo": "11/08/2026 12:31",
+  "ultimo_aggiornamento": "11/08/2026 13:23",
+  "ultimo_controllo": "11/08/2026 13:23",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -2637,7 +2637,22 @@
       "presidente": null,
       "esito": "ACCOGLIE  FISSA CAMERA DI CONSIGLIO    ",
       "nomeFile": "202600106_06.xml"
+    },
+    {
+      "nrgFascicolo": "202600311",
+      "sezione": "1",
+      "parte": null,
+      "tipoUdienza": null,
+      "dataUdienza": null,
+      "numProvvedimento": "202600009",
+      "dataPubblicazione": "11/08/2026",
+      "tipoProvvedimento": "DECRETO PRESIDENZIALE",
+      "codiceTipoProvvedimento": "24",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": null,
+      "esito": "ACCOGLIE      ",
+      "nomeFile": "202600009_24.xml"
     }
   ],
-  "ultima_variazione": "07/08/2026 12:32"
+  "ultima_variazione": "11/08/2026 13:23"
 }
