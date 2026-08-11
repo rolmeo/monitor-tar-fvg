@@ -1251,8 +1251,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "11/08/2026 15:34",
-  "ultimo_controllo": "11/08/2026 15:34",
+  "ultimo_aggiornamento": "11/08/2026 16:38",
+  "ultimo_controllo": "11/08/2026 16:38",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -2335,6 +2335,96 @@
       "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
       "esito": "DICHIARA INAMMISSIBILE     ",
       "nomeFile": "202600357_01.xml"
+    },
+    {
+      "nrgFascicolo": "202500407",
+      "sezione": "1",
+      "parte": "A.T.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "16/07/2026",
+      "numProvvedimento": "202600372",
+      "dataPubblicazione": "11/08/2026",
+      "tipoProvvedimento": "ORDINANZA COLLEGIALE",
+      "codiceTipoProvvedimento": "08",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "CORREGGE ERRORE MATERIALE     ",
+      "nomeFile": "202600372_08.xml"
+    },
+    {
+      "nrgFascicolo": "202600040",
+      "sezione": "1",
+      "parte": "Z.V.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "17/07/2026",
+      "numProvvedimento": "202600371",
+      "dataPubblicazione": "11/08/2026",
+      "tipoProvvedimento": "ORDINANZA COLLEGIALE",
+      "codiceTipoProvvedimento": "08",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "INTERLOCUTORIO/A FISSA CAMERA DI CONSIGLIO    ",
+      "nomeFile": "202600371_08.xml"
+    },
+    {
+      "nrgFascicolo": "202500694",
+      "sezione": "1",
+      "parte": "L.D.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "17/07/2026",
+      "numProvvedimento": "202600370",
+      "dataPubblicazione": "11/08/2026",
+      "tipoProvvedimento": "ORDINANZA COLLEGIALE",
+      "codiceTipoProvvedimento": "08",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "INTERLOCUTORIO/A FISSA CAMERA DI CONSIGLIO    ",
+      "nomeFile": "202600370_08.xml"
+    },
+    {
+      "nrgFascicolo": "202500692",
+      "sezione": "1",
+      "parte": "B.P.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "17/07/2026",
+      "numProvvedimento": "202600369",
+      "dataPubblicazione": "11/08/2026",
+      "tipoProvvedimento": "ORDINANZA COLLEGIALE",
+      "codiceTipoProvvedimento": "08",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "INTERLOCUTORIO/A FISSA CAMERA DI CONSIGLIO    ",
+      "nomeFile": "202600369_08.xml"
+    },
+    {
+      "nrgFascicolo": "202500683",
+      "sezione": "1",
+      "parte": "B.A.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "17/07/2026",
+      "numProvvedimento": "202600368",
+      "dataPubblicazione": "11/08/2026",
+      "tipoProvvedimento": "ORDINANZA COLLEGIALE",
+      "codiceTipoProvvedimento": "08",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "INTERLOCUTORIO/A FISSA CAMERA DI CONSIGLIO    ",
+      "nomeFile": "202600368_08.xml"
+    },
+    {
+      "nrgFascicolo": "202500669",
+      "sezione": "1",
+      "parte": "F.L.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "17/07/2026",
+      "numProvvedimento": "202600367",
+      "dataPubblicazione": "11/08/2026",
+      "tipoProvvedimento": "ORDINANZA COLLEGIALE",
+      "codiceTipoProvvedimento": "08",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "INTERLOCUTORIO/A FISSA CAMERA DI CONSIGLIO    ",
+      "nomeFile": "202600367_08.xml"
     }
   ],
   "provvedimenti_monocratici": [
@@ -2654,5 +2744,5 @@
       "nomeFile": "202600009_24.xml"
     }
   ],
-  "ultima_variazione": "11/08/2026 13:23"
+  "ultima_variazione": "11/08/2026 16:38"
 }
