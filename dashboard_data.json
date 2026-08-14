@@ -1251,8 +1251,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "14/08/2026 14:02",
-  "ultimo_controllo": "14/08/2026 14:02",
+  "ultimo_aggiornamento": "14/08/2026 15:24",
+  "ultimo_controllo": "14/08/2026 15:24",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -2742,7 +2742,37 @@
       "presidente": null,
       "esito": "ACCOGLIE      ",
       "nomeFile": "202600009_24.xml"
+    },
+    {
+      "nrgFascicolo": "202600337",
+      "sezione": "1",
+      "parte": null,
+      "tipoUdienza": null,
+      "dataUdienza": null,
+      "numProvvedimento": "202600108",
+      "dataPubblicazione": "14/08/2026",
+      "tipoProvvedimento": "DECRETO CAUTELARE",
+      "codiceTipoProvvedimento": "06",
+      "relatore": "BUSICO DANIELE",
+      "presidente": null,
+      "esito": "DICHIARA INAMMISSIBILE  FISSA CAMERA DI CONSIGLIO    ",
+      "nomeFile": "202600108_06.xml"
+    },
+    {
+      "nrgFascicolo": "202600336",
+      "sezione": "1",
+      "parte": null,
+      "tipoUdienza": null,
+      "dataUdienza": null,
+      "numProvvedimento": "202600107",
+      "dataPubblicazione": "14/08/2026",
+      "tipoProvvedimento": "DECRETO CAUTELARE",
+      "codiceTipoProvvedimento": "06",
+      "relatore": "BUSICO DANIELE",
+      "presidente": null,
+      "esito": "ACCOGLIE  FISSA CAMERA DI CONSIGLIO    ",
+      "nomeFile": "202600107_06.xml"
     }
   ],
-  "ultima_variazione": "12/08/2026 15:42"
+  "ultima_variazione": "14/08/2026 15:24"
 }
