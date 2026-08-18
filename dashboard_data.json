@@ -1251,8 +1251,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "18/08/2026 08:15",
-  "ultimo_controllo": "18/08/2026 08:15",
+  "ultimo_aggiornamento": "18/08/2026 09:06",
+  "ultimo_controllo": "18/08/2026 09:06",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -2772,6 +2772,21 @@
       "presidente": null,
       "esito": "ACCOGLIE  FISSA CAMERA DI CONSIGLIO    ",
       "nomeFile": "202600107_06.xml"
+    },
+    {
+      "nrgFascicolo": "202600337",
+      "sezione": "1",
+      "parte": null,
+      "tipoUdienza": null,
+      "dataUdienza": null,
+      "numProvvedimento": "202600109",
+      "dataPubblicazione": "18/08/2026",
+      "tipoProvvedimento": "DECRETO CAUTELARE",
+      "codiceTipoProvvedimento": "06",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": null,
+      "esito": "ACCOGLIE  FISSA CAMERA DI CONSIGLIO    ",
+      "nomeFile": "202600109_06.xml"
     }
   ],
   "ultima_variazione": "14/08/2026 15:24"
