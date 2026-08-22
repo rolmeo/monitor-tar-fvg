@@ -1251,8 +1251,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "22/08/2026 22:08",
-  "ultimo_controllo": "22/08/2026 22:08",
+  "ultimo_aggiornamento": "22/08/2026 23:08",
+  "ultimo_controllo": "22/08/2026 23:08",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -1357,13 +1357,11 @@
       "discussioni": [
         "14/04/2026 | CAMERA DI CONSIGLIO | DISCUSSO | LAURA MARZANO | Giudizio Cautelare | 17"
       ],
-      "provvedimenti_collegiali": [
-        "ORDINANZA CAUTELARE | MARZANO LAURA | 16/04/2026 | 14/04/2026 | CC | RESPINGE"
-      ],
+      "provvedimenti_collegiali": [],
       "provvedimenti_monocratici": [
         "DECRETO CAUTELARE | CONTESSA CLAUDIO | 13/03/2026 | RESPINGE FISSA CAMERA DI CONSIGLIO"
       ],
-      "data_rilevazione": "09/07/2026 00:45",
+      "data_rilevazione": "22/08/2026 23:08",
       "ts_eventi": {
         "14/04/2026 | CAMERA DI CONSIGLIO |  | LAURA MARZANO | Giudizio Cautelare | ": "31/03/2026 12:58",
         "14/04/2026 | CAMERA DI CONSIGLIO |  | LAURA MARZANO | Giudizio Cautelare | 17": "07/04/2026 10:36",
@@ -2894,5 +2892,5 @@
       "nomeFile": "202600110_06.xml"
     }
   ],
-  "ultima_variazione": "22/08/2026 08:37"
+  "ultima_variazione": "22/08/2026 23:08"
 }
