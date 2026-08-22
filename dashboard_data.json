@@ -1251,8 +1251,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "22/08/2026 07:57",
-  "ultimo_controllo": "22/08/2026 07:57",
+  "ultimo_aggiornamento": "22/08/2026 08:37",
+  "ultimo_controllo": "22/08/2026 08:37",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -2425,6 +2425,96 @@
       "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
       "esito": "INTERLOCUTORIO/A FISSA CAMERA DI CONSIGLIO    ",
       "nomeFile": "202600367_08.xml"
+    },
+    {
+      "nrgFascicolo": "202600085",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "UP",
+      "dataUdienza": "17/07/2026",
+      "numProvvedimento": "202600377",
+      "dataPubblicazione": "22/08/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "ACCOGLIE ACCOGLIE SUI MOTIVI AGGIUNTI    ",
+      "nomeFile": "202600377_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600068",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "UP",
+      "dataUdienza": "16/07/2026",
+      "numProvvedimento": "202600376",
+      "dataPubblicazione": "22/08/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "BUSICO DANIELE",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RESPINGE     ",
+      "nomeFile": "202600376_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600073",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "UP",
+      "dataUdienza": "16/07/2026",
+      "numProvvedimento": "202600376",
+      "dataPubblicazione": "22/08/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "BUSICO DANIELE",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RESPINGE     ",
+      "nomeFile": "202600376_01.xml"
+    },
+    {
+      "nrgFascicolo": "202500714",
+      "sezione": "1",
+      "parte": "STELLA ALPINA DI SIMONE ZIBRA & C. S.A.S.",
+      "tipoUdienza": "UP",
+      "dataUdienza": "17/07/2026",
+      "numProvvedimento": "202600375",
+      "dataPubblicazione": "22/08/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "IMPROCEDIBILE PER SOPRAVVENUTA CARENZA DI INTERESSE     ",
+      "nomeFile": "202600375_01.xml"
+    },
+    {
+      "nrgFascicolo": "202500493",
+      "sezione": "1",
+      "parte": "BIOLAB S.R.L.",
+      "tipoUdienza": "UP",
+      "dataUdienza": "16/07/2026",
+      "numProvvedimento": "202600374",
+      "dataPubblicazione": "22/08/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RESPINGE     ",
+      "nomeFile": "202600374_01.xml"
+    },
+    {
+      "nrgFascicolo": "202500490",
+      "sezione": "1",
+      "parte": "BIOLAB S.R.L.",
+      "tipoUdienza": "UP",
+      "dataUdienza": "16/07/2026",
+      "numProvvedimento": "202600373",
+      "dataPubblicazione": "22/08/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RESPINGE     ",
+      "nomeFile": "202600373_01.xml"
     }
   ],
   "provvedimenti_monocratici": [
@@ -2804,5 +2894,5 @@
       "nomeFile": "202600110_06.xml"
     }
   ],
-  "ultima_variazione": "21/08/2026 08:19"
+  "ultima_variazione": "22/08/2026 08:37"
 }
