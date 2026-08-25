@@ -1254,8 +1254,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "25/08/2026 14:05",
-  "ultimo_controllo": "25/08/2026 14:05",
+  "ultimo_aggiornamento": "25/08/2026 15:05",
+  "ultimo_controllo": "25/08/2026 15:05",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -1526,6 +1526,7 @@
       "atti": [
         "ALTRO | 2026056187 | APPELLANTE | 27/07/2026",
         "RICORSO | 2026051632 | APPELLANTE | 09/07/2026",
+        "CONTRIBUTO UNIFICATO | 2026059864 | APPELLANTE | 25/08/2026",
         "ISTANZA DI FISSAZIONE UDIENZA | 2026005693 | APPELLANTE | 09/07/2026",
         "MEMORIA | 2026055677 | APPELLATO | 25/07/2026",
         "ATTO DI COSTITUZIONE | 2026051836 | APPELLATO | 10/07/2026"
@@ -1537,9 +1538,10 @@
         "ORDINANZA CAUTELARE | CONTESSA CLAUDIO | 31/07/2026 | 28/07/2026 | CC | RESPINGE"
       ],
       "provvedimenti_monocratici": [],
-      "data_rilevazione": "31/07/2026 09:36",
+      "data_rilevazione": "25/08/2026 15:05",
       "ts_eventi": {
-        "ORDINANZA CAUTELARE | CONTESSA CLAUDIO | 31/07/2026 | 28/07/2026 | CC | RESPINGE": "31/07/2026 09:36"
+        "ORDINANZA CAUTELARE | CONTESSA CLAUDIO | 31/07/2026 | 28/07/2026 | CC | RESPINGE": "31/07/2026 09:36",
+        "CONTRIBUTO UNIFICATO | 2026059864 | APPELLANTE | 25/08/2026": "25/08/2026 15:05"
       }
     }
   ],
@@ -2897,5 +2899,5 @@
       "nomeFile": "202600110_06.xml"
     }
   ],
-  "ultima_variazione": "25/08/2026 10:47"
+  "ultima_variazione": "25/08/2026 15:05"
 }
