@@ -1,5 +1,5 @@
 {
-  "ultimo_ricorso": 343,
+  "ultimo_ricorso": 344,
   "anno_nuovi": 2026,
   "ricorsi_monitorati": [
     {
@@ -880,7 +880,8 @@
         "RICORSO | 2025001632 | RICORRENTE PRINCIPALE | 30/05/2025",
         "MEMORIA | 2026000127 | RICORRENTE PRINCIPALE | 09/01/2026",
         "ISTANZA DI FISSAZIONE UDIENZA | 2025000253 | RICORRENTE PRINCIPALE | 30/05/2025",
-        "CARTOLINA RICEVIMENTO NOTIFICA | 2025002102 | RICORRENTE PRINCIPALE | 11/07/2025"
+        "CARTOLINA RICEVIMENTO NOTIFICA | 2025002102 | RICORRENTE PRINCIPALE | 11/07/2025",
+        "ISTANZA DI RINVIO | 2026002968 | RICORRENTE PRINCIPALE | 25/08/2026"
       ],
       "discussioni": [
         "21/10/2026 | UDIENZA PUBBLICA |  | DA ASSEGNARE MAGISTRATO | Merito | ",
@@ -892,9 +893,10 @@
         "ORDINANZA CAUTELARE | SINIGOI MANUELA | 13/09/2025 | 10/09/2025 | CC | PRENDE ATTO RINUNZIA ALLA ISTANZA CAUTELARE FISSA UDIENZA PUBBLICA"
       ],
       "provvedimenti_monocratici": [],
-      "data_rilevazione": "23/06/2026 09:59",
+      "data_rilevazione": "25/08/2026 10:47",
       "ts_eventi": {
-        "ORDINANZA CAUTELARE | SINIGOI MANUELA | 13/09/2025 | 10/09/2025 | CC | PRENDE ATTO RINUNZIA ALLA ISTANZA CAUTELARE FISSA UDIENZA PUBBLICA": "15/04/2026 23:25"
+        "ORDINANZA CAUTELARE | SINIGOI MANUELA | 13/09/2025 | 10/09/2025 | CC | PRENDE ATTO RINUNZIA ALLA ISTANZA CAUTELARE FISSA UDIENZA PUBBLICA": "15/04/2026 23:25",
+        "ISTANZA DI RINVIO | 2026002968 | RICORRENTE PRINCIPALE | 25/08/2026": "25/08/2026 10:47"
       }
     },
     {
@@ -1252,8 +1254,8 @@
       "provvedimenti_monocratici": []
     }
   ],
-  "ultimo_aggiornamento": "25/08/2026 11:47",
-  "ultimo_controllo": "25/08/2026 11:47",
+  "ultimo_aggiornamento": "25/08/2026 10:47",
+  "ultimo_controllo": "25/08/2026 10:47",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -2895,5 +2897,5 @@
       "nomeFile": "202600110_06.xml"
     }
   ],
-  "ultima_variazione": "24/08/2026 09:22"
+  "ultima_variazione": "25/08/2026 10:47"
 }
