@@ -553,6 +553,7 @@
         "MEMORIA | 2026000852 | AMMINISTRAZIONE INTIMATA | 21/02/2026"
       ],
       "discussioni": [
+        "18/11/2026 | UDIENZA PUBBLICA |  | DA ASSEGNARE MAGISTRATO | Merito | ",
         "16/07/2026 | CAMERA DI CONSIGLIO | DISCUSSO | MANUELA SINIGOI | Giudizio Cautelare | 6",
         "04/06/2026 | UDIENZA PUBBLICA | RINVIO AD ALTRA DATA | MANUELA SINIGOI | Merito | 7",
         "24/02/2026 | CAMERA DI CONSIGLIO | DISCUSSO | MANUELA SINIGOI | Giudizio Cautelare | 13",
@@ -565,7 +566,7 @@
         "ORDINANZA CAUTELARE | SINIGOI MANUELA | 29/10/2025 | 22/10/2025 | CC | PRENDE ATTO RINUNZIA ALLA ISTANZA CAUTELARE FISSA UDIENZA PUBBLICA"
       ],
       "provvedimenti_monocratici": [],
-      "data_rilevazione": "21/07/2026 13:15",
+      "data_rilevazione": "28/08/2026 12:41",
       "ts_eventi": {
         "MEMORIA EX ART.73 C.P.A. | 2026001663 | RICORRENTE PRINCIPALE | 04/05/2026": "04/05/2026 10:09",
         "04/06/2026 | UDIENZA PUBBLICA |  | MANUELA SINIGOI | Merito | ": "07/05/2026 07:38",
@@ -583,7 +584,8 @@
         "MEMORIA DI COSTITUZIONE | 2026002628 | AMMINISTRAZIONE INTIMATA | 13/07/2026": "13/07/2026 10:59",
         "ALTRO | 2026002646 | AMMINISTRAZIONE INTIMATA | 13/07/2026": "13/07/2026 16:28",
         "16/07/2026 | CAMERA DI CONSIGLIO | DISCUSSO | MANUELA SINIGOI | Giudizio Cautelare | 6": "16/07/2026 13:25",
-        "ORDINANZA CAUTELARE | SINIGOI MANUELA | 21/07/2026 | 16/07/2026 | CC | RESPINGE": "21/07/2026 13:15"
+        "ORDINANZA CAUTELARE | SINIGOI MANUELA | 21/07/2026 | 16/07/2026 | CC | RESPINGE": "21/07/2026 13:15",
+        "18/11/2026 | UDIENZA PUBBLICA |  | DA ASSEGNARE MAGISTRATO | Merito | ": "28/08/2026 12:41"
       }
     },
     {
@@ -1264,8 +1266,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "28/08/2026 13:41",
-  "ultimo_controllo": "28/08/2026 13:41",
+  "ultimo_aggiornamento": "28/08/2026 12:41",
+  "ultimo_controllo": "28/08/2026 12:41",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -3108,5 +3110,5 @@
       "nomeFile": "202600110_06.xml"
     }
   ],
-  "ultima_variazione": "28/08/2026 13:41"
+  "ultima_variazione": "28/08/2026 12:41"
 }
