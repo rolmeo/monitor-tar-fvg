@@ -1264,8 +1264,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "27/08/2026 17:26",
-  "ultimo_controllo": "27/08/2026 17:26",
+  "ultimo_aggiornamento": "28/08/2026 02:29",
+  "ultimo_controllo": "28/08/2026 02:29",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -2609,6 +2609,21 @@
       "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
       "esito": "DICHIARA CESSATA MATERIA DEL CONTENDERE     ",
       "nomeFile": "202600378_01.xml"
+    },
+    {
+      "nrgFascicolo": "202500710",
+      "sezione": "1",
+      "parte": "G.M.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "17/07/2026",
+      "numProvvedimento": "202600383",
+      "dataPubblicazione": "27/08/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "DICHIARA CESSATA MATERIA DEL CONTENDERE     ",
+      "nomeFile": "202600383_01.xml"
     }
   ],
   "provvedimenti_monocratici": [
@@ -2988,5 +3003,5 @@
       "nomeFile": "202600110_06.xml"
     }
   ],
-  "ultima_variazione": "27/08/2026 17:26"
+  "ultima_variazione": "28/08/2026 02:29"
 }
