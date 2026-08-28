@@ -1264,8 +1264,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "28/08/2026 02:29",
-  "ultimo_controllo": "28/08/2026 02:29",
+  "ultimo_aggiornamento": "28/08/2026 13:41",
+  "ultimo_controllo": "28/08/2026 13:41",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -2624,6 +2624,111 @@
       "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
       "esito": "DICHIARA CESSATA MATERIA DEL CONTENDERE     ",
       "nomeFile": "202600383_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600232",
+      "sezione": "1",
+      "parte": "ZAMPE CHE DANNO UNA MANO ODV",
+      "tipoUdienza": "CC",
+      "dataUdienza": "16/07/2026",
+      "numProvvedimento": "202600390",
+      "dataPubblicazione": "28/08/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "ACCOLTO PARZIALMENTE DICHIARA IMPROCEDIBILE    ",
+      "nomeFile": "202600390_01.xml"
+    },
+    {
+      "nrgFascicolo": "202500523",
+      "sezione": "1",
+      "parte": "V.F.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "16/07/2026",
+      "numProvvedimento": "202600389",
+      "dataPubblicazione": "28/08/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "DICHIARA CESSATA MATERIA DEL CONTENDERE     ",
+      "nomeFile": "202600389_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600112",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "UP",
+      "dataUdienza": "17/07/2026",
+      "numProvvedimento": "202600388",
+      "dataPubblicazione": "28/08/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RESPINGE     ",
+      "nomeFile": "202600388_01.xml"
+    },
+    {
+      "nrgFascicolo": "202500707",
+      "sezione": "1",
+      "parte": "R.G.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "17/07/2026",
+      "numProvvedimento": "202600387",
+      "dataPubblicazione": "28/08/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "DICHIARA CESSATA MATERIA DEL CONTENDERE     ",
+      "nomeFile": "202600387_01.xml"
+    },
+    {
+      "nrgFascicolo": "202300279",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "UP",
+      "dataUdienza": "17/07/2026",
+      "numProvvedimento": "202600386",
+      "dataPubblicazione": "28/08/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "DICHIARA IMPROCEDIBILE     ",
+      "nomeFile": "202600386_01.xml"
+    },
+    {
+      "nrgFascicolo": "202500541",
+      "sezione": "1",
+      "parte": "V.I.A.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "16/07/2026",
+      "numProvvedimento": "202600385",
+      "dataPubblicazione": "28/08/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "DICHIARA CESSATA MATERIA DEL CONTENDERE     ",
+      "nomeFile": "202600385_01.xml"
+    },
+    {
+      "nrgFascicolo": "202500567",
+      "sezione": "1",
+      "parte": "V.S.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "16/07/2026",
+      "numProvvedimento": "202600384",
+      "dataPubblicazione": "28/08/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "DICHIARA CESSATA MATERIA DEL CONTENDERE     ",
+      "nomeFile": "202600384_01.xml"
     }
   ],
   "provvedimenti_monocratici": [
@@ -3003,5 +3108,5 @@
       "nomeFile": "202600110_06.xml"
     }
   ],
-  "ultima_variazione": "28/08/2026 02:29"
+  "ultima_variazione": "28/08/2026 13:41"
 }
