@@ -1246,6 +1246,7 @@
         "MEMORIA | 2026002616 | CONTROINTERESSATO | 13/07/2026",
         "ATTO DI COSTITUZIONE | 2026002513 | AMMINISTRAZIONE INTIMATA | 06/07/2026",
         "MEMORIA | 2026002609 | AMMINISTRAZIONE INTIMATA | 13/07/2026",
+        "DOCUMENTI | 2026003013 | AMMINISTRAZIONE INTIMATA | 01/09/2026",
         "MEMORIA DI COSTITUZIONE | 2026002559 | CONTROINTERESSATO | 08/07/2026",
         "RICORSO | 2026002350 | RICORRENTE PRINCIPALE | 22/06/2026",
         "DOCUMENTI | 2026002728 | RICORRENTE PRINCIPALE | 16/07/2026",
@@ -1262,14 +1263,15 @@
         "ORDINANZA CAUTELARE | MICELLI CLAUDIA | 21/07/2026 | 16/07/2026 | CC | RESPINGE FISSA UDIENZA PUBBLICA"
       ],
       "provvedimenti_monocratici": [],
-      "data_rilevazione": "26/08/2026 10:40",
+      "data_rilevazione": "01/09/2026 20:17",
       "ts_eventi": {
-        "MOTIVI AGGIUNTI | 2026002974 | RICORRENTE PRINCIPALE | 26/08/2026": "26/08/2026 10:40"
+        "MOTIVI AGGIUNTI | 2026002974 | RICORRENTE PRINCIPALE | 26/08/2026": "26/08/2026 10:40",
+        "DOCUMENTI | 2026003013 | AMMINISTRAZIONE INTIMATA | 01/09/2026": "01/09/2026 20:17"
       }
     }
   ],
-  "ultimo_aggiornamento": "01/09/2026 21:17",
-  "ultimo_controllo": "01/09/2026 21:17",
+  "ultimo_aggiornamento": "01/09/2026 20:17",
+  "ultimo_controllo": "01/09/2026 20:17",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -3729,5 +3731,5 @@
       "nomeFile": "202600110_06.xml"
     }
   ],
-  "ultima_variazione": "01/09/2026 16:59"
+  "ultima_variazione": "01/09/2026 20:17"
 }
