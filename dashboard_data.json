@@ -1266,8 +1266,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "01/09/2026 13:56",
-  "ultimo_controllo": "01/09/2026 13:56",
+  "ultimo_aggiornamento": "01/09/2026 17:59",
+  "ultimo_controllo": "01/09/2026 17:59",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -3333,6 +3333,21 @@
       "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
       "esito": "RESPINGE     ",
       "nomeFile": "202600429_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600200",
+      "sezione": "1",
+      "parte": "UNIONE DEGLI ATEI E AGNOSTICI RAZIONALISTI – UAAR",
+      "tipoUdienza": "CC",
+      "dataUdienza": "17/07/2026",
+      "numProvvedimento": "202600431",
+      "dataPubblicazione": "01/09/2026",
+      "tipoProvvedimento": "SENTENZA BREVE",
+      "codiceTipoProvvedimento": "20",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "ACCOGLIE DICHIARA INAMMISSIBILE    ",
+      "nomeFile": "202600431_20.xml"
     }
   ],
   "provvedimenti_monocratici": [
@@ -3712,5 +3727,5 @@
       "nomeFile": "202600110_06.xml"
     }
   ],
-  "ultima_variazione": "01/09/2026 08:29"
+  "ultima_variazione": "01/09/2026 17:59"
 }
