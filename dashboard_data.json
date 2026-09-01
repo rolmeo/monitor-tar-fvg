@@ -1266,8 +1266,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "01/09/2026 03:26",
-  "ultimo_controllo": "01/09/2026 03:26",
+  "ultimo_aggiornamento": "01/09/2026 08:29",
+  "ultimo_controllo": "01/09/2026 08:29",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -3303,6 +3303,36 @@
       "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
       "esito": "DICHIARA CESSATA MATERIA DEL CONTENDERE     ",
       "nomeFile": "202600407_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600046",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "UP",
+      "dataUdienza": "17/07/2026",
+      "numProvvedimento": "202600430",
+      "dataPubblicazione": "01/09/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RESPINGE     ",
+      "nomeFile": "202600430_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600026",
+      "sezione": "1",
+      "parte": "C.F.",
+      "tipoUdienza": "UP",
+      "dataUdienza": "17/07/2026",
+      "numProvvedimento": "202600429",
+      "dataPubblicazione": "01/09/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RESPINGE     ",
+      "nomeFile": "202600429_01.xml"
     }
   ],
   "provvedimenti_monocratici": [
@@ -3682,5 +3712,5 @@
       "nomeFile": "202600110_06.xml"
     }
   ],
-  "ultima_variazione": "31/08/2026 13:49"
+  "ultima_variazione": "01/09/2026 08:29"
 }
