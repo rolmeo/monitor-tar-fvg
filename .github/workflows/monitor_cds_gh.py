@@ -26,6 +26,7 @@ RICORSI_DA_MONITORARE = [
     (2026, 3098),   # CdS — Lido City — SAST Eredi Sapienza & Pasquin
     (2026, 4334),   # CdS — Gabbiano — Gigante Giancarlo
     (2026, 5945),   # CdS — Gabbiano — Gigante Giancarlo
+    (2026, 7225),   # CdS — Getur subconc. — Tiliaventum
 ]
 
 # ============================================================
