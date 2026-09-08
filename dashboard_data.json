@@ -1290,8 +1290,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "08/09/2026 14:04",
-  "ultimo_controllo": "08/09/2026 14:04",
+  "ultimo_aggiornamento": "08/09/2026 15:05",
+  "ultimo_controllo": "08/09/2026 15:05",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -1585,6 +1585,33 @@
         "ISTANZA DI PRELIEVO | 202600408 | APPELLANTE | 27/08/2026": "27/08/2026 17:26",
         "10/12/2026 | UDIENZA PUBBLICA |  | DA ASSEGNARE MAGISTRATO | Merito | ": "31/08/2026 13:49"
       }
+    },
+    {
+      "nrg": "2026007225",
+      "anno": 2026,
+      "numero": 7225,
+      "fonte": "CdS",
+      "sezione": "7",
+      "data_deposito": "01/09/2026",
+      "tipo_ricorso": "APPELLO AVVERSO ORDINANZA CAUTELARE",
+      "oggetto": "TRASFERIMENTO IN DELEGA DELLA CONCESSIONE DI AREA DEMANIALE MARITTIMA",
+      "parti": [
+        "APPELLANTE | 01/09/2026 | ",
+        "APPELLATO |  | ",
+        "APPELLATO | 04/09/2026 | ",
+        "APPELLATO |  | ",
+        "CONTROINTERESSATO |  | "
+      ],
+      "atti": [
+        "ATTO DI COSTITUZIONE | 2026061432 | APPELLATO | 04/09/2026",
+        "DOCUMENTI | 2026060787 | APPELLANTE | 01/09/2026",
+        "RICORSO | 2026060781 | APPELLANTE | 01/09/2026"
+      ],
+      "discussioni": [
+        "22/09/2026 | CAMERA DI CONSIGLIO |  | DANIELA DI CARLO | Giudizio Cautelare | "
+      ],
+      "provvedimenti_collegiali": [],
+      "provvedimenti_monocratici": []
     }
   ],
   "provvedimenti_collegiali": [
