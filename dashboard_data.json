@@ -705,12 +705,15 @@
         "CONTRIBUTO UNIFICATO | 2026001617 | RICORRENTE PRINCIPALE | 28/04/2026",
         "ISTANZA DI FISSAZIONE UDIENZA | 2026000113 | RICORRENTE PRINCIPALE | 11/03/2026"
       ],
-      "discussioni": [],
+      "discussioni": [
+        "18/11/2026 | UDIENZA PUBBLICA |  | DA ASSEGNARE MAGISTRATO | Merito | "
+      ],
       "provvedimenti_collegiali": [],
       "provvedimenti_monocratici": [],
-      "data_rilevazione": "28/04/2026 10:04",
+      "data_rilevazione": "09/09/2026 16:07",
       "ts_eventi": {
-        "CONTRIBUTO UNIFICATO | 2026001617 | RICORRENTE PRINCIPALE | 28/04/2026": "28/04/2026 10:04"
+        "CONTRIBUTO UNIFICATO | 2026001617 | RICORRENTE PRINCIPALE | 28/04/2026": "28/04/2026 10:04",
+        "18/11/2026 | UDIENZA PUBBLICA |  | DA ASSEGNARE MAGISTRATO | Merito | ": "09/09/2026 16:07"
       }
     },
     {
@@ -1305,8 +1308,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "09/09/2026 17:07",
-  "ultimo_controllo": "09/09/2026 17:07",
+  "ultimo_aggiornamento": "09/09/2026 16:07",
+  "ultimo_controllo": "09/09/2026 16:07",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -3793,5 +3796,5 @@
       "nomeFile": "202600110_06.xml"
     }
   ],
-  "ultima_variazione": "09/09/2026 12:13"
+  "ultima_variazione": "09/09/2026 16:07"
 }
