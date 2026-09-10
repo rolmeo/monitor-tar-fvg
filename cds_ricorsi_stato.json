@@ -315,10 +315,14 @@
         "RICORSO | 2026060781 | APPELLANTE | 01/09/2026"
       ],
       "discussioni": [
-        "22/09/2026 | CAMERA DI CONSIGLIO |  | DANIELA DI CARLO | Giudizio Cautelare | "
+        "22/09/2026 | CAMERA DI CONSIGLIO |  | DANIELA DI CARLO | Giudizio Cautelare | 7"
       ],
       "provvedimenti_collegiali": [],
-      "provvedimenti_monocratici": []
+      "provvedimenti_monocratici": [],
+      "data_rilevazione": "10/09/2026 16:20",
+      "ts_eventi": {
+        "22/09/2026 | CAMERA DI CONSIGLIO |  | DANIELA DI CARLO | Giudizio Cautelare | 7": "10/09/2026 16:20"
+      }
     }
   }
 }
