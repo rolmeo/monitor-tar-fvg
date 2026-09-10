@@ -1314,8 +1314,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "10/09/2026 15:20",
-  "ultimo_controllo": "10/09/2026 15:20",
+  "ultimo_aggiornamento": "10/09/2026 16:20",
+  "ultimo_controllo": "10/09/2026 16:20",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -1632,10 +1632,14 @@
         "RICORSO | 2026060781 | APPELLANTE | 01/09/2026"
       ],
       "discussioni": [
-        "22/09/2026 | CAMERA DI CONSIGLIO |  | DANIELA DI CARLO | Giudizio Cautelare | "
+        "22/09/2026 | CAMERA DI CONSIGLIO |  | DANIELA DI CARLO | Giudizio Cautelare | 7"
       ],
       "provvedimenti_collegiali": [],
-      "provvedimenti_monocratici": []
+      "provvedimenti_monocratici": [],
+      "data_rilevazione": "10/09/2026 16:20",
+      "ts_eventi": {
+        "22/09/2026 | CAMERA DI CONSIGLIO |  | DANIELA DI CARLO | Giudizio Cautelare | 7": "10/09/2026 16:20"
+      }
     }
   ],
   "provvedimenti_collegiali": [
@@ -3802,5 +3806,5 @@
       "nomeFile": "202600110_06.xml"
     }
   ],
-  "ultima_variazione": "10/09/2026 11:04"
+  "ultima_variazione": "10/09/2026 16:20"
 }
