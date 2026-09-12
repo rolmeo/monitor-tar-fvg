@@ -1324,8 +1324,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "12/09/2026 03:35",
-  "ultimo_controllo": "12/09/2026 03:35",
+  "ultimo_aggiornamento": "12/09/2026 08:26",
+  "ultimo_controllo": "12/09/2026 08:26",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -3437,6 +3437,21 @@
       "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
       "esito": "ACCOGLIE DICHIARA INAMMISSIBILE    ",
       "nomeFile": "202600431_20.xml"
+    },
+    {
+      "nrgFascicolo": "202600311",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "CC",
+      "dataUdienza": "09/09/2026",
+      "numProvvedimento": "202600111",
+      "dataPubblicazione": "12/09/2026",
+      "tipoProvvedimento": "ORDINANZA CAUTELARE",
+      "codiceTipoProvvedimento": "05",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "ACCOGLIE FISSA UDIENZA PUBBLICA    ",
+      "nomeFile": "202600111_05.xml"
     }
   ],
   "provvedimenti_monocratici": [
@@ -3816,5 +3831,5 @@
       "nomeFile": "202600110_06.xml"
     }
   ],
-  "ultima_variazione": "11/09/2026 22:55"
+  "ultima_variazione": "12/09/2026 08:26"
 }
