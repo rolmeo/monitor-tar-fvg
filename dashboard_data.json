@@ -1340,8 +1340,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "17/09/2026 11:09",
-  "ultimo_controllo": "17/09/2026 11:09",
+  "ultimo_aggiornamento": "17/09/2026 12:09",
+  "ultimo_controllo": "17/09/2026 12:09",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -1647,12 +1647,13 @@
       "oggetto": "TRASFERIMENTO IN DELEGA DELLA CONCESSIONE DI AREA DEMANIALE MARITTIMA",
       "parti": [
         "APPELLANTE | 01/09/2026 | ",
-        "APPELLATO |  | ",
+        "APPELLATO | 17/09/2026 | ",
         "APPELLATO | 04/09/2026 | ",
         "APPELLATO |  | ",
         "CONTROINTERESSATO |  | "
       ],
       "atti": [
+        "ATTO DI COSTITUZIONE | 2026064701 | APPELLATO | 17/09/2026",
         "ATTO DI COSTITUZIONE | 2026061432 | APPELLATO | 04/09/2026",
         "DOCUMENTI | 2026060787 | APPELLANTE | 01/09/2026",
         "RICORSO | 2026060781 | APPELLANTE | 01/09/2026"
@@ -1662,9 +1663,10 @@
       ],
       "provvedimenti_collegiali": [],
       "provvedimenti_monocratici": [],
-      "data_rilevazione": "10/09/2026 16:20",
+      "data_rilevazione": "17/09/2026 12:09",
       "ts_eventi": {
-        "22/09/2026 | CAMERA DI CONSIGLIO |  | DANIELA DI CARLO | Giudizio Cautelare | 7": "10/09/2026 16:20"
+        "22/09/2026 | CAMERA DI CONSIGLIO |  | DANIELA DI CARLO | Giudizio Cautelare | 7": "10/09/2026 16:20",
+        "ATTO DI COSTITUZIONE | 2026064701 | APPELLATO | 17/09/2026": "17/09/2026 12:09"
       }
     }
   ],
@@ -4042,5 +4044,5 @@
       "nomeFile": "202600120_06.xml"
     }
   ],
-  "ultima_variazione": "16/09/2026 17:51"
+  "ultima_variazione": "17/09/2026 12:09"
 }
