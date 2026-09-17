@@ -1340,8 +1340,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "17/09/2026 12:09",
-  "ultimo_controllo": "17/09/2026 12:09",
+  "ultimo_aggiornamento": "17/09/2026 16:58",
+  "ultimo_controllo": "17/09/2026 16:58",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -4042,7 +4042,52 @@
       "presidente": null,
       "esito": "RESPINGE  FISSA CAMERA DI CONSIGLIO    ",
       "nomeFile": "202600120_06.xml"
+    },
+    {
+      "nrgFascicolo": "202600359",
+      "sezione": "1",
+      "parte": null,
+      "tipoUdienza": null,
+      "dataUdienza": null,
+      "numProvvedimento": "202600123",
+      "dataPubblicazione": "17/09/2026",
+      "tipoProvvedimento": "DECRETO CAUTELARE",
+      "codiceTipoProvvedimento": "06",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": null,
+      "esito": "RESPINGE  FISSA CAMERA DI CONSIGLIO    ",
+      "nomeFile": "202600123_06.xml"
+    },
+    {
+      "nrgFascicolo": "202600358",
+      "sezione": "1",
+      "parte": null,
+      "tipoUdienza": null,
+      "dataUdienza": null,
+      "numProvvedimento": "202600122",
+      "dataPubblicazione": "17/09/2026",
+      "tipoProvvedimento": "DECRETO CAUTELARE",
+      "codiceTipoProvvedimento": "06",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": null,
+      "esito": "RESPINGE  FISSA CAMERA DI CONSIGLIO    ",
+      "nomeFile": "202600122_06.xml"
+    },
+    {
+      "nrgFascicolo": "202600354",
+      "sezione": "1",
+      "parte": null,
+      "tipoUdienza": null,
+      "dataUdienza": null,
+      "numProvvedimento": "202600010",
+      "dataPubblicazione": "17/09/2026",
+      "tipoProvvedimento": "DECRETO PRESIDENZIALE",
+      "codiceTipoProvvedimento": "24",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": null,
+      "esito": "RESPINGE      ",
+      "nomeFile": "202600010_24.xml"
     }
   ],
-  "ultima_variazione": "17/09/2026 12:09"
+  "ultima_variazione": "17/09/2026 16:58"
 }
