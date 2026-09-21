@@ -1363,8 +1363,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "21/09/2026 15:00",
-  "ultimo_controllo": "21/09/2026 15:00",
+  "ultimo_aggiornamento": "21/09/2026 16:00",
+  "ultimo_controllo": "21/09/2026 16:00",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -1678,6 +1678,7 @@
       "atti": [
         "ATTO DI COSTITUZIONE | 2026064701 | APPELLATO | 17/09/2026",
         "MEMORIA | 2026065405 | APPELLATO | 19/09/2026",
+        "DOCUMENTI | 2026065761 | APPELLATO | 21/09/2026",
         "ATTO DI COSTITUZIONE | 2026061432 | APPELLATO | 04/09/2026",
         "DOCUMENTI | 2026060787 | APPELLANTE | 01/09/2026",
         "MEMORIA | 2026065343 | APPELLATO | 18/09/2026",
@@ -1688,12 +1689,13 @@
       ],
       "provvedimenti_collegiali": [],
       "provvedimenti_monocratici": [],
-      "data_rilevazione": "19/09/2026 11:46",
+      "data_rilevazione": "21/09/2026 16:00",
       "ts_eventi": {
         "22/09/2026 | CAMERA DI CONSIGLIO |  | DANIELA DI CARLO | Giudizio Cautelare | 7": "10/09/2026 16:20",
         "ATTO DI COSTITUZIONE | 2026064701 | APPELLATO | 17/09/2026": "17/09/2026 12:09",
         "MEMORIA | 2026065343 | APPELLATO | 18/09/2026": "18/09/2026 20:26",
-        "MEMORIA | 2026065405 | APPELLATO | 19/09/2026": "19/09/2026 11:46"
+        "MEMORIA | 2026065405 | APPELLATO | 19/09/2026": "19/09/2026 11:46",
+        "DOCUMENTI | 2026065761 | APPELLATO | 21/09/2026": "21/09/2026 16:00"
       }
     }
   ],
@@ -4146,5 +4148,5 @@
       "nomeFile": "202600124_06.xml"
     }
   ],
-  "ultima_variazione": "19/09/2026 19:55"
+  "ultima_variazione": "21/09/2026 16:00"
 }
