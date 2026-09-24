@@ -1371,8 +1371,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "24/09/2026 09:34",
-  "ultimo_controllo": "24/09/2026 09:34",
+  "ultimo_aggiornamento": "24/09/2026 10:34",
+  "ultimo_controllo": "24/09/2026 10:34",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -1681,13 +1681,14 @@
         "APPELLATO | 17/09/2026 | ",
         "APPELLATO | 04/09/2026 | ",
         "APPELLATO |  | ",
-        "CONTROINTERESSATO |  | "
+        "CONTROINTERESSATO |  | ",
+        "ALTRE PARTI NON RITUALI |  | "
       ],
       "atti": [
         "ATTO DI COSTITUZIONE | 2026064701 | APPELLATO | 17/09/2026",
         "MEMORIA | 2026065405 | APPELLATO | 19/09/2026",
-        "DOCUMENTI | 2026065761 | APPELLATO | 21/09/2026",
         "ATTO DI COSTITUZIONE | 2026061432 | APPELLATO | 04/09/2026",
+        "DOCUMENTI | 2026065761 | APPELLATO | 21/09/2026",
         "DOCUMENTI | 2026060787 | APPELLANTE | 01/09/2026",
         "MEMORIA | 2026065343 | APPELLATO | 18/09/2026",
         "RICORSO | 2026060781 | APPELLANTE | 01/09/2026"
@@ -1695,16 +1696,19 @@
       "discussioni": [
         "22/09/2026 | CAMERA DI CONSIGLIO | DISCUSSO | DANIELA DI CARLO | Giudizio Cautelare | 7"
       ],
-      "provvedimenti_collegiali": [],
+      "provvedimenti_collegiali": [
+        "ORDINANZA CAUTELARE | DI CARLO DANIELA | 24/09/2026 | 22/09/2026 | CC | ACCOGLIE RINVIA AL TAR PER LA FISSAZIONE"
+      ],
       "provvedimenti_monocratici": [],
-      "data_rilevazione": "22/09/2026 13:29",
+      "data_rilevazione": "24/09/2026 10:34",
       "ts_eventi": {
         "22/09/2026 | CAMERA DI CONSIGLIO |  | DANIELA DI CARLO | Giudizio Cautelare | 7": "10/09/2026 16:20",
         "ATTO DI COSTITUZIONE | 2026064701 | APPELLATO | 17/09/2026": "17/09/2026 12:09",
         "MEMORIA | 2026065343 | APPELLATO | 18/09/2026": "18/09/2026 20:26",
         "MEMORIA | 2026065405 | APPELLATO | 19/09/2026": "19/09/2026 11:46",
         "DOCUMENTI | 2026065761 | APPELLATO | 21/09/2026": "21/09/2026 16:00",
-        "22/09/2026 | CAMERA DI CONSIGLIO | DISCUSSO | DANIELA DI CARLO | Giudizio Cautelare | 7": "22/09/2026 13:29"
+        "22/09/2026 | CAMERA DI CONSIGLIO | DISCUSSO | DANIELA DI CARLO | Giudizio Cautelare | 7": "22/09/2026 13:29",
+        "ORDINANZA CAUTELARE | DI CARLO DANIELA | 24/09/2026 | 22/09/2026 | CC | ACCOGLIE RINVIA AL TAR PER LA FISSAZIONE": "24/09/2026 10:34"
       }
     }
   ],
@@ -4172,5 +4176,5 @@
       "nomeFile": "202600126_06.xml"
     }
   ],
-  "ultima_variazione": "23/09/2026 15:24"
+  "ultima_variazione": "24/09/2026 10:34"
 }
