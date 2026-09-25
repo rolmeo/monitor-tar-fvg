@@ -1375,8 +1375,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "25/09/2026 10:08",
-  "ultimo_controllo": "25/09/2026 10:08",
+  "ultimo_aggiornamento": "25/09/2026 15:41",
+  "ultimo_controllo": "25/09/2026 15:41",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -3696,6 +3696,36 @@
       "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
       "esito": "ACCOGLIE FISSA UDIENZA PUBBLICA    ",
       "nomeFile": "202600121_05.xml"
+    },
+    {
+      "nrgFascicolo": "202400451",
+      "sezione": "1",
+      "parte": "CARNIAGRICOLA S.R.L.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "23/09/2026",
+      "numProvvedimento": "202600435",
+      "dataPubblicazione": "25/09/2026",
+      "tipoProvvedimento": "ORDINANZA COLLEGIALE",
+      "codiceTipoProvvedimento": "08",
+      "relatore": "BUSICO DANIELE",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "NOMINA COMMISSARIO AD ACTA     ",
+      "nomeFile": "202600435_08.xml"
+    },
+    {
+      "nrgFascicolo": "202600265",
+      "sezione": "1",
+      "parte": "R.A.O.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "23/09/2026",
+      "numProvvedimento": "202600127",
+      "dataPubblicazione": "25/09/2026",
+      "tipoProvvedimento": "ORDINANZA CAUTELARE",
+      "codiceTipoProvvedimento": "05",
+      "relatore": "BUSICO DANIELE",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "INTERLOCUTORIO/A ACCOGLIE FISSA CAMERA DI CONSIGLIO   ",
+      "nomeFile": "202600127_05.xml"
     }
   ],
   "provvedimenti_monocratici": [
@@ -4180,5 +4210,5 @@
       "nomeFile": "202600126_06.xml"
     }
   ],
-  "ultima_variazione": "24/09/2026 18:59"
+  "ultima_variazione": "25/09/2026 15:41"
 }
