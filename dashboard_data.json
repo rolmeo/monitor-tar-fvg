@@ -1375,8 +1375,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "28/09/2026 14:02",
-  "ultimo_controllo": "28/09/2026 14:02",
+  "ultimo_aggiornamento": "28/09/2026 21:35",
+  "ultimo_controllo": "28/09/2026 21:35",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -4056,6 +4056,66 @@
       "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
       "esito": "RESPINGE FISSA UDIENZA PUBBLICA    ",
       "nomeFile": "202600128_05.xml"
+    },
+    {
+      "nrgFascicolo": "202500549",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "CC",
+      "dataUdienza": "23/09/2026",
+      "numProvvedimento": "202600455",
+      "dataPubblicazione": "28/09/2026",
+      "tipoProvvedimento": "ORDINANZA COLLEGIALE",
+      "codiceTipoProvvedimento": "08",
+      "relatore": "BUSICO DANIELE",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "CONVERSIONE DEL RITO INTERLOCUTORIO/A FISSA UDIENZA PUBBLICA   ",
+      "nomeFile": "202600455_08.xml"
+    },
+    {
+      "nrgFascicolo": "202600300",
+      "sezione": "1",
+      "parte": "IMPRESA SANGALLI GIANCARLO & C. S.R.L. IN PROPRIO E QUALE CAPOGRUPPO MANDATARIA DEL RTI CON IDEALSERVICE SOC. COOP.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "23/09/2026",
+      "numProvvedimento": "202600454",
+      "dataPubblicazione": "28/09/2026",
+      "tipoProvvedimento": "ORDINANZA COLLEGIALE",
+      "codiceTipoProvvedimento": "08",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "CONVERSIONE DEL RITO FISSA CAMERA DI CONSIGLIO    ",
+      "nomeFile": "202600454_08.xml"
+    },
+    {
+      "nrgFascicolo": "202600157",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "UP",
+      "dataUdienza": "23/09/2026",
+      "numProvvedimento": "202600453",
+      "dataPubblicazione": "28/09/2026",
+      "tipoProvvedimento": "ORDINANZA COLLEGIALE",
+      "codiceTipoProvvedimento": "08",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "INTERLOCUTORIO/A FISSA UDIENZA PUBBLICA    ",
+      "nomeFile": "202600453_08.xml"
+    },
+    {
+      "nrgFascicolo": "202600356",
+      "sezione": "1",
+      "parte": "ASSOCIAZIONE SPORTIVA DILETTANTISTICA ROLLER TIME ROMANS D’ISONZO",
+      "tipoUdienza": "CC",
+      "dataUdienza": "23/09/2026",
+      "numProvvedimento": "202600452",
+      "dataPubblicazione": "28/09/2026",
+      "tipoProvvedimento": "ORDINANZA COLLEGIALE",
+      "codiceTipoProvvedimento": "08",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RICONVOCAZIONE EX ART. 73 CO.3 C.P.A.     ",
+      "nomeFile": "202600452_08.xml"
     }
   ],
   "provvedimenti_monocratici": [
@@ -4540,5 +4600,5 @@
       "nomeFile": "202600126_06.xml"
     }
   ],
-  "ultima_variazione": "28/09/2026 14:01"
+  "ultima_variazione": "28/09/2026 21:35"
 }
