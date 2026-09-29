@@ -1375,8 +1375,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "29/09/2026 05:21",
-  "ultimo_controllo": "29/09/2026 05:21",
+  "ultimo_aggiornamento": "29/09/2026 11:58",
+  "ultimo_controllo": "29/09/2026 11:58",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -4116,6 +4116,36 @@
       "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
       "esito": "RICONVOCAZIONE EX ART. 73 CO.3 C.P.A.     ",
       "nomeFile": "202600452_08.xml"
+    },
+    {
+      "nrgFascicolo": "202600336",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "CC",
+      "dataUdienza": "09/09/2026",
+      "numProvvedimento": "202600457",
+      "dataPubblicazione": "29/09/2026",
+      "tipoProvvedimento": "SENTENZA BREVE",
+      "codiceTipoProvvedimento": "20",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "DICHIARA ESTINTO     ",
+      "nomeFile": "202600457_20.xml"
+    },
+    {
+      "nrgFascicolo": "202600294",
+      "sezione": "1",
+      "parte": "IL CASTELLO S.A.S. DI GELMI DI CAPORIACCO SERGIO & C.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "09/09/2026",
+      "numProvvedimento": "202600456",
+      "dataPubblicazione": "29/09/2026",
+      "tipoProvvedimento": "SENTENZA BREVE",
+      "codiceTipoProvvedimento": "20",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "DICHIARA ESTINTO     ",
+      "nomeFile": "202600456_20.xml"
     }
   ],
   "provvedimenti_monocratici": [
@@ -4598,7 +4628,52 @@
       "presidente": null,
       "esito": "RESPINGE  FISSA CAMERA DI CONSIGLIO    ",
       "nomeFile": "202600126_06.xml"
+    },
+    {
+      "nrgFascicolo": "202600367",
+      "sezione": "1",
+      "parte": null,
+      "tipoUdienza": null,
+      "dataUdienza": null,
+      "numProvvedimento": "202600136",
+      "dataPubblicazione": "29/09/2026",
+      "tipoProvvedimento": "DECRETO CAUTELARE",
+      "codiceTipoProvvedimento": "06",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": null,
+      "esito": "ACCOGLIE  FISSA CAMERA DI CONSIGLIO    ",
+      "nomeFile": "202600136_06.xml"
+    },
+    {
+      "nrgFascicolo": "202600366",
+      "sezione": "1",
+      "parte": null,
+      "tipoUdienza": null,
+      "dataUdienza": null,
+      "numProvvedimento": "202600135",
+      "dataPubblicazione": "29/09/2026",
+      "tipoProvvedimento": "DECRETO CAUTELARE",
+      "codiceTipoProvvedimento": "06",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": null,
+      "esito": "ACCOGLIE  FISSA CAMERA DI CONSIGLIO    ",
+      "nomeFile": "202600135_06.xml"
+    },
+    {
+      "nrgFascicolo": "202600365",
+      "sezione": "1",
+      "parte": null,
+      "tipoUdienza": null,
+      "dataUdienza": null,
+      "numProvvedimento": "202600134",
+      "dataPubblicazione": "29/09/2026",
+      "tipoProvvedimento": "DECRETO CAUTELARE",
+      "codiceTipoProvvedimento": "06",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": null,
+      "esito": "ACCOGLIE  FISSA CAMERA DI CONSIGLIO    ",
+      "nomeFile": "202600134_06.xml"
     }
   ],
-  "ultima_variazione": "28/09/2026 21:35"
+  "ultima_variazione": "29/09/2026 11:58"
 }
