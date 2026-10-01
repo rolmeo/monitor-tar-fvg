@@ -1397,8 +1397,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "01/10/2026 08:25",
-  "ultimo_controllo": "01/10/2026 08:25",
+  "ultimo_aggiornamento": "01/10/2026 15:38",
+  "ultimo_controllo": "01/10/2026 15:38",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -4168,6 +4168,21 @@
       "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
       "esito": "DICHIARA ESTINTO     ",
       "nomeFile": "202600456_20.xml"
+    },
+    {
+      "nrgFascicolo": "202600303",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "CC",
+      "dataUdienza": "09/09/2026",
+      "numProvvedimento": "202600458",
+      "dataPubblicazione": "01/10/2026",
+      "tipoProvvedimento": "SENTENZA BREVE",
+      "codiceTipoProvvedimento": "20",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "ACCOGLIE     ",
+      "nomeFile": "202600458_20.xml"
     }
   ],
   "provvedimenti_monocratici": [
@@ -4727,5 +4742,5 @@
       "nomeFile": "202600137_06.xml"
     }
   ],
-  "ultima_variazione": "30/09/2026 12:14"
+  "ultima_variazione": "01/10/2026 15:38"
 }
