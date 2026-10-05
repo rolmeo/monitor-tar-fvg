@@ -1404,8 +1404,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "05/10/2026 10:56",
-  "ultimo_controllo": "05/10/2026 10:56",
+  "ultimo_aggiornamento": "05/10/2026 19:47",
+  "ultimo_controllo": "05/10/2026 19:47",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -4235,6 +4235,21 @@
       "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
       "esito": "RESPINGE     ",
       "nomeFile": "202600460_20.xml"
+    },
+    {
+      "nrgFascicolo": "202600288",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "CC",
+      "dataUdienza": "09/09/2026",
+      "numProvvedimento": "202600462",
+      "dataPubblicazione": "05/10/2026",
+      "tipoProvvedimento": "SENTENZA BREVE",
+      "codiceTipoProvvedimento": "20",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RESPINGE     ",
+      "nomeFile": "202600462_20.xml"
     }
   ],
   "provvedimenti_monocratici": [
@@ -4792,7 +4807,22 @@
       "presidente": null,
       "esito": "RESPINGE  FISSA CAMERA DI CONSIGLIO    ",
       "nomeFile": "202600137_06.xml"
+    },
+    {
+      "nrgFascicolo": "202600332",
+      "sezione": "1",
+      "parte": null,
+      "tipoUdienza": null,
+      "dataUdienza": null,
+      "numProvvedimento": "202600011",
+      "dataPubblicazione": "05/10/2026",
+      "tipoProvvedimento": "DECRETO PRESIDENZIALE",
+      "codiceTipoProvvedimento": "24",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": null,
+      "esito": "ACCOGLIE L'ISTANZA DI ABBREVIAZIONE TERMINI      ",
+      "nomeFile": "202600011_24.xml"
     }
   ],
-  "ultima_variazione": "05/10/2026 10:56"
+  "ultima_variazione": "05/10/2026 19:47"
 }
