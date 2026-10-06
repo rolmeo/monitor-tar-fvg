@@ -1404,8 +1404,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "06/10/2026 05:08",
-  "ultimo_controllo": "06/10/2026 05:08",
+  "ultimo_aggiornamento": "06/10/2026 12:10",
+  "ultimo_controllo": "06/10/2026 12:10",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -4250,6 +4250,51 @@
       "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
       "esito": "RESPINGE     ",
       "nomeFile": "202600462_20.xml"
+    },
+    {
+      "nrgFascicolo": "202600271",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "CC",
+      "dataUdienza": "09/09/2026",
+      "numProvvedimento": "202600465",
+      "dataPubblicazione": "06/10/2026",
+      "tipoProvvedimento": "SENTENZA BREVE",
+      "codiceTipoProvvedimento": "20",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RESPINGE     ",
+      "nomeFile": "202600465_20.xml"
+    },
+    {
+      "nrgFascicolo": "202500619",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "UP",
+      "dataUdienza": "23/09/2026",
+      "numProvvedimento": "202600464",
+      "dataPubblicazione": "06/10/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "SINIGOI MANUELA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RESPINGE     ",
+      "nomeFile": "202600464_01.xml"
+    },
+    {
+      "nrgFascicolo": "202500703",
+      "sezione": "1",
+      "parte": "CONDOMINIO CITY RESIDENCE",
+      "tipoUdienza": "UP",
+      "dataUdienza": "23/09/2026",
+      "numProvvedimento": "202600463",
+      "dataPubblicazione": "06/10/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "BUSICO DANIELE",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RESPINGE     ",
+      "nomeFile": "202600463_01.xml"
     }
   ],
   "provvedimenti_monocratici": [
@@ -4824,5 +4869,5 @@
       "nomeFile": "202600011_24.xml"
     }
   ],
-  "ultima_variazione": "05/10/2026 19:47"
+  "ultima_variazione": "06/10/2026 12:10"
 }
