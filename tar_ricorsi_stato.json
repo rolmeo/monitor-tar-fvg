@@ -1,5 +1,5 @@
 {
-  "ultimo_numero": 391,
+  "ultimo_numero": 393,
   "ricorsi_monitorati": {
     "2026_99": {
       "nrg": "2026000099",
@@ -122,7 +122,7 @@
         "MEMORIA | 2026001203 | CONTROINTERESSATO | 20/03/2026"
       ],
       "discussioni": [
-        "07/10/2026 | UDIENZA PUBBLICA | DISCUSSO | CLAUDIA MICELLI | Merito | 9",
+        "07/10/2026 | UDIENZA PUBBLICA | RINVIO AD ALTRA DATA | CLAUDIA MICELLI | Merito | 9",
         "04/06/2026 | CAMERA DI CONSIGLIO | DISCUSSO | CARLO MODICA DE MOHAC DI GRISI' | Giudizio Cautelare | 1",
         "24/03/2026 | CAMERA DI CONSIGLIO | DISCUSSO | CLAUDIA MICELLI | Giudizio Cautelare | 6"
       ],
@@ -131,7 +131,7 @@
         "ORDINANZA CAUTELARE | MICELLI CLAUDIA | 27/03/2026 | 24/03/2026 | CC | RESPINGE FISSA UDIENZA PUBBLICA"
       ],
       "provvedimenti_monocratici": [],
-      "data_rilevazione": "07/10/2026 14:48",
+      "data_rilevazione": "09/10/2026 10:06",
       "ts_eventi": {
         "MEMORIA | 2026001241 | RICORRENTE PRINCIPALE | 21/03/2026": "21/03/2026 11:50",
         "DOCUMENTI | 2026001255 | RICORRENTE PRINCIPALE | 23/03/2026": "23/03/2026 16:42",
@@ -165,7 +165,8 @@
         "07/10/2026 | UDIENZA PUBBLICA |  | CLAUDIA MICELLI | Merito | ": "23/09/2026 15:24",
         "ISTANZA DI RINVIO | 2026003484 | RICORRENTE PRINCIPALE | 01/10/2026": "01/10/2026 14:38",
         "07/10/2026 | UDIENZA PUBBLICA |  | CLAUDIA MICELLI | Merito | 9": "02/10/2026 09:26",
-        "07/10/2026 | UDIENZA PUBBLICA | DISCUSSO | CLAUDIA MICELLI | Merito | 9": "07/10/2026 14:48"
+        "07/10/2026 | UDIENZA PUBBLICA | DISCUSSO | CLAUDIA MICELLI | Merito | 9": "07/10/2026 14:48",
+        "07/10/2026 | UDIENZA PUBBLICA | RINVIO AD ALTRA DATA | CLAUDIA MICELLI | Merito | 9": "09/10/2026 10:06"
       }
     },
     "2026_80": {
