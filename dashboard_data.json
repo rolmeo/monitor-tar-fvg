@@ -1435,8 +1435,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "10/10/2026 14:22",
-  "ultimo_controllo": "10/10/2026 14:22",
+  "ultimo_aggiornamento": "10/10/2026 19:23",
+  "ultimo_controllo": "10/10/2026 19:23",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -4806,6 +4806,51 @@
       "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
       "esito": "ACCOGLIE FISSA UDIENZA PUBBLICA    ",
       "nomeFile": "202600139_05.xml"
+    },
+    {
+      "nrgFascicolo": "202500537",
+      "sezione": "1",
+      "parte": "C.A.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "23/09/2026",
+      "numProvvedimento": "202600494",
+      "dataPubblicazione": "10/10/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "DICHIARA CESSATA MATERIA DEL CONTENDERE     ",
+      "nomeFile": "202600494_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600178",
+      "sezione": "1",
+      "parte": "D.B.F.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "23/09/2026",
+      "numProvvedimento": "202600493",
+      "dataPubblicazione": "10/10/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "DICHIARA CESSATA MATERIA DEL CONTENDERE     ",
+      "nomeFile": "202600493_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600093",
+      "sezione": "1",
+      "parte": "B.G.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "23/09/2026",
+      "numProvvedimento": "202600492",
+      "dataPubblicazione": "10/10/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "DICHIARA CESSATA MATERIA DEL CONTENDERE     ",
+      "nomeFile": "202600492_01.xml"
     }
   ],
   "provvedimenti_monocratici": [
@@ -5380,5 +5425,5 @@
       "nomeFile": "202600011_24.xml"
     }
   ],
-  "ultima_variazione": "10/10/2026 14:21"
+  "ultima_variazione": "10/10/2026 19:23"
 }
