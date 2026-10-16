@@ -1440,8 +1440,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "16/10/2026 08:23",
-  "ultimo_controllo": "16/10/2026 08:23",
+  "ultimo_aggiornamento": "16/10/2026 13:40",
+  "ultimo_controllo": "16/10/2026 13:40",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -5051,6 +5051,156 @@
       "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
       "esito": "DICHIARA CESSATA MATERIA DEL CONTENDERE     ",
       "nomeFile": "202600495_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600169",
+      "sezione": "1",
+      "parte": "S.V.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "23/09/2026",
+      "numProvvedimento": "202600517",
+      "dataPubblicazione": "16/10/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "DICHIARA INAMMISSIBILE     ",
+      "nomeFile": "202600517_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600043",
+      "sezione": "1",
+      "parte": "G.C.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "23/09/2026",
+      "numProvvedimento": "202600516",
+      "dataPubblicazione": "16/10/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "DICHIARA INAMMISSIBILE     ",
+      "nomeFile": "202600516_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600037",
+      "sezione": "1",
+      "parte": "C.P.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "23/09/2026",
+      "numProvvedimento": "202600515",
+      "dataPubblicazione": "16/10/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "DICHIARA INAMMISSIBILE     ",
+      "nomeFile": "202600515_01.xml"
+    },
+    {
+      "nrgFascicolo": "202500510",
+      "sezione": "1",
+      "parte": "C.A.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "07/10/2026",
+      "numProvvedimento": "202600514",
+      "dataPubblicazione": "16/10/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "SINIGOI MANUELA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RESPINGE     ",
+      "nomeFile": "202600514_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600061",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "UP",
+      "dataUdienza": "07/10/2026",
+      "numProvvedimento": "202600513",
+      "dataPubblicazione": "16/10/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "DICHIARA INAMMISSIBILE     ",
+      "nomeFile": "202600513_01.xml"
+    },
+    {
+      "nrgFascicolo": "202500653",
+      "sezione": "1",
+      "parte": "SOC.. KEY WEST S.A.S. DI MARCHESAN CLAUDIO E MASSIMO & C.",
+      "tipoUdienza": "UP",
+      "dataUdienza": "07/10/2026",
+      "numProvvedimento": "202600512",
+      "dataPubblicazione": "16/10/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "ACCOGLIE ACCOGLIE SUI MOTIVI AGGIUNTI    ",
+      "nomeFile": "202600512_01.xml"
+    },
+    {
+      "nrgFascicolo": "202500652",
+      "sezione": "1",
+      "parte": "SOC. FRATELLI TROIAN SRL",
+      "tipoUdienza": "UP",
+      "dataUdienza": "07/10/2026",
+      "numProvvedimento": "202600511",
+      "dataPubblicazione": "16/10/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "ACCOGLIE ACCOGLIE SUI MOTIVI AGGIUNTI    ",
+      "nomeFile": "202600511_01.xml"
+    },
+    {
+      "nrgFascicolo": "202500590",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "UP",
+      "dataUdienza": "23/09/2026",
+      "numProvvedimento": "202600510",
+      "dataPubblicazione": "16/10/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "ACCOGLIE     ",
+      "nomeFile": "202600510_01.xml"
+    },
+    {
+      "nrgFascicolo": "202500564",
+      "sezione": "1",
+      "parte": "ASPIAG SERVICE S.R.L.",
+      "tipoUdienza": "UP",
+      "dataUdienza": "07/10/2026",
+      "numProvvedimento": "202600509",
+      "dataPubblicazione": "16/10/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "BUSICO DANIELE",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "DICHIARA INAMMISSIBILE     ",
+      "nomeFile": "202600509_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600244",
+      "sezione": "1",
+      "parte": "CODESS FRIULI VENEZIA GIULIA COOPERATIVA SOCIALE ONLUS",
+      "tipoUdienza": "UP",
+      "dataUdienza": "07/10/2026",
+      "numProvvedimento": "202600508",
+      "dataPubblicazione": "16/10/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "SINIGOI MANUELA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "ACCOGLIE DICHIARA ESTINTO    ",
+      "nomeFile": "202600508_01.xml"
     }
   ],
   "provvedimenti_monocratici": [
@@ -5625,5 +5775,5 @@
       "nomeFile": "202600011_24.xml"
     }
   ],
-  "ultima_variazione": "14/10/2026 16:00"
+  "ultima_variazione": "16/10/2026 13:40"
 }
