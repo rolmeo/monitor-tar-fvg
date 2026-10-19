@@ -1461,8 +1461,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "19/10/2026 07:48",
-  "ultimo_controllo": "19/10/2026 07:48",
+  "ultimo_aggiornamento": "19/10/2026 13:18",
+  "ultimo_controllo": "19/10/2026 13:18",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -5372,6 +5372,111 @@
       "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
       "esito": "CONVERSIONE DEL RITO DICHIARA INAMMISSIBILE DICHIARA DIFETTO DI GIURISDIZIONE   ",
       "nomeFile": "202600518_01.xml"
+    },
+    {
+      "nrgFascicolo": "202500566",
+      "sezione": "1",
+      "parte": "G.R.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "23/09/2026",
+      "numProvvedimento": "202600534",
+      "dataPubblicazione": "19/10/2026",
+      "tipoProvvedimento": "ORDINANZA COLLEGIALE",
+      "codiceTipoProvvedimento": "08",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "INTERLOCUTORIO/A FISSA CAMERA DI CONSIGLIO    ",
+      "nomeFile": "202600534_08.xml"
+    },
+    {
+      "nrgFascicolo": "202600199",
+      "sezione": "1",
+      "parte": "C.G.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "23/09/2026",
+      "numProvvedimento": "202600533",
+      "dataPubblicazione": "19/10/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "ACCOGLIE NOMINA COMMISSARIO AD ACTA    ",
+      "nomeFile": "202600533_01.xml"
+    },
+    {
+      "nrgFascicolo": "202500495",
+      "sezione": "1",
+      "parte": "C.L.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "23/09/2026",
+      "numProvvedimento": "202600532",
+      "dataPubblicazione": "19/10/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "ACCOGLIE NOMINA COMMISSARIO AD ACTA    ",
+      "nomeFile": "202600532_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600042",
+      "sezione": "1",
+      "parte": "B.G.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "23/09/2026",
+      "numProvvedimento": "202600531",
+      "dataPubblicazione": "19/10/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "ACCOGLIE NOMINA COMMISSARIO AD ACTA    ",
+      "nomeFile": "202600531_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600101",
+      "sezione": "1",
+      "parte": "D.S.V.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "23/09/2026",
+      "numProvvedimento": "202600530",
+      "dataPubblicazione": "19/10/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "ACCOLTO PARZIALMENTE NEI TERMINI IN MOTIVAZIONE NOMINA COMMISSARIO AD ACTA    ",
+      "nomeFile": "202600530_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600057",
+      "sezione": "1",
+      "parte": "I.E.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "23/09/2026",
+      "numProvvedimento": "202600529",
+      "dataPubblicazione": "19/10/2026",
+      "tipoProvvedimento": "SENTENZA BREVE",
+      "codiceTipoProvvedimento": "20",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "ACCOLTO PARZIALMENTE NEI TERMINI IN MOTIVAZIONE NOMINA COMMISSARIO AD ACTA    ",
+      "nomeFile": "202600529_20.xml"
+    },
+    {
+      "nrgFascicolo": "202500681",
+      "sezione": "1",
+      "parte": "B.D.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "23/09/2026",
+      "numProvvedimento": "202600528",
+      "dataPubblicazione": "19/10/2026",
+      "tipoProvvedimento": "ORDINANZA COLLEGIALE",
+      "codiceTipoProvvedimento": "08",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "CORREGGE ERRORE MATERIALE     ",
+      "nomeFile": "202600528_08.xml"
     }
   ],
   "provvedimenti_monocratici": [
@@ -5946,5 +6051,5 @@
       "nomeFile": "202600011_24.xml"
     }
   ],
-  "ultima_variazione": "17/10/2026 13:23"
+  "ultima_variazione": "19/10/2026 13:18"
 }
