@@ -1461,8 +1461,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "20/10/2026 07:17",
-  "ultimo_controllo": "20/10/2026 07:17",
+  "ultimo_aggiornamento": "20/10/2026 12:08",
+  "ultimo_controllo": "20/10/2026 12:08",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -5477,6 +5477,21 @@
       "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
       "esito": "CORREGGE ERRORE MATERIALE     ",
       "nomeFile": "202600528_08.xml"
+    },
+    {
+      "nrgFascicolo": "202600066",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "UP",
+      "dataUdienza": "07/10/2026",
+      "numProvvedimento": "202600535",
+      "dataPubblicazione": "20/10/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "BUSICO DANIELE",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RESPINGE     ",
+      "nomeFile": "202600535_01.xml"
     }
   ],
   "provvedimenti_monocratici": [
@@ -6051,5 +6066,5 @@
       "nomeFile": "202600011_24.xml"
     }
   ],
-  "ultima_variazione": "19/10/2026 13:18"
+  "ultima_variazione": "20/10/2026 12:08"
 }
