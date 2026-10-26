@@ -1476,8 +1476,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "26/10/2026 15:24",
-  "ultimo_controllo": "26/10/2026 15:24",
+  "ultimo_aggiornamento": "26/10/2026 21:27",
+  "ultimo_controllo": "26/10/2026 21:27",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -5717,6 +5717,126 @@
       "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
       "esito": "PRENDE ATTO RINUNZIA ALLA ISTANZA CAUTELARE FISSA UDIENZA PUBBLICA    ",
       "nomeFile": "202600145_05.xml"
+    },
+    {
+      "nrgFascicolo": "202600332",
+      "sezione": "1",
+      "parte": "IMPRESA SANGALLI GIANCARLO & C. S.R.L. IN PROPRIO E CAPOGRUPPO MANDATARIA DESIGNATA DEL COSTITUENDO RTI CON IDEALSERVI",
+      "tipoUdienza": "UP",
+      "dataUdienza": "21/10/2026",
+      "numProvvedimento": "202600544",
+      "dataPubblicazione": "26/10/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RESPINGE RESPINGE SUI MOTIVI AGGIUNTI DICHIARA IMPROCEDIBILE RICORSO INCIDENTALE   ",
+      "nomeFile": "202600544_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600163",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "UP",
+      "dataUdienza": "21/10/2026",
+      "numProvvedimento": "202600543",
+      "dataPubblicazione": "26/10/2026",
+      "tipoProvvedimento": "ORDINANZA COLLEGIALE",
+      "codiceTipoProvvedimento": "08",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RINVIA AD ALTRA DATA     ",
+      "nomeFile": "202600543_08.xml"
+    },
+    {
+      "nrgFascicolo": "202600359",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "CC",
+      "dataUdienza": "21/10/2026",
+      "numProvvedimento": "202600157",
+      "dataPubblicazione": "26/10/2026",
+      "tipoProvvedimento": "ORDINANZA CAUTELARE",
+      "codiceTipoProvvedimento": "05",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RINVIA AD ALTRA DATA     ",
+      "nomeFile": "202600157_05.xml"
+    },
+    {
+      "nrgFascicolo": "202600358",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "CC",
+      "dataUdienza": "21/10/2026",
+      "numProvvedimento": "202600156",
+      "dataPubblicazione": "26/10/2026",
+      "tipoProvvedimento": "ORDINANZA CAUTELARE",
+      "codiceTipoProvvedimento": "05",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RINVIA AD ALTRA DATA     ",
+      "nomeFile": "202600156_05.xml"
+    },
+    {
+      "nrgFascicolo": "202600398",
+      "sezione": "1",
+      "parte": "A.S.D. CHIARBOLA PONZIANA CALCIO",
+      "tipoUdienza": "CC",
+      "dataUdienza": "21/10/2026",
+      "numProvvedimento": "202600155",
+      "dataPubblicazione": "26/10/2026",
+      "tipoProvvedimento": "ORDINANZA CAUTELARE",
+      "codiceTipoProvvedimento": "05",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "PRENDE ATTO RINUNZIA ALLA ISTANZA CAUTELARE FISSA UDIENZA PUBBLICA    ",
+      "nomeFile": "202600155_05.xml"
+    },
+    {
+      "nrgFascicolo": "202600393",
+      "sezione": "1",
+      "parte": "MERANESE SERVIZI S.P.A.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "21/10/2026",
+      "numProvvedimento": "202600154",
+      "dataPubblicazione": "26/10/2026",
+      "tipoProvvedimento": "ORDINANZA CAUTELARE",
+      "codiceTipoProvvedimento": "05",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "PRENDE ATTO RINUNZIA ALLA ISTANZA CAUTELARE FISSA UDIENZA PUBBLICA    ",
+      "nomeFile": "202600154_05.xml"
+    },
+    {
+      "nrgFascicolo": "202600383",
+      "sezione": "1",
+      "parte": "STABILIMENTO TRIESTINO DI SORVEGLIANZA E CHIUSURA S.R.L. A SOCIO UNICO",
+      "tipoUdienza": "CC",
+      "dataUdienza": "21/10/2026",
+      "numProvvedimento": "202600153",
+      "dataPubblicazione": "26/10/2026",
+      "tipoProvvedimento": "ORDINANZA CAUTELARE",
+      "codiceTipoProvvedimento": "05",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RESPINGE FISSA UDIENZA PUBBLICA    ",
+      "nomeFile": "202600153_05.xml"
+    },
+    {
+      "nrgFascicolo": "202600332",
+      "sezione": "1",
+      "parte": "IMPRESA SANGALLI GIANCARLO & C. S.R.L. IN PROPRIO E CAPOGRUPPO MANDATARIA DESIGNATA DEL COSTITUENDO RTI CON IDEALSERVI",
+      "tipoUdienza": "CC",
+      "dataUdienza": "21/10/2026",
+      "numProvvedimento": "202600152",
+      "dataPubblicazione": "26/10/2026",
+      "tipoProvvedimento": "ORDINANZA CAUTELARE",
+      "codiceTipoProvvedimento": "05",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "DICHIARA IMPROCEDIBILE     ",
+      "nomeFile": "202600152_05.xml"
     }
   ],
   "provvedimenti_monocratici": [
@@ -6289,7 +6409,22 @@
       "presidente": null,
       "esito": "ACCOGLIE L'ISTANZA DI ABBREVIAZIONE TERMINI      ",
       "nomeFile": "202600011_24.xml"
+    },
+    {
+      "nrgFascicolo": "202600374",
+      "sezione": "1",
+      "parte": null,
+      "tipoUdienza": null,
+      "dataUdienza": null,
+      "numProvvedimento": "202600017",
+      "dataPubblicazione": "26/10/2026",
+      "tipoProvvedimento": "GRATUITO PATROCINIO",
+      "codiceTipoProvvedimento": "40",
+      "relatore": "BUSICO DANIELE",
+      "presidente": null,
+      "esito": "RESPINGE      ",
+      "nomeFile": "202600017_40.xml"
     }
   ],
-  "ultima_variazione": "23/10/2026 11:23"
+  "ultima_variazione": "26/10/2026 21:27"
 }
