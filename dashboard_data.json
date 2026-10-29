@@ -1492,8 +1492,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "29/10/2026 04:46",
-  "ultimo_controllo": "29/10/2026 04:46",
+  "ultimo_aggiornamento": "29/10/2026 10:56",
+  "ultimo_controllo": "29/10/2026 10:56",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -5853,6 +5853,51 @@
       "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
       "esito": "DICHIARA IMPROCEDIBILE     ",
       "nomeFile": "202600152_05.xml"
+    },
+    {
+      "nrgFascicolo": "202600063",
+      "sezione": "1",
+      "parte": "FINCANTIERI INFRASTRUCTURE OPERE MARITTIME S.P.A.",
+      "tipoUdienza": "UP",
+      "dataUdienza": "07/10/2026",
+      "numProvvedimento": "202600546",
+      "dataPubblicazione": "29/10/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "BUSICO DANIELE",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RIUNISCE IMPROCEDIBILE PER SOPRAVVENUTA CARENZA DI INTERESSE    ",
+      "nomeFile": "202600546_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600131",
+      "sezione": "1",
+      "parte": "FINCANTIERI INFRASTRUCTURE OPERE MARITTIME S.P.A.",
+      "tipoUdienza": "UP",
+      "dataUdienza": "07/10/2026",
+      "numProvvedimento": "202600546",
+      "dataPubblicazione": "29/10/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "BUSICO DANIELE",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RIUNISCE RESPINGE    ",
+      "nomeFile": "202600546_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600356",
+      "sezione": "1",
+      "parte": "ASSOCIAZIONE SPORTIVA DILETTANTISTICA ROLLER TIME ROMANS D’ISONZO",
+      "tipoUdienza": "CC",
+      "dataUdienza": "23/09/2026",
+      "numProvvedimento": "202600545",
+      "dataPubblicazione": "29/10/2026",
+      "tipoProvvedimento": "SENTENZA BREVE",
+      "codiceTipoProvvedimento": "20",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "DICHIARA CESSATA MATERIA DEL CONTENDERE     ",
+      "nomeFile": "202600545_20.xml"
     }
   ],
   "provvedimenti_monocratici": [
@@ -6472,5 +6517,5 @@
       "nomeFile": "202600013_03.xml"
     }
   ],
-  "ultima_variazione": "28/10/2026 15:23"
+  "ultima_variazione": "29/10/2026 10:56"
 }
