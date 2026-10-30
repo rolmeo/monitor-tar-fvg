@@ -1492,8 +1492,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "30/10/2026 13:41",
-  "ultimo_controllo": "30/10/2026 13:41",
+  "ultimo_aggiornamento": "30/10/2026 14:42",
+  "ultimo_controllo": "30/10/2026 14:42",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -1762,6 +1762,7 @@
         "CONTROINTERESSATO |  | "
       ],
       "atti": [
+        "DOCUMENTI | 2026076629 | APPELLANTE | 30/10/2026",
         "ALTRO | 2026056187 | APPELLANTE | 27/07/2026",
         "RICORSO | 2026051632 | APPELLANTE | 09/07/2026",
         "ISTANZA DI FISSAZIONE UDIENZA | 2026005693 | APPELLANTE | 09/07/2026",
@@ -1779,13 +1780,14 @@
         "ORDINANZA CAUTELARE | CONTESSA CLAUDIO | 31/07/2026 | 28/07/2026 | CC | RESPINGE"
       ],
       "provvedimenti_monocratici": [],
-      "data_rilevazione": "31/08/2026 13:49",
+      "data_rilevazione": "30/10/2026 14:41",
       "ts_eventi": {
         "ORDINANZA CAUTELARE | CONTESSA CLAUDIO | 31/07/2026 | 28/07/2026 | CC | RESPINGE": "31/07/2026 09:36",
         "CONTRIBUTO UNIFICATO | 2026059864 | APPELLANTE | 25/08/2026": "25/08/2026 15:05",
         "DOCUMENTI | 2026060166 | APPELLANTE | 27/08/2026": "27/08/2026 17:26",
         "ISTANZA DI PRELIEVO | 202600408 | APPELLANTE | 27/08/2026": "27/08/2026 17:26",
-        "10/12/2026 | UDIENZA PUBBLICA |  | DA ASSEGNARE MAGISTRATO | Merito | ": "31/08/2026 13:49"
+        "10/12/2026 | UDIENZA PUBBLICA |  | DA ASSEGNARE MAGISTRATO | Merito | ": "31/08/2026 13:49",
+        "DOCUMENTI | 2026076629 | APPELLANTE | 30/10/2026": "30/10/2026 14:41"
       }
     },
     {
@@ -6517,5 +6519,5 @@
       "nomeFile": "202600013_03.xml"
     }
   ],
-  "ultima_variazione": "29/10/2026 10:56"
+  "ultima_variazione": "30/10/2026 14:42"
 }
