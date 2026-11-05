@@ -1492,8 +1492,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "05/11/2026 14:10",
-  "ultimo_controllo": "05/11/2026 14:10",
+  "ultimo_aggiornamento": "05/11/2026 21:53",
+  "ultimo_controllo": "05/11/2026 21:53",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -5930,6 +5930,21 @@
       "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
       "esito": "PRENDE ATTO RINUNZIA ALLA ISTANZA CAUTELARE     ",
       "nomeFile": "202600160_05.xml"
+    },
+    {
+      "nrgFascicolo": "202600381",
+      "sezione": "1",
+      "parte": "U.R.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "21/10/2026",
+      "numProvvedimento": "202600548",
+      "dataPubblicazione": "05/11/2026",
+      "tipoProvvedimento": "ORDINANZA COLLEGIALE",
+      "codiceTipoProvvedimento": "08",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RICONVOCAZIONE EX ART. 73 CO.3 C.P.A.     ",
+      "nomeFile": "202600548_08.xml"
     }
   ],
   "provvedimenti_monocratici": [
@@ -6562,7 +6577,67 @@
       "presidente": null,
       "esito": "RESPINGE  FISSA CAMERA DI CONSIGLIO    ",
       "nomeFile": "202600159_06.xml"
+    },
+    {
+      "nrgFascicolo": "202600447",
+      "sezione": "1",
+      "parte": null,
+      "tipoUdienza": null,
+      "dataUdienza": null,
+      "numProvvedimento": "202600163",
+      "dataPubblicazione": "05/11/2026",
+      "tipoProvvedimento": "DECRETO CAUTELARE",
+      "codiceTipoProvvedimento": "06",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": null,
+      "esito": "ACCOGLIE  FISSA CAMERA DI CONSIGLIO    ",
+      "nomeFile": "202600163_06.xml"
+    },
+    {
+      "nrgFascicolo": "202600439",
+      "sezione": "1",
+      "parte": null,
+      "tipoUdienza": null,
+      "dataUdienza": null,
+      "numProvvedimento": "202600162",
+      "dataPubblicazione": "05/11/2026",
+      "tipoProvvedimento": "DECRETO CAUTELARE",
+      "codiceTipoProvvedimento": "06",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": null,
+      "esito": "RESPINGE  FISSA CAMERA DI CONSIGLIO    ",
+      "nomeFile": "202600162_06.xml"
+    },
+    {
+      "nrgFascicolo": "202600433",
+      "sezione": "1",
+      "parte": null,
+      "tipoUdienza": null,
+      "dataUdienza": null,
+      "numProvvedimento": "202600161",
+      "dataPubblicazione": "05/11/2026",
+      "tipoProvvedimento": "DECRETO CAUTELARE",
+      "codiceTipoProvvedimento": "06",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": null,
+      "esito": "RESPINGE  FISSA CAMERA DI CONSIGLIO    ",
+      "nomeFile": "202600161_06.xml"
+    },
+    {
+      "nrgFascicolo": "202600440",
+      "sezione": "1",
+      "parte": null,
+      "tipoUdienza": null,
+      "dataUdienza": null,
+      "numProvvedimento": "202600018",
+      "dataPubblicazione": "05/11/2026",
+      "tipoProvvedimento": "GRATUITO PATROCINIO",
+      "codiceTipoProvvedimento": "40",
+      "relatore": "BUSICO DANIELE",
+      "presidente": null,
+      "esito": "ACCOGLIE      ",
+      "nomeFile": "202600018_40.xml"
     }
   ],
-  "ultima_variazione": "05/11/2026 14:10"
+  "ultima_variazione": "05/11/2026 21:53"
 }
