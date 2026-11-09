@@ -1492,8 +1492,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "09/11/2026 10:43",
-  "ultimo_controllo": "09/11/2026 10:43",
+  "ultimo_aggiornamento": "09/11/2026 21:10",
+  "ultimo_controllo": "09/11/2026 21:10",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -5945,6 +5945,21 @@
       "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
       "esito": "RICONVOCAZIONE EX ART. 73 CO.3 C.P.A.     ",
       "nomeFile": "202600548_08.xml"
+    },
+    {
+      "nrgFascicolo": "202600408",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "CC",
+      "dataUdienza": "05/11/2026",
+      "numProvvedimento": "202600549",
+      "dataPubblicazione": "09/11/2026",
+      "tipoProvvedimento": "ORDINANZA COLLEGIALE",
+      "codiceTipoProvvedimento": "08",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "INTERLOCUTORIO/A FISSA CAMERA DI CONSIGLIO    ",
+      "nomeFile": "202600549_08.xml"
     }
   ],
   "provvedimenti_monocratici": [
@@ -6639,5 +6654,5 @@
       "nomeFile": "202600018_40.xml"
     }
   ],
-  "ultima_variazione": "05/11/2026 21:53"
+  "ultima_variazione": "09/11/2026 21:10"
 }
