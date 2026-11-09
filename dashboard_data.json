@@ -1492,8 +1492,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "09/11/2026 20:11",
-  "ultimo_controllo": "09/11/2026 20:11",
+  "ultimo_aggiornamento": "09/11/2026 21:11",
+  "ultimo_controllo": "09/11/2026 21:11",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -1765,29 +1765,34 @@
         "DOCUMENTI | 2026076629 | APPELLANTE | 30/10/2026",
         "ALTRO | 2026056187 | APPELLANTE | 27/07/2026",
         "RICORSO | 2026051632 | APPELLANTE | 09/07/2026",
+        "MEMORIA | 2026078956 | APPELLATO | 09/11/2026",
         "ISTANZA DI FISSAZIONE UDIENZA | 2026005693 | APPELLANTE | 09/07/2026",
         "CONTRIBUTO UNIFICATO | 2026059864 | APPELLANTE | 25/08/2026",
+        "MEMORIA | 2026079057 | APPELLANTE | 09/11/2026",
         "MEMORIA | 2026055677 | APPELLATO | 25/07/2026",
         "ATTO DI COSTITUZIONE | 2026051836 | APPELLATO | 10/07/2026",
         "ISTANZA DI PRELIEVO | 202600408 | APPELLANTE | 27/08/2026",
         "DOCUMENTI | 2026060166 | APPELLANTE | 27/08/2026"
       ],
       "discussioni": [
-        "10/12/2026 | UDIENZA PUBBLICA |  | DA ASSEGNARE MAGISTRATO | Merito | ",
+        "10/12/2026 | UDIENZA PUBBLICA |  | BRUNELLA BRUNO | Merito | 25",
         "28/07/2026 | CAMERA DI CONSIGLIO | DISCUSSO | CLAUDIO CONTESSA | Giudizio Cautelare | 136"
       ],
       "provvedimenti_collegiali": [
         "ORDINANZA CAUTELARE | CONTESSA CLAUDIO | 31/07/2026 | 28/07/2026 | CC | RESPINGE"
       ],
       "provvedimenti_monocratici": [],
-      "data_rilevazione": "30/10/2026 14:41",
+      "data_rilevazione": "09/11/2026 21:11",
       "ts_eventi": {
         "ORDINANZA CAUTELARE | CONTESSA CLAUDIO | 31/07/2026 | 28/07/2026 | CC | RESPINGE": "31/07/2026 09:36",
         "CONTRIBUTO UNIFICATO | 2026059864 | APPELLANTE | 25/08/2026": "25/08/2026 15:05",
         "DOCUMENTI | 2026060166 | APPELLANTE | 27/08/2026": "27/08/2026 17:26",
         "ISTANZA DI PRELIEVO | 202600408 | APPELLANTE | 27/08/2026": "27/08/2026 17:26",
         "10/12/2026 | UDIENZA PUBBLICA |  | DA ASSEGNARE MAGISTRATO | Merito | ": "31/08/2026 13:49",
-        "DOCUMENTI | 2026076629 | APPELLANTE | 30/10/2026": "30/10/2026 14:41"
+        "DOCUMENTI | 2026076629 | APPELLANTE | 30/10/2026": "30/10/2026 14:41",
+        "MEMORIA | 2026078956 | APPELLATO | 09/11/2026": "09/11/2026 21:11",
+        "MEMORIA | 2026079057 | APPELLANTE | 09/11/2026": "09/11/2026 21:11",
+        "10/12/2026 | UDIENZA PUBBLICA |  | BRUNELLA BRUNO | Merito | 25": "09/11/2026 21:11"
       }
     },
     {
@@ -6654,5 +6659,5 @@
       "nomeFile": "202600018_40.xml"
     }
   ],
-  "ultima_variazione": "09/11/2026 21:10"
+  "ultima_variazione": "09/11/2026 21:11"
 }
