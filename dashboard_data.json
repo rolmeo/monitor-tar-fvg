@@ -1492,8 +1492,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "10/11/2026 04:05",
-  "ultimo_controllo": "10/11/2026 04:05",
+  "ultimo_aggiornamento": "10/11/2026 11:39",
+  "ultimo_controllo": "10/11/2026 11:39",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -5965,6 +5965,21 @@
       "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
       "esito": "INTERLOCUTORIO/A FISSA CAMERA DI CONSIGLIO    ",
       "nomeFile": "202600549_08.xml"
+    },
+    {
+      "nrgFascicolo": "202400010",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "UP",
+      "dataUdienza": "23/09/2026",
+      "numProvvedimento": "202600550",
+      "dataPubblicazione": "10/11/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "ACCOGLIE     ",
+      "nomeFile": "202600550_01.xml"
     }
   ],
   "provvedimenti_monocratici": [
@@ -6659,5 +6674,5 @@
       "nomeFile": "202600018_40.xml"
     }
   ],
-  "ultima_variazione": "09/11/2026 21:11"
+  "ultima_variazione": "10/11/2026 11:39"
 }
