@@ -104,6 +104,7 @@
         "CONTROINTERESSATO | 03/03/2026 | ",
         "ALTRE PARTI NON RITUALI |  | ",
         "ALTRE PARTI NON RITUALI |  | ",
+        "ALTRE PARTI NON RITUALI |  | ",
         "ALTRE PARTI NON RITUALI |  | "
       ],
       "atti": [
@@ -118,6 +119,7 @@
         "DOMANDA DI MISURE CAUTELARI MONOCRATICHE ART.56 C.P.A. | 2026000932 | RICORRENTE PRINCIPALE | 27/02/2026",
         "ISTANZA DI RINVIO | 2026003254 | RICORRENTE PRINCIPALE | 16/09/2026",
         "ISTANZA DI RINVIO | 2026003484 | RICORRENTE PRINCIPALE | 01/10/2026",
+        "MOTIVI AGGIUNTI | 2026004023 | RICORRENTE PRINCIPALE | 13/11/2026",
         "MEMORIA | 2026000933 | AMMINISTRAZIONE INTIMATA | 01/03/2026",
         "MEMORIA | 2026001199 | AMMINISTRAZIONE INTIMATA | 20/03/2026",
         "ALTRO | 2026002087 | AMMINISTRAZIONE INTIMATA | 03/06/2026",
@@ -148,7 +150,7 @@
         "ORDINANZA CAUTELARE | MICELLI CLAUDIA | 27/03/2026 | 24/03/2026 | CC | RESPINGE FISSA UDIENZA PUBBLICA"
       ],
       "provvedimenti_monocratici": [],
-      "data_rilevazione": "09/10/2026 10:06",
+      "data_rilevazione": "13/11/2026 16:42",
       "ts_eventi": {
         "MEMORIA | 2026001241 | RICORRENTE PRINCIPALE | 21/03/2026": "21/03/2026 11:50",
         "DOCUMENTI | 2026001255 | RICORRENTE PRINCIPALE | 23/03/2026": "23/03/2026 16:42",
@@ -183,7 +185,8 @@
         "ISTANZA DI RINVIO | 2026003484 | RICORRENTE PRINCIPALE | 01/10/2026": "01/10/2026 14:38",
         "07/10/2026 | UDIENZA PUBBLICA |  | CLAUDIA MICELLI | Merito | 9": "02/10/2026 09:26",
         "07/10/2026 | UDIENZA PUBBLICA | DISCUSSO | CLAUDIA MICELLI | Merito | 9": "07/10/2026 14:48",
-        "07/10/2026 | UDIENZA PUBBLICA | RINVIO AD ALTRA DATA | CLAUDIA MICELLI | Merito | 9": "09/10/2026 10:06"
+        "07/10/2026 | UDIENZA PUBBLICA | RINVIO AD ALTRA DATA | CLAUDIA MICELLI | Merito | 9": "09/10/2026 10:06",
+        "MOTIVI AGGIUNTI | 2026004023 | RICORRENTE PRINCIPALE | 13/11/2026": "13/11/2026 16:42"
       }
     },
     {
@@ -1501,8 +1504,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "13/11/2026 17:42",
-  "ultimo_controllo": "13/11/2026 17:42",
+  "ultimo_aggiornamento": "13/11/2026 16:42",
+  "ultimo_controllo": "13/11/2026 16:42",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -6908,5 +6911,5 @@
       "nomeFile": "202600018_40.xml"
     }
   ],
-  "ultima_variazione": "13/11/2026 09:47"
+  "ultima_variazione": "13/11/2026 16:42"
 }
