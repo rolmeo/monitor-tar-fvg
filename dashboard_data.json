@@ -1501,8 +1501,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "13/11/2026 03:03",
-  "ultimo_controllo": "13/11/2026 03:03",
+  "ultimo_aggiornamento": "13/11/2026 09:47",
+  "ultimo_controllo": "13/11/2026 09:47",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -6199,6 +6199,21 @@
       "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
       "esito": "RESPINGE     ",
       "nomeFile": "202600164_05.xml"
+    },
+    {
+      "nrgFascicolo": "202600363",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "CC",
+      "dataUdienza": "21/10/2026",
+      "numProvvedimento": "202600562",
+      "dataPubblicazione": "13/11/2026",
+      "tipoProvvedimento": "SENTENZA BREVE",
+      "codiceTipoProvvedimento": "20",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RESPINGE     ",
+      "nomeFile": "202600562_20.xml"
     }
   ],
   "provvedimenti_monocratici": [
@@ -6893,5 +6908,5 @@
       "nomeFile": "202600018_40.xml"
     }
   ],
-  "ultima_variazione": "12/11/2026 13:23"
+  "ultima_variazione": "13/11/2026 09:47"
 }
