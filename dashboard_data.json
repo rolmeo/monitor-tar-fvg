@@ -1504,8 +1504,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "16/11/2026 03:25",
-  "ultimo_controllo": "16/11/2026 03:25",
+  "ultimo_aggiornamento": "16/11/2026 10:13",
+  "ultimo_controllo": "16/11/2026 10:13",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -6262,6 +6262,51 @@
       "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
       "esito": "RESPINGE     ",
       "nomeFile": "202600563_20.xml"
+    },
+    {
+      "nrgFascicolo": "202600370",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "CC",
+      "dataUdienza": "21/10/2026",
+      "numProvvedimento": "202600568",
+      "dataPubblicazione": "16/11/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RESPINGE     ",
+      "nomeFile": "202600568_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600374",
+      "sezione": "1",
+      "parte": "R.B.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "21/10/2026",
+      "numProvvedimento": "202600567",
+      "dataPubblicazione": "16/11/2026",
+      "tipoProvvedimento": "SENTENZA BREVE",
+      "codiceTipoProvvedimento": "20",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RESPINGE     ",
+      "nomeFile": "202600567_20.xml"
+    },
+    {
+      "nrgFascicolo": "202600376",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "CC",
+      "dataUdienza": "21/10/2026",
+      "numProvvedimento": "202600566",
+      "dataPubblicazione": "16/11/2026",
+      "tipoProvvedimento": "SENTENZA BREVE",
+      "codiceTipoProvvedimento": "20",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "ACCOGLIE     ",
+      "nomeFile": "202600566_20.xml"
     }
   ],
   "provvedimenti_monocratici": [
@@ -6954,7 +6999,22 @@
       "presidente": null,
       "esito": "ACCOGLIE      ",
       "nomeFile": "202600018_40.xml"
+    },
+    {
+      "nrgFascicolo": "202600453",
+      "sezione": "1",
+      "parte": null,
+      "tipoUdienza": null,
+      "dataUdienza": null,
+      "numProvvedimento": "202600167",
+      "dataPubblicazione": "16/11/2026",
+      "tipoProvvedimento": "DECRETO CAUTELARE",
+      "codiceTipoProvvedimento": "06",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": null,
+      "esito": "ACCOGLIE  FISSA CAMERA DI CONSIGLIO    ",
+      "nomeFile": "202600167_06.xml"
     }
   ],
-  "ultima_variazione": "14/11/2026 16:57"
+  "ultima_variazione": "16/11/2026 10:13"
 }
