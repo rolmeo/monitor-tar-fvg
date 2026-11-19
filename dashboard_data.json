@@ -1523,8 +1523,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "19/11/2026 07:40",
-  "ultimo_controllo": "19/11/2026 07:40",
+  "ultimo_aggiornamento": "19/11/2026 16:40",
+  "ultimo_controllo": "19/11/2026 16:40",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -6326,6 +6326,126 @@
       "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
       "esito": "ACCOGLIE     ",
       "nomeFile": "202600566_20.xml"
+    },
+    {
+      "nrgFascicolo": "202600386",
+      "sezione": "1",
+      "parte": "D.B.M.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "18/11/2026",
+      "numProvvedimento": "202600575",
+      "dataPubblicazione": "19/11/2026",
+      "tipoProvvedimento": "SENTENZA BREVE",
+      "codiceTipoProvvedimento": "20",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "IMPROCEDIBILE PER SOPRAVVENUTA CARENZA D'INTERESSE     ",
+      "nomeFile": "202600575_20.xml"
+    },
+    {
+      "nrgFascicolo": "202600212",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "UP",
+      "dataUdienza": "05/11/2026",
+      "numProvvedimento": "202600574",
+      "dataPubblicazione": "19/11/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "DICHIARA IMPROCEDIBILE     ",
+      "nomeFile": "202600574_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600120",
+      "sezione": "1",
+      "parte": "MATAJUR 3000 SRL",
+      "tipoUdienza": "UP",
+      "dataUdienza": "18/11/2026",
+      "numProvvedimento": "202600573",
+      "dataPubblicazione": "19/11/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "SINIGOI MANUELA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "DICHIARA ESTINTO     ",
+      "nomeFile": "202600573_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600096",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "UP",
+      "dataUdienza": "05/11/2026",
+      "numProvvedimento": "202600572",
+      "dataPubblicazione": "19/11/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RESPINGE     ",
+      "nomeFile": "202600572_01.xml"
+    },
+    {
+      "nrgFascicolo": "202500344",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "UP",
+      "dataUdienza": "05/11/2026",
+      "numProvvedimento": "202600571",
+      "dataPubblicazione": "19/11/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "ACCOGLIE     ",
+      "nomeFile": "202600571_01.xml"
+    },
+    {
+      "nrgFascicolo": "202500342",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "UP",
+      "dataUdienza": "07/10/2026",
+      "numProvvedimento": "202600570",
+      "dataPubblicazione": "19/11/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "DICHIARA INAMMISSIBILE     ",
+      "nomeFile": "202600570_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600254",
+      "sezione": "1",
+      "parte": "B.F.",
+      "tipoUdienza": "UP",
+      "dataUdienza": "07/10/2026",
+      "numProvvedimento": "202600569",
+      "dataPubblicazione": "19/11/2026",
+      "tipoProvvedimento": "ORDINANZA COLLEGIALE",
+      "codiceTipoProvvedimento": "08",
+      "relatore": "BUSICO DANIELE",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "INTERLOCUTORIO/A FISSA UDIENZA PUBBLICA    ",
+      "nomeFile": "202600569_08.xml"
+    },
+    {
+      "nrgFascicolo": "202600422",
+      "sezione": "1",
+      "parte": "OMNIA IMMOBILIARE S.R.L.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "18/11/2026",
+      "numProvvedimento": "202600170",
+      "dataPubblicazione": "19/11/2026",
+      "tipoProvvedimento": "ORDINANZA CAUTELARE",
+      "codiceTipoProvvedimento": "05",
+      "relatore": "SINIGOI MANUELA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "ACCOGLIE INTERLOCUTORIO/A FISSA UDIENZA PUBBLICA   ",
+      "nomeFile": "202600170_05.xml"
     }
   ],
   "provvedimenti_monocratici": [
@@ -7048,7 +7168,22 @@
       "presidente": null,
       "esito": "RESPINGE  FISSA CAMERA DI CONSIGLIO    ",
       "nomeFile": "202600168_06.xml"
+    },
+    {
+      "nrgFascicolo": "202600470",
+      "sezione": "1",
+      "parte": null,
+      "tipoUdienza": null,
+      "dataUdienza": null,
+      "numProvvedimento": "202600169",
+      "dataPubblicazione": "19/11/2026",
+      "tipoProvvedimento": "DECRETO CAUTELARE",
+      "codiceTipoProvvedimento": "06",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": null,
+      "esito": "ACCOGLIE  FISSA CAMERA DI CONSIGLIO    ",
+      "nomeFile": "202600169_06.xml"
     }
   ],
-  "ultima_variazione": "18/11/2026 18:57"
+  "ultima_variazione": "19/11/2026 16:40"
 }
