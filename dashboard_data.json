@@ -1,5 +1,5 @@
 {
-  "ultimo_ricorso": 472,
+  "ultimo_ricorso": 474,
   "anno_nuovi": 2026,
   "ricorsi_monitorati": [
     {
@@ -731,10 +731,11 @@
         "24/03/2026 | CAMERA DI CONSIGLIO | DISCUSSO | MANUELA SINIGOI | Giudizio Cautelare | 1"
       ],
       "provvedimenti_collegiali": [
+        "SENTENZA | SINIGOI MANUELA | 19/11/2026 | 18/11/2026 | UP | DICHIARA ESTINTO",
         "ORDINANZA CAUTELARE | SINIGOI MANUELA | 27/03/2026 | 24/03/2026 | CC | RESPINGE FISSA UDIENZA PUBBLICA"
       ],
       "provvedimenti_monocratici": [],
-      "data_rilevazione": "18/11/2026 18:57",
+      "data_rilevazione": "19/11/2026 15:40",
       "ts_eventi": {
         "24/03/2026 | CAMERA DI CONSIGLIO | DISCUSSO | MANUELA SINIGOI | Giudizio Cautelare | 1": "24/03/2026 15:08",
         "18/11/2026 | UDIENZA PUBBLICA |  | DA ASSEGNARE MAGISTRATO | Merito | ": "27/03/2026 08:45",
@@ -744,7 +745,8 @@
         "18/11/2026 | UDIENZA PUBBLICA |  | MANUELA SINIGOI | Merito | 4": "12/11/2026 13:23",
         "ALTRO | 2026004073 | AMMINISTRAZIONE INTIMATA | 16/11/2026": "16/11/2026 19:33",
         "ALTRO | 2026004098 | RICORRENTE PRINCIPALE | 17/11/2026": "17/11/2026 20:17",
-        "18/11/2026 | UDIENZA PUBBLICA | DISCUSSO | MANUELA SINIGOI | Merito | 4": "18/11/2026 18:57"
+        "18/11/2026 | UDIENZA PUBBLICA | DISCUSSO | MANUELA SINIGOI | Merito | 4": "18/11/2026 18:57",
+        "SENTENZA | SINIGOI MANUELA | 19/11/2026 | 18/11/2026 | UP | DICHIARA ESTINTO": "19/11/2026 15:40"
       }
     },
     {
@@ -825,14 +827,15 @@
         "CONTRIBUTO UNIFICATO | 2026001617 | RICORRENTE PRINCIPALE | 28/04/2026",
         "MEMORIA DI REPLICA | 2026003858 | RICORRENTE PRINCIPALE | 28/10/2026",
         "DOCUMENTI | 2026003562 | AMMINISTRAZIONE INTIMATA | 07/10/2026",
-        "ISTANZA DI FISSAZIONE UDIENZA | 2026000113 | RICORRENTE PRINCIPALE | 11/03/2026"
+        "ISTANZA DI FISSAZIONE UDIENZA | 2026000113 | RICORRENTE PRINCIPALE | 11/03/2026",
+        "DOCUMENTI | 2026004112 | RICORRENTE PRINCIPALE | 19/11/2026"
       ],
       "discussioni": [
         "18/11/2026 | UDIENZA PUBBLICA | DISCUSSO | CLAUDIA MICELLI | Merito | 1"
       ],
       "provvedimenti_collegiali": [],
       "provvedimenti_monocratici": [],
-      "data_rilevazione": "18/11/2026 18:57",
+      "data_rilevazione": "19/11/2026 15:40",
       "ts_eventi": {
         "CONTRIBUTO UNIFICATO | 2026001617 | RICORRENTE PRINCIPALE | 28/04/2026": "28/04/2026 10:04",
         "18/11/2026 | UDIENZA PUBBLICA |  | DA ASSEGNARE MAGISTRATO | Merito | ": "09/09/2026 16:07",
@@ -845,7 +848,8 @@
         "MEMORIA DI REPLICA | 2026003858 | RICORRENTE PRINCIPALE | 28/10/2026": "28/10/2026 15:23",
         "18/11/2026 | UDIENZA PUBBLICA |  | CLAUDIA MICELLI | Merito | 1": "12/11/2026 13:23",
         "ALTRO | 2026004077 | AMMINISTRAZIONE INTIMATA | 16/11/2026": "16/11/2026 19:33",
-        "18/11/2026 | UDIENZA PUBBLICA | DISCUSSO | CLAUDIA MICELLI | Merito | 1": "18/11/2026 18:57"
+        "18/11/2026 | UDIENZA PUBBLICA | DISCUSSO | CLAUDIA MICELLI | Merito | 1": "18/11/2026 18:57",
+        "DOCUMENTI | 2026004112 | RICORRENTE PRINCIPALE | 19/11/2026": "19/11/2026 15:40"
       }
     },
     {
@@ -1523,8 +1527,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "19/11/2026 16:40",
-  "ultimo_controllo": "19/11/2026 16:40",
+  "ultimo_aggiornamento": "19/11/2026 15:40",
+  "ultimo_controllo": "19/11/2026 15:40",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -7185,5 +7189,5 @@
       "nomeFile": "202600169_06.xml"
     }
   ],
-  "ultima_variazione": "19/11/2026 16:40"
+  "ultima_variazione": "19/11/2026 15:40"
 }
