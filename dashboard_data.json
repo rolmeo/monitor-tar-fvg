@@ -1527,8 +1527,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "21/11/2026 10:30",
-  "ultimo_controllo": "21/11/2026 10:30",
+  "ultimo_aggiornamento": "21/11/2026 18:19",
+  "ultimo_controllo": "21/11/2026 18:19",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -6454,6 +6454,51 @@
       "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
       "esito": "ACCOGLIE INTERLOCUTORIO/A FISSA UDIENZA PUBBLICA   ",
       "nomeFile": "202600170_05.xml"
+    },
+    {
+      "nrgFascicolo": "202600330",
+      "sezione": "1",
+      "parte": "ECRA S.R.L.",
+      "tipoUdienza": "UP",
+      "dataUdienza": "05/11/2026",
+      "numProvvedimento": "202600576",
+      "dataPubblicazione": "21/11/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "SINIGOI MANUELA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RESPINGE     ",
+      "nomeFile": "202600576_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600417",
+      "sezione": "1",
+      "parte": "F.M.T.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "18/11/2026",
+      "numProvvedimento": "202600172",
+      "dataPubblicazione": "21/11/2026",
+      "tipoProvvedimento": "ORDINANZA CAUTELARE",
+      "codiceTipoProvvedimento": "05",
+      "relatore": "BUSICO DANIELE",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "PRENDE ATTO RINUNZIA ALLA ISTANZA CAUTELARE FISSA UDIENZA PUBBLICA    ",
+      "nomeFile": "202600172_05.xml"
+    },
+    {
+      "nrgFascicolo": "202600429",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "CC",
+      "dataUdienza": "18/11/2026",
+      "numProvvedimento": "202600171",
+      "dataPubblicazione": "21/11/2026",
+      "tipoProvvedimento": "ORDINANZA CAUTELARE",
+      "codiceTipoProvvedimento": "05",
+      "relatore": "BUSICO DANIELE",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "DICHIARA IMPROCEDIBILE     ",
+      "nomeFile": "202600171_05.xml"
     }
   ],
   "provvedimenti_monocratici": [
@@ -7193,5 +7238,5 @@
       "nomeFile": "202600169_06.xml"
     }
   ],
-  "ultima_variazione": "19/11/2026 16:41"
+  "ultima_variazione": "21/11/2026 18:19"
 }
