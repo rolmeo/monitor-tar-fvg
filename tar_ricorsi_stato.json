@@ -1524,6 +1524,28 @@
         "SENTENZA | MICELLI CLAUDIA | 16/10/2026 | 23/09/2026 | UP | CONVERSIONE DEL RITO DICHIARA INAMMISSIBILE DICHIARA DIFETTO DI GIURISDIZIONE": "16/10/2026 16:32",
         "CONTRIBUTO UNIFICATO | 2026004004 | RICORRENTE PRINCIPALE | 11/11/2026": "11/11/2026 18:07"
       }
+    },
+    "2026_479": {
+      "nrg": "2026000479",
+      "anno": 2026,
+      "numero": 479,
+      "sezione": "1",
+      "data_deposito": "20/11/2026",
+      "tipo_ricorso": "ORDINARIO",
+      "oggetto": "PRESA D’ATTO MODIFICA PLANIMETRIA ANTICIPATA OCCUPAZIONE STABILIMENTO BALNEARE «PORTOFINO» INDIVIDUATO AL PUD CON IL NUMERO 188",
+      "parti": [
+        "RICORRENTE | 20/11/2026 | ",
+        "RESISTENTE |  | ",
+        "CONTROINTERESSATO |  | "
+      ],
+      "atti": [
+        "ISTANZA DI FISSAZIONE UDIENZA | 2026000470 | RICORRENTE PRINCIPALE | 20/11/2026",
+        "DOCUMENTI | 2026004129 | RICORRENTE PRINCIPALE | 20/11/2026",
+        "RICORSO | 2026004128 | RICORRENTE PRINCIPALE | 20/11/2026"
+      ],
+      "discussioni": [],
+      "provvedimenti_collegiali": [],
+      "provvedimenti_monocratici": []
     }
   }
 }
