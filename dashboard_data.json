@@ -1,5 +1,5 @@
 {
-  "ultimo_ricorso": 480,
+  "ultimo_ricorso": 483,
   "anno_nuovi": 2026,
   "ricorsi_monitorati": [
     {
@@ -114,6 +114,7 @@
         "DICHIARAZIONE DI RINUNZIA ALLA MISURA CAUTELARE | 2026002046 | RICORRENTE PRINCIPALE | 28/05/2026",
         "MEMORIA EX ART.73 C.P.A. | 2026003239 | RICORRENTE PRINCIPALE | 16/09/2026",
         "MOTIVI AGGIUNTI > RICHIESTA MISURA CAUTELARE E CAUTELARE URGENTE | 2026001651 | RICORRENTE PRINCIPALE | 30/04/2026",
+        "ISTANZA DI FISSAZIONE UDIENZA | 2026000473 | RICORRENTE PRINCIPALE | 23/11/2026",
         "DOCUMENTI | 2026002821 | AMMINISTRAZIONE INTIMATA | 27/07/2026",
         "MEMORIA EX ART.73 C.P.A. | 2026003123 | AMMINISTRAZIONE INTIMATA | 05/09/2026",
         "DOCUMENTI | 2026001255 | RICORRENTE PRINCIPALE | 23/03/2026",
@@ -153,7 +154,7 @@
         "ORDINANZA CAUTELARE | MICELLI CLAUDIA | 27/03/2026 | 24/03/2026 | CC | RESPINGE FISSA UDIENZA PUBBLICA"
       ],
       "provvedimenti_monocratici": [],
-      "data_rilevazione": "13/11/2026 16:42",
+      "data_rilevazione": "23/11/2026 12:01",
       "ts_eventi": {
         "MEMORIA | 2026001241 | RICORRENTE PRINCIPALE | 21/03/2026": "21/03/2026 11:50",
         "DOCUMENTI | 2026001255 | RICORRENTE PRINCIPALE | 23/03/2026": "23/03/2026 16:42",
@@ -189,7 +190,8 @@
         "07/10/2026 | UDIENZA PUBBLICA |  | CLAUDIA MICELLI | Merito | 9": "02/10/2026 09:26",
         "07/10/2026 | UDIENZA PUBBLICA | DISCUSSO | CLAUDIA MICELLI | Merito | 9": "07/10/2026 14:48",
         "07/10/2026 | UDIENZA PUBBLICA | RINVIO AD ALTRA DATA | CLAUDIA MICELLI | Merito | 9": "09/10/2026 10:06",
-        "MOTIVI AGGIUNTI | 2026004023 | RICORRENTE PRINCIPALE | 13/11/2026": "13/11/2026 16:42"
+        "MOTIVI AGGIUNTI | 2026004023 | RICORRENTE PRINCIPALE | 13/11/2026": "13/11/2026 16:42",
+        "ISTANZA DI FISSAZIONE UDIENZA | 2026000473 | RICORRENTE PRINCIPALE | 23/11/2026": "23/11/2026 12:01"
       }
     },
     {
@@ -1537,20 +1539,26 @@
       "parti": [
         "RICORRENTE | 20/11/2026 | ",
         "RESISTENTE |  | ",
-        "CONTROINTERESSATO |  | "
+        "CONTROINTERESSATO |  | ",
+        "CONTROINTERESSATO | 23/11/2026 | "
       ],
       "atti": [
         "ISTANZA DI FISSAZIONE UDIENZA | 2026000470 | RICORRENTE PRINCIPALE | 20/11/2026",
         "DOCUMENTI | 2026004129 | RICORRENTE PRINCIPALE | 20/11/2026",
-        "RICORSO | 2026004128 | RICORRENTE PRINCIPALE | 20/11/2026"
+        "RICORSO | 2026004128 | RICORRENTE PRINCIPALE | 20/11/2026",
+        "ATTO DI COSTITUZIONE | 2026004146 | CONTROINTERESSATO | 23/11/2026"
       ],
       "discussioni": [],
       "provvedimenti_collegiali": [],
-      "provvedimenti_monocratici": []
+      "provvedimenti_monocratici": [],
+      "data_rilevazione": "23/11/2026 12:02",
+      "ts_eventi": {
+        "ATTO DI COSTITUZIONE | 2026004146 | CONTROINTERESSATO | 23/11/2026": "23/11/2026 12:02"
+      }
     }
   ],
-  "ultimo_aggiornamento": "23/11/2026 13:01",
-  "ultimo_controllo": "23/11/2026 13:01",
+  "ultimo_aggiornamento": "23/11/2026 12:02",
+  "ultimo_controllo": "23/11/2026 12:02",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -7260,5 +7268,5 @@
       "nomeFile": "202600169_06.xml"
     }
   ],
-  "ultima_variazione": "21/11/2026 18:19"
+  "ultima_variazione": "23/11/2026 12:02"
 }
