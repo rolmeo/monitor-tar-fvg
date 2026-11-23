@@ -1557,8 +1557,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "23/11/2026 13:02",
-  "ultimo_controllo": "23/11/2026 13:02",
+  "ultimo_aggiornamento": "24/11/2026 00:32",
+  "ultimo_controllo": "24/11/2026 00:32",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -6529,6 +6529,96 @@
       "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
       "esito": "DICHIARA IMPROCEDIBILE     ",
       "nomeFile": "202600171_05.xml"
+    },
+    {
+      "nrgFascicolo": "202600351",
+      "sezione": "1",
+      "parte": "ECO LASER INFORMATICA S.R.L.",
+      "tipoUdienza": "UP",
+      "dataUdienza": "18/11/2026",
+      "numProvvedimento": "202600582",
+      "dataPubblicazione": "23/11/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "BUSICO DANIELE",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "RESPINGE DICHIARA IMPROCEDIBILE    ",
+      "nomeFile": "202600582_01.xml"
+    },
+    {
+      "nrgFascicolo": "202500645",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "UP",
+      "dataUdienza": "18/11/2026",
+      "numProvvedimento": "202600581",
+      "dataPubblicazione": "23/11/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "BUSICO DANIELE",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "DICHIARA INAMMISSIBILE ACCOGLIE SUI MOTIVI AGGIUNTI    ",
+      "nomeFile": "202600581_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600350",
+      "sezione": "1",
+      "parte": "A.R.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "18/11/2026",
+      "numProvvedimento": "202600580",
+      "dataPubblicazione": "23/11/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "BUSICO DANIELE",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "DICHIARA INAMMISSIBILE     ",
+      "nomeFile": "202600580_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600266",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "UP",
+      "dataUdienza": "18/11/2026",
+      "numProvvedimento": "202600579",
+      "dataPubblicazione": "23/11/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "BUSICO DANIELE",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "IMPROCEDIBILE PER SOPRAVVENUTA CARENZA DI INTERESSE     ",
+      "nomeFile": "202600579_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600248",
+      "sezione": "1",
+      "parte": "D2M FRIULI S.R.L.",
+      "tipoUdienza": "CC",
+      "dataUdienza": "18/11/2026",
+      "numProvvedimento": "202600578",
+      "dataPubblicazione": "23/11/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MICELLI CLAUDIA",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "ACCOGLIE     ",
+      "nomeFile": "202600578_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600121",
+      "sezione": "1",
+      "parte": "MATAJUR 3000 SRL",
+      "tipoUdienza": "UP",
+      "dataUdienza": "18/11/2026",
+      "numProvvedimento": "202600577",
+      "dataPubblicazione": "23/11/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "BUSICO DANIELE",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "DICHIARA ESTINTO     ",
+      "nomeFile": "202600577_01.xml"
     }
   ],
   "provvedimenti_monocratici": [
@@ -7268,5 +7358,5 @@
       "nomeFile": "202600169_06.xml"
     }
   ],
-  "ultima_variazione": "23/11/2026 12:02"
+  "ultima_variazione": "24/11/2026 00:32"
 }
