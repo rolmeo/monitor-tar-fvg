@@ -1559,8 +1559,8 @@
       }
     }
   ],
-  "ultimo_aggiornamento": "26/11/2026 12:30",
-  "ultimo_controllo": "26/11/2026 12:30",
+  "ultimo_aggiornamento": "26/11/2026 13:31",
+  "ultimo_controllo": "26/11/2026 13:31",
   "cds_ricorsi_monitorati": [
     {
       "nrg": "2025001750",
@@ -6996,6 +6996,66 @@
       "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
       "esito": "RESPINGE DICHIARA INAMMISSIBILE ACCOGLIE SUI MOTIVI AGGIUNTI   ",
       "nomeFile": "202600583_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600115",
+      "sezione": "1",
+      "parte": "M.S.",
+      "tipoUdienza": "UP",
+      "dataUdienza": "21/10/2026",
+      "numProvvedimento": "202600611",
+      "dataPubblicazione": "26/11/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "DICHIARA CESSATA MATERIA DEL CONTENDERE     ",
+      "nomeFile": "202600611_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600116",
+      "sezione": "1",
+      "parte": "G.M.",
+      "tipoUdienza": "UP",
+      "dataUdienza": "21/10/2026",
+      "numProvvedimento": "202600610",
+      "dataPubblicazione": "26/11/2026",
+      "tipoProvvedimento": "SENTENZA",
+      "codiceTipoProvvedimento": "01",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "DICHIARA CESSATA MATERIA DEL CONTENDERE     ",
+      "nomeFile": "202600610_01.xml"
+    },
+    {
+      "nrgFascicolo": "202600117",
+      "sezione": "1",
+      "parte": "M.W.",
+      "tipoUdienza": "UP",
+      "dataUdienza": "18/11/2026",
+      "numProvvedimento": "202600609",
+      "dataPubblicazione": "26/11/2026",
+      "tipoProvvedimento": "ORDINANZA COLLEGIALE",
+      "codiceTipoProvvedimento": "08",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "DICHIARA INTERROTTO     ",
+      "nomeFile": "202600609_08.xml"
+    },
+    {
+      "nrgFascicolo": "202600288",
+      "sezione": "1",
+      "parte": "XXX_OMISSIS_XXX",
+      "tipoUdienza": "CC",
+      "dataUdienza": "21/10/2026",
+      "numProvvedimento": "202600608",
+      "dataPubblicazione": "26/11/2026",
+      "tipoProvvedimento": "DECRETO COLLEGIALE",
+      "codiceTipoProvvedimento": "36",
+      "relatore": "MODICA DE MOHAC DI GRISI' CARLO",
+      "presidente": "MODICA DE MOHAC DI GRISI' CARLO",
+      "esito": "DISPONE     ",
+      "nomeFile": "202600608_36.xml"
     }
   ],
   "provvedimenti_monocratici": [
@@ -7765,5 +7825,5 @@
       "nomeFile": "202600173_06.xml"
     }
   ],
-  "ultima_variazione": "25/11/2026 12:32"
+  "ultima_variazione": "26/11/2026 13:31"
 }
